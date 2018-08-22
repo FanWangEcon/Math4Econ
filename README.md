@@ -2,6 +2,10 @@
 
 This is the course website for learning about Mathematics for Economists. Course materials
 
+To view the matlab livescripts and html files, you can pull from the repository following instructions below.
+Altneratively, can click on *Clone or Download* and click *Download Zip*, which will download all files in Math4Econ repository.
+Additionally, if you open one of the HTML files on github.com and would like to view it directly, append this to the beginning of the current HTML page's full URL: *http://htmlpreview.github.io/?* (see https://github.com/htmlpreview/htmlpreview.github.com for more information on how)
+
 # Setting up GIT to pull from this repository
 
 You can set up your own github account if you would like. That is however not necessary for completing the following steps. Github allows us to host and share codes in the form of git repositories. git is a type of repository.
