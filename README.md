@@ -14,7 +14,8 @@ You can set up your own github account if you would like. That is however not ne
   /c/Users/fan
   ```
 
-## Clone latest files from github for Math4Econ:
+## First time clone:
+This is for **first time** set-up. We clone a repository from github to your local drive.
 1. Create a directory under your user main for git repositories (only have to do this once)
   ```console
   mkdir ~/GitRepos
@@ -27,7 +28,29 @@ You can set up your own github account if you would like. That is however not ne
   ```console
   git clone https://github.com/FanWangEcon/Math4Econ
   ```
-4. Now you can go to your folder and see our latest files. And you can open up matlab and set the directory to the one that contains Math4Econ. For me that would be this folder:
+4. Now you can go to your folder and see our latest files. And you can open up matlab and set the directory to the one that contains Math4Econ. For me that would be this folder, this is a git folder:
   ```console
   /c/Users/fan/GitRepos/Math4Econ
+  ```
+
+## Updating existing Math4Econ Git Repository:
+I will be updating the files in our shared repository. You can pull from the shared repository to get the latest files. 
+
+The instructions below will eliminate any local changes you have made to the files and replace them with latest from our github repository. If you want to save your local changes, re-save the files that you have modified in another folder for yourself before you proceed with the codes below.
+
+1. Go to our Math4Econ folder:
+  ```console
+  cd ~/GitRepos/Math4Econ
+  ```
+2. First fetch all changes from origin (which we defined previously)
+  ```console
+  git fetch origin
+  ```
+3. Reset your local repository
+  ```console
+  git reset --hard origin/master
+  ```
+4. Pull from remote replace local
+  ```console
+  git pull origin master
   ```
