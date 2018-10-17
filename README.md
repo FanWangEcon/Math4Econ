@@ -1,4 +1,10 @@
-# Math4Econ
+---
+layout: default
+title: Mathematics for Economists with Matlab
+author: Fan Wang
+pageorder: 0
+---
+
 
 This is a work-in-progress course website for Mathematics for Economists, produced by [Fan](https://fanwangecon.github.io/). Course covers a limited subset of topics from *Mathematics for Economists* (Simon and Blume 1994), and uses various definitions from the book. Matlab's symbolic toolbox is used throughout.
 
