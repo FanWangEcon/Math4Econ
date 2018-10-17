@@ -46,7 +46,7 @@ Please contact @FanWangEcon for issues or problems.
 
 ## 3.1 Basics
 
-1. [Laws of Matrix Algebra](matrix_basics/matrix_matlab.html)
+1. [Laws of Matrix Algebra](matrix_basics/matlab_define_matrix.html)
 2. [Matrix Addition and Multiplication](matrix_basics/matrix_algebra_rules.html)
 3. [Creating Matrixes in Matlab](matrix_basics/matrix_matlab.html)
 
@@ -57,7 +57,8 @@ Please contact @FanWangEcon for issues or problems.
 3. [System of Linear Equations, Row Echelon Form](matrix_system_of_equations/matrix_row_echelon_form.html)
 
 
-## 3.3 Matrix Application
-
+## 3.3 Application--Firm's Problem
 1. [Firm Maximization Problem with Capital and Labor](matrix_application/KL_borrowhire_firm.html)
+
+## 3.4 Application--Household's Problem
 2. [Household Maximization with Two Goods and Budget](matrix_application/twogoods.html)
