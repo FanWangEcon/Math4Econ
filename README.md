@@ -29,21 +29,28 @@ Please contact @FanWangEcon for issues or problems.
 3. [Elasticity and Derivative](derivative/derivative_elasticity.html)
 4. [First Order Taylor Approximation](derivative/derivative_MPL_first_order_taylor_approximation.html)
 
-## Derivatives Application--Cobb Douglas Production Function
+## Application--Production Function
 
-1. [Marginal Product Discrete Units of Workers](derivative_application/second_derivative.html)
+1. [Marginal Product Discrete Units of Workers](derivative_application/derivative_MPL_discrete_workers.html)
 2. [Derivative of Cobb-Douglas Production Function](derivative_application/derivative_cobb_douglas.html)
 3. [Derivative Approximation and Cobb-Douglas Function](derivative_application/derivative_hslope_cobb_douglas.html)
 4. [Higher Order Derivatives--Cobb Douglas Production](derivative_application/second_derivative.html)
 
-## Derivatives Application--Asset Demand and Supply
-
-Household supply credit and firms demand credit. The files solve household and firm maximization problems and derive demand and supply curves.
+## Application--Demand and Supply
 
 1. [Optimal Savings Choice in a 2 period Model with initial Wealth](derivative_application/K_save_households.html)
 2. [Optimal Borrowing Choice Firm Maximization](derivative_application/K_borrow_firm.html)
 
+# Exponential and Log
+
+1. [Exponential Function](explog/exponential.html)
+2. [Exponential Function and Log Function](explog/exolog.html)
+
 # Matrix
+
+1. [Laws of Matrix Algebra](matrix_basics/matrix_matlab.html)
+2. [Matrix Addition and Multiplication](matrix_basics/matrix_algebra_rules.html)
+3. [Creating Matrixes in Matlab](matrix_basics/matrix_matlab.html)
 
 ## Basics
 
