@@ -24,13 +24,13 @@ Please contact @FanWangEcon for issues or problems.
 2. [Continuity and Differentiability](derivative/continuous_differentiable.html)
 3. [Elasticity and Derivative](derivative/derivative_elasticity.html)
 4. [First Order Taylor Approximation](derivative/derivative_MPL_first_order_taylor_approximation.html)
+5. [Higher Order Derivatives--Cobb Douglas Production](derivative/second_derivative.html)
 
 ## 1.3 Application--Production Function
 
 1. [Marginal Product Discrete Units of Workers](derivative_application/derivative_MPL_discrete_workers.html)
 2. [Derivative of Cobb-Douglas Production Function](derivative_application/derivative_cobb_douglas.html)
 3. [Derivative Approximation and Cobb-Douglas Function](derivative_application/derivative_hslope_cobb_douglas.html)
-4. [Higher Order Derivatives--Cobb Douglas Production](derivative/second_derivative.html)
 
 ## 1.4 Application--Demand and Supply
 
@@ -52,7 +52,7 @@ Please contact @FanWangEcon for issues or problems.
 
 ## 3.2 Matrix System of Equations
 
-1. [System of Linear Equations, Row Echelon Form](matrix_system_of_equations/matrix_linear_equations.html)
+1. [System of Linear Equations](matrix_system_of_equations/matrix_linear_equations.html)
 2. [Solving for Two Equations and Two Unknowns](matrix_system_of_equations/matrix_linear_system_2.html)
 3. [System of Linear Equations, Row Echelon Form](matrix_system_of_equations/matrix_row_echelon_form.html)
 
