@@ -56,9 +56,11 @@ Please contact @FanWangEcon for issues or problems.
 2. [Solving for Two Equations and Two Unknowns](matrix_system_of_equations/matrix_linear_system_2.html)
 3. [System of Linear Equations, Row Echelon Form](matrix_system_of_equations/matrix_row_echelon_form.html)
 
-
 ## 3.3 Application--Firm's Problem
 1. [Firm Maximization Problem with Capital and Labor](matrix_application/KL_borrowhire_firm.html)
 
 ## 3.4 Application--Household's Problem
 2. [Household Maximization with Two Goods and Budget](matrix_application/twogoods.html)
+
+## 3.5 Application--Approximate Demand and Supply
+1. [First Order Taylor Approximation of Demand and Supply Curves](matrix_application/demand_supply_taylor_approximate.html)
