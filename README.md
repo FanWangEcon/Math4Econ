@@ -7,7 +7,7 @@ Materials are written in matlab livescript files and shown as HTML files. To obt
 
 Please contact @FanWangEcon for issues or problems.
 
-# 1. One Variable Calculus
+# 1. Basic Calculus and Applications
 
 ## 1.1 Basics
 
@@ -36,6 +36,10 @@ Please contact @FanWangEcon for issues or problems.
 
 1. [Optimal Savings Choice in a 2 period Model with initial Wealth](derivative_application/K_save_households.html)
 2. [Optimal Borrowing Choice Firm Maximization](derivative_application/K_borrow_firm.html)
+
+## 1.5 Application--Risky Asset
+
+1. [Risky Assets and Different States of the World](nonlinear/RiskyAsset.html)
 
 # 2. Exponential and Log
 
