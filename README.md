@@ -68,3 +68,4 @@ Please contact @FanWangEcon for issues or problems.
 
 ## 3.5 Application--Approximate Demand and Supply
 1. [First Order Taylor Approximation of Demand and Supply Curves](matrix_application/demand_supply_taylor_approximate.html)
+1. [First Order Taylor Approximation of Demand and Supply Curves for Capital](matrix_application/demand_supply_taylor_approximate_capital.html)
