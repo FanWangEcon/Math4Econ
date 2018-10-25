@@ -1,3 +1,5 @@
 theme: jekyll-theme-slate
 title: Introductory Mathematics for Economists
 google_analytics: UA-92953468-2
+plugins:
+  - jekyll-sitemap
