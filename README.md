@@ -71,6 +71,7 @@ Please contact @FanWangEcon for issues or problems.
 1. [First Order Taylor Approximation of Demand and Supply Curves for Capital](matrix_application/demand_supply_taylor_approximate_capital.html)
 
 
-# 4. Constrained and Unconstrained Maximization
+# 4. Constrained Optimization
 
-1. [Profit Maximization and Cost Minimization](optimization_application/profit_maximize.html)
+1. [Constrained Profit Maximization and Cost Minimization](optimization_application/profit_maximize.html)
+2. [Cost Minimization and Marginal Cost](optimization_application/profit_maximize_crs_profit.html)
