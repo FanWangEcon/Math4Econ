@@ -73,5 +73,9 @@ Please contact @FanWangEcon for issues or problems.
 
 # 4. Constrained Optimization
 
+## 4.1 Equality Constraint
 1. [Constrained Profit Maximization and Cost Minimization](optimization_application/profit_maximize.html)
 2. [Cost Minimization and Marginal Cost](optimization_application/profit_maximize_crs_profit.html)
+
+## 4.2 Inequality Constraint
+1. [Constrained Household Borrowing/Saving Problem](optimization_application/household_borrow_constrained.html)
