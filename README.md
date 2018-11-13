@@ -78,4 +78,5 @@ Please contact @FanWangEcon for issues or problems.
 2. [Cost Minimization and Marginal Cost](optimization_application/profit_maximize_crs_profit.html)
 
 ## 4.2 Inequality Constraint
-1. [Constrained Household Borrowing/Saving Problem](optimization_application/household_borrow_constrained.html)
+1. [Single Constraints--Constrained Household Borrowing/Saving Problem](optimization_application/household_borrow_constrained.html)
+2. [Multiple Constraints--Constrained Household Borrowing/Saving and Labor Choice Problem](optimization_application/household_asset_labor_constrained.html)
