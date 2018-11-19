@@ -73,11 +73,14 @@ Please contact @FanWangEcon for issues or problems.
 
 # 4. Constrained Optimization
 
-## 4.1 Equality Constraint
+## 4.1 Firm's Problem
 1. [Constrained Profit Maximization and Cost Minimization](optimization_application/profit_maximize.html)
 2. [Cost Minimization and Marginal Cost](optimization_application/profit_maximize_crs_profit.html)
 
-## 4.2 Inequality Constraint
+## 4.2 Household's Problem
+1. [Constrained Utility Maximization and Expenditure Minimization](optimization_application/household_c1_c2_constrained.html)
+2. [Income and Substitution Effects](optimization_application/household_c1_c2_constrained_r_change.html)
+
+## 4.3 Inequality Constraints
 1. [Borrowing Constraint](optimization_application/household_borrow_constrained.html)
-2. [Optimal Consumption Choices](optimization_application/household_c1_c2_constrained.html)
-3. [Constrained Household Borrowing/Saving and Labor Choice Problem](optimization_application/household_asset_labor_constrained.html)
+2. [Constrained Household Borrowing/Saving and Labor Choice Problem](optimization_application/household_asset_labor_constrained.html)
