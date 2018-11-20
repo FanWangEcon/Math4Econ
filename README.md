@@ -84,3 +84,6 @@ Please contact @FanWangEcon for issues or problems.
 ## 4.3 Inequality Constraints
 1. [Borrowing Constraint](optimization_application/household_borrow_constrained.html)
 2. [Constrained Household Borrowing/Saving and Labor Choice Problem](optimization_application/household_asset_labor_constrained.html)
+
+## 4.4 Equilibrium and Government Policy
+2. [Equilibrium Interest Rate and Tax](equilibrium/equilibrium_constrainedborrow.html)
