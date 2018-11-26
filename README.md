@@ -86,4 +86,5 @@ Please contact @FanWangEcon for issues or problems.
 2. [Constrained Household Borrowing/Saving and Labor Choice Problem](optimization_application/household_asset_labor_constrained.html)
 
 ## 4.4 Equilibrium and Government Policy
-2. [Equilibrium Interest Rate and Tax](equilibrium/equilibrium_constrainedborrow.html)
+1. [Equilibrium Interest Rate](equilibrium/equilibrium_constrainedborrow.html)
+2. [Equilibrium Interest Rate and Wage](equilibrium/equilibrium_constrainedborrow_labor.html)
