@@ -5,7 +5,7 @@ This is a work-in-progress [course website](https://fanwangecon.github.io/Math4E
 
 Materials are written in matlab livescript files and shown as HTML files. To obtain matlab codes, see [here](docs/gitsetup.md) for github set up. For HTML files, click on the links below.
 
-Please contact @FanWangEcon for issues or problems.
+Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
 
 # 1. Basic Calculus and Applications
 
