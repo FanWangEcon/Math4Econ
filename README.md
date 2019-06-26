@@ -3,7 +3,7 @@
 
 This is a work-in-progress [course website](https://fanwangecon.github.io/Math4Econ/) for Mathematics for Economists, produced by [Fan](https://fanwangecon.github.io/). Course covers a limited subset of topics from *Mathematics for Economists* (Simon and Blume 1994), and uses various definitions from the book. Matlab's symbolic toolbox is used throughout.
 
-Materials are written in matlab livescript files and shown as HTML files. To obtain matlab codes, see [here](docs/gitsetup.md) for github set up. For HTML files, click on the links below.
+Materials are written in matlab livescript files and shown as HTML files. To obtain matlab codes, see [here](docs/gitsetup.md) and [here](docs/gitsetupown.md) for github set up. For HTML files, click on the links below.
 
 Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
 

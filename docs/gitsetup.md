@@ -1,5 +1,7 @@
 # Setting up GIT to pull from this repository
 
+*This page describes how to pull from [fan](http://fanwangecon.github.io)'s [Math4Econ](https://fanwangecon.github.io/Math4Econ/) or [other](https://github.com/FanWangEcon) repositories. To set up a github account and create your own repository, see this [guide](gitsetup.md).*
+
 To view the matlab livescripts and html files, you can pull from the repository following instructions below.
 Altneratively, can click on *Clone or Download* and click *Download Zip*, which will download all files in Math4Econ repository.
 Additionally, if you open one of the HTML files on github.com and would like to view it directly, append this to the beginning of the current HTML page's full URL: *http://htmlpreview.github.io/?* (see https://github.com/htmlpreview/htmlpreview.github.com for more information on how)
