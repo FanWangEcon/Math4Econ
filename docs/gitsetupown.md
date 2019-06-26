@@ -2,14 +2,15 @@
 
 *This page describes how to set up a github account and create your own repository, see this [guide](gitsetup.md) for how to pull from [fan](http://fanwangecon.github.io)'s [Math4Econ](https://fanwangecon.github.io/Math4Econ/) or [other](https://github.com/FanWangEcon) repositories.*
 
-## Github Install and Create a Repository on Github.com
+## Install and Create a Repo on Github
 
 Replace my email below
 
 1. Install [GIT](https://git-scm.com/)
-2. Install [Atom](https://atom.io/) as a git/github friendly editor
-3. Set up an account on github.com
-4. Create a new repository under your account's repository tab, for example: [https://github.com/FanWangEcon?tab=repositories](https://github.com/FanWangEcon?tab=repositories); choose to *Initialize this repository with a README*.
+2. install [putty](https://www.putty.org/)
+3. Install [Atom](https://atom.io/) as a git/github friendly editor
+4. Set up an account on [GITHUB](https://github.com/)
+5. Create a new repository under your account's repository tab, for example: [https://github.com/FanWangEcon?tab=repositories](https://github.com/FanWangEcon?tab=repositories); choose to *Initialize this repository with a README*.
 
 ## Set up Local Security to Pull and Push to Github
 
