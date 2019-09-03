@@ -37,7 +37,8 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
 1. [Two Periods Saving/Borrowing without Shocks](https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html):  [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_save_households.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_save_households.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html)
     + Endowments today and tomorrow, borrowing and savings, no shocks
     + Grid based or analytical solution
-    + **core**: *max, diff, solve; plot scatter*
+    + Supply curve of assets
+    + **core**: *max, diff, solve; plot, scatter*
 2. [Optimal Borrowing Choice Firm Maximization](derivative_application/K_borrow_firm.html)
 
 ## 1.5 Application--Risky Asset
