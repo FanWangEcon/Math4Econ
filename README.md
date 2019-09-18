@@ -11,35 +11,39 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
 
 ## 1.1 Basics
 
-1. [Real Number and intervals](calconevar/realnumber.html)
-2. [What is a Function?](calconevar/whatisfunction.html)
-3. [Function Notations](calconevar/funcnotations.html)
-4. [Interval Notations and Examples](calconevar/interval.html)
-5. [Monomial and Polynomial](calconevar/polynomial.html)
-6. [Local and Global Maximum](calconevar/localglobal.html)
+1. [Real Number and intervals](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html): [m](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [mlx](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [pdf](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [html](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
+2. [What is a Function?](https://fanwangecon.github.io/Math4Econ/calconevar/whatisfunction.html): [m](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [mlx](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [pdf](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [html](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
+3. [Function Notations](https://fanwangecon.github.io/Math4Econ/calconevar/funcnotations.html): [m](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [mlx](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [pdf](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [html](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
+4. [Interval Notations and Examples](https://fanwangecon.github.io/Math4Econ/calconevar/interval.html): [m](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [mlx](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [pdf](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [html](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
+5. [Monomial and Polynomial](https://fanwangecon.github.io/Math4Econ/calconevar/polynomial.html): [m](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [mlx](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [pdf](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [html](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
+6. [Local and Global Maximum](https://fanwangecon.github.io/Math4Econ/calconevar/localglobal.html): [m](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [mlx](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [pdf](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [html](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
 
 ## 1.2 Derivatives
 
-1. [Derivative Definition and Rules](derivative/derivative_rules.html)
-2. [Continuity and Differentiability](derivative/continuous_differentiable.html)
-3. [Elasticity and Derivative](derivative/derivative_elasticity.html)
-4. [First Order Taylor Approximation](derivative/derivative_MPL_first_order_taylor_approximation.html)
-5. [Higher Order Derivatives--Cobb Douglas Production](derivative/second_derivative.html)
+1. [Derivative Definition and Rules](https://fanwangecon.github.io/Math4Econ/derivative/derivative_rules.html): [m](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [mlx](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [pdf](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [html](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
+2. [Continuity and Differentiability](https://fanwangecon.github.io/Math4Econ/derivative/continuous_differentiable.html): [m](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [mlx](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [pdf](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [html](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
+3. [Elasticity and Derivative](https://fanwangecon.github.io/Math4Econ/derivative/derivative_elasticity.html): [m](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [mlx](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [pdf](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [html](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
+4. [First Order Taylor Approximation](https://fanwangecon.github.io/Math4Econ/derivative/derivative_MPL_first_order_taylor_approximation.html): [m](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [mlx](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [pdf](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [html](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
+5. [Higher Order Derivatives--Cobb Douglas Production](https://fanwangecon.github.io/Math4Econ/derivative/second_derivative.html): [m](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [mlx](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [pdf](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [html](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
 
 ## 1.3 Application--Production Function
 
-1. [Marginal Product Discrete Units of Workers](derivative_application/derivative_MPL_discrete_workers.html)
-2. [Derivative of Cobb-Douglas Production Function](derivative_application/derivative_cobb_douglas.html)
-3. [Derivative Approximation and Cobb-Douglas Function](derivative_application/derivative_hslope_cobb_douglas.html)
+1. [Marginal Product Discrete Units of Workers](https://fanwangecon.github.io/Math4Econ/derivative_application/derivative_MPL_discrete_workers.html): [m](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [mlx](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [pdf](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [html](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
+2. [Derivative of Cobb-Douglas Production Function](https://fanwangecon.github.io/Math4Econ/derivative_application/derivative_cobb_douglas.html): [m](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [mlx](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [pdf](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [html](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
+3. [Derivative Approximation and Cobb-Douglas Function](https://fanwangecon.github.io/Math4Econ/derivative_application/derivative_hslope_cobb_douglas.html): [m](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [mlx](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [pdf](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [html](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
 
 ## 1.4 Application--Demand and Supply
 
-1. [Two Periods Saving/Borrowing without Shocks](https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html):  [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_save_households.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_save_households.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html)
+1. [Two Periods Saving/Borrowing without Shocks](https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html): [m](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_save_households_m.m) \| [mlx](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_save_households.mlx) \| [pdf](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_save_households.pdf) \| [html](https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html)
     + Endowments today and tomorrow, borrowing and savings, no shocks
     + Grid based or analytical solution
-    + Supply curve of assets
+    + Supply curve of savings (asset)
     + **core**: *max, diff, solve; plot, scatter*
-2. [Optimal Borrowing Choice Firm Maximization](derivative_application/K_borrow_firm.html)
+2. [Optimal Borrowing Choice Firm Maximization](https://fanwangecon.github.io/Math4Econ/derivative_application/K_borrow_firm.html): [m](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_borrow_firm_m.m) \|[mlx](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_borrow_firm.mlx) \| [pdf](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_borrow_firm.pdf) \| [html](https://fanwangecon.github.io/Math4Econ/derivative_application/K_borrow_firm.html)
+    + Profit maximization choosing capital, with labor fixed
+    + Grid based or analytical solution
+    + Demand curve of capital (asset)
+    + **core**: *max, diff, solve; plot, scatter*
 
 ## 1.5 Application--Risky Asset
 
