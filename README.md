@@ -11,12 +11,28 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
 
 ## 1.1 Basics
 
-1. [Real Number and intervals](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html): [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
-2. [What is a Function?](https://fanwangecon.github.io/Math4Econ/calconevar/whatisfunction.html): [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
-3. [Function Notations](https://fanwangecon.github.io/Math4Econ/calconevar/funcnotations.html): [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
-4. [Interval Notations and Examples](https://fanwangecon.github.io/Math4Econ/calconevar/interval.html): [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
-5. [Monomial and Polynomial](https://fanwangecon.github.io/Math4Econ/calconevar/polynomial.html): [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
-6. [Local and Global Maximum](https://fanwangecon.github.io/Math4Econ/calconevar/localglobal.html): [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
+1. [Real Number and intervals](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html):
+    - [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
+    - definition and draw a line
+    - **m**: *linspace, line, set(gca, yaxis off), pbaspect*
+2. [What is a Function?](https://fanwangecon.github.io/Math4Econ/calconevar/whatisfunction.html):
+    - [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/whatisfunction_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/whatisfunction.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/whatisfunction.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/calconevar/whatisfunction.html)
+    - domain, argument, do-domain, image/value, range
+    - **m**: *sin, plot, circle  plot*    
+3. [Function Notations](https://fanwangecon.github.io/Math4Econ/calconevar/funcnotations.html):
+    - [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/funcnotations_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/funcnotations.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/funcnotations.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/calconevar/funcnotations.html)
+    - consistent function naming
+4. [Interval Notations and Examples](https://fanwangecon.github.io/Math4Econ/calconevar/interval.html):
+    - [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/interval_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/interval.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/interval.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/calconevar/interval.html)
+    - closed, open intervals
+5. [Monomial and Polynomial](https://fanwangecon.github.io/Math4Econ/calconevar/polynomial.html):
+    - [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/polynomial_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/polynomial.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/polynomial.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/calconevar/polynomial.html)
+    - monomial, polynomial, degree of polynomial
+    - **m**: *syms x, f(x) = a*x, fplot(@(x) f(x,a), [x_low, x_high])*    
+6. [Local and Global Maximum](https://fanwangecon.github.io/Math4Econ/calconevar/localglobal.html):
+    - [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/localglobal_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/localglobal.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/localglobal.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/calconevar/localglobal.html)
+    - local and global maximum,
+    - **m**: *syms, f(x) = x - a*x^2, double(solve(diff(f,x),x)), fplot(f,[x_low, x_high])*
 
 ## 1.2 Derivatives
 
@@ -38,12 +54,12 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
     + Endowments today and tomorrow, borrowing and savings, no shocks
     + Grid based or analytical solution
     + Supply curve of savings (asset)
-    + **core**: *max, diff, solve; plot, scatter*
+    + **m**: *max, diff, solve; plot, scatter*
 2. [Optimal Borrowing Choice Firm Maximization](https://fanwangecon.github.io/Math4Econ/derivative_application/K_borrow_firm.html): [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_borrow_firm_m.m) \|[**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_borrow_firm.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_borrow_firm.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/derivative_application/K_borrow_firm.html)
     + Profit maximization choosing capital, with labor fixed
     + Grid based or analytical solution
     + Demand curve of capital (asset)
-    + **core**: *max, diff, solve; plot, scatter*
+    + **m**: *max, diff, solve; plot, scatter*
 
 ## 1.5 Application--Risky Asset
 
