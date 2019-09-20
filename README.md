@@ -51,6 +51,7 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
 4. [First Order Taylor Approximation](https://fanwangecon.github.io/Math4Econ/derivative/derivative_MPL_first_order_taylor_approximation.html):
     - [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative/derivative_MPL_first_order_taylor_approximation_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative/derivative_MPL_first_order_taylor_approximation.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative/derivative_MPL_first_order_taylor_approximation.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/derivative/derivative_MPL_first_order_taylor_approximation.html)
     - differential: change along the tangent line to approximate change in function value
+    - first order taylor approximation and the limiting definition of derivative
     - differential approximating marginal productivity of labor
     - **m**: *syms L, f(L) = L^a, sub(f, 1)*
 5. [Higher Order Derivatives--Cobb Douglas Production](https://fanwangecon.github.io/Math4Econ/derivative/second_derivative.html):
@@ -61,22 +62,33 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
 
 ## 1.3 Application--Production Function
 
-1. [Marginal Product Discrete Units of Workers](https://fanwangecon.github.io/Math4Econ/derivative_application/derivative_MPL_discrete_workers.html): [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
-2. [Derivative of Cobb-Douglas Production Function](https://fanwangecon.github.io/Math4Econ/derivative_application/derivative_cobb_douglas.html): [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
-3. [Derivative Approximation and Cobb-Douglas Function](https://fanwangecon.github.io/Math4Econ/derivative_application/derivative_hslope_cobb_douglas.html): [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/realnumber.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/calconevar/realnumber.html)
+1. [Marginal Product Discrete Units of Workers](https://fanwangecon.github.io/Math4Econ/derivative_application/derivative_MPL_discrete_workers.html):
+    - [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/derivative_MPL_discrete_workers_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/derivative_MPL_discrete_workers.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/derivative_MPL_discrete_workers.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/derivative_application/derivative_MPL_discrete_workers.html)
+    - marginal product for each additional units of workers given different levels of capital    
+    - **m**: *plot, scatter, legend(['k=',num2str(K1)], ['k=',num2str(K1)])*
+2. [Derivative of Cobb-Douglas Production Function](https://fanwangecon.github.io/Math4Econ/derivative_application/derivative_cobb_douglas.html):
+    - [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/derivative_cobb_douglas_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/derivative_cobb_douglas.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/derivative_cobb_douglas.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/derivative_application/derivative_cobb_douglas.html)
+    - marginal product of labor given different levels of capitals
+    - **m**: *syms, diff, fplot*
+3. [Derivative Approximation and Cobb-Douglas Function](https://fanwangecon.github.io/Math4Econ/derivative_application/derivative_hslope_cobb_douglas.html):
+    - [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/derivative_hslope_cobb_douglas_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/derivative_hslope_cobb_douglas.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/derivative_hslope_cobb_douglas.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/derivative_application/derivative_hslope_cobb_douglas.html)
+    - marginal product and tangent line
+    - **m**: *syms, diff, fplot, lengend{}*
 
 ## 1.4 Application--Demand and Supply
 
-1. [Two Periods Saving/Borrowing without Shocks](https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html): [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_save_households_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_save_households.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_save_households.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html)
-    + Endowments today and tomorrow, borrowing and savings, no shocks
-    + Grid based or analytical solution
-    + Supply curve of savings (asset)
-    + **m**: *max, diff, solve; plot, scatter*
-2. [Optimal Borrowing Choice Firm Maximization](https://fanwangecon.github.io/Math4Econ/derivative_application/K_borrow_firm.html): [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_borrow_firm_m.m) \|[**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_borrow_firm.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_borrow_firm.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/derivative_application/K_borrow_firm.html)
-    + Profit maximization choosing capital, with labor fixed
-    + Grid based or analytical solution
-    + Demand curve of capital (asset)
-    + **m**: *max, diff, solve; plot, scatter*
+1. [Two Periods Saving/Borrowing without Shocks](https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html):
+    - [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_save_households_m.m) \| [**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_save_households.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_save_households.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html)
+    - Endowments today and tomorrow, borrowing and savings, no shocks
+    - Grid based or analytical solution
+    - Supply curve of savings (asset)
+    - **m**: *max, diff, solve; plot, scatter*
+2. [Optimal Borrowing Choice Firm Maximization](https://fanwangecon.github.io/Math4Econ/derivative_application/K_borrow_firm.html):
+    - [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_borrow_firm_m.m) \|[**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_borrow_firm.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_borrow_firm.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/derivative_application/K_borrow_firm.html)
+    - Profit maximization choosing capital, with labor fixed
+    - Grid based or analytical solution
+    - Demand curve of capital (asset)
+    - **m**: *max, diff, solve; plot, scatter*
 
 ## 1.5 Application--Risky Asset
 
