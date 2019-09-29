@@ -103,9 +103,20 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
 
 ## 3.1 Basics
 
-1. [Laws of Matrix Algebra](matrix_basics/matlab_define_matrix.html)
-2. [Matrix Addition and Multiplication](matrix_basics/matrix_algebra_rules.html)
-3. [Creating Matrixes in Matlab](matrix_basics/matrix_matlab.html)
+1. [Laws of Matrix Algebra](https://fanwangecon.github.io/Math4Econ/matrix_basics/matlab_define_matrix.html):
+    - [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_basics/matlab_define_matrix_m.m) \|[**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_basics/matlab_define_matrix.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_basics/matlab_define_matrix.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/matrix_basics/matlab_define_matrix.html)
+    - Scalar: Associative + Communtative + Distributive Law Laws
+    - Matrix: all apply except A times B != B times A
+    - **m**: *transpose*
+2. [Matrix Addition and Multiplication](https://fanwangecon.github.io/Math4Econ/matrix_basics/matrix_algebra_rules.html):
+    - [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_basics/matrix_algebra_rules_m.m) \|[**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_basics/matrix_algebra_rules.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_basics/matrix_algebra_rules.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/matrix_basics/matrix_algebra_rules.html)
+    - scalar and matrix
+    - matrix dimensions
+    - **m**: *dot product*
+3. [Creating Matrixes in Matlab](https://fanwangecon.github.io/Math4Econ/matrix_basics/matrix_matlab.html):
+    - [**M**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_basics/matrix_matlab_m.m) \|[**MLX**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_basics/matrix_matlab.mlx) \| [**PDF**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_basics/matrix_matlab.pdf) \| [**HTML**](https://fanwangecon.github.io/Math4Econ/matrix_basics/matrix_matlab.html)
+    - vectors, matrixes and multiple matrixes
+    - **m**: *ceil, eye, tril, triu, rand(N,M,Q)*
 
 ## 3.2 Matrix System of Equations
 
