@@ -3,6 +3,8 @@
 
 This is a work-in-progress [course website](https://fanwangecon.github.io/Math4Econ/) for Mathematics for Economists, produced by [Fan](https://fanwangecon.github.io/). Course covers a limited subset of topics from *Mathematics for Economists* (Simon and Blume 1994), and uses various definitions from the book. Applications focus on two period borrowing and savings problems. Matlab's symbolic toolbox is used throughout.
 
+From [Fan](https://fanwangecon.github.io/)'s other repositories: For dynamic borrowing and savings problems, see [Dynamic Asset Repository](https://fanwangecon.github.io/CodeDynaAsset/); For matlab programming guides, see [Project Reusable Matlab Code](https://fanwangecon.github.io/M4Econ/); For data analysis, see [R Panel Data Code](https://fanwangecon.github.io/R4Econ/) and [Stata Example Code](https://fanwangecon.github.io/Stata4Econ/). See [here](https://github.com/FanWangEcon) for all of [Fan](https://fanwangecon.github.io/)'s public repositories.
+
 Materials are written in matlab livescript files and shown as HTML files. To obtain matlab codes, see [here](docs/gitsetup.md) and [here](docs/gitsetupown.md) for github set up. For HTML files, click on the links below.
 
 Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
@@ -121,7 +123,7 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
     - two equations and two unknowns
     - elementary row operations and row echelon form
 
-## 3.3 Applications
+## 3.3 Applications--Firm's Problem
 1. [Firm Maximization Problem with Capital and Labor](https://fanwangecon.github.io/Math4Econ/matrix_application/KL_borrowhire_firm.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/KL_borrowhire_firm_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/KL_borrowhire_firm.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/KL_borrowhire_firm.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/matrix_application/KL_borrowhire_firm.html)
     - first order conditions Cobb-Douglas production function with Capital and Labor
     - log linearize first order conditions
