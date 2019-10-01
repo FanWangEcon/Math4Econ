@@ -64,14 +64,14 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
 ## 1.4 Application--Demand and Supply
 
 1. [Household's Savings Problem](https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_save_households_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_save_households.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_save_households.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html)
-    - Endowments today and tomorrow, borrowing and savings, no shocks
-    - Grid based or analytical solution
-    - Supply curve of savings (asset)
+    - edowments today and tomorrow, borrowing and savings, no shocks
+    - grid based or analytical solution
+    - supply curve of savings (asset)
     - **m**: *max, diff, solve; plot, scatter*
 2. [Firm's Borrowing Problem](https://fanwangecon.github.io/Math4Econ/derivative_application/K_borrow_firm.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_borrow_firm_m.m) \|[**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_borrow_firm.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_borrow_firm.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/derivative_application/K_borrow_firm.html)
-    - Profit maximization choosing capital, with labor fixed
-    - Grid based or analytical solution
-    - Demand curve of capital (asset)
+    - profit maximization choosing capital, with labor fixed
+    - grid based or analytical solution
+    - demand curve of capital (asset)
     - **m**: *max, diff, solve; plot, scatter*
 
 ## 1.5 Application--Risky Asset
@@ -80,8 +80,16 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
 
 # 2. Exponential and Log
 
-1. [Exponential Function](explog/exponential.html)
-2. [Exponential Function and Log Function](explog/exolog.html)
+1. [Exponential and Infinitely Compounding Interest Rate](https://fanwangecon.github.io/Math4Econ/explog/exponential.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/explog/exponential_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/explog/exponential.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/explog/exponential.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/explog/exponential.html)
+    - exponential function and rules: a^b
+    - base e exponential, e = 2.71828
+    - infinitely compounding interest rate (continuous time)
+    - e^r: borrow 1 dollar, given r, meaning r percent interest, e^r is how much to pay back in principle + interests given infinite compounding.
+    - **m**: *exp, fplot, double(subs())*
+2. [Exponential Function and Log Function](https://fanwangecon.github.io/Math4Econ/explog/exolog.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/explog/exolog_m.m) \|[**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/explog/exolog.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/explog/exolog.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/explog/exolog.html)
+    - log and natural log (log in matlab base e, log in google base 10)
+    - log rules, and why: log(x*y) = log(x) + log(y); log(x^a) = a*log(x)
+    - log difference and small rates of change
 
 # 3. Matrix
 
@@ -101,20 +109,42 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
 
 ## 3.2 Matrix System of Equations
 
-1. [System of Linear Equations](matrix_system_of_equations/matrix_linear_equations.html)
-2. [Solving for Two Equations and Two Unknowns](matrix_system_of_equations/matrix_linear_system_2.html)
-3. [System of Linear Equations, Row Echelon Form](matrix_system_of_equations/matrix_row_echelon_form.html)
+1. [System of Linear Equations](https://fanwangecon.github.io/Math4Econ/matrix_system_of_equations/matrix_linear_equations.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_system_of_equations/matrix_linear_equations_m.m) \|[**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_system_of_equations/matrix_linear_equations.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_system_of_equations/matrix_linear_equations.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/matrix_system_of_equations/matrix_linear_equations.html)
+    - one or multiple linear equations
+    - coefficient matrix and augmented form
+2. [Solving for Two Equations and Two Unknowns](https://fanwangecon.github.io/Math4Econ/matrix_system_of_equations/matrix_linear_system_2.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_system_of_equations/matrix_linear_system_2_m.m) \|[**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_system_of_equations/matrix_linear_system_2.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_system_of_equations/matrix_linear_system_2.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/matrix_system_of_equations/matrix_linear_system_2.html)
+    - two equations and two unknowns matrix form
+    - graphical intersection of two lines
+    - using linear solver *linsolve*
+    - **m**: *linsolve, double(solve(y_1 - y_2 == 0))*
+3. [System of Linear Equations, Row Echelon Form](https://fanwangecon.github.io/Math4Econ/matrix_system_of_equations/matrix_row_echelon_form.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_system_of_equations/matrix_row_echelon_form_m.m) \|[**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_system_of_equations/matrix_row_echelon_form.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_system_of_equations/matrix_row_echelon_form.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/matrix_system_of_equations/matrix_row_echelon_form.html)
+    - two equations and two unknowns
+    - elementary row operations and row echelon form
 
-## 3.3 Application--Firm's Problem
-1. [Firm Maximization Problem with Capital and Labor](matrix_application/KL_borrowhire_firm.html)
+## 3.3 Applications
+1. [Firm Maximization Problem with Capital and Labor](https://fanwangecon.github.io/Math4Econ/matrix_application/KL_borrowhire_firm.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/KL_borrowhire_firm_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/KL_borrowhire_firm.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/KL_borrowhire_firm.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/matrix_application/KL_borrowhire_firm.html)
+    - first order conditions Cobb-Douglas production function with Capital and Labor
+    - log linearize first order conditions
+    - matrix form and linsolve Cobb-Douglas production function
+    - own and cross price elasticities
+    - **m**: *linsolve, simplify(exp(linsolve())), meshgrid mesh, contourf, clabel, zlabel*
 
 ## 3.4 Application--Household's Problem
-2. [Household Maximization with Two Goods and Budget](matrix_application/twogoods.html)
+2. [Household Maximization with Two Goods and Budget](https://fanwangecon.github.io/Math4Econ/matrix_application/twogoods.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/twogoods_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/twogoods.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/twogoods.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/matrix_application/twogoods.html)
+    - preference over two good, cobb douglas utility
+    - indifference curves and budget set
+    - **m**: *linspace, meshgrid, mesh, contourf, clabel, colormap, zlabel, plot*
 
 ## 3.5 Application--Approximate Demand and Supply
-1. [First Order Taylor Approximation of Demand and Supply Curves](matrix_application/demand_supply_taylor_approximate.html)
-1. [First Order Taylor Approximation of Demand and Supply Curves for Capital](matrix_application/demand_supply_taylor_approximate_capital.html)
-
+1. [First Order Taylor Approximation of Demand and Supply Curves](https://fanwangecon.github.io/Math4Econ/matrix_application/demand_supply_taylor_approximate.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/demand_supply_taylor_approximate_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/demand_supply_taylor_approximate.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/demand_supply_taylor_approximate.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/matrix_application/demand_supply_taylor_approximate.html)
+    - simplified nonlinear form of demand and supply as functions or the interest rate
+    - first order Taylor linear approximation of nonlinear demand and supply
+    - **m**: *diff, subs(S,r,1), linsolve*
+2. [Capital Demand and Supply Equilibrium Analysis](https://fanwangecon.github.io/Math4Econ/matrix_application/demand_supply_taylor_approximate_capital.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/demand_supply_taylor_approximate_capital_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/demand_supply_taylor_approximate_capital.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/demand_supply_taylor_approximate_capital.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/matrix_application/demand_supply_taylor_approximate_capital.html)
+    - exact solutions for (approximated) equilibrium interest rate and asset supply/demand given linearized demand and supply equations
+    - graphical illustration of exact equilibrium and linear approximated equilibrium
+    - analyze how productivity, elasticity, wealth, discount factor impact equilibrium prices and quantity given exact solutions to linear approximation
+    - **m**: *linspace, subs(diff(S,r), r, r0), subs(D, {Z,beta}, {Z_num, beta_num}); fplot, plot, line.Color, line.LineStyle*
 
 # 4. Constrained Optimization
 

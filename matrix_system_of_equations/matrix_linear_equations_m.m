@@ -1,6 +1,15 @@
 %% System of Linear Equations
 % *Back to *<http://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Economist Table of Content*>
+% 
+% _See also_: <https://fanwangecon.github.io/Math4Econ/matrix_system_of_equations/matrix_linear_equations.html 
+% System of Linear Equations>
+% 
+% _See also_: <https://fanwangecon.github.io/Math4Econ/matrix_system_of_equations/matrix_linear_system_2.html 
+% Solving for Two Equations and Two Unknowns>
+% 
+% _See also_: <https://fanwangecon.github.io/Math4Econ/matrix_system_of_equations/matrix_row_echelon_form.html 
+% System of Linear Equations, Row Echelon Form>
 %% Linear Equation
 % If we have an equation: $a \cdot x_1 + b \cdot x_2 + c \cdot x_3 = o$, we 
 % can write this in matrix form:
