@@ -51,7 +51,7 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
     - Convex and Concave functions
     - **m**: *syms L, f(L) = L^a, diff(diff(f, L),L); fplot, title({'title one' 'subtitle'}) + ylabel({'ylab abc' 'ylab efg'}) + legend{['line a'],['lineb'],, 'Location','NW'}*
 
-## 1.3 Application--Production Function
+## 1.3 Applications--Production Function
 
 1. [Marginal Product of Labor](https://fanwangecon.github.io/Math4Econ/derivative_application/derivative_MPL_discrete_workers.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/derivative_MPL_discrete_workers_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/derivative_MPL_discrete_workers.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/derivative_MPL_discrete_workers.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/derivative_application/derivative_MPL_discrete_workers.html)
     - marginal product for each additional units of workers given different levels of capital    
@@ -63,7 +63,7 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
     - marginal product and tangent line
     - **m**: *syms, diff, fplot, lengend{}*
 
-## 1.4 Application--Demand and Supply
+## 1.4 Applications--Demand and Supply
 
 1. [Household's Savings Problem](https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_save_households_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_save_households.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/K_save_households.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html)
     - edowments today and tomorrow, borrowing and savings, no shocks
@@ -131,13 +131,13 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
     - own and cross price elasticities
     - **m**: *linsolve, simplify(exp(linsolve())), meshgrid mesh, contourf, clabel, zlabel*
 
-## 3.4 Application--Household's Problem
+## 3.4 Applications--Household's Problem
 2. [Household Maximization with Two Goods and Budget](https://fanwangecon.github.io/Math4Econ/matrix_application/twogoods.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/twogoods_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/twogoods.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/twogoods.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/matrix_application/twogoods.html)
     - preference over two good, cobb douglas utility
     - indifference curves and budget set
     - **m**: *linspace, meshgrid, mesh, contourf, clabel, colormap, zlabel, plot*
 
-## 3.5 Application--Approximate Demand and Supply
+## 3.5 Applications--Approximate Demand and Supply
 1. [First Order Taylor Approximation of Demand and Supply Curves](https://fanwangecon.github.io/Math4Econ/matrix_application/demand_supply_taylor_approximate.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/demand_supply_taylor_approximate_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/demand_supply_taylor_approximate.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_application/demand_supply_taylor_approximate.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/matrix_application/demand_supply_taylor_approximate.html)
     - simplified nonlinear form of demand and supply as functions or the interest rate
     - first order Taylor linear approximation of nonlinear demand and supply
