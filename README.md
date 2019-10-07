@@ -8,7 +8,7 @@ Materials are written in matlab livescript files and shown as HTML files. To obt
 
 Files are from the [Math4Econ](https://github.com/FanWangEcon/Math4Econ) repository. Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
 
-[![](https://img.shields.io/github/last-commit/fanwangecon/Math4Econ)](https://github.com/FanWangEcon/Math4Econ/commits/master) [![](https://img.shields.io/github/commit-activity/y/fanwangecon/Math4Econ)](https://github.com/FanWangEcon/Math4Econ/graphs/commit-activity) [![](https://img.shields.io/github/issues/fanwangecon/Math4Econ)](https://github.com/FanWangEcon/Math4Econ/issues) [![](https://img.shields.io/github/issues-pr/fanwangecon/Math4Econ)](https://github.com/FanWangEcon/Math4Econ/pulls)
+[![](https://img.shields.io/github/last-commit/fanwangecon/Math4Econ)](https://github.com/FanWangEcon/Math4Econ/commits/master) [![](https://img.shields.io/github/commit-activity/m/fanwangecon/Math4Econ)](https://github.com/FanWangEcon/Math4Econ/graphs/commit-activity) [![](https://img.shields.io/github/issues/fanwangecon/Math4Econ)](https://github.com/FanWangEcon/Math4Econ/issues) [![](https://img.shields.io/github/issues-pr/fanwangecon/Math4Econ)](https://github.com/FanWangEcon/Math4Econ/pulls)
 
 # 1. Basic Calculus and Applications
 
