@@ -7,7 +7,7 @@ From [Fan](https://fanwangecon.github.io/)'s other repositories: For dynamic bor
 
 Materials are written in matlab livescript files and shown as HTML files. To obtain matlab codes, see [here](docs/gitsetup.md) and [here](docs/gitsetupown.md) for github set up. For HTML files, click on the links below.
 
-Files are from the [Math4Econ](https://github.com/FanWangEcon/Math4Econ) [![HitCount](http://hits.dwyl.io/fanwangecon/Math4Econ.svg)](http://hits.dwyl.io/fanwangecon/Math4Econ) repository. Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
+Files are from the [Math4Econ](https://github.com/FanWangEcon/Math4Econ) repository. Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
 
 # 1. Basic Calculus and Applications
 
@@ -165,3 +165,8 @@ Files are from the [Math4Econ](https://github.com/FanWangEcon/Math4Econ) [![HitC
 ## 4.4 Equilibrium and Government Policy
 1. [Equilibrium Interest Rate](equilibrium/equilibrium_constrainedborrow.html)
 2. [Equilibrium Interest Rate and Wage](equilibrium/equilibrium_constrainedborrow_labor.html)
+
+----
+Files are from [Fan](https://fanwangecon.github.io)'s [Math4Econ](https://github.com/FanWangEcon/Math4Econ) repository. Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
+
+[![HitCount](http://hits.dwyl.io/fanwangecon/Math4Econ.svg)](http://hits.dwyl.io/fanwangecon/Math4Econ)
