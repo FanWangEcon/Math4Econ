@@ -9,7 +9,7 @@
 % Assume that $K$ is a number $K=K_0$, We can, following the chain rule, take 
 % derivative of $Y$ with respect to $L$:
 % 
-% $$\frac{dY(K_0,L)}{dL} = (1-\alpha) \cdot K^{\alpha} \cdot L^{-\alpha}$$
+% $$\frac{dY(K_0,L)}{dL} = (1-\alpha) \cdot K_0^{\alpha} \cdot L^{-\alpha}$$
 % 
 % Matlab symbolic toolbox gives us the same answer:
 
@@ -67,6 +67,5 @@ legend(['k=',num2str(k0a)],...
 title('Marginal Product of Labor with different Capital Levels, alpha=0.5')
 ylabel({'Marginal Product of additional labor'})
 xlabel('Current level of Labor')
-
 %% 
 %
