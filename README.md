@@ -168,7 +168,7 @@ Files are from the [Math4Econ](https://github.com/FanWangEcon/Math4Econ) reposit
 2. [Equilibrium Interest Rate and Wage](equilibrium/equilibrium_constrainedborrow_labor.html)
 
 ----
-Files are from [Fan](https://fanwangecon.github.io)'s [Math4Econ](https://github.com/FanWangEcon/Math4Econ) repository. Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
+Files are from [Fan](https://fanwangecon.github.io)'s [Math4Econ](https://github.com/FanWangEcon/Math4Econ) repository. Please contact [![](https://img.shields.io/github/followers/fanwangecon?label=FanWangEcon&style=social)](https://github.com/FanWangEcon) [![](https://img.shields.io/twitter/follow/fanwangecon?label=%20&style=social)](https://twitter.com/fanwangecon) for issues or problems.
 
 ![RepoSize](https://img.shields.io/github/repo-size/fanwangecon/Math4Econ)
 ![CodeSize](https://img.shields.io/github/languages/code-size/fanwangecon/Math4Econ)
