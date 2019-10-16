@@ -1,6 +1,7 @@
 %% Marginal Product Discrete Units of Workers
-% *Back to *<http://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
-% *Intro Math for Economist Table of Content*>
+% *back to *<https://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
+% *Intro Math for Econ*>*,  *<https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
+% or *<https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*>* Repositories*
 %% Marginal Product of Additional Workers (Discrete Workers)
 % Suppose we can not hire fractions of workers, but have to hire 1, 2, 3, etc.. 
 % What is the marginal product of each additional worker?

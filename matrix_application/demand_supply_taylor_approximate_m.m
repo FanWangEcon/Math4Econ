@@ -1,6 +1,7 @@
 %% Approximating Credit Demand and Supply Curves--First Order Taylor Linear Approximation
-% *Back to *<http://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
-% *Intro Math for Economist Table of Content*>
+% *back to *<https://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
+% *Intro Math for Econ*>*,  *<https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
+% or *<https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*>* Repositories*
 % 
 % We derived demand and supply for credit here: <https://fanwangecon.github.io/Math4Econ/derivative_application/K_borrow_firm.html 
 % Demand and Supply Derivation and Graphs>.

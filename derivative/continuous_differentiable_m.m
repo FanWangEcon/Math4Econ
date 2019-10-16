@@ -1,6 +1,7 @@
 %% Continuity and Differentiability
-% *Back to *<http://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
-% *Intro Math for Economist Table of Content*>
+% *back to *<https://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
+% *Intro Math for Econ*>*,  *<https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
+% or *<https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*>* Repositories*
 % 
 % In the real world, households and firms general consume and use discrete units 
 % of goods. Households can buy $N$ apples, and firms can hire $M$ numbers of workers. 

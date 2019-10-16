@@ -1,6 +1,7 @@
 %% *Firm's Profit Maximization Problem with Cobb Douglas Production Function (Decreasing Returns to Scale)*
-% *Back to *<http://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
-% *Intro Math for Economist Table of Content*>
+% *back to *<https://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
+% *Intro Math for Econ*>*,  *<https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
+% or *<https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*>* Repositories*
 % 
 % In the example here, we will solve a firm optimization problem using a system 
 % of linear equations (2 equations and 2 unknowns). The solution method is the 

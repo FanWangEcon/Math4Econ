@@ -1,6 +1,7 @@
 %% Firm's Profit Maximization Problem and Optimal Capital Choice
-% *Back to *<http://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
-% *Intro Math for Economist Table of Content*>
+% *back to *<https://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
+% *Intro Math for Econ*>*,  *<https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
+% or *<https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*>* Repositories*
 %% Model Components and Maximization Problem
 % Assume that the firm has fixed free labor, but can choose capital input. At 
 % the start of a period, a firm rents capital inputs and combines capital with 

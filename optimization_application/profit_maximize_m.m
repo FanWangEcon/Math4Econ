@@ -1,6 +1,7 @@
 %% *Firm's Profit Maximization and Cost Minimization Problems given Cobb Douglas Production Function*
-% <https://fanwangecon.github.io/Math4Econ/ *Back to Fan's Math for Economist 
-% Table of Content*>
+% *back to *<https://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
+% *Intro Math for Econ*>*,  *<https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
+% or *<https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*>* Repositories*
 % 
 % We have already solved the firm's maximization problem before given decreasing 
 % return to scale: <https://fanwangecon.github.io/Math4Econ/matrix_application/KL_borrowhire_firm.html 
