@@ -159,14 +159,13 @@ Files are from the [Math4Econ](https://github.com/FanWangEcon/Math4Econ) reposit
 ## 4.1 Firm's Problem
 
 1. [Constrained Profit Maximization and Cost Minimization](https://fanwangecon.github.io/Math4Econ/optimization_application/profit_maximize.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/optimization_application/profit_maximize_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/optimization_application/profit_maximize.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/optimization_application/profit_maximize.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/optimization_application/profit_maximize.html)
-    - profit maximization and cost minimization with Cobb Douglas production function given quantity constraint
+    - profit maximization and cost minimization with Cobb Douglas production function given quantity constraint constant or decreasing returns to scales
     - Lagrangian, Gradient and Hessian
-    - optimal capital and labor given quantity constraint and
+    - optimal capital and labor given quantity constraint for constant
     - **m**: *GRADIENT = subs(GRADIENT, {A,p,w,r,q,alpha,beta},{1,1,1,1,2,0.3,0.7});solu = solve(GRADIENT(1)==0, GRADIENT(2)==0, GRADIENT(3)==0, K, L, m, 'Real', true);*
 2. [Firm Marginal Cost and Profit given Constant Returns to Scale](https://fanwangecon.github.io/Math4Econ/optimization_application/profit_maximize_crs_profit.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/optimization_application/profit_maximize_crs_profit_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/optimization_application/profit_maximize_crs_profit.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/optimization_application/profit_maximize_crs_profit.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/optimization_application/profit_maximize_crs_profit.html)
-    - profit maximization over quantity with optimal input choices for quantity
-    - marginal costs and constant returns to scales
-    - perfect competition and zero profits
+    - profit maximization over outputs with optimal input choices as functions of outputs and prices
+    - marginal costs and constant returns to scales, perfect competition and zero profits
 
 ## 4.2 Household's Problem
 1. [Constrained Utility Maximization and Expenditure Minimization](optimization_application/household_c1_c2_constrained.html)
