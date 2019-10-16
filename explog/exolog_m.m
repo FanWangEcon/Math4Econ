@@ -1,6 +1,7 @@
-%% Exponential Function and Log Function
-% *Back to *<http://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
-% *Intro Math for Economist Table of Content*>
+%% Rules and Properties of Natural Logarithm, Exponential and Log Function
+% *back to *<https://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
+% *Intro Math for Econ*>*,  *<https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
+% or *<https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*>* Repositories*
 % 
 % We use log for log utility in our <https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html 
 % household maximization problems>, and we use exponential functions with other 
