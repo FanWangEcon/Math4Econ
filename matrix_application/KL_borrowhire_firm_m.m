@@ -1,9 +1,10 @@
-%% *Firm Maximization Problem with Capital and Labor (Decreasing Return to Scale)*
+%% *Firm Maximization Problem with Cobb Douglas Production Function (Decreasing Return to Scale)*
 % *Back to *<http://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
-% *Intro Math for Economist Table of Content*>In the example here, I will solve 
-% a firm optimization problem using a system of linear equations (2 equations 
-% and 2 unknowns). The solution method is the same for N inputs with Cobb-Douglas 
-% Production Function.
+% *Intro Math for Economist Table of Content*>
+% 
+% In the example here, we will solve a firm optimization problem using a system 
+% of linear equations (2 equations and 2 unknowns). The solution method is the 
+% same for N inputs with Cobb-Douglas Production Function.
 %% Firm and Capital and Labor
 % Assume that the firm can choose capital and labor inputs. At the start of 
 % a period, a firm rents capital inputs and combines capital with labor to produce. 

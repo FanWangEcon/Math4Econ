@@ -1,9 +1,13 @@
-%% Two Periods Saving/Borrowing without Shocks
+%% Two Period Borrowing and Savings Problem given Endowments
 % *Back to *<http://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Economist Table of Content*>
 %% Model Components and Maximization Problem
 % Suppose we have a household who will $z_2$ income tomorrow, and has $z_1$ 
-% dollar income income today. He needs to determine how much to save/borrow.
+% dollar income income today. He needs to determine how much to save/borrow. There 
+% is no uncertainty in this problem, we solve the problem with uncertainty again 
+% in: <https://fanwangecon.github.io/Math4Econ/nonlinear/RiskyAsset.html Protofolio 
+% Choice: Investments in Risky (stocks) and Safe (bank) Assets, and Financing 
+% Risky Investments with Bank Loans>.
 % 
 % We can write down the model where we maximize utility over choices $c_{today}, 
 % c_{tomorrow}$:

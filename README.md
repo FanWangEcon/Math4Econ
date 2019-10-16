@@ -75,6 +75,7 @@ Files are from the [Math4Econ](https://github.com/FanWangEcon/Math4Econ) reposit
     - profit maximization choosing capital, with labor fixed
     - grid based or analytical solution
     - demand curve of capital (asset)
+    - overlay demand and supply curves, visualize interest rate equilibrium
     - **m**: *max, diff, solve; plot, scatter*
 
 ## 1.5 Application--Risky Asset

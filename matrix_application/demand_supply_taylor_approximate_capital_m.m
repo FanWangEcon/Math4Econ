@@ -1,4 +1,4 @@
-%% First Order Taylor Approximation of Demand and Supply for Capital
+%% Equilibrium Interest Rate given Demand and Supply for Credit--First Order Taylor Linear Approximation
 % *Back to *<http://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Economist Table of Content*>
 %% Demand and Supply for Credit and $a, b, h, k$

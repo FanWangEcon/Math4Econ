@@ -1,4 +1,4 @@
-%% *Household Maximization with Two Goods and Budget*
+%% *Household Maximization with Cobb Douglas Utility*
 % *Back to *<http://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Economist Table of Content*>
 %% A Model with Two Goods

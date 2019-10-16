@@ -1,4 +1,4 @@
-%% First Order Taylor Approximation of Demand and Supply Curves
+%% Approximating Credit Demand and Supply Curves--First Order Taylor Linear Approximation
 % *Back to *<http://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Economist Table of Content*>
 % 
