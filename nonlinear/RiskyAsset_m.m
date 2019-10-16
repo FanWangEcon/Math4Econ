@@ -1,4 +1,4 @@
-%% *Investments in Risky and Safe Assets Different States of the World*
+%% *Investments in Risky and Safe Assets, States of the World*
 % <https://fanwangecon.github.io/Math4Econ/ *Back to Fan's Math for Economist 
 % Table of Content*>
 %% *Uncertainty*

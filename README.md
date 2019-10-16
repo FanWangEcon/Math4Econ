@@ -80,7 +80,11 @@ Files are from the [Math4Econ](https://github.com/FanWangEcon/Math4Econ) reposit
 
 ## 1.5 Application--Risky Asset
 
-1. [Risky Assets and Different States of the World](nonlinear/RiskyAsset.html)
+1. [Risky Assets and Different States of the World](https://fanwangecon.github.io/Math4Econ/nonlinear/RiskyAsset.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/nonlinear/RiskyAsset_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/nonlinear/RiskyAsset.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/nonlinear/RiskyAsset.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/nonlinear/RiskyAsset.html)
+    - bad and good states of the world
+    - safe savings and risky investments with uncertain returns
+    - borrowing to finance risky investments
+    - **m**: *solve(diff(U, D)==0, diff(U, B)==0, D, B)*
 
 # 2. Exponential and Log
 
@@ -153,8 +157,16 @@ Files are from the [Math4Econ](https://github.com/FanWangEcon/Math4Econ) reposit
 # 4. Constrained Optimization
 
 ## 4.1 Firm's Problem
-1. [Constrained Profit Maximization and Cost Minimization](optimization_application/profit_maximize.html)
-2. [Cost Minimization and Marginal Cost](optimization_application/profit_maximize_crs_profit.html)
+
+1. [Constrained Profit Maximization and Cost Minimization](https://fanwangecon.github.io/Math4Econ/optimization_application/profit_maximize.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/optimization_application/profit_maximize_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/optimization_application/profit_maximize.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/optimization_application/profit_maximize.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/optimization_application/profit_maximize.html)
+    - profit maximization and cost minimization with Cobb Douglas production function given quantity constraint
+    - Lagrangian, Gradient and Hessian
+    - optimal capital and labor given quantity constraint and
+    - **m**: *GRADIENT = subs(GRADIENT, {A,p,w,r,q,alpha,beta},{1,1,1,1,2,0.3,0.7});solu = solve(GRADIENT(1)==0, GRADIENT(2)==0, GRADIENT(3)==0, K, L, m, 'Real', true);*
+2. [Firm Marginal Cost and Profit given Constant Returns to Scale](https://fanwangecon.github.io/Math4Econ/optimization_application/profit_maximize_crs_profit.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/optimization_application/profit_maximize_crs_profit_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/optimization_application/profit_maximize_crs_profit.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/optimization_application/profit_maximize_crs_profit.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/optimization_application/profit_maximize_crs_profit.html)
+    - profit maximization over quantity with optimal input choices for quantity
+    - marginal costs and constant returns to scales
+    - perfect competition and zero profits
 
 ## 4.2 Household's Problem
 1. [Constrained Utility Maximization and Expenditure Minimization](optimization_application/household_c1_c2_constrained.html)
