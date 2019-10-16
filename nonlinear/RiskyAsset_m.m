@@ -130,9 +130,12 @@ solu_D = solu_DB.D
 solu_B = solu_DB.B
 %% Solving for Optimal Chocies--Numerical Parameter Values
 % If we have specific values for the parameters, we can find the exact optimal 
-% choices. In the exmaple below below, the optimal $B$ choice is negative, and 
-% $D$ choice is positive. This means the household is borrowing from Bank of America 
-% to finance investment in DOW. 
+% choices. In the example below below, we modify the problem slightly so that 
+% there could be positive return from stocks in the bad state of the world as 
+% well. Given our parameters, the optimal $B$ choice is negative, and $D$ choice 
+% is positive. This means the household is borrowing from Bank of America to finance 
+% investment in DOW. Change the parameters and see how the optimal portofolio 
+% of choices differ.
 % 
 % Is there an _upper bound_ to this borrowing? Yes, the household knows that 
 % DOW investment will have no return in the bad state of the world, but BOA loans 
@@ -149,11 +152,16 @@ solu_B = solu_DB.B
 
 % Let's only have D and B as symbols
 syms D B 
+% More endowment today than tomorrow, giving us incentives to save
 Z1 = 10;
 Z2 = 5;
 beta = 1;
 ph = 0.7;
 R = 1;
+% Modify the problem slightly so that there is positive return in the bad
+% state. Modify this value and see what happens. Set Rl=0 for the
+% previously stated problem where stocks have no returns in the bad state
+% of the world.
 Rh = 1.5;
 Rl = 0.5;
 % Retype what we had before:
