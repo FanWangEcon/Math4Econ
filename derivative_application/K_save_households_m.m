@@ -1,4 +1,4 @@
-%% Two Period Borrowing and Savings Problem given Endowments
+%% Household's Utility Maximization Problem and Two-Period Borrowing and Savings Problem given Endowments
 % *Back to *<http://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Economist Table of Content*>
 %% Model Components and Maximization Problem

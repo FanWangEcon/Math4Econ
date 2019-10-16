@@ -1,4 +1,4 @@
-%% Optimal Borrowing Choice Firm Maximization
+%% Firm's Profit Maximization Problem and Optimal Capital Choice
 % *Back to *<http://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Economist Table of Content*>
 %% Model Components and Maximization Problem

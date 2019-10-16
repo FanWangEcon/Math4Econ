@@ -1,4 +1,4 @@
-%% *Household Maximization with Cobb Douglas Utility*
+%% *Household's Utility Maximization Problem with Cobb Douglas Utility, Budget Sets and Indifference Curves*
 % *Back to *<http://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Economist Table of Content*>
 %% A Model with Two Goods

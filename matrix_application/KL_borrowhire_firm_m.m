@@ -1,4 +1,4 @@
-%% *Firm Maximization Problem with Cobb Douglas Production Function (Decreasing Return to Scale)*
+%% *Firm's Profit Maximization Problem with Cobb Douglas Production Function (Decreasing Returns to Scale)*
 % *Back to *<http://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Economist Table of Content*>
 % 

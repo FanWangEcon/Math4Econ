@@ -1,4 +1,4 @@
-%% *Firm Marginal Cost and Profit given Constant Returns to Scale*
+%% *Firm's Profit Maximization Problem over Outputs, Marginal Costs and Profits given Constant Returns to Scale*
 % <https://fanwangecon.github.io/Math4Econ/ *Back to Fan's Math for Economist 
 % Table of Content*>
 % 
