@@ -19,14 +19,14 @@ Files are from the [Math4Econ](https://github.com/FanWangEcon/Math4Econ) reposit
     - **m**: *linspace, line, set(gca, yaxis off), pbaspect*
 2. [What is a Function?](https://fanwangecon.github.io/Math4Econ/calconevar/whatisfunction.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/whatisfunction_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/whatisfunction.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/whatisfunction.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/calconevar/whatisfunction.html)
     - domain, argument, do-domain, image/value, range
-    - **m**: *sin, plot, circle  plot*    
+    - **m**: *sin, plot, circle  plot*
 3. [Function Notations](https://fanwangecon.github.io/Math4Econ/calconevar/funcnotations.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/funcnotations_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/funcnotations.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/funcnotations.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/calconevar/funcnotations.html)
     - consistent function naming
 4. [Interval Notations and Examples](https://fanwangecon.github.io/Math4Econ/calconevar/interval.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/interval_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/interval.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/interval.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/calconevar/interval.html)
     - closed, open intervals
 5. [Monomial and Polynomial](https://fanwangecon.github.io/Math4Econ/calconevar/polynomial.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/polynomial_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/polynomial.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/polynomial.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/calconevar/polynomial.html)
     - monomial, polynomial, degree of polynomial
-    - **m**: *syms x, f(x) = a + x, fplot(@(x) f(x,a), [x_low, x_high])*    
+    - **m**: *syms x, f(x) = a + x, fplot(@(x) f(x,a), [x_low, x_high])*
 6. [Local and Global Maximum](https://fanwangecon.github.io/Math4Econ/calconevar/localglobal.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/localglobal_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/localglobal.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/localglobal.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/calconevar/localglobal.html)
     - local and global maximum,
     - **m**: *syms x, f(x) = x - x^2, double(solve(diff(f,x),x)), fplot(f,[x_low, x_high])*
@@ -55,7 +55,7 @@ Files are from the [Math4Econ](https://github.com/FanWangEcon/Math4Econ) reposit
 ## 1.3 Applications--Production Function
 
 1. [Marginal Product of Labor](https://fanwangecon.github.io/Math4Econ/derivative_application/derivative_MPL_discrete_workers.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/derivative_MPL_discrete_workers_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/derivative_MPL_discrete_workers.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/derivative_MPL_discrete_workers.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/derivative_application/derivative_MPL_discrete_workers.html)
-    - marginal product for each additional units of workers given different levels of capital    
+    - marginal product for each additional units of workers given different levels of capital
     - **m**: *plot, scatter, legend(['k=',num2str(K1)], ['k=',num2str(K1)])*
 2. [Derivative of Cobb-Douglas Production Function](https://fanwangecon.github.io/Math4Econ/derivative_application/derivative_cobb_douglas.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/derivative_cobb_douglas_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/derivative_cobb_douglas.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/derivative_application/derivative_cobb_douglas.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/derivative_application/derivative_cobb_douglas.html)
     - marginal product of labor given different levels of capitals
@@ -168,8 +168,9 @@ Files are from the [Math4Econ](https://github.com/FanWangEcon/Math4Econ) reposit
     - marginal costs and constant returns to scales, perfect competition and zero profits
 
 ## 4.2 Household's Problem
-1. [Constrained Utility Maximization and Expenditure Minimization](optimization_application/household_c1_c2_constrained.html)
-2. [Income and Substitution Effects](optimization_application/household_c1_c2_constrained_r_change.html)
+1. [Constrained Utility Maximization with borrowing and savings](optimization_application/household_c1_c2_constrained.html)
+2. [Constrained Expenditure Minimization with borrowing and savings](optimization_application/household_c1_c2_constrained_expmin.html)
+3. [Income and Substitution Effects](optimization_application/household_c1_c2_constrained_r_change.html)
 
 ## 4.3 Inequality Constraints
 1. [Borrowing Constraint](optimization_application/household_borrow_constrained.html)
