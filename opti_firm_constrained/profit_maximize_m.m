@@ -94,7 +94,7 @@ is_negative = (xAx_save < 0);
 is_negative(1:5)
 % This counts how many are negative, should be 100, because this is a maximum
 sum(is_negative)
-%% Cost minimization with Constraint
+%% Cost Minimization with Constraint
 % We can actually re-write the problem as a cost minimization problem, because 
 % the first term in the objective function actually is always equal to $q$, so 
 % that does not change regardless of the choices we make, so we can take it out, 
@@ -109,7 +109,8 @@ sum(is_negative)
 % * $\mathcal{L} = \left\{ w \cdot L + r \cdot K \right\} - \mu \cdot (AK^\alpha 
 % L^\beta -q)$
 %% 
-% This problem looks a little different, will we get the same solution?
+% This problem looks a little different, will we get the same solution? Yes, 
+% we can call the solutions below as the solutions to the COO's problem.
 %% Cost Minimization Problem--Optimal Capital Labor Choices
 % Taking derivative of $L$, $K$ and $\mu$ with respect to the lagrangian, and 
 % setting first order conditions to $0$, we can derive the optimal constrained 

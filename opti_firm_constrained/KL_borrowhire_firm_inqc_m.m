@@ -1,7 +1,7 @@
 %% *Borrowing Constrained Firm's Profit Maximization Problem with Cobb Douglas Production Function*
-% *back to *<https://fanwangecon.github.io *Fan*>*'s <https://fanwangecon.github.io/Math4Econ/ 
-% * Intro Math for Econ*>,  <https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>, 
-% or <https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*> Repositories*
+% *back to *<https://fanwangecon.github.io *Fan*>*'s *<https://fanwangecon.github.io/Math4Econ/ 
+% *Intro Math for Econ*>*,  *<https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
+% or *<https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*>* Repositories*
 % 
 % In this problem, we solve the constrained firm's profit maximization problem 
 % with decreasing returns to scale. This continues from the unconstrained profit 
@@ -11,7 +11,7 @@
 %% Firm and Capital and Labor
 % The problem is the same as before, the profit maximization problem is:
 %% 
-% * $\max_{K, L} \left( p\cdot A\cdot K^{\alpha}\cdot L^{\beta}-r\cdot K-w\cdot  
+% * $\max_{K, L} \left( p\cdot A\cdot K^{\alpha}\cdot L^{\beta}-r\cdot K-w\cdot   
 % L \right)$
 %% 
 % The constraint is such that the firm can not borrow more than $\bar{K}$
@@ -23,11 +23,13 @@
 % $$\mathcal{L} = \left( p\cdot A\cdot K^{\alpha}\cdot L^{\beta}-r\cdot K-w\cdot 
 % L \right) - \lambda \left( K - \bar{K}\right)$$
 %% 
-% * $\frac{\partial\mathcal{L}}{\partial K}: \alpha\cdot p\cdot A\cdot K^{\alpha-1}\cdot  
+% * $\frac{\partial\mathcal{L}}{\partial K}: \alpha\cdot p\cdot A\cdot K^{\alpha-1}\cdot   
 % L^{\beta}-r = \lambda$
-% * $\frac{\partial\mathcal{L}}{\partial L}: \beta\cdot p\cdot A\cdot K^{\alpha}\cdot  
+% * $\frac{\partial\mathcal{L}}{\partial L}: \beta\cdot p\cdot A\cdot K^{\alpha}\cdot   
 % L^{\beta-1}-w = \lambda$
 % * $\lambda \left( K - \bar{K}\right) = 0$
+% * $\lambda \ge 0$
+% * $K < \bar{K}$
 %% 
 % If the optimal unconstrained capital choice is less than $\bar{K}$, then the 
 % inequality constraint can not impact optimal choices. The inequality constraint 
@@ -36,7 +38,7 @@
 % If the optimal constrained capital choice would have been greater than $\bar{K}$, 
 % then the constraint is binding, in the sense that the $\bar{K}$ bound will limit 
 % the firm from borrowing optimally. The firm will borrow as much as it can so 
-% that $K = \bar{K}$. Since $K-\bar{K}=0$, $\lambda \ge 0$. Note that the larger 
+% that $K = \bar{K}$. Since $K-\bar{K}=0$, $\lambda \ge 0$. Note that the larger  
 % $\lambda$ is, the greater the gap between marginal productivity and marginal 
 % cost. 
 %% Solving for Different Cases
@@ -59,8 +61,8 @@
 % labor fixing capital at the constraint. 
 %% Solution
 % With _con_ denoting constrained, _unc_ denoting unconstrained, we have: 
-%
-% $$K^{\text{con}} = \begin{cases} K^{\text{unc}} \text{, if } K^{\text{unc}} < \bar{K}\\ \bar{K} \text{, otherwise}\end{cases}$$
-%
-% $$L^{\text{con}} = \begin{cases} L^{\text{unc}} \text{, if } K^{\text{unc}} < \bar{K}\\ \arg\max_{L} \pi\left(\bar{K}, L; r, w\right) \text{, otherwise}\end{cases}$$
-%
+%% 
+% * $K^{\text{con}} = \begin{cases} K^{\text{unc}} \text{, if } K^{\text{unc}} 
+% < \bar{K}\\ \bar{K} \text{, otherwise}\end{cases}$
+% * $L^{\text{con}} = \begin{cases} L^{\text{unc}} \text{, if } K^{\text{unc}} 
+% < \bar{K}\\ \arg\max_{L} \Pi\left(\bar{K}, L; r, w\right) \text{, otherwise}\end{cases}$

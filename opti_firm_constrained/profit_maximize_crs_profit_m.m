@@ -7,10 +7,10 @@
 % return to scale: <https://fanwangecon.github.io/Math4Econ/matrix_application/KL_borrowhire_firm.html 
 % Firm Maximization Problem with Capital and Labor (Decreasing Return to Scale)>. 
 % We have also solved the constrained profit maximization or cost minimization 
-% problem as well: <https://fanwangecon.github.io/Math4Econ/optimization_application/profit_maximize.html 
+% problem as well: <https://fanwangecon.github.io/Math4Econ/opti_firm_constrained/profit_maximize.html 
 % Profit Maximize and Cost Minimize>.
 %% What is the Profit of the firm at Constrained Optimal Choices?
-% We derived the optimal constrained $K$ and $L$ equations here: <https://fanwangecon.github.io/Math4Econ/optimization_application/profit_maximize.html 
+% We derived the optimal constrained $K$ and $L$ equations here: <https://fanwangecon.github.io/Math4Econ/opti_firm_constrained/profit_maximize.html 
 % Profit Maximize and Cost Minimize>. The constrained profit equation given, $p,q,w,r$, 
 % is:
 %% 
@@ -22,9 +22,9 @@
 % $K$ and $L$ to maximize profit, we can think of the marginal cost and marginal 
 % profit of the firm as $q$ changes for the firm. If the firm can choose $q$, 
 % it will want to choose the $q$ that maximizes profit.
-%% 
-% * $\max_{q} p \cdot q - w \cdot L^*(w,r,q) - r \cdot K^*(w,r,q)$
-%% 
+% 
+% $$\max_{q} \left(p \cdot q - w \cdot L^*(w,r,q) - r \cdot K^*(w,r,q)\right)$$
+% 
 % The solution to this problem has to be the same as the problem we solved earlier 
 % where we directly chose $K$ and $L$, but now when formulated this way, we can 
 % think about the marginal cost and marginal revenue for the firm when $q$ changes:
@@ -59,7 +59,7 @@
 % It turns out that if $\alpha + \beta = 1$, that is, the firm has constant 
 % return to scale (CRS)--the elasticities of inputs sum up to 1--the cost minimizing 
 % optimal $K$ and $L$ choices are *linear *in terms of $q$. The equations we derived 
-% in <https://fanwangecon.github.io/Math4Econ/optimization_application/profit_maximize.html 
+% in <https://fanwangecon.github.io/Math4Econ/opti_firm_constrained/profit_maximize.html 
 % Profit Maximize and Cost Minimize>, become, with CRS:
 %% 
 % * $K^*(w,r,q) = q\cdot \left\{\frac{1}{A} \cdot \left[ \frac{\alpha}{1-\alpha}\cdot\frac{w}{r} 
@@ -99,7 +99,9 @@
 % Given perfect competition, firms do not have pricing power, and take $p$ as 
 % given, at equilibrium,$p = \text{MC}(w,r)$. With CRS and perfect competition, 
 % firms will not make a profit. The fact that marginal cost is constant and profit 
-% is linear in $q$ lead to this result. 
+% is linear in $q$ lead to this result. If there is monopolistic competition, 
+% there could be profits given CRS because firms would then be able to shift price 
+% as they shift quantity.
 % 
 % % 
 %
