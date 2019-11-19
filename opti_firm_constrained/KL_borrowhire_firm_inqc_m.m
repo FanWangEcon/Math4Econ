@@ -61,8 +61,9 @@
 % labor fixing capital at the constraint. 
 %% Solution
 % With _con_ denoting constrained, _unc_ denoting unconstrained, we have: 
-%% 
-% * $K^{\text{con}} = \begin{cases} K^{\text{unc}} \text{, if } K^{\text{unc}} 
-% < \bar{K}\\ \bar{K} \text{, otherwise}\end{cases}$
-% * $L^{\text{con}} = \begin{cases} L^{\text{unc}} \text{, if } K^{\text{unc}} 
-% < \bar{K}\\ \arg\max_{L} \Pi\left(\bar{K}, L; r, w\right) \text{, otherwise}\end{cases}$
+% 
+% $$K^{\text{con}} = \begin{cases} K^{\text{unc}} \text{, if } K^{\text{unc}} 
+% < \bar{K}\\ \bar{K} \text{, otherwise}\end{cases}$$
+% 
+% $$L^{\text{con}} = \begin{cases} L^{\text{unc}} \text{, if } K^{\text{unc}} 
+% < \bar{K}\\ \arg\max_{L} \Pi\left(\bar{K}, L; r, w\right) \text{, otherwise}\end{cases}$$

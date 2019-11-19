@@ -156,7 +156,7 @@ Files are from the [Math4Econ](https://github.com/FanWangEcon/Math4Econ) reposit
 
 # 4. Equality Constrained Optimization
 
-## 4.1 Firm's Equality Constrained Problems
+## 4.1 Firm's Problems
 
 1. [Constrained Profit Maximization and Cost Minimization](https://fanwangecon.github.io/Math4Econ/opti_firm_constrained/profit_maximize.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_firm_constrained/profit_maximize_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_firm_constrained/profit_maximize.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_firm_constrained/profit_maximize.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/opti_firm_constrained/profit_maximize.html)
     - COO's problem: profit maximization and cost minimization with Cobb Douglas production function given quantity constraint constant or decreasing returns to scales
@@ -167,14 +167,14 @@ Files are from the [Math4Econ](https://github.com/FanWangEcon/Math4Econ) reposit
     - CEO's problem: profit maximization over outputs given COO solutions
     - marginal costs and constant returns to scales, perfect competition and zero profits
 
-## 4.2 Household's Constrained Problems
+## 4.2 Household's Problems
 
-1. [Marshallian Constrained Utility Maximization with Borrowing and Savings](https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv/household_c1_c2_constrained.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_hh_constrained_brsv/household_c1_c2_constrained_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_hh_constrained_brsv/household_c1_c2_constrained.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_hh_constrained_brsv/household_c1_c2_constrained.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv/household_c1_c2_constrained.html)
+1. [Marshallian Constrained Utility Maximization](https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv/household_c1_c2_constrained.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_hh_constrained_brsv/household_c1_c2_constrained_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_hh_constrained_brsv/household_c1_c2_constrained.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_hh_constrained_brsv/household_c1_c2_constrained.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv/household_c1_c2_constrained.html)
     - budget constrained intertemporal utility maximization
     - Marshallian solutions, indirect utility
     - analytical solution, matlab symbolic solution, matlab fminunc numerical solutions
     - **m**: *diff, gradient; fmincon*
-2. [Hicksian Constrained Expenditure Minimization with Borrowing and Savings](https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv/household_c1_c2_constrained_expmin.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_hh_constrained_brsv/household_c1_c2_constrained_expmin_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_hh_constrained_brsv/household_c1_c2_constrained_expmin.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_hh_constrained_brsv/household_c1_c2_constrained_expmin.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv/household_c1_c2_constrained_expmin.html)
+2. [Hicksian Constrained Expenditure Minimization](https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv/household_c1_c2_constrained_expmin.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_hh_constrained_brsv/household_c1_c2_constrained_expmin_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_hh_constrained_brsv/household_c1_c2_constrained_expmin.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_hh_constrained_brsv/household_c1_c2_constrained_expmin.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv/household_c1_c2_constrained_expmin.html)
     - optimal expenditure minimization choice given indirect utility
     - Hicksian solutions (Dual Problem)
     - analytical solution, matlab symbolic solution
@@ -188,17 +188,26 @@ Files are from the [Math4Econ](https://github.com/FanWangEcon/Math4Econ) reposit
 
 # 5. Inequality Constrained Optimization
 
-## 5.1 Firm's Inequality Constrained Problems
+## 5.1 Firm's Problems
 
-1. [Firm Profit Maximization Problem with Borrowing Constraint](https://fanwangecon.github.io/Math4Econ/opti_firm_constrained/KL_borrowhire_firm_inqc_m.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_firm_constrained/KL_borrowhire_firm_inqc_m_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_firm_constrained/KL_borrowhire_firm_inqc_m.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_firm_constrained/KL_borrowhire_firm_inqc_m.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/opti_firm_constrained/KL_borrowhire_firm_inqc_m.html)
+1. [Firm Profit Maximization Problem with Borrowing Constraint](https://fanwangecon.github.io/Math4Econ/opti_firm_constrained/KL_borrowhire_firm_inqc.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_firm_constrained/KL_borrowhire_firm_inqc_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_firm_constrained/KL_borrowhire_firm_inqc.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_firm_constrained/KL_borrowhire_firm_inqc.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/opti_firm_constrained/KL_borrowhire_firm_inqc.html)
     - constrained on capital/borrowing, solve for cases
     - if constraint binds, re-optimize labor choice given capital bound
 
-## 5.2 Households' Inequality Constraints
-1. [Borrowing Constraint](optimization_application/household_borrow_constrained.html)
-2. [Constrained Household Borrowing/Saving and Labor Choice Problem](optimization_application/household_asset_labor_constrained.html)
+## 5.2 Households' Problems
 
-## 6 Equilibrium and Government Policy
+1. [Borrowing and Savings with Borrowing Constraint](https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv_inequality/household_borrow_constrained.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_hh_constrained_brsv_inequality/household_borrow_constrained_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_hh_constrained_brsv_inequality/household_borrow_constrained.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_hh_constrained_brsv_inequality/household_borrow_constrained.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv_inequality/household_borrow_constrained.html)
+    - unconstrained and constrained problem
+    - analytical solution and *fmincon* solution
+    - optimal borrowing/savings with varying endowments and interests rates
+2. [Labor and Borrowing/Savings Choices with Borrowing Constraint](https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv_inequality/household_asset_labor_constrained.html): [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_hh_constrained_brsv_inequality/household_asset_labor_constrained_m.m) \| [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_hh_constrained_brsv_inequality/household_asset_labor_constrained.mlx) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/opti_hh_constrained_brsv_inequality/household_asset_labor_constrained.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv_inequality/household_asset_labor_constrained.html)
+    - unconstrained work/leisure and borrow/savings problem
+    - constrained work/leisure and borrow/savings problem given borrow bound
+    - analytical and matlab symbolic solutions
+    - numerical solution with *fmincon*
+    - optimal work/leisure and borrowing/savings with varying preference
+
+## 6. Equilibrium and Government Policy
 
 1. [Equilibrium Interest Rate](equilibrium/equilibrium_constrainedborrow.html)
 2. [Equilibrium Interest Rate and Wage](equilibrium/equilibrium_constrainedborrow_labor.html)
