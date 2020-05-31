@@ -4,6 +4,8 @@
 
 _img/
 *.Rmd
+!index.Rmd
+!title.Rmd
 
 ###################
 # Images CSV

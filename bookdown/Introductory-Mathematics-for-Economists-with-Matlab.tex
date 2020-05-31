@@ -55,7 +55,7 @@
 % Allow footnotes in longtable head/foot
 \IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
 \makesavenoteenv{longtable}
-\usepackage{graphicx}
+\usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -118,11 +118,11 @@
 \chapter*{Preface}\label{preface}}
 \addcontentsline{toc}{chapter}{Preface}
 
-This is a work-in-progress \href{https://fanwangecon.github.io/Math4Econ/}{course website} for Mathematics for Economists, produced by \href{https://fanwangecon.github.io/}{Fan}. Course covers a limited subset of topics from \href{Mathematics\%20for\%20Economists}{Mathematics for Economists} \citep{simonblume1994}, and uses various definitions from the book. Applications focus on two period borrowing and savings problems. Matlab's symbolic toolbox is used throughout.
+This is a work-in-progress \href{https://fanwangecon.github.io/Math4Econ/}{course website} for Mathematics for Economists. Course covers a limited subset of topics from \href{Mathematics\%20for\%20Economists}{Mathematics for Economists} \citep{simonblume1994}, and uses various definitions from the book. Applications focus on two period borrowing and savings problems. Matlab's symbolic toolbox is used throughout.
 
 Materials are written in \href{https://www.mathworks.com/products/matlab.html}{matlab} \citep{matlab} livescript files and shown as HTML files. To obtain matlab codes, see \href{docs/gitsetup.md}{here} and \href{docs/gitsetupown.md}{here} for github set up. For HTML files, click on the links below.
 
-From \href{https://fanwangecon.github.io/}{Fan}'s other repositories: For dynamic borrowing and savings problems, see \href{https://fanwangecon.github.io/CodeDynaAsset/}{Dynamic Asset Repository}; For code examples, see also \href{https://fanwangecon.github.io/R4Econ/}{R Example Code}, \href{https://fanwangecon.github.io/M4Econ/}{Matlab Example Code}, and \href{https://fanwangecon.github.io/Stata4Econ/}{Stata Example Code}; For intro econ with Matlab, see \href{https://fanwangecon.github.io/Math4Econ/}{Intro Mathematics for Economists}. See \href{https://github.com/FanWangEcon}{here} for all of \href{https://fanwangecon.github.io/}{Fan}'s public repositories.
+From other repositories: For dynamic borrowing and savings problems, see \href{https://fanwangecon.github.io/CodeDynaAsset/}{Dynamic Asset Repository}; For code examples, see also \href{https://fanwangecon.github.io/R4Econ/}{R Example Code}, \href{https://fanwangecon.github.io/M4Econ/}{Matlab Example Code}, and \href{https://fanwangecon.github.io/Stata4Econ/}{Stata Example Code}; For intro stat with R, see \href{https://fanwangecon.github.io/Stat4Econ/}{Intro Statistics for Undergraduates}. See \href{https://github.com/FanWangEcon}{here} for all of \href{https://fanwangecon.github.io/}{Fan}'s public repositories.
 
 The site is built using \href{https://bookdown.org/}{Bookdown} \citep{R-bookdown}.
 
@@ -156,7 +156,7 @@ pbaspect([4 1 1])
 grid on
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/realnumber_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/realnumber_images/figure_0.png}
 
 \hypertarget{non-negative-numbers}{%
 \subsection{Non-negative numbers}\label{non-negative-numbers}}
@@ -198,9 +198,7 @@ pbaspect([4 1 1])
 grid on
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/realnumber_images/figure_1.png}
-
-\vspace{1em}
+\includegraphics[width=5.20833in,height=\textheight]{img/realnumber_images/figure_1.png}
 
 \hypertarget{interval-notations-and-examples}{%
 \section{Interval Notations and Examples}\label{interval-notations-and-examples}}
@@ -275,9 +273,7 @@ pbaspect([4 1 1])
 grid on
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/interval_images/figure_0.png}
-
-\vspace{1em}
+\includegraphics[width=5.20833in,height=\textheight]{img/interval_images/figure_0.png}
 
 \hypertarget{what-is-a-function}{%
 \section{What is a Function?}\label{what-is-a-function}}
@@ -332,7 +328,7 @@ plot(x,y);
 grid on;
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/whatisfunction_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/whatisfunction_images/figure_0.png}
 
 \textbf{\emph{This is NOT a function}}:
 
@@ -346,7 +342,7 @@ h = plot(xunit, yunit);
 grid on;
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/whatisfunction_images/figure_1.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/whatisfunction_images/figure_1.png}
 
 \hypertarget{function-notations}{%
 \section{Function Notations}\label{function-notations}}
@@ -458,21 +454,21 @@ a = 0.75;
 monomial_graph(a)
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/polynomial_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/polynomial_images/figure_0.png}
 
 \begin{verbatim}
 a = 1;
 monomial_graph(a)
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/polynomial_images/figure_1.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/polynomial_images/figure_1.png}
 
 \begin{verbatim}
 a = 1.25;
 monomial_graph(a)
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/polynomial_images/figure_2.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/polynomial_images/figure_2.png}
 
 \hypertarget{mononomials-function}{%
 \subsection{Mononomials Function}\label{mononomials-function}}
@@ -645,7 +641,7 @@ ylabel(['Utility'])
 grid on
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/localglobal_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/localglobal_images/figure_0.png}
 
 \hypertarget{commonly-used-functions}{%
 \chapter{Commonly Used Functions}\label{commonly-used-functions}}
@@ -726,7 +722,7 @@ legend(['base=',num2str(a1)], ['base=',num2str(a2)],['base=',num2str(a3)]);
 grid on;
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/exponential_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/exponential_images/figure_0.png}
 
 \hypertarget{infinitely-compounding-interest-rate}{%
 \subsection{Infinitely Compounding Interest rate}\label{infinitely-compounding-interest-rate}}
@@ -781,7 +777,7 @@ grid on;
 grid minor
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/exponential_images/figure_1.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/exponential_images/figure_1.png}
 
 \begin{verbatim}
 double(subs(f_compoundR,[1,2,3,4,5,6,7,8,9,10]))
@@ -833,7 +829,7 @@ ylabel({'Principle and Interests at End of Year Given 100% APR' 'for 1 dollar Bo
 grid on;
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/exponential_images/figure_2.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/exponential_images/figure_2.png}
 
 \hypertarget{natural-logarithm-and-exponential}{%
 \section{Natural Logarithm and Exponential}\label{natural-logarithm-and-exponential}}
@@ -1920,7 +1916,7 @@ legend(['f(x)'], ['First Derivative'], ['Second Derivative'], 'Location','SE');
 grid on
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/second_derivative_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/second_derivative_images/figure_0.png}
 
 \hypertarget{curvature-and-second-derivative-convex-function}{%
 \subsection{Curvature and Second Derivative, Convex Function}\label{curvature-and-second-derivative-convex-function}}
@@ -1965,9 +1961,7 @@ legend(['f(x)'], ['First Derivative'], ['Second Derivative'], 'Location','NW');
 grid on
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/second_derivative_images/figure_1.png}
-
-\vspace{1em}
+\includegraphics[width=5.20833in,height=\textheight]{img/second_derivative_images/figure_1.png}
 
 \hypertarget{univariate-applications}{%
 \chapter{Univariate Applications}\label{univariate-applications}}
@@ -2040,7 +2034,7 @@ xlabel('L, previous/existing number of workers')
 title('Discrete Labor Unit, Marginal Product of Each Worker')
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/derivative_MPL_discrete_workers_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/derivative_MPL_discrete_workers_images/figure_0.png}
 
 \hypertarget{using-derivative-to-approximate-increase-in-output-from-more-workers}{%
 \subsection{Using Derivative to approximate Increase in Output from More Workers}\label{using-derivative-to-approximate-increase-in-output-from-more-workers}}
@@ -2112,7 +2106,7 @@ legend(['k=',num2str(K1)], ['k=',num2str(K1)],...
 ['k=',num2str(K3)],['k=',num2str(K3)]);
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/derivative_MPL_discrete_workers_images/figure_1.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/derivative_MPL_discrete_workers_images/figure_1.png}
 
 \begin{verbatim}
 function [fprimeX0, L] = MPKdiscrete(K)
@@ -2192,7 +2186,7 @@ xlabel('Current level of Labor')
 grid on
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/derivative_cobb_douglas_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/derivative_cobb_douglas_images/figure_0.png}
 
 \hypertarget{marginal-product-of-labor-at-different-capital-levels}{%
 \subsection{Marginal Product of Labor at different Capital Levels}\label{marginal-product-of-labor-at-different-capital-levels}}
@@ -2236,9 +2230,7 @@ ylabel({'Marginal Product of additional labor'})
 xlabel('Current level of Labor')
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/derivative_cobb_douglas_images/figure_1.png}
-
-\vspace{1em}
+\includegraphics[width=5.20833in,height=\textheight]{img/derivative_cobb_douglas_images/figure_1.png}
 
 \hypertarget{derivative-approximation-of-marginal-product}{%
 \section{Derivative Approximation of Marginal Product}\label{derivative-approximation-of-marginal-product}}
@@ -2285,7 +2277,7 @@ xlabel('Labor');
 title(['Output with Increasing Labor with fixed Capital=', num2str(K)])
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/derivative_hslope_cobb_douglas_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/derivative_hslope_cobb_douglas_images/figure_0.png}
 
 \hypertarget{cobb-douglastangent-line-as-h-gets-smaller}{%
 \subsection{Cobb-Douglas--Tangent line as h gets smaller}\label{cobb-douglastangent-line-as-h-gets-smaller}}
@@ -2343,7 +2335,7 @@ title({'Tangent line as h gets smaller'...
 legend(Legend_list,'Location', 'NW','Orientation' ,'Vertical' );
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/derivative_hslope_cobb_douglas_images/figure_1.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/derivative_hslope_cobb_douglas_images/figure_1.png}
 
 At different \(h\), the approximating slope formula is calculating output
 per additional worker given \(h\) increase in workers. Below are the
@@ -2376,9 +2368,7 @@ xlabel('h=increases in labor from L=2 (K=1 fixed)')
 title('Derivative Approximation as h gets small, CD Production')
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/derivative_hslope_cobb_douglas_images/figure_2.png}
-
-\vspace{1em}
+\includegraphics[width=5.20833in,height=\textheight]{img/derivative_hslope_cobb_douglas_images/figure_2.png}
 
 \hypertarget{utility-maximization-and-intertemporal-consumption}{%
 \section{Utility Maximization and Intertemporal Consumption}\label{utility-maximization-and-intertemporal-consumption}}
@@ -2509,7 +2499,7 @@ plot(ones(size(save_grid))*0, utility_at_savegrid, 'k--');
 grid on;
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/K_save_households_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/K_save_households_images/figure_0.png}
 
 \hypertarget{analytical-solution}{%
 \subsection{Analytical Solution}\label{analytical-solution}}
@@ -2562,7 +2552,7 @@ title({'Inverse Supply For Capital'});
 grid on;
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/K_save_households_images/figure_1.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/K_save_households_images/figure_1.png}
 
 \hypertarget{profit-maximization-over-capital-and-labor}{%
 \section{Profit Maximization over Capital and Labor}\label{profit-maximization-over-capital-and-labor}}
@@ -2644,7 +2634,7 @@ title({'Optimal capital choice (red dot) on feasible choice grid';...
 grid on;
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/K_borrow_firm_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/K_borrow_firm_images/figure_0.png}
 
 \hypertarget{analytical-solution-1}{%
 \subsection{Analytical Solution}\label{analytical-solution-1}}
@@ -2698,7 +2688,7 @@ title({'Inverse Demand For Capital'});
 grid on;
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/K_borrow_firm_images/figure_1.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/K_borrow_firm_images/figure_1.png}
 
 \hypertarget{demand-and-supply-intersection}{%
 \subsection{Demand and Supply Intersection}\label{demand-and-supply-intersection}}
@@ -2735,7 +2725,7 @@ legend({'Demand', 'Supply'});
 grid on;
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/K_borrow_firm_images/figure_2.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/K_borrow_firm_images/figure_2.png}
 
 \hypertarget{matrix-basics}{%
 \chapter{Matrix Basics}\label{matrix-basics}}
@@ -3098,8 +3088,6 @@ matC = 2x1
     1.6524
     3.5895
 \end{verbatim}
-
-\vspace{1em}
 
 \hypertarget{creating-matrixes-in-matlab}{%
 \section{Creating Matrixes in Matlab}\label{creating-matrixes-in-matlab}}
@@ -3480,8 +3468,6 @@ matrix of the system of linear equations:
   \textbf{\emph{Augmented}} Matrix:\(\left\lbrack \begin{array}{cccc} a & b & c & |o\\ d & e & f & |p\\ g & h & i & |q \end{array}\right\rbrack\)
 \end{itemize}
 
-\vspace{1em}
-
 \hypertarget{solving-for-two-equations-and-two-unknowns}{%
 \section{Solving for Two Equations and Two Unknowns}\label{solving-for-two-equations-and-two-unknowns}}
 
@@ -3556,7 +3542,7 @@ title({'Intersection of 2 lines'...
        ,['y intersect=',num2str(solve_analytical_y)]});
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/matrix_linear_system_2_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/matrix_linear_system_2_images/figure_0.png}
 
 \hypertarget{linear-equation-in-matrix-form}{%
 \subsection{Linear Equation in Matrix Form}\label{linear-equation-in-matrix-form}}
@@ -4178,7 +4164,7 @@ zlabel('Cobb Douglas Firm Profit');
 title('Profit Function for Labor and Capital Choices')
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/KL_borrowhire_firm_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/KL_borrowhire_firm_images/figure_0.png}
 
 \begin{verbatim}
 %% To see the results more easily, contour plot
@@ -4194,7 +4180,7 @@ zlabel('Cobb Douglas Firm Profit');
 title('Profit Function for Labor and Capital Choices')
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/KL_borrowhire_firm_images/figure_1.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/KL_borrowhire_firm_images/figure_1.png}
 
 \hypertarget{cobb-douglas-utility-maximization}{%
 \section{Cobb Douglas Utility Maximization}\label{cobb-douglas-utility-maximization}}
@@ -4264,7 +4250,7 @@ zlabel('Cobb Douglas Utility');
 title('Utility Function Along Two Goods Dimensions')
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/twogoods_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/twogoods_images/figure_0.png}
 
 \hypertarget{budget}{%
 \subsection{Budget}\label{budget}}
@@ -4295,7 +4281,7 @@ zlabel('Cost');
 title('Contour Plot of Budget Set over two goods')
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/twogoods_images/figure_1.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/twogoods_images/figure_1.png}
 
 \hypertarget{budget-and-preference-indifference-curves}{%
 \subsection{Budget and Preference: Indifference Curves}\label{budget-and-preference-indifference-curves}}
@@ -4326,7 +4312,7 @@ hold on;
 plot(x1_M, x2_M, 'LineWidth', 3);
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/twogoods_images/figure_2.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/twogoods_images/figure_2.png}
 
 \hypertarget{equilibrium-interest-rate}{%
 \section{Equilibrium Interest Rate}\label{equilibrium-interest-rate}}
@@ -4739,7 +4725,7 @@ legend({'Demand','Taylor Approxi. Demand',...
 grid on
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/demand_supply_taylor_approximate_capital_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/demand_supply_taylor_approximate_capital_images/figure_0.png}
 
 \hypertarget{approximate-equilibrium-in-terms-of-parameters}{%
 \subsection{Approximate Equilibrium in terms of Parameters}\label{approximate-equilibrium-in-terms-of-parameters}}
@@ -4836,7 +4822,7 @@ title('Derivative d(Q(A))/dA ')
 grid on
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/demand_supply_taylor_approximate_capital_images/figure_1.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/demand_supply_taylor_approximate_capital_images/figure_1.png}
 
 \hypertarget{parameter-impacts-on-equilibriumeffects-of-changing-z}{%
 \subsection{\texorpdfstring{Parameter Impacts on Equilibrium--Effects of changing \(Z\)}{Parameter Impacts on Equilibrium--Effects of changing Z}}\label{parameter-impacts-on-equilibriumeffects-of-changing-z}}
@@ -4878,7 +4864,7 @@ title('Derivative d(Q(Z))/dZ ')
 grid on
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/demand_supply_taylor_approximate_capital_images/figure_2.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/demand_supply_taylor_approximate_capital_images/figure_2.png}
 
 \hypertarget{parameter-impacts-on-equilibriumeffects-of-changing-beta}{%
 \subsection{\texorpdfstring{Parameter Impacts on Equilibrium--Effects of changing \(\beta\)}{Parameter Impacts on Equilibrium--Effects of changing \textbackslash beta}}\label{parameter-impacts-on-equilibriumeffects-of-changing-beta}}
@@ -4919,7 +4905,7 @@ title('Derivative d(Q(beta))/dbeta ')
 grid on
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/demand_supply_taylor_approximate_capital_images/figure_3.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/demand_supply_taylor_approximate_capital_images/figure_3.png}
 
 \hypertarget{parameter-impacts-on-equilibriumeffects-of-changing-alpha}{%
 \subsection{\texorpdfstring{Parameter Impacts on Equilibrium--Effects of changing \(\alpha\)}{Parameter Impacts on Equilibrium--Effects of changing \textbackslash alpha}}\label{parameter-impacts-on-equilibriumeffects-of-changing-alpha}}
@@ -4960,7 +4946,7 @@ title('Derivative d(Q(alpha))/dalpha ')
 grid on
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/demand_supply_taylor_approximate_capital_images/figure_4.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/demand_supply_taylor_approximate_capital_images/figure_4.png}
 
 \hypertarget{uncertainty}{%
 \chapter{Uncertainty}\label{uncertainty}}
@@ -5583,8 +5569,6 @@ disp(sum(isPositive));
 
    100
 \end{verbatim}
-
-\vspace{1em}
 
 \hypertarget{profit-maximization-constant-returns}{%
 \section{Profit Maximization Constant Returns}\label{profit-maximization-constant-returns}}
@@ -6360,7 +6344,7 @@ legend({'Budget', 'Utility at Optimal Choices', 'Optimal Choice', 'Endowment Poi
 grid on;
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/household_c1_c2_constrained_expmin_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/household_c1_c2_constrained_expmin_images/figure_0.png}
 
 \hypertarget{intertemporal-income-and-substitution-effects}{%
 \section{Intertemporal Income and Substitution Effects}\label{intertemporal-income-and-substitution-effects}}
@@ -6560,7 +6544,7 @@ title({['r increases from ' num2str(r1) ' to ' num2str(r2)],...
 grid on;
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/household_c1_c2_constrained_r_change_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/household_c1_c2_constrained_r_change_images/figure_0.png}
 
 \hypertarget{graphical-illustration-of-the-income-and-substitution-effect}{%
 \subsection{Graphical Illustration of the Income and Substitution Effect}\label{graphical-illustration-of-the-income-and-substitution-effect}}
@@ -6634,7 +6618,7 @@ title({['Substitution Effect when r increases from ' num2str(r1) ' to ' num2str(
 grid on;
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/household_c1_c2_constrained_r_change_images/figure_1.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/household_c1_c2_constrained_r_change_images/figure_1.png}
 
 In the graph above, the shift between the empty blue circle and the red
 solid circle is the substitution effect. Remaining changes between empty
@@ -7086,7 +7070,7 @@ ylabel('Optimal Savings Choice')
 xlabel('Endowment next Period')
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/household_borrow_constrained_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/household_borrow_constrained_images/figure_0.png}
 
 \hypertarget{effects-of-r-on-optimal-choices}{%
 \subsection{\texorpdfstring{Effects of \(r\) on optimal choices}{Effects of r on optimal choices}}\label{effects-of-r-on-optimal-choices}}
@@ -7117,7 +7101,7 @@ ylabel('Optimal Savings Choice')
 xlabel('interest rate (1+r)')
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/household_borrow_constrained_images/figure_1.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/household_borrow_constrained_images/figure_1.png}
 
 \hypertarget{leisure-savings-and-constrained-borrowing}{%
 \section{Leisure, Savings and Constrained Borrowing}\label{leisure-savings-and-constrained-borrowing}}
@@ -7547,7 +7531,7 @@ ylabel('Share of Time Leisure')
 xlabel('psi, leisure preference')
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/household_asset_labor_constrained_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/household_asset_labor_constrained_images/figure_0.png}
 
 \hypertarget{effects-of-r-and-z_2-on-optimal-choices}{%
 \subsection{\texorpdfstring{Effects of \(r\) and \(z_2\) on optimal choices}{Effects of r and z\_2 on optimal choices}}\label{effects-of-r-and-z_2-on-optimal-choices}}
@@ -7616,7 +7600,7 @@ xlabel('interest rate')
 legend(legendCell);
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/household_asset_labor_constrained_images/figure_1.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/household_asset_labor_constrained_images/figure_1.png}
 
 \hypertarget{equilibrium-and-policy}{%
 \chapter{Equilibrium and Policy}\label{equilibrium-and-policy}}
@@ -7712,7 +7696,7 @@ xlabel('interest rate')
 legend(legendCell, 'Location','northwest');
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/equilibrium_constrainedborrow_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/equilibrium_constrainedborrow_images/figure_0.png}
 
 \hypertarget{aggregate-household-excess-supply-along-interest-rate}{%
 \subsection{Aggregate Household Excess Supply along Interest Rate}\label{aggregate-household-excess-supply-along-interest-rate}}
@@ -7759,7 +7743,7 @@ xlabel('interest rate')
 legend({'HH Net B Supply'}, 'Location','northwest');
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/equilibrium_constrainedborrow_images/figure_1.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/equilibrium_constrainedborrow_images/figure_1.png}
 
 \hypertarget{firm-demand-for-credit}{%
 \subsection{Firm Demand for Credit}\label{firm-demand-for-credit}}
@@ -7798,7 +7782,7 @@ ylabel('Optimal Firm Choice')
 xlabel('interest rate')
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/equilibrium_constrainedborrow_images/figure_2.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/equilibrium_constrainedborrow_images/figure_2.png}
 
 \hypertarget{economy-wide-excess-supply-for-credit-firm-households}{%
 \subsection{Economy Wide Excess Supply for Credit (Firm + Households)}\label{economy-wide-excess-supply-for-credit-firm-households}}
@@ -7902,7 +7886,7 @@ xlabel('interest rate')
 legend({'Excess Supply', ['Equilibrium r=' num2str(equilibrium_r)]}, 'Location','northwest');
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/equilibrium_constrainedborrow_images/figure_3.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/equilibrium_constrainedborrow_images/figure_3.png}
 
 \hypertarget{demand-and-supply-for-credit-with-a-tax-on-interest-rate}{%
 \subsection{Demand and Supply for Credit with a Tax on Interest Rate}\label{demand-and-supply-for-credit-with-a-tax-on-interest-rate}}
@@ -8034,7 +8018,7 @@ xlabel('interest rate')
 legend({'Excess Supply', ['Equilibrium r=' num2str(equilibrium_r)]}, 'Location','northwest');
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/equilibrium_constrainedborrow_images/figure_4.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/equilibrium_constrainedborrow_images/figure_4.png}
 
 \hypertarget{equilibrium-interest-rate-and-wage-rate}{%
 \section{Equilibrium Interest Rate and Wage Rate}\label{equilibrium-interest-rate-and-wage-rate}}
@@ -8288,7 +8272,7 @@ legendCell = cellstr(num2str(W_vec', 'wage=%3.2f'));
 legend(chart(legend2plot), legendCell(legend2plot), 'Location','southeast');
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/equilibrium_constrainedborrow_labor_images/figure_0.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/equilibrium_constrainedborrow_labor_images/figure_0.png}
 
 \hypertarget{demand-and-supply-for-labor-demand-and-supply}{%
 \subsection{Demand and Supply for Labor Demand and Supply}\label{demand-and-supply-for-labor-demand-and-supply}}
@@ -8331,7 +8315,7 @@ legendCell = cellstr(num2str(W_vec', 'wage=%3.2f'));
 legend(legendCell, 'Location','northeast');
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/equilibrium_constrainedborrow_labor_images/figure_1.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/equilibrium_constrainedborrow_labor_images/figure_1.png}
 
 \hypertarget{excess-demand-for-capital-and-labor}{%
 \subsection{Excess Demand for Capital and Labor}\label{excess-demand-for-capital-and-labor}}
@@ -8386,7 +8370,7 @@ legendCell = cellstr(num2str(W_vec', 'wage=%3.2f'));
 legend(legendCell, 'Location','southeast');
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/equilibrium_constrainedborrow_labor_images/figure_2.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/equilibrium_constrainedborrow_labor_images/figure_2.png}
 
 \hypertarget{w-and-r-equilibrium}{%
 \subsection{\texorpdfstring{\(w\) and \(r\) Equilibrium}{w and r Equilibrium}}\label{w-and-r-equilibrium}}
@@ -8446,7 +8430,7 @@ ylabel('wage')
 xlabel('1+r')
 \end{verbatim}
 
-\includegraphics[width=5.20833in,height=\textheight]{_img/equilibrium_constrainedborrow_labor_images/figure_3.png}
+\includegraphics[width=5.20833in,height=\textheight]{img/equilibrium_constrainedborrow_labor_images/figure_3.png}
 
 \hypertarget{appendix-appendix}{%
 \appendix}
