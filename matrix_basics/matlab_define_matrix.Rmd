@@ -1,0 +1,163 @@
+---
+always_allow_html: 'true'
+core:
+- code: 'transpose()
+
+    '
+  package: m
+date: '2020-05-30'
+date_start: '2018-12-01'
+description: 'Scalar: Associative + Communtative + Distributive laws; Matrix: all
+  apply except A times B != B times A.
+
+  '
+file: matlab_define_matrix
+output:
+  html_document:
+    includes:
+      in_header: ../hdga.html
+    pandoc_args: ../_output_kniti_html.yaml
+  pdf_document:
+    includes:
+      in_header: ../preamble.tex
+    pandoc_args: ../_output_kniti_pdf.yaml
+title: Laws of Matrix Algebra
+titleshort: Laws of Matrix Algebra
+urlcolor: blue
+---
+
+## Laws of Matrix Algebra
+
+```{r global_options, include = FALSE}
+try(source('../.Rprofile'))
+```
+
+`r text_shared_preamble_one`
+`r text_shared_preamble_two`
+`r text_shared_preamble_thr`
+
+### 6 Old Rules, 5 Still Apply
+
+We had associative, commutative and distributive laws for scalar
+algebra, we can think of them as the six bullet points below. Only the
+multiplicative-commutative law no longer works for matrix, the other
+rules work for matrix as well as scalar algebra.
+
+Associative laws work as in scalar algebra for matrix
+
+-   $\displaystyle (A+B)+C=A+(B+C)$
+
+-   $\displaystyle (A\cdot B)\cdot C=A\cdot (B\cdot C)$
+
+Commutative Law works as well for addition
+
+-   $\displaystyle A+B=B+A$
+
+-   with scalars, we know $3\cdot 4=4\cdot 3$, but commutative law for
+    matrix multiplication does not work, Matrix
+    $A\cdot B\not= B\cdot A$. The matrix dimensions might not even match
+    up for multiplication. (see below for examples)
+
+And Distributive Law still applies to matrix
+
+-   $\displaystyle A\cdot (B+C)=A\cdot B+A\cdot C$
+
+-   $\displaystyle (B+C)\cdot A=B\cdot A+C\cdot A$
+
+### Example for $A\cdot B\not= B\cdot A$
+
+    % Non-Square
+    A = rand(2,3)
+
+    A = 2x3    
+        0.6959    0.6385    0.0688
+        0.6999    0.0336    0.3196
+
+    B = rand(3,4)
+
+    B = 3x4    
+        0.5309    0.8200    0.5313    0.6110
+        0.6544    0.7184    0.3251    0.7788
+        0.4076    0.9686    0.1056    0.4235
+
+    % This is OK
+    disp(A*B)
+
+        0.8154    1.0960    0.5847    0.9516
+        0.5238    0.9076    0.4166    0.5891
+
+    % This does not work
+    try 
+        B*A
+    catch ME
+        disp('does not work! Dimension mismatch')
+    end
+
+    does not work! Dimension mismatch
+
+
+    % Square
+    A = rand(3,3)
+
+    A = 3x3    
+        0.0908    0.2810    0.4574
+        0.2665    0.4401    0.8754
+        0.1537    0.5271    0.5181
+
+    B = rand(3,3)
+
+    B = 3x3    
+        0.9436    0.2407    0.6718
+        0.6377    0.6761    0.6951
+        0.9577    0.2891    0.0680
+
+    % This is OK
+    A*B
+
+    ans = 3x3    
+        0.7030    0.3441    0.2875
+        1.3704    0.6147    0.5445
+        0.9773    0.5431    0.5049
+
+    % This works, but result differs from A*B
+    B*A
+
+    ans = 3x3    
+        0.2531    0.7252    0.9904
+        0.3449    0.8432    1.2437
+        0.1745    0.4322    0.7263
+
+### 4 New Rules for Transpose
+
+In scalar algebra, transpose does not make sense. Given matrix $A$,
+$A^T$ is the transpose matrix of $A$ where each row of $A$ becomes
+columns in $A^T$. If $A$ is $M$ by $N$, then $A^T$ is $N$ by $M$.
+
+Given matrix $A$ and scalar value $r$:
+
+-   **1**: $(r\cdot A)^T =r\cdot A^T$
+
+-   **2**: $(A^T )^T =A$
+
+-   **3:** $(A+B)^T =A^T +B^T$
+
+-   **4**: $(A\cdot B)^T =B^T \cdot A^T$
+
+For the 4th rule, suppose matrix $A$ is has $L$ rows and $M$ columns,
+and the matrix $B$ has $M$ rows and $N$columns. $(A\cdot B)$ is a $L$ by
+$N$ matrix, $(A\cdot B)^T$ is a $N$ by $L$ matrix. This is equal to
+$B^T \cdot A^T$, where we have a $N$ by $M$ matrix $B^T$ multiplied by a
+$M$ by $L$ matrix $A^T$, and the resulting matrix is $N$ by $L$.
+
+    A = rand(2,3)
+
+    A = 2x3    
+        0.2548    0.6678    0.3445
+        0.2240    0.8444    0.7805
+
+    Atranspose = (A')
+
+    Atranspose = 3x2    
+        0.2548    0.2240
+        0.6678    0.8444
+        0.3445    0.7805

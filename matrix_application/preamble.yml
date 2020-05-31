@@ -1,0 +1,118 @@
+- file: KL_borrowhire_firm
+  title: "Firm's Profit Maximization Problem with Cobb Douglas Production Function (Decreasing Returns to Scale)"
+  titleshort: "Firm Maximization Problem with Capital and Labor"
+  description: |
+    First order conditions Cobb-Douglas production function with Capital and Labor.
+    Log linearize first order conditions, matrix form and linsolve Cobb-Douglas production function.
+    Own and cross price elasticities
+  core :
+    - package: m
+      code: |
+        linsolve()
+        simplify(exp(linsolve()))
+        mesh()
+        meshgrid()
+        contourf()
+        clabel()
+        zlabel()
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: twogoods
+  title: "Household's Utility Maximization Problem with Cobb Douglas Utility, Budget Sets and Indifference Curves"
+  titleshort: "Household Maximization with Two Goods and Budget"
+  description: |
+    Preference over two good, cobb douglas utility.
+    Indifference curves and budget set.
+  core :
+    - package: m
+      code: |
+        linspace()
+        meshgrid()
+        mesh()
+        contourf()
+        clabel()
+        colormap()
+        zlabel()
+        plot()
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: demand_supply_taylor_approximate
+  title: "Equilibrium Interest Rate given Demand and Supply for Credit--First Order Taylor Linear Approximation"
+  titleshort: "Capital Demand and Supply Equilibrium Analysis"
+  description: |
+    Simplified nonlinear form of demand and supply as functions or the interest rate.
+    First order Taylor linear approximation of nonlinear demand and supply.
+  core :
+    - package: m
+      code: |
+        diff()
+        subs(S,r,1)
+        linsolve()
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: demand_supply_taylor_approximate_capital
+  title: "Approximating Credit Demand and Supply Curves--First Order Taylor Linear Approximation"
+  titleshort: "First Order Taylor Approximation of Demand and Supply Curves"
+  description: |
+    Exact solutions for (approximated) equilibrium interest rate and asset supply/demand given linearized demand and supply equations.
+    Graphical illustration of exact equilibrium and linear approximated equilibrium.
+    Analyze how productivity, elasticity, wealth, discount factor impact equilibrium prices and quantity given exact solutions to linear approximation.
+  core :
+    - package: m
+      code: |
+        linspace()
+        subs(diff(S,r), r, r0)
+        subs(D, {Z,beta}, {Z_num, beta_num})
+        fplot()
+        plot()
+        line.Color
+        line.LineStyle
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue

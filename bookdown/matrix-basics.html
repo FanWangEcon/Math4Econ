@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Matrix Basics | Introductory Mathematics for Economists with Matlab</title>
+  <meta name="description" content="<p>Households supply labor and enjoy leisure, firms demand labor.
+Households borrow with constraints and supply savings, firm demand capital.
+Solve for excess supply of assets and labor over wage and interest rates grid.
+Solve for market clearing wage and interest rates.</p>" />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Matrix Basics | Introductory Mathematics for Economists with Matlab" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="<p>Households supply labor and enjoy leisure, firms demand labor.
+Households borrow with constraints and supply savings, firm demand capital.
+Solve for excess supply of assets and labor over wage and interest rates grid.
+Solve for market clearing wage and interest rates.</p>" />
+  <meta name="github-repo" content="fanwangecon/Math4Econ" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Matrix Basics | Introductory Mathematics for Economists with Matlab" />
+  
+  <meta name="twitter:description" content="<p>Households supply labor and enjoy leisure, firms demand labor.
+Households borrow with constraints and supply savings, firm demand capital.
+Solve for excess supply of assets and labor over wage and interest rates grid.
+Solve for market clearing wage and interest rates.</p>" />
+  
+
+<meta name="author" content="Fan Wang" />
+
+
+<meta name="date" content="2020-05-31" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="univariate-applications.html"/>
+<link rel="next" href="system-of-equations.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92953468-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92953468-2');
+</script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introductory Mathematics for Economists with Matlab</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="notations-and-functions.html"><a href="notations-and-functions.html"><i class="fa fa-check"></i><b>1</b> Notations and Functions</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="notations-and-functions.html"><a href="notations-and-functions.html#real-number-and-intervals"><i class="fa fa-check"></i><b>1.1</b> Real Number and intervals</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="notations-and-functions.html"><a href="notations-and-functions.html#real-number-line"><i class="fa fa-check"></i><b>1.1.1</b> Real Number Line</a></li>
+<li class="chapter" data-level="1.1.2" data-path="notations-and-functions.html"><a href="notations-and-functions.html#non-negative-numbers"><i class="fa fa-check"></i><b>1.1.2</b> Non-negative numbers</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="notations-and-functions.html"><a href="notations-and-functions.html#interval-notations-and-examples"><i class="fa fa-check"></i><b>1.2</b> Interval Notations and Examples</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="notations-and-functions.html"><a href="notations-and-functions.html#closed-interval"><i class="fa fa-check"></i><b>1.2.1</b> Closed Interval</a></li>
+<li class="chapter" data-level="1.2.2" data-path="notations-and-functions.html"><a href="notations-and-functions.html#open-interval"><i class="fa fa-check"></i><b>1.2.2</b> Open Interval</a></li>
+<li class="chapter" data-level="1.2.3" data-path="notations-and-functions.html"><a href="notations-and-functions.html#half-open-and-half-close-interval"><i class="fa fa-check"></i><b>1.2.3</b> Half Open and Half Close Interval</a></li>
+<li class="chapter" data-level="1.2.4" data-path="notations-and-functions.html"><a href="notations-and-functions.html#graph"><i class="fa fa-check"></i><b>1.2.4</b> Graph</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="notations-and-functions.html"><a href="notations-and-functions.html#what-is-a-function"><i class="fa fa-check"></i><b>1.3</b> What is a Function?</a></li>
+<li class="chapter" data-level="1.4" data-path="notations-and-functions.html"><a href="notations-and-functions.html#function-notations"><i class="fa fa-check"></i><b>1.4</b> Function Notations</a></li>
+<li class="chapter" data-level="1.5" data-path="notations-and-functions.html"><a href="notations-and-functions.html#monomial-and-polynomial"><i class="fa fa-check"></i><b>1.5</b> Monomial and Polynomial</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="notations-and-functions.html"><a href="notations-and-functions.html#monomial"><i class="fa fa-check"></i><b>1.5.1</b> Monomial</a></li>
+<li class="chapter" data-level="1.5.2" data-path="notations-and-functions.html"><a href="notations-and-functions.html#polynomial"><i class="fa fa-check"></i><b>1.5.2</b> Polynomial</a></li>
+<li class="chapter" data-level="1.5.3" data-path="notations-and-functions.html"><a href="notations-and-functions.html#graphical-monomial-examples"><i class="fa fa-check"></i><b>1.5.3</b> Graphical Monomial Examples</a></li>
+<li class="chapter" data-level="1.5.4" data-path="notations-and-functions.html"><a href="notations-and-functions.html#mononomials-function"><i class="fa fa-check"></i><b>1.5.4</b> Mononomials Function</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="notations-and-functions.html"><a href="notations-and-functions.html#local-and-global-maximum"><i class="fa fa-check"></i><b>1.6</b> Local and Global Maximum</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html"><i class="fa fa-check"></i><b>2</b> Commonly Used Functions</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#exponentiation-and-compounding-interest-rate"><i class="fa fa-check"></i><b>2.1</b> Exponentiation and Compounding Interest Rate</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#exponential-function"><i class="fa fa-check"></i><b>2.1.1</b> <strong>Exponential Function</strong></a></li>
+<li class="chapter" data-level="2.1.2" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#exponential-function-graphs"><i class="fa fa-check"></i><b>2.1.2</b> Exponential Function Graphs?</a></li>
+<li class="chapter" data-level="2.1.3" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#infinitely-compounding-interest-rate"><i class="fa fa-check"></i><b>2.1.3</b> Infinitely Compounding Interest rate</a></li>
+<li class="chapter" data-level="2.1.4" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#infinitely-compounding-interest-rate-different-r-apr-r"><i class="fa fa-check"></i><b>2.1.4</b> Infinitely compounding Interest rate, different <span class="math inline">\(r\)</span> (APR <span class="math inline">\(r\)</span>)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#natural-logarithm-and-exponential"><i class="fa fa-check"></i><b>2.2</b> Natural Logarithm and Exponential</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#log-and-exponential"><i class="fa fa-check"></i><b>2.2.1</b> Log and Exponential</a></li>
+<li class="chapter" data-level="2.2.2" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#log-rules"><i class="fa fa-check"></i><b>2.2.2</b> Log Rules</a></li>
+<li class="chapter" data-level="2.2.3" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#why-does-log-xcdot-ylog-xlog-y"><i class="fa fa-check"></i><b>2.2.3</b> Why does <span class="math inline">\(\log (x\cdot y)=\log (x)+\log (y)\)</span>?</a></li>
+<li class="chapter" data-level="2.2.4" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#why-does-log-xa-acdot-log-x"><i class="fa fa-check"></i><b>2.2.4</b> Why does <span class="math inline">\(\log (x^a )=a\cdot \log (x)\)</span>?</a></li>
+<li class="chapter" data-level="2.2.5" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#for-variables-that-grow-log-difference-is-close-to-rate-of-change"><i class="fa fa-check"></i><b>2.2.5</b> For Variables that Grow, Log difference is close to rate of change</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="derivatives.html"><a href="derivatives.html"><i class="fa fa-check"></i><b>3</b> Derivatives</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="derivatives.html"><a href="derivatives.html#derivative-definition-and-rules"><i class="fa fa-check"></i><b>3.1</b> Derivative Definition and Rules</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="derivatives.html"><a href="derivatives.html#definition"><i class="fa fa-check"></i><b>3.1.1</b> Definition</a></li>
+<li class="chapter" data-level="3.1.2" data-path="derivatives.html"><a href="derivatives.html#derivative-rulesconstant-rule"><i class="fa fa-check"></i><b>3.1.2</b> Derivative Rules–Constant Rule</a></li>
+<li class="chapter" data-level="3.1.3" data-path="derivatives.html"><a href="derivatives.html#derivative-rulespower-rule-polynomial-rule"><i class="fa fa-check"></i><b>3.1.3</b> Derivative Rules–Power Rule (Polynomial Rule)</a></li>
+<li class="chapter" data-level="3.1.4" data-path="derivatives.html"><a href="derivatives.html#derivative-ruleschain-rule"><i class="fa fa-check"></i><b>3.1.4</b> Derivative Rules–Chain Rule</a></li>
+<li class="chapter" data-level="3.1.5" data-path="derivatives.html"><a href="derivatives.html#derivative-rulessum-and-difference-rule"><i class="fa fa-check"></i><b>3.1.5</b> Derivative Rules–Sum (and difference) Rule</a></li>
+<li class="chapter" data-level="3.1.6" data-path="derivatives.html"><a href="derivatives.html#derivative-rulesproduct-rule"><i class="fa fa-check"></i><b>3.1.6</b> Derivative Rules–Product Rule</a></li>
+<li class="chapter" data-level="3.1.7" data-path="derivatives.html"><a href="derivatives.html#derivative-rulesquotient-rule"><i class="fa fa-check"></i><b>3.1.7</b> Derivative Rules–Quotient Rule</a></li>
+<li class="chapter" data-level="3.1.8" data-path="derivatives.html"><a href="derivatives.html#derivative-rulesexponential"><i class="fa fa-check"></i><b>3.1.8</b> Derivative Rules–Exponential</a></li>
+<li class="chapter" data-level="3.1.9" data-path="derivatives.html"><a href="derivatives.html#derivative-ruleslog"><i class="fa fa-check"></i><b>3.1.9</b> Derivative Rules–Log</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="derivatives.html"><a href="derivatives.html#continuity-and-differentiability"><i class="fa fa-check"></i><b>3.2</b> Continuity and Differentiability</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="derivatives.html"><a href="derivatives.html#definition-continuous"><i class="fa fa-check"></i><b>3.2.1</b> Definition Continuous</a></li>
+<li class="chapter" data-level="3.2.2" data-path="derivatives.html"><a href="derivatives.html#definition-continuously-differentiable"><i class="fa fa-check"></i><b>3.2.2</b> Definition Continuously Differentiable</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="derivatives.html"><a href="derivatives.html#elasticity-and-derivative"><i class="fa fa-check"></i><b>3.3</b> Elasticity and Derivative</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="derivatives.html"><a href="derivatives.html#demand-and-supply"><i class="fa fa-check"></i><b>3.3.1</b> Demand and Supply</a></li>
+<li class="chapter" data-level="3.3.2" data-path="derivatives.html"><a href="derivatives.html#how-does-demand-or-supply-respond-to-a-change-in-price"><i class="fa fa-check"></i><b>3.3.2</b> How does demand (or supply) respond to a change in price?</a></li>
+<li class="chapter" data-level="3.3.3" data-path="derivatives.html"><a href="derivatives.html#how-sensitive-are-demands-to-price-changes"><i class="fa fa-check"></i><b>3.3.3</b> How sensitive are demands to price changes?</a></li>
+<li class="chapter" data-level="3.3.4" data-path="derivatives.html"><a href="derivatives.html#point-elasticity-and-derivative"><i class="fa fa-check"></i><b>3.3.4</b> Point Elasticity and Derivative</a></li>
+<li class="chapter" data-level="3.3.5" data-path="derivatives.html"><a href="derivatives.html#inelastic-elastic-and-unit-elastic"><i class="fa fa-check"></i><b>3.3.5</b> <strong>Inelastic, elastic and unit elastic</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="derivatives.html"><a href="derivatives.html#differential-and-marginal-product"><i class="fa fa-check"></i><b>3.4</b> Differential and Marginal Product</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="derivatives.html"><a href="derivatives.html#mpl-for-cobb-douglas"><i class="fa fa-check"></i><b>3.4.1</b> MPL for Cobb-Douglas</a></li>
+<li class="chapter" data-level="3.4.2" data-path="derivatives.html"><a href="derivatives.html#interpreting-mpl"><i class="fa fa-check"></i><b>3.4.2</b> Interpreting MPL</a></li>
+<li class="chapter" data-level="3.4.3" data-path="derivatives.html"><a href="derivatives.html#exact-output-calculated-with-matlab"><i class="fa fa-check"></i><b>3.4.3</b> Exact Output Calculated with Matlab</a></li>
+<li class="chapter" data-level="3.4.4" data-path="derivatives.html"><a href="derivatives.html#approximate-output-increase-with-derivative-mpl"><i class="fa fa-check"></i><b>3.4.4</b> <strong>Approximate Output Increase with Derivative (MPL)</strong></a></li>
+<li class="chapter" data-level="3.4.5" data-path="derivatives.html"><a href="derivatives.html#first-order-taylor-polynomial-approximation"><i class="fa fa-check"></i><b>3.4.5</b> First Order Taylor Polynomial Approximation</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="derivatives.html"><a href="derivatives.html#higher-order-derivativescobb-douglas"><i class="fa fa-check"></i><b>3.5</b> Higher Order Derivatives–Cobb Douglas</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="derivatives.html"><a href="derivatives.html#curvature-and-second-derivative-concave-function"><i class="fa fa-check"></i><b>3.5.1</b> Curvature and Second Derivative, Concave Function</a></li>
+<li class="chapter" data-level="3.5.2" data-path="derivatives.html"><a href="derivatives.html#curvature-and-second-derivative-convex-function"><i class="fa fa-check"></i><b>3.5.2</b> Curvature and Second Derivative, Convex Function</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="univariate-applications.html"><a href="univariate-applications.html"><i class="fa fa-check"></i><b>4</b> Univariate Applications</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="univariate-applications.html"><a href="univariate-applications.html#marginal-product-of-labor"><i class="fa fa-check"></i><b>4.1</b> Marginal Product of Labor</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="univariate-applications.html"><a href="univariate-applications.html#marginal-product-of-additional-workers-discrete-workers"><i class="fa fa-check"></i><b>4.1.1</b> Marginal Product of Additional Workers (Discrete Workers)</a></li>
+<li class="chapter" data-level="4.1.2" data-path="univariate-applications.html"><a href="univariate-applications.html#using-derivative-to-approximate-increase-in-output-from-more-workers"><i class="fa fa-check"></i><b>4.1.2</b> Using Derivative to approximate Increase in Output from More Workers</a></li>
+<li class="chapter" data-level="4.1.3" data-path="univariate-applications.html"><a href="univariate-applications.html#marginal-product-of-additional-workers-different-capital-discrete-workers"><i class="fa fa-check"></i><b>4.1.3</b> Marginal Product of Additional Workers Different Capital (Discrete Workers)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="univariate-applications.html"><a href="univariate-applications.html#derivative-of-cobb-douglas-production-function"><i class="fa fa-check"></i><b>4.2</b> Derivative of Cobb-Douglas Production Function</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="univariate-applications.html"><a href="univariate-applications.html#marginal-output-per-worker-holding-capital-fixed"><i class="fa fa-check"></i><b>4.2.1</b> Marginal Output Per Worker Holding Capital Fixed</a></li>
+<li class="chapter" data-level="4.2.2" data-path="univariate-applications.html"><a href="univariate-applications.html#marginal-productivity-graph-at-fixed-capital-level"><i class="fa fa-check"></i><b>4.2.2</b> Marginal Productivity Graph at Fixed Capital Level</a></li>
+<li class="chapter" data-level="4.2.3" data-path="univariate-applications.html"><a href="univariate-applications.html#marginal-product-of-labor-at-different-capital-levels"><i class="fa fa-check"></i><b>4.2.3</b> Marginal Product of Labor at different Capital Levels</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="univariate-applications.html"><a href="univariate-applications.html#derivative-approximation-of-marginal-product"><i class="fa fa-check"></i><b>4.3</b> Derivative Approximation of Marginal Product</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="univariate-applications.html"><a href="univariate-applications.html#cobb-douglasoutput-as-a-function-of-capital"><i class="fa fa-check"></i><b>4.3.1</b> Cobb-Douglas–Output as a Function of Capital</a></li>
+<li class="chapter" data-level="4.3.2" data-path="univariate-applications.html"><a href="univariate-applications.html#cobb-douglastangent-line-as-h-gets-smaller"><i class="fa fa-check"></i><b>4.3.2</b> Cobb-Douglas–Tangent line as h gets smaller</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="univariate-applications.html"><a href="univariate-applications.html#utility-maximization-and-intertemporal-consumption"><i class="fa fa-check"></i><b>4.4</b> Utility Maximization and Intertemporal Consumption</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="univariate-applications.html"><a href="univariate-applications.html#model-components-and-maximization-problem"><i class="fa fa-check"></i><b>4.4.1</b> Model Components and Maximization Problem</a></li>
+<li class="chapter" data-level="4.4.2" data-path="univariate-applications.html"><a href="univariate-applications.html#open-set-for-choice-set"><i class="fa fa-check"></i><b>4.4.2</b> Open set for Choice set</a></li>
+<li class="chapter" data-level="4.4.3" data-path="univariate-applications.html"><a href="univariate-applications.html#finding-optimal-choicesbrute-force-grid"><i class="fa fa-check"></i><b>4.4.3</b> Finding Optimal Choices–Brute Force Grid</a></li>
+<li class="chapter" data-level="4.4.4" data-path="univariate-applications.html"><a href="univariate-applications.html#analytical-solution"><i class="fa fa-check"></i><b>4.4.4</b> Analytical Solution</a></li>
+<li class="chapter" data-level="4.4.5" data-path="univariate-applications.html"><a href="univariate-applications.html#supply-curve-for-capital"><i class="fa fa-check"></i><b>4.4.5</b> Supply Curve For Capital</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="univariate-applications.html"><a href="univariate-applications.html#profit-maximization-over-capital-and-labor"><i class="fa fa-check"></i><b>4.5</b> Profit Maximization over Capital and Labor</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="univariate-applications.html"><a href="univariate-applications.html#model-components-and-maximization-problem-1"><i class="fa fa-check"></i><b>4.5.1</b> Model Components and Maximization Problem</a></li>
+<li class="chapter" data-level="4.5.2" data-path="univariate-applications.html"><a href="univariate-applications.html#finding-optimal-choicesbrute-force-grid-1"><i class="fa fa-check"></i><b>4.5.2</b> Finding Optimal Choices–Brute Force Grid</a></li>
+<li class="chapter" data-level="4.5.3" data-path="univariate-applications.html"><a href="univariate-applications.html#analytical-solution-1"><i class="fa fa-check"></i><b>4.5.3</b> Analytical Solution</a></li>
+<li class="chapter" data-level="4.5.4" data-path="univariate-applications.html"><a href="univariate-applications.html#demand-curve-for-capital"><i class="fa fa-check"></i><b>4.5.4</b> Demand Curve For Capital</a></li>
+<li class="chapter" data-level="4.5.5" data-path="univariate-applications.html"><a href="univariate-applications.html#demand-and-supply-intersection"><i class="fa fa-check"></i><b>4.5.5</b> Demand and Supply Intersection</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="matrix-basics.html"><a href="matrix-basics.html"><i class="fa fa-check"></i><b>5</b> Matrix Basics</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="matrix-basics.html"><a href="matrix-basics.html#laws-of-matrix-algebra"><i class="fa fa-check"></i><b>5.1</b> Laws of Matrix Algebra</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="matrix-basics.html"><a href="matrix-basics.html#old-rules-5-still-apply"><i class="fa fa-check"></i><b>5.1.1</b> 6 Old Rules, 5 Still Apply</a></li>
+<li class="chapter" data-level="5.1.2" data-path="matrix-basics.html"><a href="matrix-basics.html#example-for-acdot-bnot-bcdot-a"><i class="fa fa-check"></i><b>5.1.2</b> Example for <span class="math inline">\(A\cdot B\not= B\cdot A\)</span></a></li>
+<li class="chapter" data-level="5.1.3" data-path="matrix-basics.html"><a href="matrix-basics.html#new-rules-for-transpose"><i class="fa fa-check"></i><b>5.1.3</b> 4 New Rules for Transpose</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="matrix-basics.html"><a href="matrix-basics.html#matrix-addition-and-multiplication"><i class="fa fa-check"></i><b>5.2</b> Matrix Addition and Multiplication</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="matrix-basics.html"><a href="matrix-basics.html#scalar-multiplicationdivision-additionsubtraction"><i class="fa fa-check"></i><b>5.2.1</b> Scalar Multiplication/Division, Addition/Subtraction</a></li>
+<li class="chapter" data-level="5.2.2" data-path="matrix-basics.html"><a href="matrix-basics.html#addition-and-subtraction"><i class="fa fa-check"></i><b>5.2.2</b> Addition and Subtraction</a></li>
+<li class="chapter" data-level="5.2.3" data-path="matrix-basics.html"><a href="matrix-basics.html#matrix-multiplication"><i class="fa fa-check"></i><b>5.2.3</b> <strong>Matrix Multiplication</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="matrix-basics.html"><a href="matrix-basics.html#creating-matrixes-in-matlab"><i class="fa fa-check"></i><b>5.3</b> Creating Matrixes in Matlab</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="matrix-basics.html"><a href="matrix-basics.html#matlab-define-row-and-column-vectors-matrix"><i class="fa fa-check"></i><b>5.3.1</b> Matlab Define Row and Column Vectors (Matrix)</a></li>
+<li class="chapter" data-level="5.3.2" data-path="matrix-basics.html"><a href="matrix-basics.html#matlab-define-a-matrix"><i class="fa fa-check"></i><b>5.3.2</b> Matlab Define a Matrix</a></li>
+<li class="chapter" data-level="5.3.3" data-path="matrix-basics.html"><a href="matrix-basics.html#matlab-define-a-square-matrix"><i class="fa fa-check"></i><b>5.3.3</b> Matlab Define a Square Matrix</a></li>
+<li class="chapter" data-level="5.3.4" data-path="matrix-basics.html"><a href="matrix-basics.html#identity-matrix"><i class="fa fa-check"></i><b>5.3.4</b> Identity Matrix</a></li>
+<li class="chapter" data-level="5.3.5" data-path="matrix-basics.html"><a href="matrix-basics.html#lower-triangular-matrix-and-upper-triangular-matrix"><i class="fa fa-check"></i><b>5.3.5</b> Lower-Triangular Matrix and Upper-Triangular Matrix</a></li>
+<li class="chapter" data-level="5.3.6" data-path="matrix-basics.html"><a href="matrix-basics.html#three-dimensions-matrix-tensor"><i class="fa fa-check"></i><b>5.3.6</b> Three Dimensions Matrix (Tensor)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="system-of-equations.html"><a href="system-of-equations.html"><i class="fa fa-check"></i><b>6</b> System of Equations</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="system-of-equations.html"><a href="system-of-equations.html#system-of-linear-equations"><i class="fa fa-check"></i><b>6.1</b> System of Linear Equations</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="system-of-equations.html"><a href="system-of-equations.html#linear-equation"><i class="fa fa-check"></i><b>6.1.1</b> Linear Equation</a></li>
+<li class="chapter" data-level="6.1.2" data-path="system-of-equations.html"><a href="system-of-equations.html#system-of-linear-equations-1"><i class="fa fa-check"></i><b>6.1.2</b> System of Linear Equations</a></li>
+<li class="chapter" data-level="6.1.3" data-path="system-of-equations.html"><a href="system-of-equations.html#augmented-form"><i class="fa fa-check"></i><b>6.1.3</b> Augmented Form</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="system-of-equations.html"><a href="system-of-equations.html#solving-for-two-equations-and-two-unknowns"><i class="fa fa-check"></i><b>6.2</b> Solving for Two Equations and Two Unknowns</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="system-of-equations.html"><a href="system-of-equations.html#intersection-of-two-linear-equations"><i class="fa fa-check"></i><b>6.2.1</b> Intersection of two Linear Equations</a></li>
+<li class="chapter" data-level="6.2.2" data-path="system-of-equations.html"><a href="system-of-equations.html#linear-equation-in-matrix-form"><i class="fa fa-check"></i><b>6.2.2</b> Linear Equation in Matrix Form</a></li>
+<li class="chapter" data-level="6.2.3" data-path="system-of-equations.html"><a href="system-of-equations.html#two-linear-equation-in-matrix-form"><i class="fa fa-check"></i><b>6.2.3</b> Two Linear Equation in Matrix Form</a></li>
+<li class="chapter" data-level="6.2.4" data-path="system-of-equations.html"><a href="system-of-equations.html#linsolve-matlab-matrix-solution-for-2-equations-and-two-unknowns"><i class="fa fa-check"></i><b>6.2.4</b> Linsolve: Matlab Matrix Solution for 2 Equations and Two Unknowns</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="system-of-equations.html"><a href="system-of-equations.html#system-of-linear-equations-row-echelon-form"><i class="fa fa-check"></i><b>6.3</b> System of Linear Equations, Row Echelon Form</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="system-of-equations.html"><a href="system-of-equations.html#two-equations-and-two-unknowns"><i class="fa fa-check"></i><b>6.3.1</b> Two Equations and Two Unknowns</a></li>
+<li class="chapter" data-level="6.3.2" data-path="system-of-equations.html"><a href="system-of-equations.html#elementary-row-operations"><i class="fa fa-check"></i><b>6.3.2</b> Elementary Row Operations</a></li>
+<li class="chapter" data-level="6.3.3" data-path="system-of-equations.html"><a href="system-of-equations.html#row-echelon-form"><i class="fa fa-check"></i><b>6.3.3</b> Row Echelon Form</a></li>
+<li class="chapter" data-level="6.3.4" data-path="system-of-equations.html"><a href="system-of-equations.html#row-echelon-form-with-2-equations-and-2-unknowns"><i class="fa fa-check"></i><b>6.3.4</b> Row Echelon Form with 2 Equations and 2 Unknowns</a></li>
+<li class="chapter" data-level="6.3.5" data-path="system-of-equations.html"><a href="system-of-equations.html#reduced-row-echelon-form"><i class="fa fa-check"></i><b>6.3.5</b> Reduced Row Echelon Form</a></li>
+<li class="chapter" data-level="6.3.6" data-path="system-of-equations.html"><a href="system-of-equations.html#reduced-row-echelon-form-with-2-equations-and-2-unknowns"><i class="fa fa-check"></i><b>6.3.6</b> Reduced Row Echelon Form with 2 Equations and 2 Unknowns</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="matrix-applications.html"><a href="matrix-applications.html"><i class="fa fa-check"></i><b>7</b> Matrix Applications</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="matrix-applications.html"><a href="matrix-applications.html#cobb-douglas-profit-maximization"><i class="fa fa-check"></i><b>7.1</b> Cobb Douglas Profit Maximization</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="matrix-applications.html"><a href="matrix-applications.html#firm-and-capital-and-labor"><i class="fa fa-check"></i><b>7.1.1</b> Firm and Capital and Labor</a></li>
+<li class="chapter" data-level="7.1.2" data-path="matrix-applications.html"><a href="matrix-applications.html#two-first-order-conditions"><i class="fa fa-check"></i><b>7.1.2</b> Two First Order Conditions</a></li>
+<li class="chapter" data-level="7.1.3" data-path="matrix-applications.html"><a href="matrix-applications.html#log-linearizing-optimality-conditions"><i class="fa fa-check"></i><b>7.1.3</b> Log Linearizing Optimality Conditions</a></li>
+<li class="chapter" data-level="7.1.4" data-path="matrix-applications.html"><a href="matrix-applications.html#solving-linear-system-to-find-optimal-choices"><i class="fa fa-check"></i><b>7.1.4</b> Solving Linear System to find Optimal Choices</a></li>
+<li class="chapter" data-level="7.1.5" data-path="matrix-applications.html"><a href="matrix-applications.html#relative-choices"><i class="fa fa-check"></i><b>7.1.5</b> Relative Choices</a></li>
+<li class="chapter" data-level="7.1.6" data-path="matrix-applications.html"><a href="matrix-applications.html#choices-as-a-function-of-w-and-r"><i class="fa fa-check"></i><b>7.1.6</b> Choices as a Function of <span class="math inline">\(w\)</span> and <span class="math inline">\(r\)</span></a></li>
+<li class="chapter" data-level="7.1.7" data-path="matrix-applications.html"><a href="matrix-applications.html#own-and-cross-price-elasticity"><i class="fa fa-check"></i><b>7.1.7</b> <strong>Own and Cross Price Elasticity</strong></a></li>
+<li class="chapter" data-level="7.1.8" data-path="matrix-applications.html"><a href="matrix-applications.html#graphical-results-for-optimal-choices"><i class="fa fa-check"></i><b>7.1.8</b> Graphical Results for Optimal Choices</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="matrix-applications.html"><a href="matrix-applications.html#cobb-douglas-utility-maximization"><i class="fa fa-check"></i><b>7.2</b> Cobb Douglas Utility Maximization</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="matrix-applications.html"><a href="matrix-applications.html#a-model-with-two-goods"><i class="fa fa-check"></i><b>7.2.1</b> A Model with Two Goods</a></li>
+<li class="chapter" data-level="7.2.2" data-path="matrix-applications.html"><a href="matrix-applications.html#model-parameters"><i class="fa fa-check"></i><b>7.2.2</b> Model Parameters</a></li>
+<li class="chapter" data-level="7.2.3" data-path="matrix-applications.html"><a href="matrix-applications.html#preference"><i class="fa fa-check"></i><b>7.2.3</b> Preference</a></li>
+<li class="chapter" data-level="7.2.4" data-path="matrix-applications.html"><a href="matrix-applications.html#budget"><i class="fa fa-check"></i><b>7.2.4</b> Budget</a></li>
+<li class="chapter" data-level="7.2.5" data-path="matrix-applications.html"><a href="matrix-applications.html#budget-and-preference-indifference-curves"><i class="fa fa-check"></i><b>7.2.5</b> Budget and Preference: Indifference Curves</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="matrix-applications.html"><a href="matrix-applications.html#equilibrium-interest-rate"><i class="fa fa-check"></i><b>7.3</b> Equilibrium Interest Rate</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="matrix-applications.html"><a href="matrix-applications.html#first-order-taylor-approximation"><i class="fa fa-check"></i><b>7.3.1</b> First Order Taylor Approximation</a></li>
+<li class="chapter" data-level="7.3.2" data-path="matrix-applications.html"><a href="matrix-applications.html#approximate-the-supply"><i class="fa fa-check"></i><b>7.3.2</b> Approximate the Supply</a></li>
+<li class="chapter" data-level="7.3.3" data-path="matrix-applications.html"><a href="matrix-applications.html#approximate-the-demand"><i class="fa fa-check"></i><b>7.3.3</b> Approximate the Demand</a></li>
+<li class="chapter" data-level="7.3.4" data-path="matrix-applications.html"><a href="matrix-applications.html#solve-approximate-demand-and-supply-using-a-system-of-linear-equations"><i class="fa fa-check"></i><b>7.3.4</b> Solve approximate Demand and Supply using a System of Linear Equations</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="matrix-applications.html"><a href="matrix-applications.html#first-order-taylor-approximation-1"><i class="fa fa-check"></i><b>7.4</b> First Order Taylor Approximation</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="matrix-applications.html"><a href="matrix-applications.html#demand-and-supply-for-credit-and-abhk"><i class="fa fa-check"></i><b>7.4.1</b> Demand and Supply for Credit and <span class="math inline">\(a,b,h,k\)</span></a></li>
+<li class="chapter" data-level="7.4.2" data-path="matrix-applications.html"><a href="matrix-applications.html#what-are-abhk"><i class="fa fa-check"></i><b>7.4.2</b> What are <span class="math inline">\(a,b,h,k\)</span>?</a></li>
+<li class="chapter" data-level="7.4.3" data-path="matrix-applications.html"><a href="matrix-applications.html#exact-equlibrium-interest-rate"><i class="fa fa-check"></i><b>7.4.3</b> Exact Equlibrium Interest Rate</a></li>
+<li class="chapter" data-level="7.4.4" data-path="matrix-applications.html"><a href="matrix-applications.html#approximating-demand-and-supply-for-credit"><i class="fa fa-check"></i><b>7.4.4</b> Approximating Demand and Supply for Credit</a></li>
+<li class="chapter" data-level="7.4.5" data-path="matrix-applications.html"><a href="matrix-applications.html#graphical-ilustration"><i class="fa fa-check"></i><b>7.4.5</b> Graphical Ilustration</a></li>
+<li class="chapter" data-level="7.4.6" data-path="matrix-applications.html"><a href="matrix-applications.html#approximate-equilibrium-in-terms-of-parameters"><i class="fa fa-check"></i><b>7.4.6</b> Approximate Equilibrium in terms of Parameters</a></li>
+<li class="chapter" data-level="7.4.7" data-path="matrix-applications.html"><a href="matrix-applications.html#parameter-impacts-on-equilibriumeffects-of-changing-a"><i class="fa fa-check"></i><b>7.4.7</b> Parameter Impacts on Equilibrium–Effects of changing <span class="math inline">\(A\)</span></a></li>
+<li class="chapter" data-level="7.4.8" data-path="matrix-applications.html"><a href="matrix-applications.html#parameter-impacts-on-equilibriumeffects-of-changing-z"><i class="fa fa-check"></i><b>7.4.8</b> Parameter Impacts on Equilibrium–Effects of changing <span class="math inline">\(Z\)</span></a></li>
+<li class="chapter" data-level="7.4.9" data-path="matrix-applications.html"><a href="matrix-applications.html#parameter-impacts-on-equilibriumeffects-of-changing-beta"><i class="fa fa-check"></i><b>7.4.9</b> Parameter Impacts on Equilibrium–Effects of changing <span class="math inline">\(\beta\)</span></a></li>
+<li class="chapter" data-level="7.4.10" data-path="matrix-applications.html"><a href="matrix-applications.html#parameter-impacts-on-equilibriumeffects-of-changing-alpha"><i class="fa fa-check"></i><b>7.4.10</b> Parameter Impacts on Equilibrium–Effects of changing <span class="math inline">\(\alpha\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="uncertainty.html"><a href="uncertainty.html"><i class="fa fa-check"></i><b>8</b> Uncertainty</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="uncertainty.html"><a href="uncertainty.html#risky-and-safe-assets"><i class="fa fa-check"></i><b>8.1</b> Risky and Safe Assets</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="uncertainty.html"><a href="uncertainty.html#uncertainty-1"><i class="fa fa-check"></i><b>8.1.1</b> <strong>Uncertainty</strong></a></li>
+<li class="chapter" data-level="8.1.2" data-path="uncertainty.html"><a href="uncertainty.html#differential-returns-depending-on-the-state-of-the-world"><i class="fa fa-check"></i><b>8.1.2</b> Differential Returns Depending on the State of the World</a></li>
+<li class="chapter" data-level="8.1.3" data-path="uncertainty.html"><a href="uncertainty.html#the-two-period-household-protofolio-choice-problem"><i class="fa fa-check"></i><b>8.1.3</b> The Two Period Household Protofolio Choice Problem</a></li>
+<li class="chapter" data-level="8.1.4" data-path="uncertainty.html"><a href="uncertainty.html#household-maximization-problem"><i class="fa fa-check"></i><b>8.1.4</b> Household Maximization Problem</a></li>
+<li class="chapter" data-level="8.1.5" data-path="uncertainty.html"><a href="uncertainty.html#first-order-conditions"><i class="fa fa-check"></i><b>8.1.5</b> First Order Conditions</a></li>
+<li class="chapter" data-level="8.1.6" data-path="uncertainty.html"><a href="uncertainty.html#marginal-utility-and-marginal-returns"><i class="fa fa-check"></i><b>8.1.6</b> Marginal Utility and Marginal Returns</a></li>
+<li class="chapter" data-level="8.1.7" data-path="uncertainty.html"><a href="uncertainty.html#solving-for-optimal-choicesanalytical-solution"><i class="fa fa-check"></i><b>8.1.7</b> Solving for Optimal Choices–Analytical Solution</a></li>
+<li class="chapter" data-level="8.1.8" data-path="uncertainty.html"><a href="uncertainty.html#solving-for-optimal-chociesnumerical-parameter-values"><i class="fa fa-check"></i><b>8.1.8</b> Solving for Optimal Chocies–Numerical Parameter Values</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html"><i class="fa fa-check"></i><b>9</b> Equality Constrained Optimization</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#cost-minimization-decreasing-returns"><i class="fa fa-check"></i><b>9.1</b> Cost Minimization Decreasing Returns</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#profit-maximization-with-constraint"><i class="fa fa-check"></i><b>9.1.1</b> Profit Maximization with Constraint</a></li>
+<li class="chapter" data-level="9.1.2" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#cost-minimization-with-constraint"><i class="fa fa-check"></i><b>9.1.2</b> Cost Minimization with Constraint</a></li>
+<li class="chapter" data-level="9.1.3" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#cost-minimization-problemoptimal-capital-labor-choices"><i class="fa fa-check"></i><b>9.1.3</b> Cost Minimization Problem–Optimal Capital Labor Choices</a></li>
+<li class="chapter" data-level="9.1.4" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#cost-minimization-problemsolving-on-matlab"><i class="fa fa-check"></i><b>9.1.4</b> Cost Minimization Problem–Solving on Matlab</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#profit-maximization-constant-returns"><i class="fa fa-check"></i><b>9.2</b> Profit Maximization Constant Returns</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#what-is-the-profit-of-the-firm-at-constrained-optimal-choices"><i class="fa fa-check"></i><b>9.2.1</b> What is the Profit of the firm at Constrained Optimal Choices?</a></li>
+<li class="chapter" data-level="9.2.2" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#profit-maximization-and-marginal-cost"><i class="fa fa-check"></i><b>9.2.2</b> Profit Maximization and Marginal Cost</a></li>
+<li class="chapter" data-level="9.2.3" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#constant-return-to-scale"><i class="fa fa-check"></i><b>9.2.3</b> Constant Return to Scale</a></li>
+<li class="chapter" data-level="9.2.4" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#when-will-the-firm-produce-and-what-is-its-profit"><i class="fa fa-check"></i><b>9.2.4</b> When will the Firm produce, and what is its Profit?</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#intertemporal-utility-maximization"><i class="fa fa-check"></i><b>9.3</b> Intertemporal Utility Maximization</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#utility-maximization-over-consumption-in-two-periods"><i class="fa fa-check"></i><b>9.3.1</b> Utility Maximization over Consumption in Two Periods</a></li>
+<li class="chapter" data-level="9.3.2" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#first-order-conditions-of-the-constrained-consumption-problem"><i class="fa fa-check"></i><b>9.3.2</b> First Order Conditions of the Constrained Consumption Problem</a></li>
+<li class="chapter" data-level="9.3.3" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#optimal-relative-allocations-of-consumptions-in-the-first-and-second-periods"><i class="fa fa-check"></i><b>9.3.3</b> Optimal Relative Allocations of Consumptions in the First and Second Periods</a></li>
+<li class="chapter" data-level="9.3.4" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#optimal-consumption-choices"><i class="fa fa-check"></i><b>9.3.4</b> Optimal Consumption Choices</a></li>
+<li class="chapter" data-level="9.3.5" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#indirect-utility"><i class="fa fa-check"></i><b>9.3.5</b> Indirect Utility</a></li>
+<li class="chapter" data-level="9.3.6" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#optimal-borrowing-and-savings-choices"><i class="fa fa-check"></i><b>9.3.6</b> Optimal Borrowing and Savings Choices</a></li>
+<li class="chapter" data-level="9.3.7" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#computational-solution-to-the-equality-constrained-problem"><i class="fa fa-check"></i><b>9.3.7</b> Computational Solution to the Equality Constrained Problem</a></li>
+<li class="chapter" data-level="9.3.8" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#fmincon-solution-to-the-constrained-problem"><i class="fa fa-check"></i><b>9.3.8</b> Fmincon Solution to the Constrained Problem</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#intertemporal-expenditure-minimization"><i class="fa fa-check"></i><b>9.4</b> Intertemporal Expenditure Minimization</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#utility-maximization-over-consumption-in-two-periods-1"><i class="fa fa-check"></i><b>9.4.1</b> Utility Maximization over Consumption in Two Periods</a></li>
+<li class="chapter" data-level="9.4.2" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#the-expenditure-minimization-problem"><i class="fa fa-check"></i><b>9.4.2</b> The Expenditure Minimization Problem</a></li>
+<li class="chapter" data-level="9.4.3" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#first-order-conditions-of-the-constrained-consumption-problem-1"><i class="fa fa-check"></i><b>9.4.3</b> First Order Conditions of the Constrained Consumption Problem</a></li>
+<li class="chapter" data-level="9.4.4" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#optimal-relative-allocations-of-consumptions-in-the-first-and-second-periods-1"><i class="fa fa-check"></i><b>9.4.4</b> Optimal Relative Allocations of Consumptions in the First and Second Periods</a></li>
+<li class="chapter" data-level="9.4.5" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#optimal-expenditure-minimization-consumption-choices"><i class="fa fa-check"></i><b>9.4.5</b> Optimal Expenditure Minimization Consumption Choices</a></li>
+<li class="chapter" data-level="9.4.6" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#compuational-solution"><i class="fa fa-check"></i><b>9.4.6</b> Compuational Solution</a></li>
+<li class="chapter" data-level="9.4.7" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#graphical-representation"><i class="fa fa-check"></i><b>9.4.7</b> Graphical Representation</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#intertemporal-income-and-substitution-effects"><i class="fa fa-check"></i><b>9.5</b> Intertemporal Income and Substitution Effects</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#utility-maximization-over-consumption-in-two-periods-2"><i class="fa fa-check"></i><b>9.5.1</b> Utility Maximization over Consumption in Two Periods</a></li>
+<li class="chapter" data-level="9.5.2" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#solving-for-the-substitution-effect"><i class="fa fa-check"></i><b>9.5.2</b> Solving for the Substitution Effect</a></li>
+<li class="chapter" data-level="9.5.3" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#optimal-consumption-choices-with-different-interest-rates"><i class="fa fa-check"></i><b>9.5.3</b> Optimal Consumption Choices with Different Interest Rates</a></li>
+<li class="chapter" data-level="9.5.4" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#graphical-illustration-of-the-income-and-substitution-effect"><i class="fa fa-check"></i><b>9.5.4</b> Graphical Illustration of the Income and Substitution Effect</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html"><i class="fa fa-check"></i><b>10</b> Inequality Constrained Optimization</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#borrowing-constrained-profit-maximization"><i class="fa fa-check"></i><b>10.1</b> Borrowing Constrained Profit Maximization</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#firm-and-capital-and-labor-1"><i class="fa fa-check"></i><b>10.1.1</b> Firm and Capital and Labor</a></li>
+<li class="chapter" data-level="10.1.2" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#lagrangian-and-first-order-conditions"><i class="fa fa-check"></i><b>10.1.2</b> Lagrangian and First Order Conditions</a></li>
+<li class="chapter" data-level="10.1.3" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#solving-for-different-cases"><i class="fa fa-check"></i><b>10.1.3</b> Solving for Different Cases</a></li>
+<li class="chapter" data-level="10.1.4" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#solution"><i class="fa fa-check"></i><b>10.1.4</b> Solution</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#constrained-borrowing-and-savings"><i class="fa fa-check"></i><b>10.2</b> Constrained Borrowing and Savings</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#what-is-the-constrained-borrowing-problem"><i class="fa fa-check"></i><b>10.2.1</b> What is the constrained borrowing problem?</a></li>
+<li class="chapter" data-level="10.2.2" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#inequality-constraint"><i class="fa fa-check"></i><b>10.2.2</b> Inequality Constraint</a></li>
+<li class="chapter" data-level="10.2.3" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#lagrangian-with-inequality-constraint"><i class="fa fa-check"></i><b>10.2.3</b> Lagrangian with Inequality Constraint</a></li>
+<li class="chapter" data-level="10.2.4" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#derivative-with-respect-to-b"><i class="fa fa-check"></i><b>10.2.4</b> Derivative with Respect to <span class="math inline">\(b\)</span></a></li>
+<li class="chapter" data-level="10.2.5" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#first-order-conditions-with-inequality-constraint"><i class="fa fa-check"></i><b>10.2.5</b> First Order Conditions with Inequality Constraint</a></li>
+<li class="chapter" data-level="10.2.6" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#solving-the-problem"><i class="fa fa-check"></i><b>10.2.6</b> Solving the Problem</a></li>
+<li class="chapter" data-level="10.2.7" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#effects-of-z_2-on-optimal-choices"><i class="fa fa-check"></i><b>10.2.7</b> Effects of <span class="math inline">\(Z_2\)</span> on optimal choices</a></li>
+<li class="chapter" data-level="10.2.8" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#effects-of-r-on-optimal-choices"><i class="fa fa-check"></i><b>10.2.8</b> Effects of <span class="math inline">\(r\)</span> on optimal choices</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#leisure-savings-and-constrained-borrowing"><i class="fa fa-check"></i><b>10.3</b> Leisure, Savings and Constrained Borrowing</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#what-is-the-constrained-asset-choice-problem-with-labor"><i class="fa fa-check"></i><b>10.3.1</b> What is the constrained asset choice problem with labor?</a></li>
+<li class="chapter" data-level="10.3.2" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#single-inequality-constraint-problem"><i class="fa fa-check"></i><b>10.3.2</b> Single Inequality Constraint Problem</a></li>
+<li class="chapter" data-level="10.3.3" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#unconstrained-optimal-labor-and-borrowing-and-savings-choices-prlbme"><i class="fa fa-check"></i><b>10.3.3</b> Unconstrained Optimal Labor and Borrowing and Savings Choices Prlbme</a></li>
+<li class="chapter" data-level="10.3.4" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#numerical-solution-to-the-inequality-constraint-problem"><i class="fa fa-check"></i><b>10.3.4</b> Numerical Solution to the Inequality Constraint Problem</a></li>
+<li class="chapter" data-level="10.3.5" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#effects-of-psi-on-optimal-choices"><i class="fa fa-check"></i><b>10.3.5</b> Effects of <span class="math inline">\(\psi\)</span> on optimal choices</a></li>
+<li class="chapter" data-level="10.3.6" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#effects-of-r-and-z_2-on-optimal-choices"><i class="fa fa-check"></i><b>10.3.6</b> Effects of <span class="math inline">\(r\)</span> and <span class="math inline">\(z_2\)</span> on optimal choices</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html"><i class="fa fa-check"></i><b>11</b> Equilibrium and Policy</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#equilibrium-interest-rate-and-tax"><i class="fa fa-check"></i><b>11.1</b> Equilibrium Interest Rate and Tax</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#how-do-households-with-different-beta-respond-to-changes-in-r-given-borrowing-constraint"><i class="fa fa-check"></i><b>11.1.1</b> How do households with different <span class="math inline">\(\beta\)</span> respond to changes in <span class="math inline">\(r\)</span> given Borrowing Constraint?</a></li>
+<li class="chapter" data-level="11.1.2" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#aggregate-household-excess-supply-along-interest-rate"><i class="fa fa-check"></i><b>11.1.2</b> Aggregate Household Excess Supply along Interest Rate</a></li>
+<li class="chapter" data-level="11.1.3" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#firm-demand-for-credit"><i class="fa fa-check"></i><b>11.1.3</b> Firm Demand for Credit</a></li>
+<li class="chapter" data-level="11.1.4" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#economy-wide-excess-supply-for-credit-firm-households"><i class="fa fa-check"></i><b>11.1.4</b> Economy Wide Excess Supply for Credit (Firm + Households)</a></li>
+<li class="chapter" data-level="11.1.5" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#demand-and-supply-for-credit-with-a-tax-on-interest-rate"><i class="fa fa-check"></i><b>11.1.5</b> Demand and Supply for Credit with a Tax on Interest Rate</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#equilibrium-interest-rate-and-wage-rate"><i class="fa fa-check"></i><b>11.2</b> Equilibrium Interest Rate and Wage Rate</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#household-and-firms-problem"><i class="fa fa-check"></i><b>11.2.1</b> Household and Firm’s Problem</a></li>
+<li class="chapter" data-level="11.2.2" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#setting-up-parameters"><i class="fa fa-check"></i><b>11.2.2</b> Setting Up Parameters</a></li>
+<li class="chapter" data-level="11.2.3" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#household-labor-supply-and-borrowsave-with-different-beta-and-r"><i class="fa fa-check"></i><b>11.2.3</b> Household Labor Supply and Borrow/Save with different <span class="math inline">\(\beta\)</span> and <span class="math inline">\(r\)</span> ?</a></li>
+<li class="chapter" data-level="11.2.4" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#firms-demand-for-capital-and-labor"><i class="fa fa-check"></i><b>11.2.4</b> Firm’s Demand for Capital and Labor</a></li>
+<li class="chapter" data-level="11.2.5" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#demand-and-supply-for-capital"><i class="fa fa-check"></i><b>11.2.5</b> Demand and Supply for Capital</a></li>
+<li class="chapter" data-level="11.2.6" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#demand-and-supply-for-labor-demand-and-supply"><i class="fa fa-check"></i><b>11.2.6</b> Demand and Supply for Labor Demand and Supply</a></li>
+<li class="chapter" data-level="11.2.7" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#excess-demand-for-capital-and-labor"><i class="fa fa-check"></i><b>11.2.7</b> Excess Demand for Capital and Labor</a></li>
+<li class="chapter" data-level="11.2.8" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#w-and-r-equilibrium"><i class="fa fa-check"></i><b>11.2.8</b> <span class="math inline">\(w\)</span> and <span class="math inline">\(r\)</span> Equilibrium</a></li>
+</ul></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="index-and-code-links.html"><a href="index-and-code-links.html"><i class="fa fa-check"></i><b>A</b> Index and Code Links</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="index-and-code-links.html"><a href="index-and-code-links.html#notations-and-functions-links"><i class="fa fa-check"></i><b>A.1</b> Notations and Functions links</a></li>
+<li class="chapter" data-level="A.2" data-path="index-and-code-links.html"><a href="index-and-code-links.html#commonly-used-functions-links"><i class="fa fa-check"></i><b>A.2</b> Commonly Used Functions links</a></li>
+<li class="chapter" data-level="A.3" data-path="index-and-code-links.html"><a href="index-and-code-links.html#derivatives-links"><i class="fa fa-check"></i><b>A.3</b> Derivatives links</a></li>
+<li class="chapter" data-level="A.4" data-path="index-and-code-links.html"><a href="index-and-code-links.html#univariate-applications-links"><i class="fa fa-check"></i><b>A.4</b> Univariate Applications links</a></li>
+<li class="chapter" data-level="A.5" data-path="index-and-code-links.html"><a href="index-and-code-links.html#matrix-basics-links"><i class="fa fa-check"></i><b>A.5</b> Matrix Basics links</a></li>
+<li class="chapter" data-level="A.6" data-path="index-and-code-links.html"><a href="index-and-code-links.html#system-of-equations-links"><i class="fa fa-check"></i><b>A.6</b> System of Equations links</a></li>
+<li class="chapter" data-level="A.7" data-path="index-and-code-links.html"><a href="index-and-code-links.html#matrix-applications-links"><i class="fa fa-check"></i><b>A.7</b> Matrix Applications links</a></li>
+<li class="chapter" data-level="A.8" data-path="index-and-code-links.html"><a href="index-and-code-links.html#uncertainty-links"><i class="fa fa-check"></i><b>A.8</b> Uncertainty links</a></li>
+<li class="chapter" data-level="A.9" data-path="index-and-code-links.html"><a href="index-and-code-links.html#equality-constrained-optimization-links"><i class="fa fa-check"></i><b>A.9</b> Equality Constrained Optimization links</a></li>
+<li class="chapter" data-level="A.10" data-path="index-and-code-links.html"><a href="index-and-code-links.html#inequality-constrained-optimization-links"><i class="fa fa-check"></i><b>A.10</b> Inequality Constrained Optimization links</a></li>
+<li class="chapter" data-level="A.11" data-path="index-and-code-links.html"><a href="index-and-code-links.html#equilibrium-and-policy-links"><i class="fa fa-check"></i><b>A.11</b> Equilibrium and Policy links</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://fanwangecon.github.io/Math4Econ/bookdown/index.html" target="blank">Math4Econ Bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introductory Mathematics for Economists with Matlab</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="matrix-basics" class="section level1" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Matrix Basics</h1>
+
+<div id="laws-of-matrix-algebra" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Laws of Matrix Algebra</h2>
+<blockquote>
+<p>Go back to <a href="http://fanwangecon.github.io/">fan</a>’s <a href="https://fanwangecon.github.io/CodeDynaAsset/">CodeDynaAsset</a> Package, <a href="https://fanwangecon.github.io/M4Econ/">Matlab Code Examples</a> Repository (<a href="https://fanwangecon.github.io/M4Econ/bookdown">bookdown site</a>), or <a href="https://fanwangecon.github.io/Math4Econ/">Math for Econ with Matlab</a> Repository (<a href="https://fanwangecon.github.io/Math4Econ/bookdown">bookdown site</a>).</p>
+</blockquote>
+<div id="old-rules-5-still-apply" class="section level3" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> 6 Old Rules, 5 Still Apply</h3>
+<p>We had associative, commutative and distributive laws for scalar
+algebra, we can think of them as the six bullet points below. Only the
+multiplicative-commutative law no longer works for matrix, the other
+rules work for matrix as well as scalar algebra.</p>
+<p>Associative laws work as in scalar algebra for matrix</p>
+<ul>
+<li><p><span class="math inline">\(\displaystyle (A+B)+C=A+(B+C)\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle (A\cdot B)\cdot C=A\cdot (B\cdot C)\)</span></p></li>
+</ul>
+<p>Commutative Law works as well for addition</p>
+<ul>
+<li><p><span class="math inline">\(\displaystyle A+B=B+A\)</span></p></li>
+<li><p>with scalars, we know <span class="math inline">\(3\cdot 4=4\cdot 3\)</span>, but commutative law for
+matrix multiplication does not work, Matrix
+<span class="math inline">\(A\cdot B\not= B\cdot A\)</span>. The matrix dimensions might not even match
+up for multiplication. (see below for examples)</p></li>
+</ul>
+<p>And Distributive Law still applies to matrix</p>
+<ul>
+<li><p><span class="math inline">\(\displaystyle A\cdot (B+C)=A\cdot B+A\cdot C\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle (B+C)\cdot A=B\cdot A+C\cdot A\)</span></p></li>
+</ul>
+</div>
+<div id="example-for-acdot-bnot-bcdot-a" class="section level3" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Example for <span class="math inline">\(A\cdot B\not= B\cdot A\)</span></h3>
+<pre><code>% Non-Square
+A = rand(2,3)
+
+A = 2x3    
+    0.6959    0.6385    0.0688
+    0.6999    0.0336    0.3196
+
+B = rand(3,4)
+
+B = 3x4    
+    0.5309    0.8200    0.5313    0.6110
+    0.6544    0.7184    0.3251    0.7788
+    0.4076    0.9686    0.1056    0.4235
+
+% This is OK
+disp(A*B)
+
+    0.8154    1.0960    0.5847    0.9516
+    0.5238    0.9076    0.4166    0.5891
+
+% This does not work
+try 
+    B*A
+catch ME
+    disp(&#39;does not work! Dimension mismatch&#39;)
+end
+
+does not work! Dimension mismatch
+
+
+% Square
+A = rand(3,3)
+
+A = 3x3    
+    0.0908    0.2810    0.4574
+    0.2665    0.4401    0.8754
+    0.1537    0.5271    0.5181
+
+B = rand(3,3)
+
+B = 3x3    
+    0.9436    0.2407    0.6718
+    0.6377    0.6761    0.6951
+    0.9577    0.2891    0.0680
+
+% This is OK
+A*B
+
+ans = 3x3    
+    0.7030    0.3441    0.2875
+    1.3704    0.6147    0.5445
+    0.9773    0.5431    0.5049
+
+% This works, but result differs from A*B
+B*A
+
+ans = 3x3    
+    0.2531    0.7252    0.9904
+    0.3449    0.8432    1.2437
+    0.1745    0.4322    0.7263</code></pre>
+</div>
+<div id="new-rules-for-transpose" class="section level3" number="5.1.3">
+<h3><span class="header-section-number">5.1.3</span> 4 New Rules for Transpose</h3>
+<p>In scalar algebra, transpose does not make sense. Given matrix <span class="math inline">\(A\)</span>,
+<span class="math inline">\(A^T\)</span> is the transpose matrix of <span class="math inline">\(A\)</span> where each row of <span class="math inline">\(A\)</span> becomes
+columns in <span class="math inline">\(A^T\)</span>. If <span class="math inline">\(A\)</span> is <span class="math inline">\(M\)</span> by <span class="math inline">\(N\)</span>, then <span class="math inline">\(A^T\)</span> is <span class="math inline">\(N\)</span> by <span class="math inline">\(M\)</span>.</p>
+<p>Given matrix <span class="math inline">\(A\)</span> and scalar value <span class="math inline">\(r\)</span>:</p>
+<ul>
+<li><p><strong>1</strong>: <span class="math inline">\((r\cdot A)^T =r\cdot A^T\)</span></p></li>
+<li><p><strong>2</strong>: <span class="math inline">\((A^T )^T =A\)</span></p></li>
+<li><p><strong>3:</strong> <span class="math inline">\((A+B)^T =A^T +B^T\)</span></p></li>
+<li><p><strong>4</strong>: <span class="math inline">\((A\cdot B)^T =B^T \cdot A^T\)</span></p></li>
+</ul>
+<p>For the 4th rule, suppose matrix <span class="math inline">\(A\)</span> is has <span class="math inline">\(L\)</span> rows and <span class="math inline">\(M\)</span> columns,
+and the matrix <span class="math inline">\(B\)</span> has <span class="math inline">\(M\)</span> rows and <span class="math inline">\(N\)</span>columns. <span class="math inline">\((A\cdot B)\)</span> is a <span class="math inline">\(L\)</span> by
+<span class="math inline">\(N\)</span> matrix, <span class="math inline">\((A\cdot B)^T\)</span> is a <span class="math inline">\(N\)</span> by <span class="math inline">\(L\)</span> matrix. This is equal to
+<span class="math inline">\(B^T \cdot A^T\)</span>, where we have a <span class="math inline">\(N\)</span> by <span class="math inline">\(M\)</span> matrix <span class="math inline">\(B^T\)</span> multiplied by a
+<span class="math inline">\(M\)</span> by <span class="math inline">\(L\)</span> matrix <span class="math inline">\(A^T\)</span>, and the resulting matrix is <span class="math inline">\(N\)</span> by <span class="math inline">\(L\)</span>.</p>
+<pre><code>A = rand(2,3)
+
+A = 2x3    
+    0.2548    0.6678    0.3445
+    0.2240    0.8444    0.7805
+
+Atranspose = (A&#39;)
+
+Atranspose = 3x2    
+    0.2548    0.2240
+    0.6678    0.8444
+    0.3445    0.7805</code></pre>
+
+</div>
+</div>
+<div id="matrix-addition-and-multiplication" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Matrix Addition and Multiplication</h2>
+<blockquote>
+<p>Go back to <a href="http://fanwangecon.github.io/">fan</a>’s <a href="https://fanwangecon.github.io/CodeDynaAsset/">CodeDynaAsset</a> Package, <a href="https://fanwangecon.github.io/M4Econ/">Matlab Code Examples</a> Repository (<a href="https://fanwangecon.github.io/M4Econ/bookdown">bookdown site</a>), or <a href="https://fanwangecon.github.io/Math4Econ/">Math for Econ with Matlab</a> Repository (<a href="https://fanwangecon.github.io/Math4Econ/bookdown">bookdown site</a>).</p>
+</blockquote>
+<div id="scalar-multiplicationdivision-additionsubtraction" class="section level3" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Scalar Multiplication/Division, Addition/Subtraction</h3>
+<p>If we multiply a matrix by a number, we multiply every element of that
+matrix by that number. Addition, subtraction, and division of a matrix
+with a sclar value work the same way</p>
+<pre><code>c = 10
+
+c = 10
+
+matA = rand(3,2)
+
+matA = 3x2    
+    0.3111    0.1848
+    0.9234    0.9049
+    0.4302    0.9797
+
+c*matA
+
+ans = 3x2    
+    3.1110    1.8482
+    9.2338    9.0488
+    4.3021    9.7975
+
+matA/c
+
+ans = 3x2    
+    0.0311    0.0185
+    0.0923    0.0905
+    0.0430    0.0980
+
+matA - c
+
+ans = 3x2    
+   -9.6889   -9.8152
+   -9.0766   -9.0951
+   -9.5698   -9.0203
+
+matA + c
+
+ans = 3x2    
+   10.3111   10.1848
+   10.9234   10.9049
+   10.4302   10.9797</code></pre>
+</div>
+<div id="addition-and-subtraction" class="section level3" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Addition and Subtraction</h3>
+<p>You can add/subtract together two matrixes of the same size. We can add
+up the two 3 by 1 vectors from above, and the two 2 by 3 matrixes from
+above.</p>
+<pre><code>colVecA = rand(3,1)
+
+colVecA = 3x1    
+    0.4389
+    0.1111
+    0.2581
+
+colVecB = rand(3,1)
+
+colVecB = 3x1    
+    0.4087
+    0.5949
+    0.2622
+
+matA = rand(3,2)
+
+matA = 3x2    
+    0.6028    0.1174
+    0.7112    0.2967
+    0.2217    0.3188
+
+matB = rand(3,2)
+
+matB = 3x2    
+    0.4242    0.2625
+    0.5079    0.8010
+    0.0855    0.0292
+
+colVecA + colVecB
+
+ans = 3x1    
+    0.8476
+    0.7060
+    0.5203
+
+matA - matB
+
+ans = 3x2    
+    0.1787   -0.1451
+    0.2034   -0.5043
+    0.1362    0.2896</code></pre>
+<p>When using matlab, even if you add up to a single column or single row
+with a matrix that has multiple rows and columns, if the column count or
+row count matches up, matlab will <strong><em>broadcast</em></strong> rules, and addition
+will still be legal. In the example below, matA is 3 by 2, and colVecA
+is 3 by 1, matlab duplicate colVecA and add it to each column of matA
+(<em>Broadcast rules are important for efficient storage and computation</em>):</p>
+<pre><code>matA + colVecA
+
+ans = 3x2    
+    1.0417    0.5563
+    0.8223    0.4078
+    0.4798    0.5768</code></pre>
+</div>
+<div id="matrix-multiplication" class="section level3" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> <strong>Matrix Multiplication</strong></h3>
+<p>When we try to multiply two matrixes together: <span class="math inline">\(A\cdot B\)</span> for example,
+the <strong><em>number of columns</em></strong> of matrix <span class="math inline">\(A\)</span> and the <strong><em>number of rows</em></strong>
+of matrix <span class="math inline">\(B\)</span> have to match up.</p>
+<p>If the matrix <span class="math inline">\(A\)</span> is has <span class="math inline">\(L\)</span> rows and <span class="math inline">\(M\)</span> columns, and the matrix <span class="math inline">\(B\)</span>
+has <span class="math inline">\(M\)</span> rows and <span class="math inline">\(N\)</span>columns, then the resulting matrix of <span class="math inline">\(C=A\cdot B\)</span>
+has to have <span class="math inline">\(L\)</span> rows and <span class="math inline">\(N\)</span> columns.</p>
+<p>Each of the <span class="math inline">\((l,n)\)</span> cell in the product matrix <span class="math inline">\(C=A\cdot B\)</span>, is equal
+to:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle C_{l,n} =\sum_{m=1}^M A_{l,m} \cdot B_{m,n}\)</span></li>
+</ul>
+<p>Note that we are summing over <span class="math inline">\(M\)</span>: row <span class="math inline">\(l\)</span> in matrix <span class="math inline">\(A\)</span>, and column <span class="math inline">\(n\)</span>
+in matrix <span class="math inline">\(B\)</span> both have <span class="math inline">\(M\)</span> elements. We multiply each <span class="math inline">\(m\)</span> of the <span class="math inline">\(M\)</span>
+element from the row in <span class="math inline">\(A\)</span> and column in <span class="math inline">\(B\)</span> together one by one, and
+then sum them up to end up with the value for the <span class="math inline">\(l\)</span>th row and <span class="math inline">\(n\)</span>th
+column in matrix <span class="math inline">\(C\)</span>.</p>
+<pre><code>% (3 by 4) times (4 by 2) end up with (3 by 2)
+L = 3;
+M = 4;
+N = 2;
+matA = rand(L, M)
+
+matA = 3x4    
+    0.9289    0.5785    0.9631    0.2316
+    0.7303    0.2373    0.5468    0.4889
+    0.4886    0.4588    0.5211    0.6241
+
+matB = rand(M, N)  
+
+matB = 4x2    
+    0.6791    0.0377
+    0.3955    0.8852
+    0.3674    0.9133
+    0.9880    0.7962
+
+matC = matA*matB
+
+matC = 3x2    
+    1.4423    1.6111
+    1.2738    1.1262
+    1.3214    1.3974
+
+
+% (2 by 10) times (10 by 1) end up with (2 by 1)
+L = 2;
+M = 10;
+N = 1;
+matA = rand(L, M)
+
+matA = 2x10    
+    0.0987    0.3354    0.1366    0.1068    0.4942    0.7150    0.8909    0.6987    0.0305    0.5000
+    0.2619    0.6797    0.7212    0.6538    0.7791    0.9037    0.3342    0.1978    0.7441    0.4799
+
+matB = rand(M, N)  
+
+matB = 10x1    
+    0.9047
+    0.6099
+    0.6177
+    0.8594
+    0.8055
+    0.5767
+    0.1829
+    0.2399
+    0.8865
+    0.0287
+
+matC = matA*matB
+
+matC = 2x1    
+    1.6524
+    3.5895</code></pre>
+
+</div>
+</div>
+<div id="creating-matrixes-in-matlab" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Creating Matrixes in Matlab</h2>
+<blockquote>
+<p>Go back to <a href="http://fanwangecon.github.io/">fan</a>’s <a href="https://fanwangecon.github.io/CodeDynaAsset/">CodeDynaAsset</a> Package, <a href="https://fanwangecon.github.io/M4Econ/">Matlab Code Examples</a> Repository (<a href="https://fanwangecon.github.io/M4Econ/bookdown">bookdown site</a>), or <a href="https://fanwangecon.github.io/Math4Econ/">Math for Econ with Matlab</a> Repository (<a href="https://fanwangecon.github.io/Math4Econ/bookdown">bookdown site</a>).</p>
+</blockquote>
+<div id="matlab-define-row-and-column-vectors-matrix" class="section level3" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Matlab Define Row and Column Vectors (Matrix)</h3>
+<pre><code>% A column vector 4 by 1, with three numbers you fill in by yourself
+colVec = [5;2;3;10]
+
+colVec = 4x1    
+     5
+     2
+     3
+    10
+
+% Another column vector with 4 random numbers
+colVecRand = rand(4,1)
+
+colVecRand = 4x1    
+    0.4899
+    0.1679
+    0.9787
+    0.7127
+
+% A row vector 1 by 4
+rowVec = [3,2,4,5]
+
+rowVec = 1x4    
+     3     2     4     5
+
+% A row vector 1 by 4 with random number
+rowVecRand = rand(1,4)
+
+rowVecRand = 1x4    
+    0.5005    0.4711    0.0596    0.6820</code></pre>
+</div>
+<div id="matlab-define-a-matrix" class="section level3" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Matlab Define a Matrix</h3>
+<pre><code>% A 2 by 3 matrix by hand
+matA = [1,2,1;
+         3,4,10]
+
+matA = 2x3    
+     1     2     1
+     3     4    10
+
+% Another 2 by 3 matrix, now with random numbers
+matRand = rand(2,3)
+
+matRand = 2x3    
+    0.0424    0.5216    0.8181
+    0.0714    0.0967    0.8175
+
+% Another 2 by 3 matrix, now with random integers between 1 and 10
+% rand draws between 0 and 1, ceil converts 0.1 to 1, 1.1 to 2, etc
+matRand = ceil(rand(2,3)*10)
+
+matRand = 2x3    
+     8     7    10
+     2     6     7</code></pre>
+</div>
+<div id="matlab-define-a-square-matrix" class="section level3" number="5.3.3">
+<h3><span class="header-section-number">5.3.3</span> Matlab Define a Square Matrix</h3>
+<pre><code>% A 4 by 4 square matrix
+matSquare = rand(4)
+
+matSquare = 4x4    
+    0.8003    0.0835    0.8314    0.5269
+    0.4538    0.1332    0.8034    0.4168
+    0.4324    0.1734    0.0605    0.6569
+    0.8253    0.3909    0.3993    0.6280
+
+% or can define 4 by 4
+matSquare = rand(4, 4)
+
+matSquare = 4x4    
+    0.2920    0.1672    0.4897    0.0527
+    0.4317    0.1062    0.3395    0.7379
+    0.0155    0.3724    0.9516    0.2691
+    0.9841    0.1981    0.9203    0.4228
+
+% or can define 4 by 4, between 1 and 5 each number
+matSquare = ceil(rand(4, 4)*5)
+
+matSquare = 4x4    
+     3     2     4     5
+     5     4     4     1
+     3     4     1     1
+     5     3     1     3</code></pre>
+</div>
+<div id="identity-matrix" class="section level3" number="5.3.4">
+<h3><span class="header-section-number">5.3.4</span> Identity Matrix</h3>
+<p>If a matrix <span class="math inline">\(A\)</span> is square matrix with the same number of rows and
+columns, and all diagonal elements are <span class="math inline">\(1\)</span> and non-diagonal elements are
+<span class="math inline">\(0\)</span>, then <span class="math inline">\(A\)</span> is an identity matrix:</p>
+<ul>
+<li><p><span class="math inline">\(A_{i,j}\)</span> are the value in the ith row and jth column of the matrix
+<span class="math inline">\(A\)</span></p></li>
+<li><p><span class="math inline">\(A\)</span> is an identity matrix, when:
+<span class="math inline">\(A_{i,j} =0\;\textrm{if}\;i\not= j\)</span>, <span class="math inline">\(A_{i,j} =1\;\textrm{if}\;i=j\)</span></p></li>
+</ul>
+<!-- -->
+<pre><code>% 4 by 4 identity matrix
+identity4by4 = eye(4)
+
+identity4by4 = 4x4    
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1</code></pre>
+<p>When a matrix is muplieid by the identity matrix, you get the same
+matrix back, for example, multiplying random integer 4 by 4 matrix by
+the 4 by 4 identity matrix:</p>
+<pre><code>matSquare
+
+matSquare = 4x4    
+     3     2     4     5
+     5     4     4     1
+     3     4     1     1
+     5     3     1     3
+
+matSquareTimesIdentity = matSquare*identity4by4
+
+matSquareTimesIdentity = 4x4    
+     3     2     4     5
+     5     4     4     1
+     3     4     1     1
+     5     3     1     3</code></pre>
+<p>When a row vector is muplieid by the identity matrix, you get the same
+vector back, for example, multiplying random integer 1 by 4 row vector
+by the 4 by 4 identity matrix:</p>
+<pre><code>rowVec
+
+rowVec = 1x4    
+     3     2     4     5
+
+rowVecTimesIdentity = rowVec*identity4by4
+
+rowVecTimesIdentity = 1x4    
+     3     2     4     5</code></pre>
+<p>When an identity matrix is multiplied by a column vector, you get the
+same vector back, for example, multiplying 4 by 4 identity matrix by
+random integer 4 by 1 column vector by the :</p>
+<pre><code>colVec
+
+colVec = 4x1    
+     5
+     2
+     3
+    10
+
+colVecTimesIdentity = identity4by4*colVec
+
+colVecTimesIdentity = 4x1    
+     5
+     2
+     3
+    10</code></pre>
+</div>
+<div id="lower-triangular-matrix-and-upper-triangular-matrix" class="section level3" number="5.3.5">
+<h3><span class="header-section-number">5.3.5</span> Lower-Triangular Matrix and Upper-Triangular Matrix</h3>
+<p>A lower triangular matrix is a square matrix where:</p>
+<ul>
+<li><p>Square matrix<span class="math inline">\(A\)</span> is a <strong>lower triangular</strong> matrix, when:
+<span class="math inline">\(A_{i,j} =0\;\textrm{if}\;i&lt;j\)</span></p></li>
+<li><p>Square matrix<span class="math inline">\(A\)</span> is a <strong>upper triangular</strong> matrix, when:
+<span class="math inline">\(A_{i,j} =0\;\textrm{if}\;i&gt;j\)</span></p></li>
+</ul>
+<!-- -->
+<pre><code>% lower triangular matrix of matA 
+lowerTriangular = tril(matSquare)
+
+lowerTriangular = 4x4    
+     3     0     0     0
+     5     4     0     0
+     3     4     1     0
+     5     3     1     3
+
+% upper triangular matrix of matA 
+upperTriangular = triu(matSquare)
+
+upperTriangular = 4x4    
+     3     2     4     5
+     0     4     4     1
+     0     0     1     1
+     0     0     0     3</code></pre>
+</div>
+<div id="three-dimensions-matrix-tensor" class="section level3" number="5.3.6">
+<h3><span class="header-section-number">5.3.6</span> Three Dimensions Matrix (Tensor)</h3>
+<pre><code>% 3 by 3 by 2, storing multiple matrixes together in tenA
+tenA = zeros(3,3,2);
+tenA(:,:,1) = rand(3,3);
+tenA(:,:,2) = rand(3,3);
+disp(tenA);
+
+(:,:,1) =
+
+    0.8819    0.3689    0.1564
+    0.6692    0.4607    0.8555
+    0.1904    0.9816    0.6448
+
+
+(:,:,2) =
+
+    0.3763    0.4820    0.2262
+    0.1909    0.1206    0.3846
+    0.4283    0.5895    0.5830
+
+
+% Creating four 2 by 3 matrixes
+matRand = rand(2,3,4)
+
+matRand = 
+matRand(:,:,1) =
+
+    0.2518    0.6171    0.8244
+    0.2904    0.2653    0.9827
+
+
+matRand(:,:,2) =
+
+    0.7302    0.5841    0.9063
+    0.3439    0.1078    0.8797
+
+
+matRand(:,:,3) =
+
+    0.8178    0.5944    0.4253
+    0.2607    0.0225    0.3127
+
+
+matRand(:,:,4) =
+
+    0.1615    0.4229    0.5985
+    0.1788    0.0942    0.4709
+
+disp(matRand);
+
+(:,:,1) =
+
+    0.2518    0.6171    0.8244
+    0.2904    0.2653    0.9827
+
+
+(:,:,2) =
+
+    0.7302    0.5841    0.9063
+    0.3439    0.1078    0.8797
+
+
+(:,:,3) =
+
+    0.8178    0.5944    0.4253
+    0.2607    0.0225    0.3127
+
+
+(:,:,4) =
+
+    0.1615    0.4229    0.5985
+    0.1788    0.0942    0.4709</code></pre>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="univariate-applications.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="system-of-equations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["Introductory-Mathematics-for-Economists-with-Matlab.pdf", "PDF"]],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

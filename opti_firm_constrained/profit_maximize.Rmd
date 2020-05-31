@@ -1,0 +1,324 @@
+---
+always_allow_html: 'true'
+core:
+- code: "GRADIENT = subs(GRADIENT, {A,p,w,r,q,alpha,beta},{1,1,1,1,2,0.3,0.7})\nsolu\
+    \ = solve(GRADIENT(1)==0, GRADIENT(2)==0, GRADIENT(3)==0, K, L, m, \xE2\u20AC\u02DC\
+    Real\xE2\u20AC\u2122, true)\n"
+  package: m
+date: '2020-05-30'
+date_start: '2018-12-01'
+description: 'Profit maximization and cost minimization with Cobb Douglas production
+  function given quantity constraint. Constant or decreasing returns to scales, optimal
+  capital and labor given quantity constraint.
+
+  '
+file: profit_maximize
+output:
+  html_document:
+    includes:
+      in_header: ../hdga.html
+    pandoc_args: ../_output_kniti_html.yaml
+  pdf_document:
+    includes:
+      in_header: ../preamble.tex
+    pandoc_args: ../_output_kniti_pdf.yaml
+title: Firm's Profit Maximization and Cost Minimization Problems given Cobb Douglas
+  Production Function
+titleshort: Profit Maximization and Cost Minimization
+urlcolor: blue
+---
+
+## Cost Minimization Decreasing Returns
+
+```{r global_options, include = FALSE}
+try(source('../.Rprofile'))
+```
+
+`r text_shared_preamble_one`
+`r text_shared_preamble_two`
+`r text_shared_preamble_thr`
+
+We have already solved the firm's maximization problem before given
+decreasing return to scale: [Firm Maximization Problem with Capital and
+Labor (Decreasing Return to
+Scale)](https://fanwangecon.github.io/Math4Econ/matrix_application/KL_borrowhire_firm.html)
+
+Now, Let's solve the firm's problem with constraints. We can divide the
+profit maximization problem into two parts: 1, given a desired level of
+output, optimize over the optimal bundle of capital and labor; 2, given
+the result from the first part, optimize over the quantity of outputs.
+Here we focus on the first part, which can be thought of as a cost
+minimization or profit maximization problem.
+
+### Profit Maximization with Constraint
+
+Let's now write down the firm's cost minimization problem with the
+appropriate constraints, using the Cobb-Douglas production function.
+
+We can state the problem as a profit maximization problem:
+
+-   $\displaystyle \max_{K,L} \left\lbrace p\cdot AK^{\alpha } L^{\beta } -w\cdot L-r\cdot K\right\rbrace$
+
+-   such that: $AK^{\alpha } L^{\beta } =q$, where $q$ is some desired
+    level of output
+
+We can write down the lagrangian for this problem:
+
+-   $\displaystyle \mathcal{L}=\left\lbrace p\cdot AK^{\alpha } L^{\beta } -w\cdot L-r\cdot K\right\rbrace -\mu \cdot (AK^{\alpha } L^{\beta } -q)$
+
+Now, the maximization problem has three choice variables, $L,K,\mu$,
+where $\mu$ is the lagrange multiplier.
+
+***Step 1***: We can plug things into matlab's symbolic toolbox
+
+    % These are the parameters
+    syms p A alpha beta w r q
+    % These are the choice variables
+    syms K L m
+    % The Lagrangian
+    lagrangian = (p*A*(K^alpha)*(L^beta) - w*L - r*K) - m*(A*(K^alpha)*(L^beta) - q)
+
+lagrangian =
+$\displaystyle m\,{\left(q-A\,K^{\alpha } \,L^{\beta } \right)}-L\,w-K\,r+A\,K^{\alpha } \,L^{\beta } \,p$
+
+***Step 2***: As before, we can differentiate and obtain the gradient
+
+    d_lagrangian_K = diff(lagrangian, K);
+    d_lagrangian_L = diff(lagrangian, L);
+    d_lagrangian_m = diff(lagrangian, m);  
+    GRADIENT = [d_lagrangian_K; d_lagrangian_L; d_lagrangian_m]
+
+GRADIENT = $\displaystyle \left(\begin{array}{c}
+A\,K^{\alpha -1} \,L^{\beta } \,\alpha \,p-A\,K^{\alpha -1} \,L^{\beta } \,\alpha \,m-r\\
+A\,K^{\alpha } \,L^{\beta -1} \,\beta \,p-A\,K^{\alpha } \,L^{\beta -1} \,\beta \,m-w\\
+q-A\,K^{\alpha } \,L^{\beta } 
+\end{array}\right)$
+
+***Step 3***: We can solve the problem. Let's plug in some numbers
+(matlab in this case is unable to solve the problem with symbols):
+
+    % Given we have many symbols, type K, L, mu at the end to let matlab know what we are solving for
+    GRADIENT = subs(GRADIENT, {A,p,w,r,q,alpha,beta},{1,1,1,1,2,0.3,0.7});
+    solu = solve(GRADIENT(1)==0, GRADIENT(2)==0, GRADIENT(3)==0, K, L, m, 'Real', true);
+    soluK = double(solu.K);
+    soluL = double(solu.L);
+    soluM = double(solu.m);
+    disp(table(soluK, soluL, soluM));
+
+        soluK     soluL      soluM  
+        ______    ______    ________
+
+        1.1052    2.5788    -0.84202
+
+***Step 4***: What is the gradient at the optimal choices?
+
+These are almost all exactly zero, which is what we expect, at the
+optimal choices, gradient should be 0. (SB P460)
+
+    gradientAtOptimum = double(subs(GRADIENT, {K,L,m}, {soluK, soluL, soluM}))
+
+    gradientAtOptimum = 3x1    
+    1.0e+-15 *
+
+       -0.0156
+        0.0131
+       -0.1296
+
+***Step 5***: What is the hessian with respect to $K,L$ (excluding
+$\mu$) at the optimal choices?
+
+The second derivative condition is a little bit more complicated. You
+can see details on P460 of SB. In practice, we find the hessian only
+with respect to the real choices, not the multipliers, and we check if
+the resulting matrix is **negative definite**. If it is, we have found a
+**local maximum**.
+
+    HESSIAN = [diff(GRADIENT(1), K), diff(GRADIENT(2), K);...
+               diff(GRADIENT(1), L), diff(GRADIENT(2), L)];
+    HESSIANatOptimum = double(subs(HESSIAN, {K,L,m}, {soluK, soluL, soluM}))
+
+    HESSIANatOptimum = 2x2    
+       -0.6334    0.2714
+        0.2714   -0.1163
+
+Is the Hessian Positive definite or negative definite? Let's prove by
+trial and try some random vectors and use the $xAx^{\prime }$ rule:
+
+    % An empty vector of zeros
+    xAxSave = zeros(1,100);
+    % Try 100 random xs and see what xAx equal to
+    for i=1:100
+        x = rand(1,2);
+        xAxSave(i) = x*HESSIANatOptimum*x';
+    end
+    % Let's see the first 5 elements:
+    xAxSave(1:5)
+
+    ans = 1x5    
+       -0.0946   -0.2636   -0.3029   -0.1754   -0.0002
+
+    % OK the first 5 elements are negative, what about the rest?
+    % This command creates a new vector equal to FALSE (or 0) if above or equal 0, and TRUE (or 1) if below 0
+    is_negative = (xAxSave < 0);
+    is_negative(1:5)
+
+    ans = 1x5 logical array    
+       1   1   1   1   1
+
+    % This counts how many are negative, should be 100, because this is a maximum
+    sum(is_negative)
+
+    ans = 100
+
+### Cost Minimization with Constraint
+
+We can actually re-write the problem as a cost minimization problem,
+because the first term in the objective function actually is always
+equal to $q$, so that does not change regardless of the choices we make,
+so we can take it out, and say we are minimizing the cost. So we can
+re-write the problem as:
+
+-   $\displaystyle \min_{K,L} \left\lbrace w\cdot L+r\cdot K\right\rbrace$
+
+-   such that: $AK^{\alpha } L^{\beta } =q$, where $q$ is some desired
+    level of output
+
+We can write down the lagrangian for this problem:
+
+-   $\displaystyle \mathcal{L}=\left\lbrace w\cdot L+r\cdot K\right\rbrace -\mu \cdot (AK^{\alpha } L^{\beta } -q)$
+
+This problem looks a little different, will we get the same solution?
+Yes, we can call the solutions below as the solutions to the COO's
+problem.
+
+### Cost Minimization Problem--Optimal Capital Labor Choices
+
+Taking derivative of $L$, $K$ and $\mu$ with respect to the lagrangian,
+and setting first order conditions to $0$, we can derive the optimal
+constrained capital and labor choices using the first order conditions
+above, they are (they would be the same if we derived them using the
+constrained profit maximization problem earlier):
+
+-   $\displaystyle K^* (w,r,q)={\left(\frac{q}{A}\right)}^{\frac{1}{\alpha +\beta }} \cdot {\left\lbrack \frac{\alpha }{\beta }\cdot \frac{w}{r}\right\rbrack }^{\frac{\beta }{\alpha +\beta }}$
+
+-   $\displaystyle L^* (w,r,q)={\left(\frac{q}{A}\right)}^{\frac{1}{\alpha +\beta }} \cdot {\left\lbrack \frac{\alpha }{\beta }\cdot \frac{w}{r}\right\rbrack }^{\frac{-\alpha }{\alpha +\beta }}$
+
+If you divide the optimal constrained capital and labor choice equations
+above, you will find the optimal ratio is the same as what we derived in
+the unconstrained profit maximization problem: [Firm Maximization
+Problem with Capital and Labor (Decreasing Return to
+Scale)](https://fanwangecon.github.io/Math4Econ/matrix_application/KL_borrowhire_firm.html):
+
+-   $\displaystyle \frac{K^* (r,w)}{L^* (r,w)}=\frac{w}{r}\cdot \frac{\alpha }{\beta }$
+
+This means the constraint does not change the optimal capital and labor
+ratio.
+
+### Cost Minimization Problem--Solving on Matlab
+
+***Step 1***: We can plug things into matlab's symbolic toolbox
+
+    clear all
+    % These are the parameters
+    syms p A alpha beta w r q
+    % These are the choice variables
+    syms K L m
+    % The Lagrangian
+    lagrangianMin = (w*L + r*K) - m*(A*(K^alpha)*(L^beta) - q)
+
+lagrangianMin =
+$\displaystyle K\,r+L\,w+m\,{\left(q-A\,K^{\alpha } \,L^{\beta } \right)}$
+
+***Step 2***: As before, we can differentiate and obtain the gradient
+
+    d_lagrangianMin_K = diff(lagrangianMin, K);
+    d_lagrangianMin_L = diff(lagrangianMin, L);
+    d_lagrangianMin_m = diff(lagrangianMin, m);  
+    GRADIENT = [d_lagrangianMin_K; d_lagrangianMin_L; d_lagrangianMin_m];
+    disp(GRADIENT);
+
+$\displaystyle \left(\begin{array}{c}
+r-A\,K^{\alpha -1} \,L^{\beta } \,\alpha \,m\\
+w-A\,K^{\alpha } \,L^{\beta -1} \,\beta \,m\\
+q-A\,K^{\alpha } \,L^{\beta } 
+\end{array}\right)$
+
+***Step 3***: We can solve the problem. Let's plug in some numbers:
+
+    % Given we have many symbols, type K, L, mu at the end to let matlab know what we are solving for
+    GRADIENT = subs(GRADIENT, {A,p,w,r,q,alpha,beta},{1,1,1,1,2,0.3,0.7});
+    solu = solve(GRADIENT(1)==0, GRADIENT(2)==0, GRADIENT(3)==0, K, L, m, 'Real', true);
+    soluK = double(solu.K);
+    soluL = double(solu.L);
+    soluM = double(solu.m);
+    disp(table(soluK, soluL, soluM));
+
+        soluK     soluL     soluM
+        ______    ______    _____
+
+        1.1052    2.5788    1.842
+
+***Step 4***: What is the gradient at the optimal choices?
+
+These are almost all exactly zero, which is what we expect, at the
+optimal choices, gradient should be 0. (SB P460)
+
+    gradientAtOptimum = double(subs(GRADIENT, {K,L,m}, {soluK, soluL, soluM}))
+
+    gradientAtOptimum = 3x1    
+    1.0e+-15 *
+
+        0.0156
+       -0.0131
+       -0.1296
+
+***Step 5***: What is the hessian with respect to $K,L$ (excluding
+$\mu$) at the optimal choices?
+
+The second derivative condition is a little bit more complicated. You
+can see details on P460 of SB. In practice, we find the hessian only
+with respect to the real choices, not the multipliers, and we check if
+the resulting matrix is **positive definite**. If it is, we have found a
+**local minimum**.
+
+    HESSIAN = [diff(GRADIENT(1), K), diff(GRADIENT(2), K);...
+               diff(GRADIENT(1), L), diff(GRADIENT(2), L)];
+    HESSIANatOptimum = double(subs(HESSIAN, {K,L,m}, {soluK, soluL, soluM}))
+
+    HESSIANatOptimum = 2x2    
+        0.6334   -0.2714
+       -0.2714    0.1163
+
+    disp(HESSIANatOptimum);
+
+        0.6334   -0.2714
+       -0.2714    0.1163
+
+Is the Hessian Positive definite or negative definite? Let's prove by
+trial and try some random vectors and use the $xAx^{\prime }$ rule:
+
+    % An empty vector of zeros
+    xAxSave = zeros(1,100);
+    % Try 100 random xs and see what xAx equal to    
+    for i=1:100
+        x = rand(1,2);
+        xAxSave(i) = x*HESSIANatOptimum*x';
+    end
+    % Let's see the first 5 elements:
+    disp(xAxSave(1:5));
+
+        0.0096    0.0280    0.0142    0.0384    0.0133
+
+    % OK the first 5 elements are positive, what about the rest?
+    % This command creates a new vector equal to FALSE (or 0) if below or equal 0, and TRUE (or 1) if above 0
+    isPositive = (xAxSave > 0);
+    disp(isPositive(1:5));
+
+       1   1   1   1   1
+
+    % This counts how many are postiive, should be 100, because this is a minimum
+    disp(sum(isPositive));
+
+       100
+
+\vspace{1em}

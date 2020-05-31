@@ -1,0 +1,72 @@
+book_filename: "Introductory Mathematics for Economists with Matlab"
+output_dir: "bookdown"
+language:
+  ui:
+    chapter_name: "Chapter "
+delete_merged_file: true
+rmd_files:
+  - index.Rmd
+
+  - calconevar/main.Rmd
+  - calconevar/realnumber.Rmd
+  - calconevar/interval.Rmd
+  - calconevar/whatisfunction.Rmd
+  - calconevar/funcnotations.Rmd
+  - calconevar/polynomial.Rmd
+  - calconevar/localglobal.Rmd
+
+  - explog/main.Rmd
+  - explog/exponential.Rmd
+  - explog/exolog.Rmd
+
+  - derivative/main.Rmd
+  - derivative/derivative_rules.Rmd
+  - derivative/continuous_differentiable.Rmd
+  - derivative/derivative_elasticity.Rmd
+  - derivative/derivative_MPL_first_order_taylor_approximation.Rmd
+  - derivative/second_derivative.Rmd
+
+  - derivative_application/main.Rmd
+  - derivative_application/derivative_MPL_discrete_workers.Rmd
+  - derivative_application/derivative_cobb_douglas.Rmd
+  - derivative_application/derivative_hslope_cobb_douglas.Rmd
+  - derivative_application/K_save_households.Rmd
+  - derivative_application/K_borrow_firm.Rmd
+
+  - matrix_basics/main.Rmd
+  - matrix_basics/matlab_define_matrix.Rmd
+  - matrix_basics/matrix_algebra_rules.Rmd
+  - matrix_basics/matrix_matlab.Rmd
+
+  - matrix_system_of_equations/main.Rmd
+  - matrix_system_of_equations/matrix_linear_equations.Rmd
+  - matrix_system_of_equations/matrix_linear_system_2.Rmd
+  - matrix_system_of_equations/matrix_row_echelon_form.Rmd
+
+  - matrix_application/main.Rmd
+  - matrix_application/KL_borrowhire_firm.Rmd
+  - matrix_application/twogoods.Rmd
+  - matrix_application/demand_supply_taylor_approximate.Rmd
+  - matrix_application/demand_supply_taylor_approximate_capital.Rmd
+
+  - uncertainty/main.Rmd
+  - uncertainty/RiskyAsset.Rmd
+
+  - opti_firm_constrained/main.Rmd
+  - opti_firm_constrained/profit_maximize.Rmd
+  - opti_firm_constrained/profit_maximize_crs_profit.Rmd
+  - opti_hh_constrained_brsv/household_c1_c2_constrained.Rmd
+  - opti_hh_constrained_brsv/household_c1_c2_constrained_expmin.Rmd
+  - opti_hh_constrained_brsv/household_c1_c2_constrained_r_change.Rmd
+
+  - opti_hh_constrained_brsv_inequality/main.Rmd
+  - opti_firm_constrained/KL_borrowhire_firm_inqc.Rmd
+  - opti_hh_constrained_brsv_inequality/household_borrow_constrained.Rmd
+  - opti_hh_constrained_brsv_inequality/household_asset_labor_constrained.Rmd
+
+  - equilibrium/main.Rmd
+  - equilibrium/equilibrium_constrainedborrow.Rmd
+  - equilibrium/equilibrium_constrainedborrow_labor.Rmd
+
+  - README_appendix.md
+  - title.Rmd

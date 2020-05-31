@@ -1,0 +1,56 @@
+# output:
+#   html_document: default
+#   word_document: default
+#   pdf_document:
+#     includes:
+#       in_header: preamble_book.tex
+#   html_notebook: default
+# urlcolor: blue
+# always_allow_html: yes
+bookdown::gitbook:
+  css: style.css
+  includes:
+    in_header: hdga.html
+  config:
+    toc:
+      before: |
+        <li><a href="./">Introductory Mathematics for Economists with Matlab</a></li>
+      after: |
+        <li><a href="https://fanwangecon.github.io/Math4Econ/bookdown/index.html" target="blank">Math4Econ Bookdown</a></li>
+    # edit: https://github.com/FanWangEcon/R4Econ%s
+    download: [["Introductory-Mathematics-for-Economists-with-Matlab.pdf", "PDF"]]
+bookdown::pdf_book:
+  toc: true
+  toc_depth: 2
+  includes:
+    in_header: preamble_book.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+  bookdown::gitbook:
+  config:
+    toc:
+      collapse: subsection
+      scroll_highlight: yes
+      before: null
+      after: null
+    toolbar:
+      position: fixed
+    edit : null
+    download: [["Introductory-Mathematics-for-Economists-with-Matlab.pdf", "PDF"]]
+    search: yes
+    fontsettings:
+      theme: white
+      family: sans
+      size: 2
+    sharing:
+      facebook: yes
+      github: no
+      twitter: yes
+      linkedin: no
+      weibo: no
+      instapaper: no
+      vk: no
+      all: ['facebook', 'twitter', 'linkedin', 'weibo', 'instapaper']
+    info: yes
+bookdown::epub_book: default

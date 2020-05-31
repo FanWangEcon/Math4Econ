@@ -1,0 +1,140 @@
+- file: realnumber
+  title: "Real Number and Intervals"
+  titleshort: "Real Number and Intervals"
+  description: |
+    Definition and draw a line.
+  core :
+    - package: m
+      code: |
+        linspace()
+        line()
+        set(gca, yaxis off)
+        pbaspect()
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: whatisfunction
+  title: "What is a Function?"
+  titleshort: "What is a Function?"
+  description: |
+    Domain, argument, do-domain, image/value, range.
+    Graph a circle.
+  core :
+    - package: m
+      code: |
+        sin()
+        plot()
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: funcnotations
+  title: "Function Notations"
+  titleshort: "Function Notations"
+  description: |
+    Consistent function naming.
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: interval
+  title: "Interval Notations and Examples"
+  titleshort: "Interval Notations and Examples"
+  description: |
+    Closed, open intervals.
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: polynomial
+  title: "Monomial and Polynomial"
+  titleshort: "Monomial and Polynomial"
+  description: |
+    Monomial, polynomial, degree of polynomial.
+  core :
+    - package: m
+      code: |
+        syms x
+        f(x) = a + x
+        fplot(@(x) f(x,a), [x_low, x_high])
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: localglobal
+  title: "Local and Global Maximum"
+  titleshort: "Local and Global Maximum"
+  description: |
+    local and global maximum.
+  core :
+    - package: m
+      code: |
+        syms
+        solve()
+        diff()
+        double()
+        double(solve(diff(f,x),x)), fplot(f,[x_low, x_high])
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue

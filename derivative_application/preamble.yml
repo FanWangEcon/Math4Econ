@@ -1,0 +1,134 @@
+- file: derivative_MPL_discrete_workers
+  title: "Marginal Product Discrete Units of Workers"
+  titleshort: "Marginal Product of Labor"
+  description: |
+    Marginal product for each additional units of workers given different levels of capital.
+  core :
+    - package: m
+      code: |
+        plot()
+        scatter()
+        legend(['k=',num2str(K1)], ['k=',num2str(K1)])
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: derivative_cobb_douglas
+  title: "Derivative of Cobb-Douglas Production Function"
+  titleshort: "Derivative of Cobb-Douglas Production Function"
+  description: |
+    Marginal product of labor given different levels of capitals.
+  core :
+    - package: m
+      code: |
+        syms
+        diff()
+        fplot()
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: derivative_hslope_cobb_douglas
+  title: "Derivative Approximation and Cobb-Douglas Function"
+  titleshort: "Derivative Approximation"
+  description: |
+    Marginal product and tangent lines.
+  core :
+    - package: m
+      code: |
+        syms
+        diff()
+        fplot()
+        lengend{}
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: K_save_households
+  title: "Household's Utility Maximization Problem and Two-Period Borrowing and Savings Problem given Endowments"
+  titleshort: "Household's Savings Problem"
+  description: |
+    Endowments today and tomorrow, borrowing and savings, no shocks.
+    Grid based or analytical solution.
+    Supply curve of savings (asset).
+  core :
+    - package: m
+      code: |
+        max()
+        diff()
+        solve()
+        plot()
+        scatter()
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: K_borrow_firm
+  title: "Firm's Profit Maximization Problem and Optimal Capital Choice"
+  titleshort: "Firm's Borrowing Problem"
+  description: |
+    Profit maximization choosing capital, with labor fixed.
+    Grid based or analytical solution.
+    Demand curve of capital (asset).
+    Overlay demand and supply curves, visualize interest rate equilibrium
+  core :
+    - package: m
+      code: |
+        max()
+        diff()
+        solve()
+        plot()
+        scatter()
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue

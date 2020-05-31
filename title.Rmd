@@ -1,0 +1,5 @@
+---
+title: "Introductory Mathematics for Economists with Matlab"
+author: "Fan Wang"
+date: '`r format(Sys.Date(), "%Y-%m-%d")`'
+---

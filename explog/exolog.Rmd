@@ -1,0 +1,204 @@
+---
+always_allow_html: 'true'
+core:
+- code: 'linspace()
+
+    log()
+
+    '
+  package: m
+date: '2020-05-30'
+date_start: '2018-12-01'
+description: 'log and natural log (log in matlab base e, log in google base 10).
+
+  log rules, and why: log(xy) = log(x) + log(y); log(x^a) = alog(x).
+
+  log difference and small rates of change.
+
+  '
+file: exolog
+output:
+  html_document:
+    includes:
+      in_header: ../hdga.html
+    pandoc_args: ../_output_kniti_html.yaml
+  pdf_document:
+    includes:
+      in_header: ../preamble.tex
+    pandoc_args: ../_output_kniti_pdf.yaml
+title: Exponential and Log Functions
+titleshort: Exponential and Log Functions
+urlcolor: blue
+---
+
+## Natural Logarithm and Exponential
+
+```{r global_options, include = FALSE}
+try(source('../.Rprofile'))
+```
+
+`r text_shared_preamble_one`
+`r text_shared_preamble_two`
+`r text_shared_preamble_thr`
+
+We use log for log utility in our [household maximization
+problems](https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html),
+and we use exponential functions with other bases for [production
+functions](https://fanwangecon.github.io/Math4Econ/derivative_application/K_borrow_firm.html).
+
+*See also*: [Exponential and Infinitely Compounding Interest
+Rate](https://fanwangecon.github.io/Math4Econ/explog/exponential.html).
+
+### Log and Exponential
+
+If the natural log of $x$ is $y$ (in economics we generally just write
+ln and log interchangeably, becareful though, google thinks function log
+means log with base 10, matlab thinks function log means base e, you
+will get different numbers typing in log(10) in google and matlab).
+
+-   $\displaystyle \ln (x)=y$
+
+then
+
+-   $\displaystyle e^y =x$
+
+we can write:
+
+-   $e^x =\exp (x)$, writing $\exp (x)$ is a little easier to read,
+    means just $e$ to the power of $x$
+
+because of this:
+
+-   since $e^0 =1$, $\log (1)=0$
+
+-   since $e^1 \approx 2.718$, $\log (2.718)\approx 1$
+
+The natural log is just the inverse of the expoential function,
+
+We use log to linearize exponential functions, which allows us to do
+regressions afterwards for example.
+
+### Log Rules
+
+Suppose we have:
+$\log \left(\frac{\exp (A+\epsilon )\cdot a^{\alpha } \cdot b^{\beta } }{c^{\theta } \cdot d^{\phi } }\right)$
+
+This looks complicated, but because there is log, we can take the
+equation apart:
+
+$$\log \left(\frac{\exp (A+\epsilon )\cdot a^{\alpha } \cdot b^{\beta } }{c^{\theta } \cdot d^{\phi } }\right)=(A+\epsilon )+\alpha \cdot \log (a)+\beta \cdot \log (b)-\theta \cdot \log (c)-\phi \cdot \log (d)$$
+
+Generally (:
+
+-   $\displaystyle \log (\exp (A))=A$
+
+-   $\displaystyle \log (x^{\alpha } )=\alpha \cdot \log (x)$
+
+-   $\displaystyle \log (x\cdot y)=\log (x)+\log (y)$
+
+-   $\displaystyle \log (\frac{x}{y})=\log (x)-\log (y)$
+
+### Why does $\log (x\cdot y)=\log (x)+\log (y)$?
+
+Why is the log of the product of two numbers the same as the sum of the
+log of each of the two numbers? Intuitively, because we can write
+$x\cdot y$ as the exponential of a sum: when $e^a \cdot e^b$, even
+though it's multiplication, it is also just $e^{a+b}$, the exponential
+of a sum.
+
+-   **Rule**: $\log (x\cdot y)=\log (x)+\log (y)$
+
+We can write separately what each term equals to as:
+
+1.  $\displaystyle \log (x\cdot y)=z$
+
+2.  $\displaystyle \log (x)=z_x$
+
+3.  $\displaystyle \log (y)=z_y$
+
+By definition, for each of the three terms above:
+
+1.  $\displaystyle x\cdot y=\exp (z)$
+
+2.  $\displaystyle x=\exp (z_x )$
+
+3.  $\displaystyle y=\exp (z_y )$
+
+So:
+
+-   $\displaystyle \log (x\cdot y)=\log (\exp (z_x )\cdot \exp (z_y ))$
+
+Given that: $e^a \cdot e^b =e^{a+b}$, and $\log (\exp (x))=x$:
+
+-   $\displaystyle \log (x\cdot y)=\log (\exp (z_x )\cdot \exp (z_y ))=\log (\exp (z_x +z_y ))=(z_x +z_y )$
+
+Hence:
+
+-   $\displaystyle \log (x\cdot y)=z=(z_x +z_y )=\log (x)+\log (y)$
+
+### Why does $\log (x^a )=a\cdot \log (x)$?
+
+Why is the log of an exponential term equal to the power times the log
+of the base of the exponential? Intuitively, because we can re-write any
+positive number as base $e$ to the power of a coefficient:
+
+We start with:
+
+-   $\displaystyle \log (x^a )=z$
+
+Note that $x$ must be positive, otherwide log of zero of negative
+numbers are undefined. Hence, let $x=e^b$, by shifting $b$, $e^b$ can be
+equal to any positive number $x$. Then we have:
+
+-   $\displaystyle \log \left({\left(e^b \right)}^a \right)=z$
+
+Given that $\log (x^a )=z$ can be rewritten as $x^a =e^z$
+
+1.  $\log (x^a )=z$, $x=e^b$
+
+2.  $\displaystyle \log \left({\left(e^b \right)}^a \right)=z$
+
+3.  $\displaystyle x^a =e^{b\cdot a} =e^z$
+
+4.  $\displaystyle b\cdot a=z$
+
+Having defined $x=e^b$, that means $\log (x)=b$. Hence $b\cdot a=z$
+means that:
+
+-   $\displaystyle a\cdot log(x)=z=log(x^a )$
+
+### For Variables that Grow, Log difference is close to rate of change
+
+Suppose that growth rate is $x$ percent per year, after 5 years, the gdp
+will be:
+
+-   $\displaystyle Y_{1995} =Y_{1990} \cdot (1+x)^5$
+
+We can take log on both sides:
+
+-   $\displaystyle \ln (Y_{1995} )=\ln (Y_{1990} )+5\cdot \ln (1+x)$
+
+Which says that the difference in GDP between these two years divided by
+5 is equal to the log of $1$ plus the growth rate.
+
+Approximately, for $x$ small:
+
+-   $\displaystyle \frac{\ln (Y_{1995} )-\ln (Y_{1990} )}{5}=\ln (1+x)\approx x$
+
+For example:
+
+    xVec = linspace(0,0.10,10);
+    log(1+ xVec)
+
+    ans = 1x10    
+             0    0.0110    0.0220    0.0328    0.0435    0.0541    0.0645    0.0749    0.0852    0.0953
+
+    xVec
+
+    xVec = 1x10    
+             0    0.0111    0.0222    0.0333    0.0444    0.0556    0.0667    0.0778    0.0889    0.1000
+
+**Note:** This is a bad approximation if $x$ is large. For example, we
+know that $\ln (2.718)=\ln (1+1.718)\approx 1$ is almost exact. But the
+approximation here would have said $\ln (1+1.718)\approx 1.718$, which
+is very incorrect.

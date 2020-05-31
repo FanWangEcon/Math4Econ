@@ -1,0 +1,61 @@
+- file: equilibrium_constrainedborrow
+  title: "The Effects of Borrowing Interest Subsidy on Equilibrium Interest Rate"
+  titleshort: "Equilibrium Interest Rate and Tax"
+  description: |
+    Households supply savings or borrow (with constraint) to smooth consumption.
+    Firms borrow to finance capital inputs.
+    Solve for excess demand and supply of assets and equilibrium interest rate.
+    The effect of a tax on savings and subsidy for borrowing on equilibrium interest rate.
+  core :
+    - package: m
+      code: |
+        U_neg = @(x) -1*(log(z1 - x(1)) + beta_vec(j)*log(z2 + x(1)*r_vec(i)*(1-tau)))
+        excess_credit_supply = (sum(b_opti_mat, 2) + (-1)*FIRM_K')
+        min(abs(excess_credit_supply))
+        plot(r, excess_credit_supply)
+  date: 2020-05-31
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: equilibrium_constrainedborrow_labor
+  title: "Solve for Labor and Credit Market Equilibrium Wage and Interest Rate"
+  titleshort: "Equilibrium Interest Rate and Wage"
+  description: |
+    Households supply labor and enjoy leisure, firms demand labor.
+    Households borrow with constraints and supply savings, firm demand capital.
+    Solve for excess supply of assets and labor over wage and interest rates grid.
+    Solve for market clearing wage and interest rates.
+  core :
+    - package: m
+      code: |
+        U_neg = @(x) -1*(log(z1 + W_vec(j)*x(2) - x(1)) + psi*log(x(3)) + beta_vec(h)*log(z2 + x(1)*(R_vec(i))))
+        options = optimoptions('FMINCON','Display','off');
+        [x_opti,U_at_x_opti] = fmincon(U_neg, b0, A, q, [], [], [], [], [], options);
+        KD(i,j) = subs(K_opti,{r,w},{R(i), W(j)})
+        LD(i,j) = subs(L_opti,{r,w},{R(i), W(j)})
+        jet(numel(chart))
+        plot(R, b_opti);
+        plot(R, -k_opti);
+  date: 2020-05-31
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue

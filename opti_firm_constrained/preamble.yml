@@ -1,0 +1,94 @@
+- file: profit_maximize
+  title: "Firm's Profit Maximization and Cost Minimization Problems given Cobb Douglas Production Function"
+  titleshort: "Profit Maximization and Cost Minimization"
+  description: |
+    Profit maximization and cost minimization with Cobb Douglas production function given quantity constraint. Constant or decreasing returns to scales, optimal capital and labor given quantity constraint.
+  core :
+    - package: m
+      code: |
+        GRADIENT = subs(GRADIENT, {A,p,w,r,q,alpha,beta},{1,1,1,1,2,0.3,0.7})
+        solu = solve(GRADIENT(1)==0, GRADIENT(2)==0, GRADIENT(3)==0, K, L, m, ‘Real’, true)
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: profit_maximize_crs_profit
+  title: "Firm's Profit Maximization Problem over Outputs, Marginal Costs and Profits given Constant Returns to Scale"
+  titleshort: "Firm Marginal Cost and Profit given Constant Returns to Scale"
+  description: |
+    Profit maximization over outputs given cost minimization.
+    Marginal costs and constant returns to scales, perfect competition and zero profits.
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: KL_borrowhire_firm_inqc
+  title: "Borrowing Constrained Firm's Profit Maximization Problem with Cobb Douglas Production Function"
+  titleshort: "Firm Profit Maximization Problem with Borrowing Constraint"
+  description: |
+    Constrained on capital/borrowing, solve for cases.
+    If constraint binds, re-optimize labor choice given capital bound.
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: demand_supply_taylor_approximate_capital
+  title: "Approximating Credit Demand and Supply Curves--First Order Taylor Linear Approximation"
+  titleshort: "First Order Taylor Approximation of Demand and Supply Curves"
+  description: |
+    Exact solutions for (approximated) equilibrium interest rate and asset supply/demand given linearized demand and supply equations.
+    Graphical illustration of exact equilibrium and linear approximated equilibrium.
+    Analyze how productivity, elasticity, wealth, discount factor impact equilibrium prices and quantity given exact solutions to linear approximation.
+  core :
+    - package: m
+      code: |
+        linspace()
+        subs(diff(S,r), r, r0)
+        subs(D, {Z,beta}, {Z_num, beta_num})
+        fplot()
+        plot()
+        line.Color
+        line.LineStyle
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue

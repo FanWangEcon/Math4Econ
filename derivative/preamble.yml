@@ -1,0 +1,120 @@
+- file: derivative_rules
+  title: "Derivative Definition and Rules"
+  titleshort: "Derivative Definition and Rules"
+  description: |
+    Derivative notations, limit definition, and key rules.
+  core :
+    - package: m
+      code: |
+        syms
+        diff()
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: continuous_differentiable
+  title: "Continuity and Differentiability"
+  titleshort: "Continuity and Differentiability"
+  description: |
+    Continuous point, set and function, continuously differentiable.
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: derivative_elasticity
+  title: "Elasticity and Derivative"
+  titleshort: "Elasticity and Derivative"
+  description: |
+    Elasticity of demand at price p, given h change in p.
+    Point elasticity of demand at price p.
+    Elasticity and the limiting definition of derivative.
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: derivative_MPL_first_order_taylor_approximation
+  title: "First Order Taylor Approximation"
+  titleshort: "First Order Taylor Approximation"
+  description: |
+    Differential: change along the tangent line to approximate change in function value.
+    First order taylor approximation and the limiting definition of derivative.
+    Differential approximating marginal productivity of labor.
+  core :
+    - package: m
+      code: |
+        syms
+        f(L) = L^a
+        sub(f, 1)
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: second_derivative
+  title: "Higher Order Derivatives Cobb Douglas"
+  titleshort: "Higher Order Derivatives Cobb Douglas"
+  description: |
+    Cobb-Douglas production function, first and second derivatives.
+    Convex and Concave functions.
+  core :
+    - package: m
+      code: |
+        syms
+        f(L) = L^a
+        diff(diff(f, L),L)
+        fplot()
+        title({‘title one’ ‘subtitle’})
+        ylabel({‘ylab abc’ ‘ylab efg’})
+        legend{[‘line a’],[‘lineb’],, ‘Location’,’NW’}
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue

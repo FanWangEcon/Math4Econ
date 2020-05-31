@@ -1,0 +1,124 @@
+---
+always_allow_html: 'true'
+date: '2020-05-30'
+date_start: '2018-12-01'
+description: 'One or multiple linear equations.
+
+  Coefficient matrix and augmented form.
+
+  '
+file: matrix_linear_equations
+output:
+  html_document:
+    includes:
+      in_header: ../hdga.html
+    pandoc_args: ../_output_kniti_html.yaml
+  pdf_document:
+    includes:
+      in_header: ../preamble.tex
+    pandoc_args: ../_output_kniti_pdf.yaml
+title: System of Linear Equations
+titleshort: System of Linear Equations
+urlcolor: blue
+---
+
+## System of Linear Equations
+
+```{r global_options, include = FALSE}
+try(source('../.Rprofile'))
+```
+
+`r text_shared_preamble_one`
+`r text_shared_preamble_two`
+`r text_shared_preamble_thr`
+
+*See also*: [System of Linear
+Equations](https://fanwangecon.github.io/Math4Econ/matrix_system_of_equations/matrix_linear_equations.html)
+
+*See also*: [Solving for Two Equations and Two
+Unknowns](https://fanwangecon.github.io/Math4Econ/matrix_system_of_equations/matrix_linear_system_2.html)
+
+*See also*: [System of Linear Equations, Row Echelon
+Form](https://fanwangecon.github.io/Math4Econ/matrix_system_of_equations/matrix_row_echelon_form.html)
+
+### Linear Equation
+
+If we have an equation: $a\cdot x_1 +b\cdot x_2 +c\cdot x_3 =o$, we can
+write this in matrix form:
+
+-   $\displaystyle \left\lbrack \begin{array}{ccc}
+    a & b & c
+    \end{array}\right\rbrack \cdot \left\lbrack \begin{array}{c}
+    x_1 \\
+    x_2 \\
+    x_3 
+    \end{array}\right\rbrack =\left\lbrack \begin{array}{cc}
+    a\cdot x_1 +b\cdot x_2 +c\cdot x_3 
+    \end{array}\right\rbrack =\left\lbrack \begin{array}{c}
+    o
+    \end{array}\right\rbrack$
+
+This is a linear equation, where we have a sequence of variables
+multiplied by coefficients, more generally, this is a linear equation
+with $n$ unknown variables, and $n+1$ known coefficients, note the $a$
+at the beginning:
+
+-   $\displaystyle a+\beta_1 \cdot x_1 +\beta_2 \cdot x_2 +...+\beta_{_{n-1} } \cdot x_{n-1} +\beta_n \cdot x_n =0$
+
+In 2 dimension (with two unknowns), this is a line; in 3 dimension, this
+is a surface.
+
+### System of Linear Equations
+
+We have a system of linear equations, 3 equations and 3 unknowns:
+
+-   $\displaystyle \left\lbrack \begin{array}{ccc}
+    a & b & c\\
+    d & e & f\\
+    g & h & i
+    \end{array}\right\rbrack \cdot \left\lbrack \begin{array}{c}
+    x_1 \\
+    x_2 \\
+    x_3 
+    \end{array}\right\rbrack =\left\lbrack \begin{array}{cc}
+    a\cdot x_1 +b\cdot x_2 +c\cdot x_3 \\
+    d\cdot x_1 +e\cdot x_2 +f\cdot x_3 \\
+    g\cdot x_1 +h\cdot x_2 +i\cdot x_3 
+    \end{array}\right\rbrack =\left\lbrack \begin{array}{c}
+    o\\
+    p\\
+    q
+    \end{array}\right\rbrack$
+
+We can define these:
+
+-   $\displaystyle W=\left\lbrack \begin{array}{ccc}
+    a & b & c\\
+    d & e & f\\
+    g & h & i
+    \end{array}\right\rbrack$
+
+-   $\displaystyle {X}=\left\lbrack \begin{array}{c}
+    x_1 \\
+    x_2 \\
+    x_3 
+    \end{array}\right\rbrack$
+
+-   $\displaystyle v=\left\lbrack \begin{array}{c}
+    o\\
+    p\\
+    q
+    \end{array}\right\rbrack$
+
+### Augmented Form
+
+We can write $W$ and $v$ together like this, this is the augmented
+matrix of the system of linear equations:
+
+-   ***Augmented*** Matrix:$\left\lbrack \begin{array}{cccc}
+    a & b & c & |o\\
+    d & e & f & |p\\
+    g & h & i & |q
+    \end{array}\right\rbrack$
+
+\vspace{1em}

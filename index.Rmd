@@ -1,0 +1,42 @@
+---
+title: "Introductory Mathematics for Economists with Matlab"
+author: "Fan Wang"
+date: '`r format(Sys.Date(), "%Y-%m-%d")`'
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "Introductory Mathematics for Economists with Matlab"
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 5
+    pandoc_args: '_output_kniti_pdf.yaml'
+    includes:
+      in_header: 'preamble_book.tex'
+  html_document:
+    pandoc_args: '_output_kniti_html.yaml'
+always_allow_html: true
+github-repo: fanwangecon/Math4Econ
+---
+
+```{r global_options, include = FALSE}
+source(".Rprofile")
+```
+
+# Preface {-}
+
+`r text_top_count`
+
+This is a work-in-progress [course website](https://fanwangecon.github.io/Math4Econ/) for Mathematics for Economists, produced by [Fan](https://fanwangecon.github.io/). Course covers a limited subset of topics from [Mathematics for Economists](Mathematics for Economists) [@simonblume1994], and uses various definitions from the book. Applications focus on two period borrowing and savings problems. Matlab's symbolic toolbox is used throughout.
+
+Materials are written in [matlab](https://www.mathworks.com/products/matlab.html) [@matlab] livescript files and shown as HTML files. To obtain matlab codes, see [here](docs/gitsetup.md) and [here](docs/gitsetupown.md) for github set up. For HTML files, click on the links below.
+
+From [Fan](https://fanwangecon.github.io/)'s other repositories: For dynamic borrowing and savings problems, see [Dynamic Asset Repository](https://fanwangecon.github.io/CodeDynaAsset/); For code examples, see also [R Example Code](https://fanwangecon.github.io/R4Econ/), [Matlab Example Code](https://fanwangecon.github.io/M4Econ/), and [Stata Example Code](https://fanwangecon.github.io/Stata4Econ/); For intro econ with Matlab, see [Intro Mathematics for Economists](https://fanwangecon.github.io/Math4Econ/). See [here](https://github.com/FanWangEcon) for all of [Fan](https://fanwangecon.github.io/)'s public repositories.
+
+The site is built using [Bookdown](https://bookdown.org/) [@R-bookdown].
+
+Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
+
+`r text_end_count`

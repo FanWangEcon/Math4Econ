@@ -1,0 +1,124 @@
+---
+always_allow_html: 'true'
+core:
+- code: 'syms
+
+    diff()
+
+    fplot()
+
+    '
+  package: m
+date: '2020-05-30'
+date_start: '2018-12-01'
+description: 'Marginal product of labor given different levels of capitals.
+
+  '
+file: derivative_cobb_douglas
+output:
+  html_document:
+    includes:
+      in_header: ../hdga.html
+    pandoc_args: ../_output_kniti_html.yaml
+  pdf_document:
+    includes:
+      in_header: ../preamble.tex
+    pandoc_args: ../_output_kniti_pdf.yaml
+title: Derivative of Cobb-Douglas Production Function
+titleshort: Derivative of Cobb-Douglas Production Function
+urlcolor: blue
+---
+
+## Derivative of Cobb-Douglas Production Function
+
+```{r global_options, include = FALSE}
+try(source('../.Rprofile'))
+```
+
+`r text_shared_preamble_one`
+`r text_shared_preamble_two`
+`r text_shared_preamble_thr`
+
+### Marginal Output Per Worker Holding Capital Fixed
+
+Given the following production function:
+
+$$Y(K,L)=K^{\alpha } \cdot L^{1-\alpha }$$
+
+Assume that $K$ is a number $K=K_0$, We can, following the chain rule,
+take derivative of $Y$ with respect to $L$:
+
+$$\frac{dY(K_0 ,L)}{dL}=(1-\alpha )\cdot K_0^{\alpha } \cdot L^{-\alpha }$$
+
+Matlab symbolic toolbox gives us the same answer:
+
+    syms L K0 alpha
+    f(L, K0, alpha) = K0^(alpha)*L^(1-alpha);
+    diff(f, L)
+
+ans(L, K0, alpha) =
+$\displaystyle -\frac{{K_0 }^{\alpha } \,{\left(\alpha -1\right)}}{L^{\alpha } }$
+
+### Marginal Productivity Graph at Fixed Capital Level
+
+We can show this graphically using fplot to plot a symbolic function
+with one variable:
+
+    alpha = 0.5;
+    K0 = 1;
+    % Note that we have 1 symbolic variable now, the others are numbers
+    syms L
+    f(L) = K0^(alpha)*L^(1-alpha);
+    f_diff_L = diff(f, L);
+    % Start figure
+    figure()
+    % fplot plots a function with one symbolic variable
+    fplot(f_diff_L, [0.1, 15])
+    title('Marginal Product of Labor, with K=1, alpha=0.5')
+    ylabel({'Marginal Product of additional labor' 'at different level of current L'})
+    xlabel('Current level of Labor')
+    grid on
+
+![](_img/derivative_cobb_douglas_images/figure_0.png){width=500px}
+
+### Marginal Product of Labor at different Capital Levels
+
+We can show this graphically using fplot to plot a symbolic function
+with one variable, we loop over different K0 values.
+
+-   With higher capital level, the MPL is strictly higher.
+
+-   However, note on the graph that the effect of additional capital on
+    labor marginal productivity is different at different current levels
+    of labor (the gap between the three lines differ along the x-axis):
+
+<!-- -->
+
+    alpha = 0.5;
+    k0a = 1;
+    k0b = 2;
+    k0c = 3;
+    K0vec = [k0a k0b k0c];
+    % Start figure
+    figure()
+    % Hold figure
+    hold on;
+    for K0 = K0vec
+        % Note that we have 1 symbolic variable now, the others are numbers
+        syms L
+        f(L) = K0^(alpha)*L^(1-alpha);
+        f_diff_L = diff(f, L);
+        % fplot plots a function with one symbolic variable
+        fplot(f_diff_L, [0.1, 15])
+    end
+    grid on
+    legend(['k=',num2str(k0a)],...
+        ['k=',num2str(k0b)],...
+    ['k=',num2str(k0c)]);
+    title('Marginal Product of Labor with different Capital Levels, alpha=0.5')
+    ylabel({'Marginal Product of additional labor'})
+    xlabel('Current level of Labor')
+
+![](_img/derivative_cobb_douglas_images/figure_1.png){width=500px}
+
+\vspace{1em}

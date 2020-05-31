@@ -1,0 +1,82 @@
+- file: household_c1_c2_constrained
+  title: "Constrained Utility Maximization for Savings and Borrowing--the Marshallian Problem"
+  titleshort: "Marshallian Constrained Utility Maximization"
+  description: |
+    Budget constrained intertemporal utility maximization.
+    Marshallian solutions, indirect utility
+    Analytical solution, matlab symbolic solution, matlab fminunc numerical solutions
+  core :
+    - package: m
+      code: |
+        diff()
+        gradient()
+        fmincon()
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: household_c1_c2_constrained_expmin
+  title: "Constrained Expenditure Minimization for Savings and Borrowing--the Hicksian Problem"
+  titleshort: "Hicksian Constrained Expenditure Minimization"
+  description: |
+    Optimal expenditure minimization choice given indirect utility.
+    Hicksian solutions (Dual Problem).
+    Analytical solution, matlab symbolic solution.
+  core :
+    - package: m
+      code: |
+        diff()
+        gradient()
+    - package: graph
+      code: |
+        budget
+        indifference
+        endowment and optimal choices
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: household_c1_c2_constrained_r_change
+  title: "Price Change and Income and Substitution Effects--the Slutsky Decomposition"
+  titleshort: "Income and Substitution Effects"
+  description: |
+    Slusky decomposition, expenditure minimization given two prices.
+    Analytical solution, matlab symbolic solution.
+  core :
+    - package: m
+      code: |
+        diff()
+        gradient()
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue

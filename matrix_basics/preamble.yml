@@ -1,0 +1,72 @@
+- file: matlab_define_matrix
+  title: "Laws of Matrix Algebra"
+  titleshort: "Laws of Matrix Algebra"
+  description: |
+    Scalar: Associative + Communtative + Distributive laws; Matrix: all apply except A times B != B times A.
+  core:
+    - package: m
+      code: |
+        transpose()
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: matrix_algebra_rules
+  title: "Matrix Addition and Multiplication"
+  titleshort: "Matrix Addition and Multiplication"
+  description: |
+    Scalar, matrices, and matrix dimensions.
+  core:
+    - package: m
+      code: |
+        dot product
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: matrix_matlab
+  title: "Creating Matrixes in Matlab"
+  titleshort: "Creating Matrixes in Matlab"
+  description: |
+    Vectors, matrixes and multiple matrixes.
+  core:
+    - package: m
+      code: |
+        ceil()
+        eye()
+        tril()
+        triu()
+        rand(N,M,Q)
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue

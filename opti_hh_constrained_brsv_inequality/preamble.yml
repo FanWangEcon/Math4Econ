@@ -1,0 +1,62 @@
+- file: household_borrow_constrained
+  title: "Borrowing Constrained Utility Maximization with Borrowing and Savings Choices"
+  titleshort: "Borrowing and Savings with Borrowing Constraint"
+  description: |
+    Unconstrained and constrained problem.
+    Analytical solution and fmincon solution.
+    Optimal borrowing/savings with varying endowments and interests rates.
+  core :
+    - package: m
+      code: |
+        U = @(b) log(z1 - b)
+        matlabFunction(subs(U, {z1, z2}, {z1v, z2v}));
+        fmincon(U, b0, A, q);
+        optimoptions('FMINCON','Display','off');
+  date: 2020-05-31
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: household_asset_labor_constrained
+  title: "Borrowing Constrained Utility Maximization with Labor and Borrowing and Savings Choices"
+  titleshort: "Labor and Borrowing/Savings Choices with Borrowing Constraint"
+  description: |
+    Unconstrained work/leisure and borrow/savings problem.
+    Constrained work/leisure and borrow/savings problem given borrow bound.
+    Analytical and matlab symbolic solutions.
+    Numerical solution with fmincon.
+    Optimal work/leisure and borrowing/savings with varying preference.
+  core :
+    - package: m
+      code: |
+        d_L_b = diff(L, b);
+        d_L_H = diff(L, H);
+        GRAD = [d_L_b; d_L_H]
+        solu = solve(GRAD(1)==0, GRAD(2)==0, b, H, 'Real', true);
+        solu = simplify(solu)
+        fmincon(U_neg, b0, A, q)
+        fmincon(U_neg, b0, A, q, [], [], [], [], [], options)
+        legendCell = cellstr(num2str(Z2_vec', 'Z2=%-d'))
+        plot()
+  date: 2020-05-31
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue

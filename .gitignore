@@ -1,0 +1,112 @@
+
+###################
+# Images CSV
+###################
+
+*.json
+*.[jJ][pP][gG]
+
+###################
+# *.[cC][sS][vV]
+###################
+*.[tT][xX][tT]
+*.[pP][yY][cC]
+
+*.json
+
+###################
+# R.gitignore
+###################
+
+*.Rhistory
+
+###################
+# Jupyter Ignore
+###################
+
+*checkpoints.md
+*checkpoints.ipynb
+*ipynb_checkpoints
+
+###################
+# Matlab.gitignore
+###################
+
+*.asv
+
+###################
+# PDF.gitignore
+###################
+
+*.aux
+*.bbl
+*.log
+*.blg
+*.spl
+# *.pdf
+*.gz
+*.fdb_latexmk
+*.fls
+*.out
+*blx.bib
+*.run.xml
+
+###################
+# Eclipse.gitignore
+###################
+
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# Eclipse Core
+.project
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet

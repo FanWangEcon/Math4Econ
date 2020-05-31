@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 9 Equality Constrained Optimization | Introductory Mathematics for Economists with Matlab</title>
+  <meta name="description" content="<p>Households supply labor and enjoy leisure, firms demand labor.
+Households borrow with constraints and supply savings, firm demand capital.
+Solve for excess supply of assets and labor over wage and interest rates grid.
+Solve for market clearing wage and interest rates.</p>" />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 9 Equality Constrained Optimization | Introductory Mathematics for Economists with Matlab" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="<p>Households supply labor and enjoy leisure, firms demand labor.
+Households borrow with constraints and supply savings, firm demand capital.
+Solve for excess supply of assets and labor over wage and interest rates grid.
+Solve for market clearing wage and interest rates.</p>" />
+  <meta name="github-repo" content="fanwangecon/Math4Econ" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 9 Equality Constrained Optimization | Introductory Mathematics for Economists with Matlab" />
+  
+  <meta name="twitter:description" content="<p>Households supply labor and enjoy leisure, firms demand labor.
+Households borrow with constraints and supply savings, firm demand capital.
+Solve for excess supply of assets and labor over wage and interest rates grid.
+Solve for market clearing wage and interest rates.</p>" />
+  
+
+<meta name="author" content="Fan Wang" />
+
+
+<meta name="date" content="2020-05-31" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="uncertainty.html"/>
+<link rel="next" href="inequality-constrained-optimization.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92953468-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92953468-2');
+</script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introductory Mathematics for Economists with Matlab</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="notations-and-functions.html"><a href="notations-and-functions.html"><i class="fa fa-check"></i><b>1</b> Notations and Functions</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="notations-and-functions.html"><a href="notations-and-functions.html#real-number-and-intervals"><i class="fa fa-check"></i><b>1.1</b> Real Number and intervals</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="notations-and-functions.html"><a href="notations-and-functions.html#real-number-line"><i class="fa fa-check"></i><b>1.1.1</b> Real Number Line</a></li>
+<li class="chapter" data-level="1.1.2" data-path="notations-and-functions.html"><a href="notations-and-functions.html#non-negative-numbers"><i class="fa fa-check"></i><b>1.1.2</b> Non-negative numbers</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="notations-and-functions.html"><a href="notations-and-functions.html#interval-notations-and-examples"><i class="fa fa-check"></i><b>1.2</b> Interval Notations and Examples</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="notations-and-functions.html"><a href="notations-and-functions.html#closed-interval"><i class="fa fa-check"></i><b>1.2.1</b> Closed Interval</a></li>
+<li class="chapter" data-level="1.2.2" data-path="notations-and-functions.html"><a href="notations-and-functions.html#open-interval"><i class="fa fa-check"></i><b>1.2.2</b> Open Interval</a></li>
+<li class="chapter" data-level="1.2.3" data-path="notations-and-functions.html"><a href="notations-and-functions.html#half-open-and-half-close-interval"><i class="fa fa-check"></i><b>1.2.3</b> Half Open and Half Close Interval</a></li>
+<li class="chapter" data-level="1.2.4" data-path="notations-and-functions.html"><a href="notations-and-functions.html#graph"><i class="fa fa-check"></i><b>1.2.4</b> Graph</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="notations-and-functions.html"><a href="notations-and-functions.html#what-is-a-function"><i class="fa fa-check"></i><b>1.3</b> What is a Function?</a></li>
+<li class="chapter" data-level="1.4" data-path="notations-and-functions.html"><a href="notations-and-functions.html#function-notations"><i class="fa fa-check"></i><b>1.4</b> Function Notations</a></li>
+<li class="chapter" data-level="1.5" data-path="notations-and-functions.html"><a href="notations-and-functions.html#monomial-and-polynomial"><i class="fa fa-check"></i><b>1.5</b> Monomial and Polynomial</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="notations-and-functions.html"><a href="notations-and-functions.html#monomial"><i class="fa fa-check"></i><b>1.5.1</b> Monomial</a></li>
+<li class="chapter" data-level="1.5.2" data-path="notations-and-functions.html"><a href="notations-and-functions.html#polynomial"><i class="fa fa-check"></i><b>1.5.2</b> Polynomial</a></li>
+<li class="chapter" data-level="1.5.3" data-path="notations-and-functions.html"><a href="notations-and-functions.html#graphical-monomial-examples"><i class="fa fa-check"></i><b>1.5.3</b> Graphical Monomial Examples</a></li>
+<li class="chapter" data-level="1.5.4" data-path="notations-and-functions.html"><a href="notations-and-functions.html#mononomials-function"><i class="fa fa-check"></i><b>1.5.4</b> Mononomials Function</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="notations-and-functions.html"><a href="notations-and-functions.html#local-and-global-maximum"><i class="fa fa-check"></i><b>1.6</b> Local and Global Maximum</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html"><i class="fa fa-check"></i><b>2</b> Commonly Used Functions</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#exponentiation-and-compounding-interest-rate"><i class="fa fa-check"></i><b>2.1</b> Exponentiation and Compounding Interest Rate</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#exponential-function"><i class="fa fa-check"></i><b>2.1.1</b> <strong>Exponential Function</strong></a></li>
+<li class="chapter" data-level="2.1.2" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#exponential-function-graphs"><i class="fa fa-check"></i><b>2.1.2</b> Exponential Function Graphs?</a></li>
+<li class="chapter" data-level="2.1.3" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#infinitely-compounding-interest-rate"><i class="fa fa-check"></i><b>2.1.3</b> Infinitely Compounding Interest rate</a></li>
+<li class="chapter" data-level="2.1.4" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#infinitely-compounding-interest-rate-different-r-apr-r"><i class="fa fa-check"></i><b>2.1.4</b> Infinitely compounding Interest rate, different <span class="math inline">\(r\)</span> (APR <span class="math inline">\(r\)</span>)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#natural-logarithm-and-exponential"><i class="fa fa-check"></i><b>2.2</b> Natural Logarithm and Exponential</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#log-and-exponential"><i class="fa fa-check"></i><b>2.2.1</b> Log and Exponential</a></li>
+<li class="chapter" data-level="2.2.2" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#log-rules"><i class="fa fa-check"></i><b>2.2.2</b> Log Rules</a></li>
+<li class="chapter" data-level="2.2.3" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#why-does-log-xcdot-ylog-xlog-y"><i class="fa fa-check"></i><b>2.2.3</b> Why does <span class="math inline">\(\log (x\cdot y)=\log (x)+\log (y)\)</span>?</a></li>
+<li class="chapter" data-level="2.2.4" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#why-does-log-xa-acdot-log-x"><i class="fa fa-check"></i><b>2.2.4</b> Why does <span class="math inline">\(\log (x^a )=a\cdot \log (x)\)</span>?</a></li>
+<li class="chapter" data-level="2.2.5" data-path="commonly-used-functions.html"><a href="commonly-used-functions.html#for-variables-that-grow-log-difference-is-close-to-rate-of-change"><i class="fa fa-check"></i><b>2.2.5</b> For Variables that Grow, Log difference is close to rate of change</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="derivatives.html"><a href="derivatives.html"><i class="fa fa-check"></i><b>3</b> Derivatives</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="derivatives.html"><a href="derivatives.html#derivative-definition-and-rules"><i class="fa fa-check"></i><b>3.1</b> Derivative Definition and Rules</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="derivatives.html"><a href="derivatives.html#definition"><i class="fa fa-check"></i><b>3.1.1</b> Definition</a></li>
+<li class="chapter" data-level="3.1.2" data-path="derivatives.html"><a href="derivatives.html#derivative-rulesconstant-rule"><i class="fa fa-check"></i><b>3.1.2</b> Derivative Rules–Constant Rule</a></li>
+<li class="chapter" data-level="3.1.3" data-path="derivatives.html"><a href="derivatives.html#derivative-rulespower-rule-polynomial-rule"><i class="fa fa-check"></i><b>3.1.3</b> Derivative Rules–Power Rule (Polynomial Rule)</a></li>
+<li class="chapter" data-level="3.1.4" data-path="derivatives.html"><a href="derivatives.html#derivative-ruleschain-rule"><i class="fa fa-check"></i><b>3.1.4</b> Derivative Rules–Chain Rule</a></li>
+<li class="chapter" data-level="3.1.5" data-path="derivatives.html"><a href="derivatives.html#derivative-rulessum-and-difference-rule"><i class="fa fa-check"></i><b>3.1.5</b> Derivative Rules–Sum (and difference) Rule</a></li>
+<li class="chapter" data-level="3.1.6" data-path="derivatives.html"><a href="derivatives.html#derivative-rulesproduct-rule"><i class="fa fa-check"></i><b>3.1.6</b> Derivative Rules–Product Rule</a></li>
+<li class="chapter" data-level="3.1.7" data-path="derivatives.html"><a href="derivatives.html#derivative-rulesquotient-rule"><i class="fa fa-check"></i><b>3.1.7</b> Derivative Rules–Quotient Rule</a></li>
+<li class="chapter" data-level="3.1.8" data-path="derivatives.html"><a href="derivatives.html#derivative-rulesexponential"><i class="fa fa-check"></i><b>3.1.8</b> Derivative Rules–Exponential</a></li>
+<li class="chapter" data-level="3.1.9" data-path="derivatives.html"><a href="derivatives.html#derivative-ruleslog"><i class="fa fa-check"></i><b>3.1.9</b> Derivative Rules–Log</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="derivatives.html"><a href="derivatives.html#continuity-and-differentiability"><i class="fa fa-check"></i><b>3.2</b> Continuity and Differentiability</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="derivatives.html"><a href="derivatives.html#definition-continuous"><i class="fa fa-check"></i><b>3.2.1</b> Definition Continuous</a></li>
+<li class="chapter" data-level="3.2.2" data-path="derivatives.html"><a href="derivatives.html#definition-continuously-differentiable"><i class="fa fa-check"></i><b>3.2.2</b> Definition Continuously Differentiable</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="derivatives.html"><a href="derivatives.html#elasticity-and-derivative"><i class="fa fa-check"></i><b>3.3</b> Elasticity and Derivative</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="derivatives.html"><a href="derivatives.html#demand-and-supply"><i class="fa fa-check"></i><b>3.3.1</b> Demand and Supply</a></li>
+<li class="chapter" data-level="3.3.2" data-path="derivatives.html"><a href="derivatives.html#how-does-demand-or-supply-respond-to-a-change-in-price"><i class="fa fa-check"></i><b>3.3.2</b> How does demand (or supply) respond to a change in price?</a></li>
+<li class="chapter" data-level="3.3.3" data-path="derivatives.html"><a href="derivatives.html#how-sensitive-are-demands-to-price-changes"><i class="fa fa-check"></i><b>3.3.3</b> How sensitive are demands to price changes?</a></li>
+<li class="chapter" data-level="3.3.4" data-path="derivatives.html"><a href="derivatives.html#point-elasticity-and-derivative"><i class="fa fa-check"></i><b>3.3.4</b> Point Elasticity and Derivative</a></li>
+<li class="chapter" data-level="3.3.5" data-path="derivatives.html"><a href="derivatives.html#inelastic-elastic-and-unit-elastic"><i class="fa fa-check"></i><b>3.3.5</b> <strong>Inelastic, elastic and unit elastic</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="derivatives.html"><a href="derivatives.html#differential-and-marginal-product"><i class="fa fa-check"></i><b>3.4</b> Differential and Marginal Product</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="derivatives.html"><a href="derivatives.html#mpl-for-cobb-douglas"><i class="fa fa-check"></i><b>3.4.1</b> MPL for Cobb-Douglas</a></li>
+<li class="chapter" data-level="3.4.2" data-path="derivatives.html"><a href="derivatives.html#interpreting-mpl"><i class="fa fa-check"></i><b>3.4.2</b> Interpreting MPL</a></li>
+<li class="chapter" data-level="3.4.3" data-path="derivatives.html"><a href="derivatives.html#exact-output-calculated-with-matlab"><i class="fa fa-check"></i><b>3.4.3</b> Exact Output Calculated with Matlab</a></li>
+<li class="chapter" data-level="3.4.4" data-path="derivatives.html"><a href="derivatives.html#approximate-output-increase-with-derivative-mpl"><i class="fa fa-check"></i><b>3.4.4</b> <strong>Approximate Output Increase with Derivative (MPL)</strong></a></li>
+<li class="chapter" data-level="3.4.5" data-path="derivatives.html"><a href="derivatives.html#first-order-taylor-polynomial-approximation"><i class="fa fa-check"></i><b>3.4.5</b> First Order Taylor Polynomial Approximation</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="derivatives.html"><a href="derivatives.html#higher-order-derivativescobb-douglas"><i class="fa fa-check"></i><b>3.5</b> Higher Order Derivatives–Cobb Douglas</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="derivatives.html"><a href="derivatives.html#curvature-and-second-derivative-concave-function"><i class="fa fa-check"></i><b>3.5.1</b> Curvature and Second Derivative, Concave Function</a></li>
+<li class="chapter" data-level="3.5.2" data-path="derivatives.html"><a href="derivatives.html#curvature-and-second-derivative-convex-function"><i class="fa fa-check"></i><b>3.5.2</b> Curvature and Second Derivative, Convex Function</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="univariate-applications.html"><a href="univariate-applications.html"><i class="fa fa-check"></i><b>4</b> Univariate Applications</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="univariate-applications.html"><a href="univariate-applications.html#marginal-product-of-labor"><i class="fa fa-check"></i><b>4.1</b> Marginal Product of Labor</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="univariate-applications.html"><a href="univariate-applications.html#marginal-product-of-additional-workers-discrete-workers"><i class="fa fa-check"></i><b>4.1.1</b> Marginal Product of Additional Workers (Discrete Workers)</a></li>
+<li class="chapter" data-level="4.1.2" data-path="univariate-applications.html"><a href="univariate-applications.html#using-derivative-to-approximate-increase-in-output-from-more-workers"><i class="fa fa-check"></i><b>4.1.2</b> Using Derivative to approximate Increase in Output from More Workers</a></li>
+<li class="chapter" data-level="4.1.3" data-path="univariate-applications.html"><a href="univariate-applications.html#marginal-product-of-additional-workers-different-capital-discrete-workers"><i class="fa fa-check"></i><b>4.1.3</b> Marginal Product of Additional Workers Different Capital (Discrete Workers)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="univariate-applications.html"><a href="univariate-applications.html#derivative-of-cobb-douglas-production-function"><i class="fa fa-check"></i><b>4.2</b> Derivative of Cobb-Douglas Production Function</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="univariate-applications.html"><a href="univariate-applications.html#marginal-output-per-worker-holding-capital-fixed"><i class="fa fa-check"></i><b>4.2.1</b> Marginal Output Per Worker Holding Capital Fixed</a></li>
+<li class="chapter" data-level="4.2.2" data-path="univariate-applications.html"><a href="univariate-applications.html#marginal-productivity-graph-at-fixed-capital-level"><i class="fa fa-check"></i><b>4.2.2</b> Marginal Productivity Graph at Fixed Capital Level</a></li>
+<li class="chapter" data-level="4.2.3" data-path="univariate-applications.html"><a href="univariate-applications.html#marginal-product-of-labor-at-different-capital-levels"><i class="fa fa-check"></i><b>4.2.3</b> Marginal Product of Labor at different Capital Levels</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="univariate-applications.html"><a href="univariate-applications.html#derivative-approximation-of-marginal-product"><i class="fa fa-check"></i><b>4.3</b> Derivative Approximation of Marginal Product</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="univariate-applications.html"><a href="univariate-applications.html#cobb-douglasoutput-as-a-function-of-capital"><i class="fa fa-check"></i><b>4.3.1</b> Cobb-Douglas–Output as a Function of Capital</a></li>
+<li class="chapter" data-level="4.3.2" data-path="univariate-applications.html"><a href="univariate-applications.html#cobb-douglastangent-line-as-h-gets-smaller"><i class="fa fa-check"></i><b>4.3.2</b> Cobb-Douglas–Tangent line as h gets smaller</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="univariate-applications.html"><a href="univariate-applications.html#utility-maximization-and-intertemporal-consumption"><i class="fa fa-check"></i><b>4.4</b> Utility Maximization and Intertemporal Consumption</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="univariate-applications.html"><a href="univariate-applications.html#model-components-and-maximization-problem"><i class="fa fa-check"></i><b>4.4.1</b> Model Components and Maximization Problem</a></li>
+<li class="chapter" data-level="4.4.2" data-path="univariate-applications.html"><a href="univariate-applications.html#open-set-for-choice-set"><i class="fa fa-check"></i><b>4.4.2</b> Open set for Choice set</a></li>
+<li class="chapter" data-level="4.4.3" data-path="univariate-applications.html"><a href="univariate-applications.html#finding-optimal-choicesbrute-force-grid"><i class="fa fa-check"></i><b>4.4.3</b> Finding Optimal Choices–Brute Force Grid</a></li>
+<li class="chapter" data-level="4.4.4" data-path="univariate-applications.html"><a href="univariate-applications.html#analytical-solution"><i class="fa fa-check"></i><b>4.4.4</b> Analytical Solution</a></li>
+<li class="chapter" data-level="4.4.5" data-path="univariate-applications.html"><a href="univariate-applications.html#supply-curve-for-capital"><i class="fa fa-check"></i><b>4.4.5</b> Supply Curve For Capital</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="univariate-applications.html"><a href="univariate-applications.html#profit-maximization-over-capital-and-labor"><i class="fa fa-check"></i><b>4.5</b> Profit Maximization over Capital and Labor</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="univariate-applications.html"><a href="univariate-applications.html#model-components-and-maximization-problem-1"><i class="fa fa-check"></i><b>4.5.1</b> Model Components and Maximization Problem</a></li>
+<li class="chapter" data-level="4.5.2" data-path="univariate-applications.html"><a href="univariate-applications.html#finding-optimal-choicesbrute-force-grid-1"><i class="fa fa-check"></i><b>4.5.2</b> Finding Optimal Choices–Brute Force Grid</a></li>
+<li class="chapter" data-level="4.5.3" data-path="univariate-applications.html"><a href="univariate-applications.html#analytical-solution-1"><i class="fa fa-check"></i><b>4.5.3</b> Analytical Solution</a></li>
+<li class="chapter" data-level="4.5.4" data-path="univariate-applications.html"><a href="univariate-applications.html#demand-curve-for-capital"><i class="fa fa-check"></i><b>4.5.4</b> Demand Curve For Capital</a></li>
+<li class="chapter" data-level="4.5.5" data-path="univariate-applications.html"><a href="univariate-applications.html#demand-and-supply-intersection"><i class="fa fa-check"></i><b>4.5.5</b> Demand and Supply Intersection</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="matrix-basics.html"><a href="matrix-basics.html"><i class="fa fa-check"></i><b>5</b> Matrix Basics</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="matrix-basics.html"><a href="matrix-basics.html#laws-of-matrix-algebra"><i class="fa fa-check"></i><b>5.1</b> Laws of Matrix Algebra</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="matrix-basics.html"><a href="matrix-basics.html#old-rules-5-still-apply"><i class="fa fa-check"></i><b>5.1.1</b> 6 Old Rules, 5 Still Apply</a></li>
+<li class="chapter" data-level="5.1.2" data-path="matrix-basics.html"><a href="matrix-basics.html#example-for-acdot-bnot-bcdot-a"><i class="fa fa-check"></i><b>5.1.2</b> Example for <span class="math inline">\(A\cdot B\not= B\cdot A\)</span></a></li>
+<li class="chapter" data-level="5.1.3" data-path="matrix-basics.html"><a href="matrix-basics.html#new-rules-for-transpose"><i class="fa fa-check"></i><b>5.1.3</b> 4 New Rules for Transpose</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="matrix-basics.html"><a href="matrix-basics.html#matrix-addition-and-multiplication"><i class="fa fa-check"></i><b>5.2</b> Matrix Addition and Multiplication</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="matrix-basics.html"><a href="matrix-basics.html#scalar-multiplicationdivision-additionsubtraction"><i class="fa fa-check"></i><b>5.2.1</b> Scalar Multiplication/Division, Addition/Subtraction</a></li>
+<li class="chapter" data-level="5.2.2" data-path="matrix-basics.html"><a href="matrix-basics.html#addition-and-subtraction"><i class="fa fa-check"></i><b>5.2.2</b> Addition and Subtraction</a></li>
+<li class="chapter" data-level="5.2.3" data-path="matrix-basics.html"><a href="matrix-basics.html#matrix-multiplication"><i class="fa fa-check"></i><b>5.2.3</b> <strong>Matrix Multiplication</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="matrix-basics.html"><a href="matrix-basics.html#creating-matrixes-in-matlab"><i class="fa fa-check"></i><b>5.3</b> Creating Matrixes in Matlab</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="matrix-basics.html"><a href="matrix-basics.html#matlab-define-row-and-column-vectors-matrix"><i class="fa fa-check"></i><b>5.3.1</b> Matlab Define Row and Column Vectors (Matrix)</a></li>
+<li class="chapter" data-level="5.3.2" data-path="matrix-basics.html"><a href="matrix-basics.html#matlab-define-a-matrix"><i class="fa fa-check"></i><b>5.3.2</b> Matlab Define a Matrix</a></li>
+<li class="chapter" data-level="5.3.3" data-path="matrix-basics.html"><a href="matrix-basics.html#matlab-define-a-square-matrix"><i class="fa fa-check"></i><b>5.3.3</b> Matlab Define a Square Matrix</a></li>
+<li class="chapter" data-level="5.3.4" data-path="matrix-basics.html"><a href="matrix-basics.html#identity-matrix"><i class="fa fa-check"></i><b>5.3.4</b> Identity Matrix</a></li>
+<li class="chapter" data-level="5.3.5" data-path="matrix-basics.html"><a href="matrix-basics.html#lower-triangular-matrix-and-upper-triangular-matrix"><i class="fa fa-check"></i><b>5.3.5</b> Lower-Triangular Matrix and Upper-Triangular Matrix</a></li>
+<li class="chapter" data-level="5.3.6" data-path="matrix-basics.html"><a href="matrix-basics.html#three-dimensions-matrix-tensor"><i class="fa fa-check"></i><b>5.3.6</b> Three Dimensions Matrix (Tensor)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="system-of-equations.html"><a href="system-of-equations.html"><i class="fa fa-check"></i><b>6</b> System of Equations</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="system-of-equations.html"><a href="system-of-equations.html#system-of-linear-equations"><i class="fa fa-check"></i><b>6.1</b> System of Linear Equations</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="system-of-equations.html"><a href="system-of-equations.html#linear-equation"><i class="fa fa-check"></i><b>6.1.1</b> Linear Equation</a></li>
+<li class="chapter" data-level="6.1.2" data-path="system-of-equations.html"><a href="system-of-equations.html#system-of-linear-equations-1"><i class="fa fa-check"></i><b>6.1.2</b> System of Linear Equations</a></li>
+<li class="chapter" data-level="6.1.3" data-path="system-of-equations.html"><a href="system-of-equations.html#augmented-form"><i class="fa fa-check"></i><b>6.1.3</b> Augmented Form</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="system-of-equations.html"><a href="system-of-equations.html#solving-for-two-equations-and-two-unknowns"><i class="fa fa-check"></i><b>6.2</b> Solving for Two Equations and Two Unknowns</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="system-of-equations.html"><a href="system-of-equations.html#intersection-of-two-linear-equations"><i class="fa fa-check"></i><b>6.2.1</b> Intersection of two Linear Equations</a></li>
+<li class="chapter" data-level="6.2.2" data-path="system-of-equations.html"><a href="system-of-equations.html#linear-equation-in-matrix-form"><i class="fa fa-check"></i><b>6.2.2</b> Linear Equation in Matrix Form</a></li>
+<li class="chapter" data-level="6.2.3" data-path="system-of-equations.html"><a href="system-of-equations.html#two-linear-equation-in-matrix-form"><i class="fa fa-check"></i><b>6.2.3</b> Two Linear Equation in Matrix Form</a></li>
+<li class="chapter" data-level="6.2.4" data-path="system-of-equations.html"><a href="system-of-equations.html#linsolve-matlab-matrix-solution-for-2-equations-and-two-unknowns"><i class="fa fa-check"></i><b>6.2.4</b> Linsolve: Matlab Matrix Solution for 2 Equations and Two Unknowns</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="system-of-equations.html"><a href="system-of-equations.html#system-of-linear-equations-row-echelon-form"><i class="fa fa-check"></i><b>6.3</b> System of Linear Equations, Row Echelon Form</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="system-of-equations.html"><a href="system-of-equations.html#two-equations-and-two-unknowns"><i class="fa fa-check"></i><b>6.3.1</b> Two Equations and Two Unknowns</a></li>
+<li class="chapter" data-level="6.3.2" data-path="system-of-equations.html"><a href="system-of-equations.html#elementary-row-operations"><i class="fa fa-check"></i><b>6.3.2</b> Elementary Row Operations</a></li>
+<li class="chapter" data-level="6.3.3" data-path="system-of-equations.html"><a href="system-of-equations.html#row-echelon-form"><i class="fa fa-check"></i><b>6.3.3</b> Row Echelon Form</a></li>
+<li class="chapter" data-level="6.3.4" data-path="system-of-equations.html"><a href="system-of-equations.html#row-echelon-form-with-2-equations-and-2-unknowns"><i class="fa fa-check"></i><b>6.3.4</b> Row Echelon Form with 2 Equations and 2 Unknowns</a></li>
+<li class="chapter" data-level="6.3.5" data-path="system-of-equations.html"><a href="system-of-equations.html#reduced-row-echelon-form"><i class="fa fa-check"></i><b>6.3.5</b> Reduced Row Echelon Form</a></li>
+<li class="chapter" data-level="6.3.6" data-path="system-of-equations.html"><a href="system-of-equations.html#reduced-row-echelon-form-with-2-equations-and-2-unknowns"><i class="fa fa-check"></i><b>6.3.6</b> Reduced Row Echelon Form with 2 Equations and 2 Unknowns</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="matrix-applications.html"><a href="matrix-applications.html"><i class="fa fa-check"></i><b>7</b> Matrix Applications</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="matrix-applications.html"><a href="matrix-applications.html#cobb-douglas-profit-maximization"><i class="fa fa-check"></i><b>7.1</b> Cobb Douglas Profit Maximization</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="matrix-applications.html"><a href="matrix-applications.html#firm-and-capital-and-labor"><i class="fa fa-check"></i><b>7.1.1</b> Firm and Capital and Labor</a></li>
+<li class="chapter" data-level="7.1.2" data-path="matrix-applications.html"><a href="matrix-applications.html#two-first-order-conditions"><i class="fa fa-check"></i><b>7.1.2</b> Two First Order Conditions</a></li>
+<li class="chapter" data-level="7.1.3" data-path="matrix-applications.html"><a href="matrix-applications.html#log-linearizing-optimality-conditions"><i class="fa fa-check"></i><b>7.1.3</b> Log Linearizing Optimality Conditions</a></li>
+<li class="chapter" data-level="7.1.4" data-path="matrix-applications.html"><a href="matrix-applications.html#solving-linear-system-to-find-optimal-choices"><i class="fa fa-check"></i><b>7.1.4</b> Solving Linear System to find Optimal Choices</a></li>
+<li class="chapter" data-level="7.1.5" data-path="matrix-applications.html"><a href="matrix-applications.html#relative-choices"><i class="fa fa-check"></i><b>7.1.5</b> Relative Choices</a></li>
+<li class="chapter" data-level="7.1.6" data-path="matrix-applications.html"><a href="matrix-applications.html#choices-as-a-function-of-w-and-r"><i class="fa fa-check"></i><b>7.1.6</b> Choices as a Function of <span class="math inline">\(w\)</span> and <span class="math inline">\(r\)</span></a></li>
+<li class="chapter" data-level="7.1.7" data-path="matrix-applications.html"><a href="matrix-applications.html#own-and-cross-price-elasticity"><i class="fa fa-check"></i><b>7.1.7</b> <strong>Own and Cross Price Elasticity</strong></a></li>
+<li class="chapter" data-level="7.1.8" data-path="matrix-applications.html"><a href="matrix-applications.html#graphical-results-for-optimal-choices"><i class="fa fa-check"></i><b>7.1.8</b> Graphical Results for Optimal Choices</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="matrix-applications.html"><a href="matrix-applications.html#cobb-douglas-utility-maximization"><i class="fa fa-check"></i><b>7.2</b> Cobb Douglas Utility Maximization</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="matrix-applications.html"><a href="matrix-applications.html#a-model-with-two-goods"><i class="fa fa-check"></i><b>7.2.1</b> A Model with Two Goods</a></li>
+<li class="chapter" data-level="7.2.2" data-path="matrix-applications.html"><a href="matrix-applications.html#model-parameters"><i class="fa fa-check"></i><b>7.2.2</b> Model Parameters</a></li>
+<li class="chapter" data-level="7.2.3" data-path="matrix-applications.html"><a href="matrix-applications.html#preference"><i class="fa fa-check"></i><b>7.2.3</b> Preference</a></li>
+<li class="chapter" data-level="7.2.4" data-path="matrix-applications.html"><a href="matrix-applications.html#budget"><i class="fa fa-check"></i><b>7.2.4</b> Budget</a></li>
+<li class="chapter" data-level="7.2.5" data-path="matrix-applications.html"><a href="matrix-applications.html#budget-and-preference-indifference-curves"><i class="fa fa-check"></i><b>7.2.5</b> Budget and Preference: Indifference Curves</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="matrix-applications.html"><a href="matrix-applications.html#equilibrium-interest-rate"><i class="fa fa-check"></i><b>7.3</b> Equilibrium Interest Rate</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="matrix-applications.html"><a href="matrix-applications.html#first-order-taylor-approximation"><i class="fa fa-check"></i><b>7.3.1</b> First Order Taylor Approximation</a></li>
+<li class="chapter" data-level="7.3.2" data-path="matrix-applications.html"><a href="matrix-applications.html#approximate-the-supply"><i class="fa fa-check"></i><b>7.3.2</b> Approximate the Supply</a></li>
+<li class="chapter" data-level="7.3.3" data-path="matrix-applications.html"><a href="matrix-applications.html#approximate-the-demand"><i class="fa fa-check"></i><b>7.3.3</b> Approximate the Demand</a></li>
+<li class="chapter" data-level="7.3.4" data-path="matrix-applications.html"><a href="matrix-applications.html#solve-approximate-demand-and-supply-using-a-system-of-linear-equations"><i class="fa fa-check"></i><b>7.3.4</b> Solve approximate Demand and Supply using a System of Linear Equations</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="matrix-applications.html"><a href="matrix-applications.html#first-order-taylor-approximation-1"><i class="fa fa-check"></i><b>7.4</b> First Order Taylor Approximation</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="matrix-applications.html"><a href="matrix-applications.html#demand-and-supply-for-credit-and-abhk"><i class="fa fa-check"></i><b>7.4.1</b> Demand and Supply for Credit and <span class="math inline">\(a,b,h,k\)</span></a></li>
+<li class="chapter" data-level="7.4.2" data-path="matrix-applications.html"><a href="matrix-applications.html#what-are-abhk"><i class="fa fa-check"></i><b>7.4.2</b> What are <span class="math inline">\(a,b,h,k\)</span>?</a></li>
+<li class="chapter" data-level="7.4.3" data-path="matrix-applications.html"><a href="matrix-applications.html#exact-equlibrium-interest-rate"><i class="fa fa-check"></i><b>7.4.3</b> Exact Equlibrium Interest Rate</a></li>
+<li class="chapter" data-level="7.4.4" data-path="matrix-applications.html"><a href="matrix-applications.html#approximating-demand-and-supply-for-credit"><i class="fa fa-check"></i><b>7.4.4</b> Approximating Demand and Supply for Credit</a></li>
+<li class="chapter" data-level="7.4.5" data-path="matrix-applications.html"><a href="matrix-applications.html#graphical-ilustration"><i class="fa fa-check"></i><b>7.4.5</b> Graphical Ilustration</a></li>
+<li class="chapter" data-level="7.4.6" data-path="matrix-applications.html"><a href="matrix-applications.html#approximate-equilibrium-in-terms-of-parameters"><i class="fa fa-check"></i><b>7.4.6</b> Approximate Equilibrium in terms of Parameters</a></li>
+<li class="chapter" data-level="7.4.7" data-path="matrix-applications.html"><a href="matrix-applications.html#parameter-impacts-on-equilibriumeffects-of-changing-a"><i class="fa fa-check"></i><b>7.4.7</b> Parameter Impacts on Equilibrium–Effects of changing <span class="math inline">\(A\)</span></a></li>
+<li class="chapter" data-level="7.4.8" data-path="matrix-applications.html"><a href="matrix-applications.html#parameter-impacts-on-equilibriumeffects-of-changing-z"><i class="fa fa-check"></i><b>7.4.8</b> Parameter Impacts on Equilibrium–Effects of changing <span class="math inline">\(Z\)</span></a></li>
+<li class="chapter" data-level="7.4.9" data-path="matrix-applications.html"><a href="matrix-applications.html#parameter-impacts-on-equilibriumeffects-of-changing-beta"><i class="fa fa-check"></i><b>7.4.9</b> Parameter Impacts on Equilibrium–Effects of changing <span class="math inline">\(\beta\)</span></a></li>
+<li class="chapter" data-level="7.4.10" data-path="matrix-applications.html"><a href="matrix-applications.html#parameter-impacts-on-equilibriumeffects-of-changing-alpha"><i class="fa fa-check"></i><b>7.4.10</b> Parameter Impacts on Equilibrium–Effects of changing <span class="math inline">\(\alpha\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="uncertainty.html"><a href="uncertainty.html"><i class="fa fa-check"></i><b>8</b> Uncertainty</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="uncertainty.html"><a href="uncertainty.html#risky-and-safe-assets"><i class="fa fa-check"></i><b>8.1</b> Risky and Safe Assets</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="uncertainty.html"><a href="uncertainty.html#uncertainty-1"><i class="fa fa-check"></i><b>8.1.1</b> <strong>Uncertainty</strong></a></li>
+<li class="chapter" data-level="8.1.2" data-path="uncertainty.html"><a href="uncertainty.html#differential-returns-depending-on-the-state-of-the-world"><i class="fa fa-check"></i><b>8.1.2</b> Differential Returns Depending on the State of the World</a></li>
+<li class="chapter" data-level="8.1.3" data-path="uncertainty.html"><a href="uncertainty.html#the-two-period-household-protofolio-choice-problem"><i class="fa fa-check"></i><b>8.1.3</b> The Two Period Household Protofolio Choice Problem</a></li>
+<li class="chapter" data-level="8.1.4" data-path="uncertainty.html"><a href="uncertainty.html#household-maximization-problem"><i class="fa fa-check"></i><b>8.1.4</b> Household Maximization Problem</a></li>
+<li class="chapter" data-level="8.1.5" data-path="uncertainty.html"><a href="uncertainty.html#first-order-conditions"><i class="fa fa-check"></i><b>8.1.5</b> First Order Conditions</a></li>
+<li class="chapter" data-level="8.1.6" data-path="uncertainty.html"><a href="uncertainty.html#marginal-utility-and-marginal-returns"><i class="fa fa-check"></i><b>8.1.6</b> Marginal Utility and Marginal Returns</a></li>
+<li class="chapter" data-level="8.1.7" data-path="uncertainty.html"><a href="uncertainty.html#solving-for-optimal-choicesanalytical-solution"><i class="fa fa-check"></i><b>8.1.7</b> Solving for Optimal Choices–Analytical Solution</a></li>
+<li class="chapter" data-level="8.1.8" data-path="uncertainty.html"><a href="uncertainty.html#solving-for-optimal-chociesnumerical-parameter-values"><i class="fa fa-check"></i><b>8.1.8</b> Solving for Optimal Chocies–Numerical Parameter Values</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html"><i class="fa fa-check"></i><b>9</b> Equality Constrained Optimization</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#cost-minimization-decreasing-returns"><i class="fa fa-check"></i><b>9.1</b> Cost Minimization Decreasing Returns</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#profit-maximization-with-constraint"><i class="fa fa-check"></i><b>9.1.1</b> Profit Maximization with Constraint</a></li>
+<li class="chapter" data-level="9.1.2" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#cost-minimization-with-constraint"><i class="fa fa-check"></i><b>9.1.2</b> Cost Minimization with Constraint</a></li>
+<li class="chapter" data-level="9.1.3" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#cost-minimization-problemoptimal-capital-labor-choices"><i class="fa fa-check"></i><b>9.1.3</b> Cost Minimization Problem–Optimal Capital Labor Choices</a></li>
+<li class="chapter" data-level="9.1.4" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#cost-minimization-problemsolving-on-matlab"><i class="fa fa-check"></i><b>9.1.4</b> Cost Minimization Problem–Solving on Matlab</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#profit-maximization-constant-returns"><i class="fa fa-check"></i><b>9.2</b> Profit Maximization Constant Returns</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#what-is-the-profit-of-the-firm-at-constrained-optimal-choices"><i class="fa fa-check"></i><b>9.2.1</b> What is the Profit of the firm at Constrained Optimal Choices?</a></li>
+<li class="chapter" data-level="9.2.2" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#profit-maximization-and-marginal-cost"><i class="fa fa-check"></i><b>9.2.2</b> Profit Maximization and Marginal Cost</a></li>
+<li class="chapter" data-level="9.2.3" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#constant-return-to-scale"><i class="fa fa-check"></i><b>9.2.3</b> Constant Return to Scale</a></li>
+<li class="chapter" data-level="9.2.4" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#when-will-the-firm-produce-and-what-is-its-profit"><i class="fa fa-check"></i><b>9.2.4</b> When will the Firm produce, and what is its Profit?</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#intertemporal-utility-maximization"><i class="fa fa-check"></i><b>9.3</b> Intertemporal Utility Maximization</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#utility-maximization-over-consumption-in-two-periods"><i class="fa fa-check"></i><b>9.3.1</b> Utility Maximization over Consumption in Two Periods</a></li>
+<li class="chapter" data-level="9.3.2" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#first-order-conditions-of-the-constrained-consumption-problem"><i class="fa fa-check"></i><b>9.3.2</b> First Order Conditions of the Constrained Consumption Problem</a></li>
+<li class="chapter" data-level="9.3.3" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#optimal-relative-allocations-of-consumptions-in-the-first-and-second-periods"><i class="fa fa-check"></i><b>9.3.3</b> Optimal Relative Allocations of Consumptions in the First and Second Periods</a></li>
+<li class="chapter" data-level="9.3.4" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#optimal-consumption-choices"><i class="fa fa-check"></i><b>9.3.4</b> Optimal Consumption Choices</a></li>
+<li class="chapter" data-level="9.3.5" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#indirect-utility"><i class="fa fa-check"></i><b>9.3.5</b> Indirect Utility</a></li>
+<li class="chapter" data-level="9.3.6" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#optimal-borrowing-and-savings-choices"><i class="fa fa-check"></i><b>9.3.6</b> Optimal Borrowing and Savings Choices</a></li>
+<li class="chapter" data-level="9.3.7" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#computational-solution-to-the-equality-constrained-problem"><i class="fa fa-check"></i><b>9.3.7</b> Computational Solution to the Equality Constrained Problem</a></li>
+<li class="chapter" data-level="9.3.8" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#fmincon-solution-to-the-constrained-problem"><i class="fa fa-check"></i><b>9.3.8</b> Fmincon Solution to the Constrained Problem</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#intertemporal-expenditure-minimization"><i class="fa fa-check"></i><b>9.4</b> Intertemporal Expenditure Minimization</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#utility-maximization-over-consumption-in-two-periods-1"><i class="fa fa-check"></i><b>9.4.1</b> Utility Maximization over Consumption in Two Periods</a></li>
+<li class="chapter" data-level="9.4.2" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#the-expenditure-minimization-problem"><i class="fa fa-check"></i><b>9.4.2</b> The Expenditure Minimization Problem</a></li>
+<li class="chapter" data-level="9.4.3" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#first-order-conditions-of-the-constrained-consumption-problem-1"><i class="fa fa-check"></i><b>9.4.3</b> First Order Conditions of the Constrained Consumption Problem</a></li>
+<li class="chapter" data-level="9.4.4" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#optimal-relative-allocations-of-consumptions-in-the-first-and-second-periods-1"><i class="fa fa-check"></i><b>9.4.4</b> Optimal Relative Allocations of Consumptions in the First and Second Periods</a></li>
+<li class="chapter" data-level="9.4.5" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#optimal-expenditure-minimization-consumption-choices"><i class="fa fa-check"></i><b>9.4.5</b> Optimal Expenditure Minimization Consumption Choices</a></li>
+<li class="chapter" data-level="9.4.6" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#compuational-solution"><i class="fa fa-check"></i><b>9.4.6</b> Compuational Solution</a></li>
+<li class="chapter" data-level="9.4.7" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#graphical-representation"><i class="fa fa-check"></i><b>9.4.7</b> Graphical Representation</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#intertemporal-income-and-substitution-effects"><i class="fa fa-check"></i><b>9.5</b> Intertemporal Income and Substitution Effects</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#utility-maximization-over-consumption-in-two-periods-2"><i class="fa fa-check"></i><b>9.5.1</b> Utility Maximization over Consumption in Two Periods</a></li>
+<li class="chapter" data-level="9.5.2" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#solving-for-the-substitution-effect"><i class="fa fa-check"></i><b>9.5.2</b> Solving for the Substitution Effect</a></li>
+<li class="chapter" data-level="9.5.3" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#optimal-consumption-choices-with-different-interest-rates"><i class="fa fa-check"></i><b>9.5.3</b> Optimal Consumption Choices with Different Interest Rates</a></li>
+<li class="chapter" data-level="9.5.4" data-path="equality-constrained-optimization.html"><a href="equality-constrained-optimization.html#graphical-illustration-of-the-income-and-substitution-effect"><i class="fa fa-check"></i><b>9.5.4</b> Graphical Illustration of the Income and Substitution Effect</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html"><i class="fa fa-check"></i><b>10</b> Inequality Constrained Optimization</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#borrowing-constrained-profit-maximization"><i class="fa fa-check"></i><b>10.1</b> Borrowing Constrained Profit Maximization</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#firm-and-capital-and-labor-1"><i class="fa fa-check"></i><b>10.1.1</b> Firm and Capital and Labor</a></li>
+<li class="chapter" data-level="10.1.2" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#lagrangian-and-first-order-conditions"><i class="fa fa-check"></i><b>10.1.2</b> Lagrangian and First Order Conditions</a></li>
+<li class="chapter" data-level="10.1.3" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#solving-for-different-cases"><i class="fa fa-check"></i><b>10.1.3</b> Solving for Different Cases</a></li>
+<li class="chapter" data-level="10.1.4" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#solution"><i class="fa fa-check"></i><b>10.1.4</b> Solution</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#constrained-borrowing-and-savings"><i class="fa fa-check"></i><b>10.2</b> Constrained Borrowing and Savings</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#what-is-the-constrained-borrowing-problem"><i class="fa fa-check"></i><b>10.2.1</b> What is the constrained borrowing problem?</a></li>
+<li class="chapter" data-level="10.2.2" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#inequality-constraint"><i class="fa fa-check"></i><b>10.2.2</b> Inequality Constraint</a></li>
+<li class="chapter" data-level="10.2.3" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#lagrangian-with-inequality-constraint"><i class="fa fa-check"></i><b>10.2.3</b> Lagrangian with Inequality Constraint</a></li>
+<li class="chapter" data-level="10.2.4" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#derivative-with-respect-to-b"><i class="fa fa-check"></i><b>10.2.4</b> Derivative with Respect to <span class="math inline">\(b\)</span></a></li>
+<li class="chapter" data-level="10.2.5" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#first-order-conditions-with-inequality-constraint"><i class="fa fa-check"></i><b>10.2.5</b> First Order Conditions with Inequality Constraint</a></li>
+<li class="chapter" data-level="10.2.6" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#solving-the-problem"><i class="fa fa-check"></i><b>10.2.6</b> Solving the Problem</a></li>
+<li class="chapter" data-level="10.2.7" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#effects-of-z_2-on-optimal-choices"><i class="fa fa-check"></i><b>10.2.7</b> Effects of <span class="math inline">\(Z_2\)</span> on optimal choices</a></li>
+<li class="chapter" data-level="10.2.8" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#effects-of-r-on-optimal-choices"><i class="fa fa-check"></i><b>10.2.8</b> Effects of <span class="math inline">\(r\)</span> on optimal choices</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#leisure-savings-and-constrained-borrowing"><i class="fa fa-check"></i><b>10.3</b> Leisure, Savings and Constrained Borrowing</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#what-is-the-constrained-asset-choice-problem-with-labor"><i class="fa fa-check"></i><b>10.3.1</b> What is the constrained asset choice problem with labor?</a></li>
+<li class="chapter" data-level="10.3.2" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#single-inequality-constraint-problem"><i class="fa fa-check"></i><b>10.3.2</b> Single Inequality Constraint Problem</a></li>
+<li class="chapter" data-level="10.3.3" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#unconstrained-optimal-labor-and-borrowing-and-savings-choices-prlbme"><i class="fa fa-check"></i><b>10.3.3</b> Unconstrained Optimal Labor and Borrowing and Savings Choices Prlbme</a></li>
+<li class="chapter" data-level="10.3.4" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#numerical-solution-to-the-inequality-constraint-problem"><i class="fa fa-check"></i><b>10.3.4</b> Numerical Solution to the Inequality Constraint Problem</a></li>
+<li class="chapter" data-level="10.3.5" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#effects-of-psi-on-optimal-choices"><i class="fa fa-check"></i><b>10.3.5</b> Effects of <span class="math inline">\(\psi\)</span> on optimal choices</a></li>
+<li class="chapter" data-level="10.3.6" data-path="inequality-constrained-optimization.html"><a href="inequality-constrained-optimization.html#effects-of-r-and-z_2-on-optimal-choices"><i class="fa fa-check"></i><b>10.3.6</b> Effects of <span class="math inline">\(r\)</span> and <span class="math inline">\(z_2\)</span> on optimal choices</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html"><i class="fa fa-check"></i><b>11</b> Equilibrium and Policy</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#equilibrium-interest-rate-and-tax"><i class="fa fa-check"></i><b>11.1</b> Equilibrium Interest Rate and Tax</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#how-do-households-with-different-beta-respond-to-changes-in-r-given-borrowing-constraint"><i class="fa fa-check"></i><b>11.1.1</b> How do households with different <span class="math inline">\(\beta\)</span> respond to changes in <span class="math inline">\(r\)</span> given Borrowing Constraint?</a></li>
+<li class="chapter" data-level="11.1.2" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#aggregate-household-excess-supply-along-interest-rate"><i class="fa fa-check"></i><b>11.1.2</b> Aggregate Household Excess Supply along Interest Rate</a></li>
+<li class="chapter" data-level="11.1.3" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#firm-demand-for-credit"><i class="fa fa-check"></i><b>11.1.3</b> Firm Demand for Credit</a></li>
+<li class="chapter" data-level="11.1.4" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#economy-wide-excess-supply-for-credit-firm-households"><i class="fa fa-check"></i><b>11.1.4</b> Economy Wide Excess Supply for Credit (Firm + Households)</a></li>
+<li class="chapter" data-level="11.1.5" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#demand-and-supply-for-credit-with-a-tax-on-interest-rate"><i class="fa fa-check"></i><b>11.1.5</b> Demand and Supply for Credit with a Tax on Interest Rate</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#equilibrium-interest-rate-and-wage-rate"><i class="fa fa-check"></i><b>11.2</b> Equilibrium Interest Rate and Wage Rate</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#household-and-firms-problem"><i class="fa fa-check"></i><b>11.2.1</b> Household and Firm’s Problem</a></li>
+<li class="chapter" data-level="11.2.2" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#setting-up-parameters"><i class="fa fa-check"></i><b>11.2.2</b> Setting Up Parameters</a></li>
+<li class="chapter" data-level="11.2.3" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#household-labor-supply-and-borrowsave-with-different-beta-and-r"><i class="fa fa-check"></i><b>11.2.3</b> Household Labor Supply and Borrow/Save with different <span class="math inline">\(\beta\)</span> and <span class="math inline">\(r\)</span> ?</a></li>
+<li class="chapter" data-level="11.2.4" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#firms-demand-for-capital-and-labor"><i class="fa fa-check"></i><b>11.2.4</b> Firm’s Demand for Capital and Labor</a></li>
+<li class="chapter" data-level="11.2.5" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#demand-and-supply-for-capital"><i class="fa fa-check"></i><b>11.2.5</b> Demand and Supply for Capital</a></li>
+<li class="chapter" data-level="11.2.6" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#demand-and-supply-for-labor-demand-and-supply"><i class="fa fa-check"></i><b>11.2.6</b> Demand and Supply for Labor Demand and Supply</a></li>
+<li class="chapter" data-level="11.2.7" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#excess-demand-for-capital-and-labor"><i class="fa fa-check"></i><b>11.2.7</b> Excess Demand for Capital and Labor</a></li>
+<li class="chapter" data-level="11.2.8" data-path="equilibrium-and-policy.html"><a href="equilibrium-and-policy.html#w-and-r-equilibrium"><i class="fa fa-check"></i><b>11.2.8</b> <span class="math inline">\(w\)</span> and <span class="math inline">\(r\)</span> Equilibrium</a></li>
+</ul></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="index-and-code-links.html"><a href="index-and-code-links.html"><i class="fa fa-check"></i><b>A</b> Index and Code Links</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="index-and-code-links.html"><a href="index-and-code-links.html#notations-and-functions-links"><i class="fa fa-check"></i><b>A.1</b> Notations and Functions links</a></li>
+<li class="chapter" data-level="A.2" data-path="index-and-code-links.html"><a href="index-and-code-links.html#commonly-used-functions-links"><i class="fa fa-check"></i><b>A.2</b> Commonly Used Functions links</a></li>
+<li class="chapter" data-level="A.3" data-path="index-and-code-links.html"><a href="index-and-code-links.html#derivatives-links"><i class="fa fa-check"></i><b>A.3</b> Derivatives links</a></li>
+<li class="chapter" data-level="A.4" data-path="index-and-code-links.html"><a href="index-and-code-links.html#univariate-applications-links"><i class="fa fa-check"></i><b>A.4</b> Univariate Applications links</a></li>
+<li class="chapter" data-level="A.5" data-path="index-and-code-links.html"><a href="index-and-code-links.html#matrix-basics-links"><i class="fa fa-check"></i><b>A.5</b> Matrix Basics links</a></li>
+<li class="chapter" data-level="A.6" data-path="index-and-code-links.html"><a href="index-and-code-links.html#system-of-equations-links"><i class="fa fa-check"></i><b>A.6</b> System of Equations links</a></li>
+<li class="chapter" data-level="A.7" data-path="index-and-code-links.html"><a href="index-and-code-links.html#matrix-applications-links"><i class="fa fa-check"></i><b>A.7</b> Matrix Applications links</a></li>
+<li class="chapter" data-level="A.8" data-path="index-and-code-links.html"><a href="index-and-code-links.html#uncertainty-links"><i class="fa fa-check"></i><b>A.8</b> Uncertainty links</a></li>
+<li class="chapter" data-level="A.9" data-path="index-and-code-links.html"><a href="index-and-code-links.html#equality-constrained-optimization-links"><i class="fa fa-check"></i><b>A.9</b> Equality Constrained Optimization links</a></li>
+<li class="chapter" data-level="A.10" data-path="index-and-code-links.html"><a href="index-and-code-links.html#inequality-constrained-optimization-links"><i class="fa fa-check"></i><b>A.10</b> Inequality Constrained Optimization links</a></li>
+<li class="chapter" data-level="A.11" data-path="index-and-code-links.html"><a href="index-and-code-links.html#equilibrium-and-policy-links"><i class="fa fa-check"></i><b>A.11</b> Equilibrium and Policy links</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://fanwangecon.github.io/Math4Econ/bookdown/index.html" target="blank">Math4Econ Bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introductory Mathematics for Economists with Matlab</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="equality-constrained-optimization" class="section level1" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Equality Constrained Optimization</h1>
+
+<div id="cost-minimization-decreasing-returns" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> Cost Minimization Decreasing Returns</h2>
+<blockquote>
+<p>Go back to <a href="http://fanwangecon.github.io/">fan</a>’s <a href="https://fanwangecon.github.io/CodeDynaAsset/">CodeDynaAsset</a> Package, <a href="https://fanwangecon.github.io/M4Econ/">Matlab Code Examples</a> Repository (<a href="https://fanwangecon.github.io/M4Econ/bookdown">bookdown site</a>), or <a href="https://fanwangecon.github.io/Math4Econ/">Math for Econ with Matlab</a> Repository (<a href="https://fanwangecon.github.io/Math4Econ/bookdown">bookdown site</a>).</p>
+</blockquote>
+<p>We have already solved the firm’s maximization problem before given
+decreasing return to scale: <a href="https://fanwangecon.github.io/Math4Econ/matrix_application/KL_borrowhire_firm.html">Firm Maximization Problem with Capital and
+Labor (Decreasing Return to
+Scale)</a></p>
+<p>Now, Let’s solve the firm’s problem with constraints. We can divide the
+profit maximization problem into two parts: 1, given a desired level of
+output, optimize over the optimal bundle of capital and labor; 2, given
+the result from the first part, optimize over the quantity of outputs.
+Here we focus on the first part, which can be thought of as a cost
+minimization or profit maximization problem.</p>
+<div id="profit-maximization-with-constraint" class="section level3" number="9.1.1">
+<h3><span class="header-section-number">9.1.1</span> Profit Maximization with Constraint</h3>
+<p>Let’s now write down the firm’s cost minimization problem with the
+appropriate constraints, using the Cobb-Douglas production function.</p>
+<p>We can state the problem as a profit maximization problem:</p>
+<ul>
+<li><p><span class="math inline">\(\displaystyle \max_{K,L} \left\lbrace p\cdot AK^{\alpha } L^{\beta } -w\cdot L-r\cdot K\right\rbrace\)</span></p></li>
+<li><p>such that: <span class="math inline">\(AK^{\alpha } L^{\beta } =q\)</span>, where <span class="math inline">\(q\)</span> is some desired
+level of output</p></li>
+</ul>
+<p>We can write down the lagrangian for this problem:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \mathcal{L}=\left\lbrace p\cdot AK^{\alpha } L^{\beta } -w\cdot L-r\cdot K\right\rbrace -\mu \cdot (AK^{\alpha } L^{\beta } -q)\)</span></li>
+</ul>
+<p>Now, the maximization problem has three choice variables, <span class="math inline">\(L,K,\mu\)</span>,
+where <span class="math inline">\(\mu\)</span> is the lagrange multiplier.</p>
+<p><strong><em>Step 1</em></strong>: We can plug things into matlab’s symbolic toolbox</p>
+<pre><code>% These are the parameters
+syms p A alpha beta w r q
+% These are the choice variables
+syms K L m
+% The Lagrangian
+lagrangian = (p*A*(K^alpha)*(L^beta) - w*L - r*K) - m*(A*(K^alpha)*(L^beta) - q)</code></pre>
+<p>lagrangian =
+<span class="math inline">\(\displaystyle m\,{\left(q-A\,K^{\alpha } \,L^{\beta } \right)}-L\,w-K\,r+A\,K^{\alpha } \,L^{\beta } \,p\)</span></p>
+<p><strong><em>Step 2</em></strong>: As before, we can differentiate and obtain the gradient</p>
+<pre><code>d_lagrangian_K = diff(lagrangian, K);
+d_lagrangian_L = diff(lagrangian, L);
+d_lagrangian_m = diff(lagrangian, m);  
+GRADIENT = [d_lagrangian_K; d_lagrangian_L; d_lagrangian_m]</code></pre>
+<p>GRADIENT = <span class="math inline">\(\displaystyle \left(\begin{array}{c} A\,K^{\alpha -1} \,L^{\beta } \,\alpha \,p-A\,K^{\alpha -1} \,L^{\beta } \,\alpha \,m-r\\ A\,K^{\alpha } \,L^{\beta -1} \,\beta \,p-A\,K^{\alpha } \,L^{\beta -1} \,\beta \,m-w\\ q-A\,K^{\alpha } \,L^{\beta } \end{array}\right)\)</span></p>
+<p><strong><em>Step 3</em></strong>: We can solve the problem. Let’s plug in some numbers
+(matlab in this case is unable to solve the problem with symbols):</p>
+<pre><code>% Given we have many symbols, type K, L, mu at the end to let matlab know what we are solving for
+GRADIENT = subs(GRADIENT, {A,p,w,r,q,alpha,beta},{1,1,1,1,2,0.3,0.7});
+solu = solve(GRADIENT(1)==0, GRADIENT(2)==0, GRADIENT(3)==0, K, L, m, &#39;Real&#39;, true);
+soluK = double(solu.K);
+soluL = double(solu.L);
+soluM = double(solu.m);
+disp(table(soluK, soluL, soluM));
+
+    soluK     soluL      soluM  
+    ______    ______    ________
+
+    1.1052    2.5788    -0.84202</code></pre>
+<p><strong><em>Step 4</em></strong>: What is the gradient at the optimal choices?</p>
+<p>These are almost all exactly zero, which is what we expect, at the
+optimal choices, gradient should be 0. (SB P460)</p>
+<pre><code>gradientAtOptimum = double(subs(GRADIENT, {K,L,m}, {soluK, soluL, soluM}))
+
+gradientAtOptimum = 3x1    
+1.0e+-15 *
+
+   -0.0156
+    0.0131
+   -0.1296</code></pre>
+<p><strong><em>Step 5</em></strong>: What is the hessian with respect to <span class="math inline">\(K,L\)</span> (excluding
+<span class="math inline">\(\mu\)</span>) at the optimal choices?</p>
+<p>The second derivative condition is a little bit more complicated. You
+can see details on P460 of SB. In practice, we find the hessian only
+with respect to the real choices, not the multipliers, and we check if
+the resulting matrix is <strong>negative definite</strong>. If it is, we have found a
+<strong>local maximum</strong>.</p>
+<pre><code>HESSIAN = [diff(GRADIENT(1), K), diff(GRADIENT(2), K);...
+           diff(GRADIENT(1), L), diff(GRADIENT(2), L)];
+HESSIANatOptimum = double(subs(HESSIAN, {K,L,m}, {soluK, soluL, soluM}))
+
+HESSIANatOptimum = 2x2    
+   -0.6334    0.2714
+    0.2714   -0.1163</code></pre>
+<p>Is the Hessian Positive definite or negative definite? Let’s prove by
+trial and try some random vectors and use the <span class="math inline">\(xAx^{\prime }\)</span> rule:</p>
+<pre><code>% An empty vector of zeros
+xAxSave = zeros(1,100);
+% Try 100 random xs and see what xAx equal to
+for i=1:100
+    x = rand(1,2);
+    xAxSave(i) = x*HESSIANatOptimum*x&#39;;
+end
+% Let&#39;s see the first 5 elements:
+xAxSave(1:5)
+
+ans = 1x5    
+   -0.0946   -0.2636   -0.3029   -0.1754   -0.0002
+
+% OK the first 5 elements are negative, what about the rest?
+% This command creates a new vector equal to FALSE (or 0) if above or equal 0, and TRUE (or 1) if below 0
+is_negative = (xAxSave &lt; 0);
+is_negative(1:5)
+
+ans = 1x5 logical array    
+   1   1   1   1   1
+
+% This counts how many are negative, should be 100, because this is a maximum
+sum(is_negative)
+
+ans = 100</code></pre>
+</div>
+<div id="cost-minimization-with-constraint" class="section level3" number="9.1.2">
+<h3><span class="header-section-number">9.1.2</span> Cost Minimization with Constraint</h3>
+<p>We can actually re-write the problem as a cost minimization problem,
+because the first term in the objective function actually is always
+equal to <span class="math inline">\(q\)</span>, so that does not change regardless of the choices we make,
+so we can take it out, and say we are minimizing the cost. So we can
+re-write the problem as:</p>
+<ul>
+<li><p><span class="math inline">\(\displaystyle \min_{K,L} \left\lbrace w\cdot L+r\cdot K\right\rbrace\)</span></p></li>
+<li><p>such that: <span class="math inline">\(AK^{\alpha } L^{\beta } =q\)</span>, where <span class="math inline">\(q\)</span> is some desired
+level of output</p></li>
+</ul>
+<p>We can write down the lagrangian for this problem:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \mathcal{L}=\left\lbrace w\cdot L+r\cdot K\right\rbrace -\mu \cdot (AK^{\alpha } L^{\beta } -q)\)</span></li>
+</ul>
+<p>This problem looks a little different, will we get the same solution?
+Yes, we can call the solutions below as the solutions to the COO’s
+problem.</p>
+</div>
+<div id="cost-minimization-problemoptimal-capital-labor-choices" class="section level3" number="9.1.3">
+<h3><span class="header-section-number">9.1.3</span> Cost Minimization Problem–Optimal Capital Labor Choices</h3>
+<p>Taking derivative of <span class="math inline">\(L\)</span>, <span class="math inline">\(K\)</span> and <span class="math inline">\(\mu\)</span> with respect to the lagrangian,
+and setting first order conditions to <span class="math inline">\(0\)</span>, we can derive the optimal
+constrained capital and labor choices using the first order conditions
+above, they are (they would be the same if we derived them using the
+constrained profit maximization problem earlier):</p>
+<ul>
+<li><p><span class="math inline">\(\displaystyle K^* (w,r,q)={\left(\frac{q}{A}\right)}^{\frac{1}{\alpha +\beta }} \cdot {\left\lbrack \frac{\alpha }{\beta }\cdot \frac{w}{r}\right\rbrack }^{\frac{\beta }{\alpha +\beta }}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle L^* (w,r,q)={\left(\frac{q}{A}\right)}^{\frac{1}{\alpha +\beta }} \cdot {\left\lbrack \frac{\alpha }{\beta }\cdot \frac{w}{r}\right\rbrack }^{\frac{-\alpha }{\alpha +\beta }}\)</span></p></li>
+</ul>
+<p>If you divide the optimal constrained capital and labor choice equations
+above, you will find the optimal ratio is the same as what we derived in
+the unconstrained profit maximization problem: <a href="https://fanwangecon.github.io/Math4Econ/matrix_application/KL_borrowhire_firm.html">Firm Maximization
+Problem with Capital and Labor (Decreasing Return to
+Scale)</a>:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \frac{K^* (r,w)}{L^* (r,w)}=\frac{w}{r}\cdot \frac{\alpha }{\beta }\)</span></li>
+</ul>
+<p>This means the constraint does not change the optimal capital and labor
+ratio.</p>
+</div>
+<div id="cost-minimization-problemsolving-on-matlab" class="section level3" number="9.1.4">
+<h3><span class="header-section-number">9.1.4</span> Cost Minimization Problem–Solving on Matlab</h3>
+<p><strong><em>Step 1</em></strong>: We can plug things into matlab’s symbolic toolbox</p>
+<pre><code>clear all
+% These are the parameters
+syms p A alpha beta w r q
+% These are the choice variables
+syms K L m
+% The Lagrangian
+lagrangianMin = (w*L + r*K) - m*(A*(K^alpha)*(L^beta) - q)</code></pre>
+<p>lagrangianMin =
+<span class="math inline">\(\displaystyle K\,r+L\,w+m\,{\left(q-A\,K^{\alpha } \,L^{\beta } \right)}\)</span></p>
+<p><strong><em>Step 2</em></strong>: As before, we can differentiate and obtain the gradient</p>
+<pre><code>d_lagrangianMin_K = diff(lagrangianMin, K);
+d_lagrangianMin_L = diff(lagrangianMin, L);
+d_lagrangianMin_m = diff(lagrangianMin, m);  
+GRADIENT = [d_lagrangianMin_K; d_lagrangianMin_L; d_lagrangianMin_m];
+disp(GRADIENT);</code></pre>
+<p><span class="math inline">\(\displaystyle \left(\begin{array}{c} r-A\,K^{\alpha -1} \,L^{\beta } \,\alpha \,m\\ w-A\,K^{\alpha } \,L^{\beta -1} \,\beta \,m\\ q-A\,K^{\alpha } \,L^{\beta } \end{array}\right)\)</span></p>
+<p><strong><em>Step 3</em></strong>: We can solve the problem. Let’s plug in some numbers:</p>
+<pre><code>% Given we have many symbols, type K, L, mu at the end to let matlab know what we are solving for
+GRADIENT = subs(GRADIENT, {A,p,w,r,q,alpha,beta},{1,1,1,1,2,0.3,0.7});
+solu = solve(GRADIENT(1)==0, GRADIENT(2)==0, GRADIENT(3)==0, K, L, m, &#39;Real&#39;, true);
+soluK = double(solu.K);
+soluL = double(solu.L);
+soluM = double(solu.m);
+disp(table(soluK, soluL, soluM));
+
+    soluK     soluL     soluM
+    ______    ______    _____
+
+    1.1052    2.5788    1.842</code></pre>
+<p><strong><em>Step 4</em></strong>: What is the gradient at the optimal choices?</p>
+<p>These are almost all exactly zero, which is what we expect, at the
+optimal choices, gradient should be 0. (SB P460)</p>
+<pre><code>gradientAtOptimum = double(subs(GRADIENT, {K,L,m}, {soluK, soluL, soluM}))
+
+gradientAtOptimum = 3x1    
+1.0e+-15 *
+
+    0.0156
+   -0.0131
+   -0.1296</code></pre>
+<p><strong><em>Step 5</em></strong>: What is the hessian with respect to <span class="math inline">\(K,L\)</span> (excluding
+<span class="math inline">\(\mu\)</span>) at the optimal choices?</p>
+<p>The second derivative condition is a little bit more complicated. You
+can see details on P460 of SB. In practice, we find the hessian only
+with respect to the real choices, not the multipliers, and we check if
+the resulting matrix is <strong>positive definite</strong>. If it is, we have found a
+<strong>local minimum</strong>.</p>
+<pre><code>HESSIAN = [diff(GRADIENT(1), K), diff(GRADIENT(2), K);...
+           diff(GRADIENT(1), L), diff(GRADIENT(2), L)];
+HESSIANatOptimum = double(subs(HESSIAN, {K,L,m}, {soluK, soluL, soluM}))
+
+HESSIANatOptimum = 2x2    
+    0.6334   -0.2714
+   -0.2714    0.1163
+
+disp(HESSIANatOptimum);
+
+    0.6334   -0.2714
+   -0.2714    0.1163</code></pre>
+<p>Is the Hessian Positive definite or negative definite? Let’s prove by
+trial and try some random vectors and use the <span class="math inline">\(xAx^{\prime }\)</span> rule:</p>
+<pre><code>% An empty vector of zeros
+xAxSave = zeros(1,100);
+% Try 100 random xs and see what xAx equal to    
+for i=1:100
+    x = rand(1,2);
+    xAxSave(i) = x*HESSIANatOptimum*x&#39;;
+end
+% Let&#39;s see the first 5 elements:
+disp(xAxSave(1:5));
+
+    0.0096    0.0280    0.0142    0.0384    0.0133
+
+% OK the first 5 elements are positive, what about the rest?
+% This command creates a new vector equal to FALSE (or 0) if below or equal 0, and TRUE (or 1) if above 0
+isPositive = (xAxSave &gt; 0);
+disp(isPositive(1:5));
+
+   1   1   1   1   1
+
+% This counts how many are postiive, should be 100, because this is a minimum
+disp(sum(isPositive));
+
+   100</code></pre>
+
+</div>
+</div>
+<div id="profit-maximization-constant-returns" class="section level2" number="9.2">
+<h2><span class="header-section-number">9.2</span> Profit Maximization Constant Returns</h2>
+<blockquote>
+<p>Go back to <a href="http://fanwangecon.github.io/">fan</a>’s <a href="https://fanwangecon.github.io/CodeDynaAsset/">CodeDynaAsset</a> Package, <a href="https://fanwangecon.github.io/M4Econ/">Matlab Code Examples</a> Repository (<a href="https://fanwangecon.github.io/M4Econ/bookdown">bookdown site</a>), or <a href="https://fanwangecon.github.io/Math4Econ/">Math for Econ with Matlab</a> Repository (<a href="https://fanwangecon.github.io/Math4Econ/bookdown">bookdown site</a>).</p>
+</blockquote>
+<p>We have already solved the firm’s maximization problem before given
+decreasing return to scale: <a href="https://fanwangecon.github.io/Math4Econ/matrix_application/KL_borrowhire_firm.html">Firm Maximization Problem with Capital and
+Labor (Decreasing Return to
+Scale)</a>.
+We have also solved the constrained profit maximization or cost
+minimization problem as well: <a href="https://fanwangecon.github.io/Math4Econ/opti_firm_constrained/profit_maximize.html">Profit Maximize and Cost
+Minimize</a>.</p>
+<div id="what-is-the-profit-of-the-firm-at-constrained-optimal-choices" class="section level3" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> What is the Profit of the firm at Constrained Optimal Choices?</h3>
+<p>We derived the optimal constrained <span class="math inline">\(K\)</span> and <span class="math inline">\(L\)</span> equations here: <a href="https://fanwangecon.github.io/Math4Econ/opti_firm_constrained/profit_maximize.html">Profit
+Maximize and Cost
+Minimize</a>.
+The constrained profit equation given, <span class="math inline">\(p,q,w,r\)</span>, is:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \Pi^{*\textrm{cost}\;\textrm{minimize}} (p,q,w,r)=p\cdot q-w\cdot L^* (w,r,q)-r\cdot K^* (w,r,q)\)</span></li>
+</ul>
+</div>
+<div id="profit-maximization-and-marginal-cost" class="section level3" number="9.2.2">
+<h3><span class="header-section-number">9.2.2</span> Profit Maximization and Marginal Cost</h3>
+<p>Imagine a firm is now trying to decide how much to produce, given our
+cost minimization problem, now rather than thinking about the firm
+directly choosing <span class="math inline">\(K\)</span> and <span class="math inline">\(L\)</span> to maximize profit, we can think of the
+marginal cost and marginal profit of the firm as <span class="math inline">\(q\)</span> changes for the
+firm. If the firm can choose <span class="math inline">\(q\)</span>, it will want to choose the <span class="math inline">\(q\)</span> that
+maximizes profit.</p>
+<p><span class="math display">\[\max_q \left(p\cdot q-w\cdot L^* (w,r,q)-r\cdot K^* (w,r,q)\right)\]</span></p>
+<p>The solution to this problem has to be the same as the problem we solved
+earlier where we directly chose <span class="math inline">\(K\)</span> and <span class="math inline">\(L\)</span>, but now when formulated
+this way, we can think about the marginal cost and marginal revenue for
+the firm when <span class="math inline">\(q\)</span> changes:</p>
+<ul>
+<li><p><span class="math inline">\(\displaystyle \textrm{MC(w,r)}=\frac{\partial (w\cdot L^* (w,r,q)+r\cdot K^* (w,r,q))}{\partial q}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \textrm{MR}(w,r)=p\)</span></p></li>
+</ul>
+<p>Marginal revenue is of course constant at <span class="math inline">\(p\)</span> and marginal cost is the
+derivative of the cost minimizing <span class="math inline">\(L\)</span> and <span class="math inline">\(K\)</span> choices multiplied by
+respective prices with respect to <span class="math inline">\(q\)</span>. Note we drived previously that
+these are functions of <span class="math inline">\(q\)</span>. Together with what we derived here: <a href="https://fanwangecon.github.io/Math4Econ/matrix_application/KL_borrowhire_firm.html">Firm
+Maximization Problem with Capital and Labor (Decreasing Return to
+Scale)</a>,
+the Cobb-Douglas Production function firm’s problem has given us on the
+return side: marginal productivity of capital, marginal productivity of
+labor, and marginal revenue. On the cost side: marginal cost of capital,
+marginal cost of labor, marginal cost of additional output (given cost
+minimization). These six marginal ideas are crucial to any firm’s
+problem, the specific functional forms differ depending on our
+production function specifications, but formulating how firms operate
+with these marginal ideas is at the heart of economic analysis.</p>
+</div>
+<div id="constant-return-to-scale" class="section level3" number="9.2.3">
+<h3><span class="header-section-number">9.2.3</span> Constant Return to Scale</h3>
+<p>In our previous exercise decreasing return to scale, <a href="https://fanwangecon.github.io/Math4Econ/matrix_application/KL_borrowhire_firm.html">Firm Maximization
+Problem with Capital and Labor (Decreasing Return to
+Scale)</a>,
+firms chose optimal <span class="math inline">\(K\)</span> and <span class="math inline">\(L\)</span> to maximize profit. We showed that the
+log linearized coefficient matrix is not full rank and invertible with
+constant return to scale, and hence firms did not have unconstrained
+profit maximizing <span class="math inline">\(K\)</span> and <span class="math inline">\(L\)</span> choices. Why is that?</p>
+<p>Formulating the problem with marginal cost and marginal revenue helps us
+to understand what is going on.</p>
+<p>It turns out that if <span class="math inline">\(\alpha +\beta =1\)</span>, that is, the firm has constant
+return to scale (CRS)–the elasticities of inputs sum up to 1–the cost
+minimizing optimal <span class="math inline">\(K\)</span> and <span class="math inline">\(L\)</span> choices are <strong>linear</strong> in terms of <span class="math inline">\(q\)</span>.
+The equations we derived in <a href="https://fanwangecon.github.io/Math4Econ/opti_firm_constrained/profit_maximize.html">Profit Maximize and Cost
+Minimize</a>,
+become, with CRS:</p>
+<ul>
+<li><p><span class="math inline">\(\displaystyle K^* (w,r,q)=q\cdot \left\lbrace \frac{1}{A}\cdot {\left\lbrack \frac{\alpha }{1-\alpha }\cdot \frac{w}{r}\right\rbrack }^{1-\alpha } \right\rbrace\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle L^* (w,r,q)=q\cdot \left\lbrace \frac{1}{A}\cdot {\left\lbrack \frac{\alpha }{1-\alpha }\cdot \frac{w}{r}\right\rbrack }^{-\alpha } \right\rbrace\)</span></p></li>
+</ul>
+<p>These equations mean that the marginal cost of producing one more unit
+of <span class="math inline">\(q\)</span>, given CRS, is not impacted by <span class="math inline">\(q\)</span>, hence, it is a constant
+(determined by <span class="math inline">\(A,\alpha ,w,r\)</span>):</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \textrm{MC(w,r)}=r\cdot \left\lbrace \frac{1}{A}\cdot {\left\lbrack \frac{\alpha }{1-\alpha }\cdot \frac{w}{r}\right\rbrack }^{1-\alpha } \right\rbrace +w\cdot \left\lbrace \frac{1}{A}\cdot {\left\lbrack \frac{\alpha }{1-\alpha }\cdot \frac{w}{r}\right\rbrack }^{-\alpha } \right\rbrace\)</span></li>
+</ul>
+<p>With CRS, this means that if a firm makes <span class="math inline">\(q=1\)</span>, the cost would be
+<span class="math inline">\(\textrm{MC(w,r)}\)</span>, if the firm makes <span class="math inline">\(q=10\)</span>, the marginal cost for
+making the 10th good, given that the firm is cost minimizing by choosing
+optimal bundle of capital and labor, is just <span class="math inline">\(\textrm{MC(w,r)}\)</span>, and the
+total cost is also <span class="math inline">\(10\cdot \textrm{MC(w,r)}\)</span>.</p>
+</div>
+<div id="when-will-the-firm-produce-and-what-is-its-profit" class="section level3" number="9.2.4">
+<h3><span class="header-section-number">9.2.4</span> When will the Firm produce, and what is its Profit?</h3>
+<p>With decreasing return to scale, for any prices, there will be profit
+maximizing <span class="math inline">\(K\)</span> and <span class="math inline">\(L\)</span> choices that lead to some profit maximizing
+output, as shown here: <a href="https://fanwangecon.github.io/Math4Econ/matrix_application/KL_borrowhire_firm.html">Firm Maximization Problem with Capital and Labor
+(Decreasing Return to
+Scale)</a>.</p>
+<p>With CRS:</p>
+<ul>
+<li><p>if <span class="math inline">\(p&lt;\textrm{MC}(w,r)\)</span>, the firm does not produce, supply is
+perfectly inelastic</p></li>
+<li><p>if <span class="math inline">\(p&gt;\textrm{MC}(w,r)\)</span>, the firm produces infinity, every
+additional unit brings <span class="math inline">\(p-\textrm{MC(w,r)}\)</span> unit of profit, so the
+firm would want to produce up to infinity</p></li>
+<li><p>if <span class="math inline">\(p=\textrm{MC}(w,r)\)</span>. There is no profit, but there is also no
+loss. Households can also produce any amount, because there is
+nothing lost from producing.</p></li>
+</ul>
+<p>So the firm makes a profit when: <span class="math inline">\(p&gt;\textrm{MC}(w,r)\)</span>,</p>
+<p>Given perfect competition, firms do not have pricing power, and take <span class="math inline">\(p\)</span>
+as given, at equilibrium,<span class="math inline">\(p=\textrm{MC}(w,r)\)</span>. With CRS and perfect
+competition, firms will not make a profit. The fact that marginal cost
+is constant and profit is linear in <span class="math inline">\(q\)</span> lead to this result. If there is
+monopolistic competition, there could be profits given CRS because firms
+would then be able to shift price as they shift quantity.</p>
+
+</div>
+</div>
+<div id="intertemporal-utility-maximization" class="section level2" number="9.3">
+<h2><span class="header-section-number">9.3</span> Intertemporal Utility Maximization</h2>
+<blockquote>
+<p>Go back to <a href="http://fanwangecon.github.io/">fan</a>’s <a href="https://fanwangecon.github.io/CodeDynaAsset/">CodeDynaAsset</a> Package, <a href="https://fanwangecon.github.io/M4Econ/">Matlab Code Examples</a> Repository (<a href="https://fanwangecon.github.io/M4Econ/bookdown">bookdown site</a>), or <a href="https://fanwangecon.github.io/Math4Econ/">Math for Econ with Matlab</a> Repository (<a href="https://fanwangecon.github.io/Math4Econ/bookdown">bookdown site</a>).</p>
+</blockquote>
+<p>We previously solved for the unconstrained household’s savings and
+borrowing problem: <a href="https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html">unconstrained
+problem</a>.</p>
+<div id="utility-maximization-over-consumption-in-two-periods" class="section level3" number="9.3.1">
+<h3><span class="header-section-number">9.3.1</span> Utility Maximization over Consumption in Two Periods</h3>
+<ul>
+<li><p><strong>Utility</strong>: <span class="math inline">\(U(c_1 ,c_2 )=\log (c_1 )+\beta \cdot \log (c_2 )\)</span></p></li>
+<li><p><strong>Budget Today</strong>: <span class="math inline">\(c_1 +b\le Z_1\)</span></p></li>
+<li><p><strong>Budget Tomorrow</strong>: <span class="math inline">\(c_2 \le b\cdot (1+r)+Z_2\)</span></p></li>
+<li><p><span class="math inline">\(c_1 &gt;0\)</span>, <span class="math inline">\(c_2 &gt;0\)</span></p></li>
+</ul>
+<p>We have solved this problem as an unconstrained maximization problem by
+eliminating the consumption terms (<a href="https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html">unconstrained
+problem</a>).
+If we keep the consumption terms but eliminatethe <span class="math inline">\(b\)</span> term, then the
+problem is a constrained maximization problem with an income constraint:</p>
+<ul>
+<li><strong>Budget Today and Tomorrow Together</strong>: <span class="math inline">\(c_2 =(Z_1 -c_1 )(1+r)+Z_2\)</span></li>
+</ul>
+<p>Note that we have replaced the inequality symbol by an equality symbol.
+The income constraints are always going to bind because households will
+not waste income given log utility which is always increasing in
+consumption. This also means we don’t have to worry about the positive
+consumption constraints, because households will never consume at 0
+since utility is not defined. We can rewrite the budget constraint as
+follows:</p>
+<ul>
+<li><strong>Budget Today and Tomorrow Together</strong>:
+<span class="math inline">\(c_1 \cdot (1+r)+c_2 =Z_1 \cdot (1+r)+Z_2\)</span></li>
+</ul>
+<p>Rewriting the problem as we do above has a nice interpretation. In this
+model, there is no production, endowment is fixed, and we allow the
+household to freely transfer resources from today to tomorrow and
+vice-versa. So in effect, we have two good that we are buying, <span class="math inline">\(c_1\)</span> and
+<span class="math inline">\(c_2\)</span>. They seem to be the same good so they should have the same price,
+but they do not, because consumption in the first period is more
+expensive, since if you don’t consume in the first period, and save, you
+can earn interests and have higher <span class="math inline">\(c_2\)</span>. The price of <span class="math inline">\(c_1\)</span> is hence
+<span class="math inline">\(1+r\)</span>. On the other hand, the price of <span class="math inline">\(c_2\)</span> is just <span class="math inline">\(1\)</span>. The total
+resource available is on the right-hand-side of the equation. Your
+grandmother is transferring resources <span class="math inline">\(Z_1\)</span> and <span class="math inline">\(Z_2\)</span> to you, but the
+resources transfered in the first period is worth more because of the
+possibility of saving it. Again, we can bring the two periods together
+because the household is allowed to borrow and save. Given that we do
+not have uncertainty, our two period intertemporal problem has actually
+only one budget constraint. We can not do this for the problem with
+<a href="https://fanwangecon.github.io/Math4Econ/nonlinear/RiskyAsset.html">uncertainty</a>.</p>
+<p>The problem here is stated for <span class="math inline">\(c_1\)</span> and <span class="math inline">\(c_2\)</span>, and is the intertemporal
+optimal choice problem. However, replace <span class="math inline">\(c_1\)</span> by apples consumed today,
+<span class="math inline">\(c_2\)</span> by bananas consumed today, and change the budget so that <span class="math inline">\(Z_1\)</span> is
+the endowment from your grandmother who is an apple producer, and <span class="math inline">\(Z_2\)</span>
+is the endowment from your other grandmother who is a banana producer.
+All solutions follow. We would replace <span class="math inline">\((1+r)\)</span> by <span class="math inline">\(P_A\)</span>, the price of
+apples, and we can also add in <span class="math inline">\(P_B\)</span> , the price of bananas. The key
+thing about building these models is that we can easily relabel
+variables and use the same framework to analyze different types of
+problems. For each type of problem, we could modify how the budget
+works, what is exactly in the utility function, but the structure of
+optimizing utility given budget is the same.</p>
+</div>
+<div id="first-order-conditions-of-the-constrained-consumption-problem" class="section level3" number="9.3.2">
+<h3><span class="header-section-number">9.3.2</span> First Order Conditions of the Constrained Consumption Problem</h3>
+<p>Note again we already know the solution of this problem from:
+<a href="https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html">unconstrained
+problem</a>.
+What we are doing here is to resolve the problem, but now directly for
+<span class="math inline">\(c_1\)</span> and <span class="math inline">\(c_2\)</span>, rather than <span class="math inline">\(b\)</span>. But the results are the same because
+once you know <span class="math inline">\(b\)</span> you know the consumption choices from the budget, and
+vice-versa. The solution method here is more complicated because we went
+from an one-choice problem in <a href="https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html">unconstrained
+problem</a>
+to a three choice problem below. But the solution here is more general,
+allowing us to have addition constraints that can not be easily plugged
+directly into the utility function.</p>
+<p>To solve the problem, we write down the Lagrangian, and solve a problem
+with three choices.</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \mathcal{L}=\log (c_1 )+\beta \cdot \log (c_2 )-\mu \left(c_1 \cdot (1+r)+c_2 -Z_1 \cdot (1+r)-Z_2 \right)\)</span></li>
+</ul>
+<p>We have three partial derivatives of the lagrangian, and at the optimal
+choices, these are true:</p>
+<ul>
+<li><p><span class="math inline">\(\frac{\partial \mathcal{L}}{\partial c_1 }=0\)</span>, then,
+<span class="math inline">\(\frac{1}{c_1^{\ast } }=\mu (1+r)\)</span></p></li>
+<li><p><span class="math inline">\(\frac{\partial \mathcal{L}}{\partial c_2 }=0\)</span>, then,
+<span class="math inline">\(\frac{\beta }{c_2^{\ast } }=\mu\)</span></p></li>
+<li><p><span class="math inline">\(\frac{\partial \mathcal{L}}{\partial \mu }=0\)</span>, then,
+<span class="math inline">\(c_1^{\ast } \cdot (1+r)+c_2^{\ast } =Z_1 \cdot (1+r)+Z_2\)</span></p></li>
+</ul>
+</div>
+<div id="optimal-relative-allocations-of-consumptions-in-the-first-and-second-periods" class="section level3" number="9.3.3">
+<h3><span class="header-section-number">9.3.3</span> Optimal Relative Allocations of Consumptions in the First and Second Periods</h3>
+<p>Bringing the firs two conditions together, we have:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\displaystyle \frac{\beta }{c_2^{\ast } }=\frac{1}{c_1^{\ast } \cdot (1+r)}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \frac{c_1^{\ast } }{c_2^{\ast } }=\frac{1}{\beta \cdot (1+r)}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle c_1^{\ast } =\frac{1}{\beta \cdot (1+r)}\cdot c_2^{\ast }\)</span></p></li>
+</ol>
+<p>Which tells us that the optimal ratio of consumption in the two periods
+is determined not by total resource available but by the interest rate
+<span class="math inline">\(r\)</span> and preference for future <span class="math inline">\(\beta\)</span>. If the interest rate is higher,
+one will consume less today relative to tomorrow. If <span class="math inline">\(\beta\)</span> is higher,
+which means we like the future more, one will also consume less today
+relative to tomorrow.</p>
+</div>
+<div id="optimal-consumption-choices" class="section level3" number="9.3.4">
+<h3><span class="header-section-number">9.3.4</span> Optimal Consumption Choices</h3>
+<p>Using the third first order condition, and the optimal consumption
+ratio, we have:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\displaystyle \frac{1}{\beta \cdot (1+r)}\cdot c_2^{\ast } \cdot (1+r)+c_2^{\ast } =Z_1 \cdot (1+r)+Z_2\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \frac{c_2^{\ast } }{\beta }+c_2^{\ast } =Z_1 \cdot (1+r)+Z_2\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle c_2^{\ast } =\frac{Z_1 \cdot (1+r)+Z_2 }{1+\frac{1}{\beta }}\)</span></p></li>
+</ol>
+<p>Now we have the optimal consumption level. If endowments in either the
+first or second periods are higher, the household would consume more in
+the second period. If the interest rate is higher, the household would
+consume more in the second period, if <span class="math inline">\(\beta\)</span> moves from 1 to 0, the
+numerator gets larger, and the optimal choice gets smaller: this means
+the more you dislike to future relative to today, the less you will
+consume in the future.</p>
+<p>With the solution for <span class="math inline">\(c_2^{\ast }\)</span>, we also know:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\displaystyle c_1^{\ast } =\frac{1}{\beta \cdot (1+r)}\cdot \frac{Z_1 \cdot (1+r)+Z_2 }{1+\frac{1}{\beta }}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle c_1^{\ast } =\frac{Z_1 +Z_2 \cdot \frac{1}{1+r}}{1+\beta }\)</span></p></li>
+</ol>
+<p>This means similar to the optimal choice for <span class="math inline">\(c_2\)</span>, households will
+consume more if endowments are higher. Now, opposite from before, if
+interest rate is higher, the numerator gets smaller, and the household
+consume less in the first period. If <span class="math inline">\(\beta\)</span> gets closer to 0, the
+household will consume more today as well.</p>
+<p>The solutions here are <strong>Marshallian</strong>.</p>
+</div>
+<div id="indirect-utility" class="section level3" number="9.3.5">
+<h3><span class="header-section-number">9.3.5</span> Indirect Utility</h3>
+<p>We have a special name for the utility function when it is evaluated at
+the optimal choices, it is called indirect utility:</p>
+<ul>
+<li><strong>Indirect Utility function</strong>:
+<span class="math inline">\(U(c_1^{\ast } (r,Z_1 ,Z_2 ),c_2^{\ast } (r,Z_1 ,Z_2 ))=V^{\ast } (r,Z_1 ,Z_2 )\)</span></li>
+</ul>
+<p>Given the solutions, we have:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\displaystyle V^{\ast } (r,Z_1 ,Z_2 )=\log \left(\frac{Z_1 +Z_2 \cdot \frac{1}{1+r}}{1+\beta }\right)+\beta \cdot \log \left(\frac{Z_1 \cdot (1+r)+Z_2 }{1+\frac{1}{\beta }}\right)\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle V^{\ast } (r,Z_1 ,Z_2 )=\log \left(\frac{Z_1 \cdot \left(1+r\right)+Z_2 }{\left(1+\beta \right)\cdot \left(1+r\right)}\right)+\beta \cdot \log \left(\frac{Z_1 \cdot (1+r)+Z_2 }{\left(1+\beta \right)\cdot \beta^{-1} }\right)\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle V^{\ast } (r,Z_1 ,Z_2 )=\left(1+\beta \right)\log \left(\frac{Z_1 \cdot \left(1+r\right)+Z_2 }{1+\beta }\right)+\log \left(\frac{\beta^{\beta } }{1+r}\right)\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle V^{\ast } (r,Z_1 ,Z_2 )=\log \left({\left(\frac{Z_1 \cdot \left(1+r\right)+Z_2 }{1+\beta }\right)}^{\left(1+\beta \right)} \cdot \left(\frac{\beta^{\beta } }{1+r}\right)\right)\)</span></p></li>
+</ol>
+</div>
+<div id="optimal-borrowing-and-savings-choices" class="section level3" number="9.3.6">
+<h3><span class="header-section-number">9.3.6</span> Optimal Borrowing and Savings Choices</h3>
+<p>We can also now find the optimal borrowing and savings choice, which is,
+given <span class="math inline">\(c_1^{\ast } +b^{\ast } =Z_1\)</span>:</p>
+<ul>
+<li><p><span class="math inline">\(\displaystyle b^{\ast } =Z_1 -\frac{Z_1 +Z_2 \cdot \frac{1}{1+r}}{1+\beta }\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle b^{\ast } =\frac{\beta \cdot Z_1 -Z_2 \cdot \frac{1}{1+r}}{1+\beta }\)</span></p></li>
+</ul>
+<p>You could also express the above expression as:
+<span class="math inline">\(b^{\ast } =\frac{\beta \cdot (1+r)\cdot Z_1 -Z_2 }{\left(1+\beta \right)\cdot \left(1+r\right)}\)</span>,
+which is what we obtained before from the <a href="https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html">unconstrained
+problem</a>.
+Looking at the optimal borrowing and savings choice, we can see that
+sometimes the household wants to borrow, sometimes save, depending on
+the numerator, specifically:</p>
+<ul>
+<li><p><span class="math inline">\(b^{\ast } &gt;0\)</span> if <span class="math inline">\(\beta \cdot (1+r)&gt;\frac{Z_2 }{Z_1 }\)</span></p></li>
+<li><p><span class="math inline">\(b^{\ast } \le 0\)</span> if <span class="math inline">\(\beta \cdot (1+r)\le \frac{Z_2 }{Z_1 }\)</span></p></li>
+</ul>
+<p>This tells us that whether a househodl borrows is dependent on the ratio
+of endowments: <span class="math inline">\(\frac{Z_2 }{Z_1 }\)</span>, and the discount rate multiplied by
+<span class="math inline">\(1+r\)</span>. The preference for future multiplied by the total return to
+savings must be higher than the ratio of endowment tomorrow versus today
+for households to want to save. In another word, suppose
+<span class="math inline">\(\beta \cdot (1+r)&gt;1\)</span>, the household will be willing to save even if
+there is more endowment tomorrow than today.</p>
+</div>
+<div id="computational-solution-to-the-equality-constrained-problem" class="section level3" number="9.3.7">
+<h3><span class="header-section-number">9.3.7</span> Computational Solution to the Equality Constrained Problem</h3>
+<p>Matlab can solve the optimal choices for us. We can use diff and solve.</p>
+<pre><code>beta = 0.95;
+z1 = 1;
+z2 = 2;
+r = 0.05;
+syms r c1 c2 mu
+% The Lagrangian
+lagrangian = (log(c1) + beta*log(c2)) - mu*( c2 + (1+r)*c1 - z1*(1+r) - z2)</code></pre>
+<p>lagrangian =
+<span class="math inline">\(\displaystyle \log \left(c_1 \right)+\frac{19\,\log \left(c_2 \right)}{20}-\mu \,{\left(c_2 -r+c_1 \,{\left(r+1\right)}-3\right)}\)</span></p>
+<pre><code>% Derivatives
+d_lagrangian_c1 = diff(lagrangian, c1);
+d_lagrangian_c2 = diff(lagrangian, c2);
+d_lagrangian_mu = diff(lagrangian, mu);
+GRADIENTmax = [d_lagrangian_c1; d_lagrangian_c2; d_lagrangian_mu]</code></pre>
+<p>GRADIENTmax = <span class="math inline">\(\displaystyle \left(\begin{array}{c} \frac{1}{c_1 }-\mu \,{\left(r+1\right)}\\ \frac{19}{20\,c_2 }-\mu \\ r-c_2 -c_1 \,{\left(r+1\right)}+3 \end{array}\right)\)</span></p>
+<pre><code>% Given we have many symbols, type K, L, mu at the end to let matlab know what we are solving for
+solu = solve(GRADIENTmax(1)==0, GRADIENTmax(2)==0, GRADIENTmax(3)==0, c1, c2, mu, &#39;Real&#39;, true);
+soluC1 = (solu.c1)</code></pre>
+<p>soluC1 =
+<span class="math inline">\(\displaystyle \frac{20\,{\left(r+3\right)}}{39\,{\left(r+1\right)}}\)</span></p>
+<pre><code>soluC2 = (solu.c2)</code></pre>
+<p>soluC2 = <span class="math inline">\(\displaystyle \frac{19\,r}{39}+\frac{19}{13}\)</span></p>
+<pre><code>soluMu = (solu.mu)</code></pre>
+<p>soluMu = <span class="math inline">\(\displaystyle \frac{39}{20\,{\left(r+3\right)}}\)</span></p>
+</div>
+<div id="fmincon-solution-to-the-constrained-problem" class="section level3" number="9.3.8">
+<h3><span class="header-section-number">9.3.8</span> Fmincon Solution to the Constrained Problem</h3>
+<p>We can use fmincon again. What we are doing here is to explicitly solve
+the initially stated utility maximization problem, with both inequality
+constraints for consumption. This is not necessary because households
+would never choose consumption to be zero. Nevertheless, we can still
+use the fmincon set-up to solve the problem with all its constraints.</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\displaystyle c_2 +(1+r)c_1 \le Z_1 (1+r)+Z_2\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle -c_1 &lt;0\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle -c_2 &lt;0\)</span></p></li>
+</ol>
+<p>To useThis is a linear system, the equations above are equal to:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\displaystyle (1)c_2 +(1+r)c_1 \le Z_1 (1+r)+Z_2\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle (0)c_2 +(-1)c_2 &lt;0\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle (-1)c_2 +(0)c_2 &lt;0\)</span></p></li>
+</ol>
+<p>Which mean that we have a <span class="math inline">\(A\)</span> matrix and <span class="math inline">\(q\)</span> vector:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \left\lbrack \begin{array}{cc} 1 &amp; 1+r\\ 0 &amp; -1\\ -1 &amp; 0 \end{array}\right\rbrack \cdot \left\lbrack \begin{array}{c} c_2 \\ c_1 \end{array}\right\rbrack \le \left\lbrack \begin{array}{c} Z_1 (1+r)+Z_2 \\ 0\\ 0 \end{array}\right\rbrack\)</span></li>
+</ul>
+<p>Now we can set up the inputs for fmincon</p>
+<pre><code>% Parameters
+beta = 0.90;
+z1 = 1;
+z2 = 2;
+r = 0.05;
+
+% Write down the objective function, we will define it as a function handle, negative utility for minimization
+U_neg = @(x) -1*(log(x(2)) + beta*log(x(1)));
+% Constraint derived above
+A = [1,1+r;0,-1;-1,0];
+q = [(z1*(1+r) + z2);0;0];</code></pre>
+<p>Now call fminunc to solve</p>
+<pre><code>c_init = [0.5,0.5]; % starting value to search for optimal choice
+% U_neg_num = matlabFunction(subs(U_neg, {beta, z1, z2, r}, {beta_num, z1_num, z2_num, r_num}));
+[c_opti,U_neg_at_c_opti] = fmincon(U_neg, c_init, A, q);
+
+Local minimum found that satisfies the constraints.
+
+Optimization completed because the objective function is non-decreasing in 
+feasible directions, to within the value of the optimality tolerance,
+and constraints are satisfied to within the value of the constraint tolerance.
+
+&lt;stopping criteria details&gt;
+
+c2Opti = c_opti(1);
+c1Opti = c_opti(2);
+UatCOpti = -1*U_neg_at_c_opti;
+disp(table(c1Opti, c2Opti, UatCOpti));
+
+    c1Opti    c2Opti    UatCOpti
+    ______    ______    ________
+
+    1.5288    1.4447    0.75563 </code></pre>
+<p>Note that consumption in the two periods are similar. Households
+generally want to smooth consumption over time given their differential
+endowments in each period.</p>
+
+</div>
+</div>
+<div id="intertemporal-expenditure-minimization" class="section level2" number="9.4">
+<h2><span class="header-section-number">9.4</span> Intertemporal Expenditure Minimization</h2>
+<blockquote>
+<p>Go back to <a href="http://fanwangecon.github.io/">fan</a>’s <a href="https://fanwangecon.github.io/CodeDynaAsset/">CodeDynaAsset</a> Package, <a href="https://fanwangecon.github.io/M4Econ/">Matlab Code Examples</a> Repository (<a href="https://fanwangecon.github.io/M4Econ/bookdown">bookdown site</a>), or <a href="https://fanwangecon.github.io/Math4Econ/">Math for Econ with Matlab</a> Repository (<a href="https://fanwangecon.github.io/Math4Econ/bookdown">bookdown site</a>).</p>
+</blockquote>
+<p>We previously solved for the unconstrained household’s savings and
+borrowing problem: <a href="https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html">unconstrained
+problem</a>.
+And also the <a href="https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv/household_borrow_constrained.html">constrained
+optimization</a>
+problem with asset choice.</p>
+<div id="utility-maximization-over-consumption-in-two-periods-1" class="section level3" number="9.4.1">
+<h3><span class="header-section-number">9.4.1</span> Utility Maximization over Consumption in Two Periods</h3>
+<p>We solved the <a href="https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv/household_c1_c2_constrained.html">constrained utility maximization
+probem</a>
+already.</p>
+<ul>
+<li><p><strong>Utility</strong>: <span class="math inline">\(U(c_1 ,c_2 )=\log (c_1 )+\beta \cdot \log (c_2 )\)</span></p></li>
+<li><p><strong>Budget Today and Tomorrow Together</strong>:
+<span class="math inline">\(c_1 \cdot (1+r)+c_2 =Z_1 \cdot (1+r)+Z_2\)</span></p></li>
+</ul>
+<p>We found the indirect utility given optimal choices:</p>
+<pre><code>clear all
+% previous solution, indirect uitlity
+U_at_c_opti = 0.75563;
+c1_opti = 1.5288;
+c2_opti = 1.4447;
+% parameters
+beta = 0.90;
+z1 = 1;
+z2 = 2;
+r = 0.05;</code></pre>
+</div>
+<div id="the-expenditure-minimization-problem" class="section level3" number="9.4.2">
+<h3><span class="header-section-number">9.4.2</span> The Expenditure Minimization Problem</h3>
+<p>We can represent the budget constraint and utility function (objective
+function) graphically. When we plug the optimal choices back into the
+utility function, we have the <strong><em>indirect utility</em></strong>.</p>
+<ul>
+<li><strong>Indirect Utility function</strong>:
+<span class="math inline">\(V(c_1^* (r,Z_1 ,Z_2 ),c_2^* (r,Z_1 ,Z_2 ))=V(r,Z_1 ,Z_2 )\)</span></li>
+</ul>
+<p>Note that the indirect utility is a function of the price <span class="math inline">\(r\)</span> that
+households face, and the resources the have available–their
+income–<span class="math inline">\(Z_1 ,Z_2\)</span>. We can also write:</p>
+<ul>
+<li><span class="math inline">\(\displaystyle V(r,Z_1 ,Z_2 )=\max_{c_1 ,c_2 } U(c_1 ,c_2 ;r,Z_1 ,Z_2 )\)</span></li>
+</ul>
+<p>Similar to the firm’s profit maximization and <a href="https://fanwangecon.github.io/Math4Econ/opti_firm_constrained/profit_maximize.html">cost minimization
+problems</a>,
+which gave us similar optimality conditions, we can solve the
+household’s expenditure minimization problem given <span class="math inline">\(V^*\)</span>, and the
+optimal choices will be the same choices that gave us <span class="math inline">\(V^*\)</span> initially.
+Specifically:</p>
+<p><span class="math display">\[\min_{c1,c2} \left(c_2 +(1+r)c_1 \right)\]</span></p>
+<ul>
+<li>such that:</li>
+</ul>
+<p><span class="math display">\[\log (c_1 )+\beta \log (c_2 )=V^{\ast } (r,Z_1 ,Z_2 )\]</span></p>
+</div>
+<div id="first-order-conditions-of-the-constrained-consumption-problem-1" class="section level3" number="9.4.3">
+<h3><span class="header-section-number">9.4.3</span> First Order Conditions of the Constrained Consumption Problem</h3>
+<p>Note again we already know the solution of this problem from:
+<a href="https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html">unconstrained
+problem</a>.
+What we are doing here is to resolve the problem, but now directly for
+<span class="math inline">\(c_1\)</span> and <span class="math inline">\(c_2\)</span>, rather than <span class="math inline">\(b\)</span>. But the results are the same because
+once you know <span class="math inline">\(b\)</span> you know the consumption choices from the budget, and
+vice-versa. The solution method here is more complicated because we went
+from an one-choice problem in <a href="https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html">unconstrained
+problem</a>
+to a three choice problem below. But the solution here is more general,
+allowing us to have addition constraints that can not be easily plugged
+directly into the utility function.</p>
+<p>To solve the problem, we write down the Lagrangian, and solve a problem
+with three choices.</p>
+<ul>
+<li><span class="math inline">\(\displaystyle \mathcal{L}=c_2 +(1+r)c_1 -\mu \left(\log (c_1 )+\beta \log (c_2 )-V^* (r)\right)\)</span></li>
+</ul>
+<p>We have three partial derivatives of the lagrangian, and at the optimal
+choices, these are true:</p>
+<ul>
+<li><p><span class="math inline">\(\frac{\partial \mathcal{L}}{\partial c_1 }=0\)</span>, then,
+<span class="math inline">\(\frac{\mu }{c_1^{\ast } }=(1+r)\)</span></p></li>
+<li><p><span class="math inline">\(\frac{\partial \mathcal{L}}{\partial c_2 }=0\)</span>, then,
+<span class="math inline">\(\frac{\beta \cdot \mu }{c_2^{\ast } }=1\)</span></p></li>
+<li><p><span class="math inline">\(\frac{\partial \mathcal{L}}{\partial \mu }=0\)</span>, then,
+<span class="math inline">\(\log (c_1^{\ast } )+\beta \log (c_2^{\ast } )=V^{\ast } (r,Z_1 ,Z_2 )\)</span></p></li>
+</ul>
+</div>
+<div id="optimal-relative-allocations-of-consumptions-in-the-first-and-second-periods-1" class="section level3" number="9.4.4">
+<h3><span class="header-section-number">9.4.4</span> Optimal Relative Allocations of Consumptions in the First and Second Periods</h3>
+<p>Bringing the firs two conditions together, we have:</p>
+<ul>
+<li><p><span class="math inline">\(\displaystyle \frac{\beta }{c_2^{\ast } }=\frac{1}{c_1^{\ast } \cdot (1+r)}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle \frac{c_1^{\ast } }{c_2^{\ast } }=\frac{1}{\beta \cdot (1+r)}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle c_1^{\ast } =\frac{1}{\beta \cdot (1+r)}\cdot c_2^{\ast }\)</span></p></li>
+</ul>
+<p>This is the same as for the constrained utility maximization problem:
+<a href="https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv/household_c1_c2_constrained.html">constrained utility maximization
+probem</a>.</p>
+</div>
+<div id="optimal-expenditure-minimization-consumption-choices" class="section level3" number="9.4.5">
+<h3><span class="header-section-number">9.4.5</span> Optimal Expenditure Minimization Consumption Choices</h3>
+<p>Using the third first order condition, and the optimal consumption
+ratio, we have:</p>
+<ul>
+<li><p><span class="math inline">\(\displaystyle \log (\frac{1}{\beta \cdot (1+r)}\cdot c_2^{\ast } )+\beta \log (c_2^{\ast } )=V^{\ast } (r,Z_1 ,Z_2 )\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle c_2^{\ast } =\exp \left(\left(V^{\ast } (r,Z_1 ,Z_2 )+\log (\beta \cdot (1+r))\right)\cdot \frac{1}{1+\beta }\right)\)</span></p></li>
+</ul>
+<p>Subsequently, we can obtain optimal expenditure minimization <span class="math inline">\(c_1\)</span> and
+<span class="math inline">\(b\)</span>.</p>
+<p>The solutions here are <strong>Hicksian</strong>, these are the dual version of the
+Marshallian problem from: <a href="https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv/household_c1_c2_constrained.html">constrained utility maximization
+probem</a></p>
+</div>
+<div id="compuational-solution" class="section level3" number="9.4.6">
+<h3><span class="header-section-number">9.4.6</span> Compuational Solution</h3>
+<p>Solving the problem with the same parameters as before given <span class="math inline">\(V^*\)</span>, we
+will get the same solutions that we got above:</p>
+<pre><code>syms c1 c2 lambda
+% The Lagrangian given U_at_c_opti found earlier
+lagrangian = (c2 + (1+r)*c1 - lambda*( log(c1) + beta*log(c2) - U_at_c_opti));
+% Derivatives
+d_lagrangian_c1 = diff(lagrangian, c1);
+d_lagrangian_c2 = diff(lagrangian, c2);
+d_lagrangian_mu = diff(lagrangian, lambda);
+GRADIENTmin = [d_lagrangian_c1; d_lagrangian_c2; d_lagrangian_mu]</code></pre>
+<p>GRADIENTmin = <span class="math inline">\(\displaystyle \left(\begin{array}{c} \frac{21}{20}-\frac{\lambda }{c_1 }\\ 1-\frac{9\,\lambda }{10\,c_2 }\\ \frac{75563}{100000}-\frac{9\,\log \left(c_2 \right)}{10}-\log \left(c_1 \right) \end{array}\right)\)</span></p>
+<pre><code>solu_min = solve(GRADIENTmin(1)==0, GRADIENTmin(2)==0, GRADIENTmin(3)==0, c1, c2, lambda, &#39;Real&#39;, true);
+soluMinC1 = double(solu_min.c1);
+soluMinC2 = double(solu_min.c2);
+soluMinLambda = double(solu_min.lambda);
+disp(table(soluMinC1, soluMinC2, soluMinLambda));
+
+    soluMinC1    soluMinC2    soluMinLambda
+    _________    _________    _____________
+
+     1.5288       1.4447         1.6053    </code></pre>
+</div>
+<div id="graphical-representation" class="section level3" number="9.4.7">
+<h3><span class="header-section-number">9.4.7</span> Graphical Representation</h3>
+<p>At a particular <span class="math inline">\(r,Z_1 ,Z_2\)</span>, we have a specific numerical value for
+<span class="math inline">\(V^*\)</span>. We have different bundles of <span class="math inline">\(c_1 ,c_2\)</span> that can all achieve this
+particular utility level <span class="math inline">\(V^*\)</span>. We can draw these and see visually where
+the optimal choices are. So we have two equations that we can draw:</p>
+<ul>
+<li><p>Budget: <span class="math inline">\((1)c_2 +(1+r)c_1 \le Z_1 (1+r)+Z_2\)</span></p></li>
+<li><p>Indifference at <span class="math inline">\(V^*\)</span>: <span class="math inline">\(V^* =\log (c_1 )+\beta \log (c_2 )\)</span>, which
+is: <span class="math inline">\(c_2 =\exp \left(\frac{V^* -\log (c_1 )}{\beta }\right)\)</span></p></li>
+</ul>
+<p>Think of <span class="math inline">\(c_1\)</span> as the x-axis variable, and <span class="math inline">\(c_2\)</span> as the y-axis variable,
+we can plot them together</p>
+<pre><code>% Numbers defined before, and U_at_c_opti found before
+syms c1
+% The Budget Line
+f_budget = z1*(1+r) + z2 - (1+r)*c1;
+% Indifference at V*
+f_indiff = exp((U_at_c_opti-log(c1))/(beta));
+% Graph
+figure();
+hold on;
+% Main Lines
+fplot(f_budget, [0, (z1 + z2/(1+r))*1.25]);
+fplot(f_indiff, [0, (z1 + z2/(1+r))*1.25]);
+% Endowment Point
+scatter(c1_opti, c2_opti, 100, &#39;k&#39;, &#39;filled&#39;, &#39;d&#39;);
+plot(linspace(0,c1_opti,10),ones(10,1) * c2_opti, &#39;k-.&#39;, &#39;HandleVisibility&#39;,&#39;off&#39;);
+plot(ones(10,1) * c1_opti, linspace(0,c2_opti,10), &#39;k-.&#39;, &#39;HandleVisibility&#39;,&#39;off&#39;);
+% Optimal Choices Point
+scatter(z1, z2, 100, &#39;k&#39;, &#39;s&#39;);
+plot(linspace(0,z1,10),ones(10,1) * z2, &#39;k-.&#39;, &#39;HandleVisibility&#39;,&#39;off&#39;);
+plot(ones(10,1) * z1, linspace(0,z2,10), &#39;k-.&#39;, &#39;HandleVisibility&#39;,&#39;off&#39;);
+% Labeling
+ylim([0, (z1 + z2/(1+r))*1.25])
+title([&#39;beta = &#39; num2str(beta) &#39;, z1 = &#39; num2str(z1) &#39;, z2 = &#39; num2str(z2) &#39;, r = &#39; num2str(r) &#39; &#39;])
+xlabel(&#39;consumption today&#39;);
+ylabel(&#39;consumption tomorrow&#39;);
+legend({&#39;Budget&#39;, &#39;Utility at Optimal Choices&#39;, &#39;Optimal Choice&#39;, &#39;Endowment Point&#39;})
+grid on;</code></pre>
+<p><img src="_img/household_c1_c2_constrained_expmin_images/figure_0.png" width="500" /></p>
+
+</div>
+</div>
+<div id="intertemporal-income-and-substitution-effects" class="section level2" number="9.5">
+<h2><span class="header-section-number">9.5</span> Intertemporal Income and Substitution Effects</h2>
+<blockquote>
+<p>Go back to <a href="http://fanwangecon.github.io/">fan</a>’s <a href="https://fanwangecon.github.io/CodeDynaAsset/">CodeDynaAsset</a> Package, <a href="https://fanwangecon.github.io/M4Econ/">Matlab Code Examples</a> Repository (<a href="https://fanwangecon.github.io/M4Econ/bookdown">bookdown site</a>), or <a href="https://fanwangecon.github.io/Math4Econ/">Math for Econ with Matlab</a> Repository (<a href="https://fanwangecon.github.io/Math4Econ/bookdown">bookdown site</a>).</p>
+</blockquote>
+<p>We solved previously the <a href="https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv/household_c1_c2_constrained.html">Marshallian Utility Maximization
+Problem</a>
+and the <a href="https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv/household_c1_c2_constrained_expmin.html">Hicksian Expenditure Minimization
+Problem</a>,
+now we solve for the effect of a change in price (relative price) on
+optimal choices. We decompose the effects to two ingredients, the income
+and substitution effects. This is the Slutsky Decomposition. The key
+point here is that when price changes, that has changes both the
+relative costs but also changes income directly and indirectly.</p>
+<div id="utility-maximization-over-consumption-in-two-periods-2" class="section level3" number="9.5.1">
+<h3><span class="header-section-number">9.5.1</span> Utility Maximization over Consumption in Two Periods</h3>
+<p>We solved the <a href="https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv/household_c1_c2_constrained.html">constrained utility maximization
+probem</a>
+already.</p>
+<ul>
+<li><p><strong>Utility</strong>: <span class="math inline">\(U(c_1 ,c_2 )=\log (c_1 )+\beta \cdot \log (c_2 )\)</span></p></li>
+<li><p><strong>Budget Today and Tomorrow Together</strong>:
+<span class="math inline">\(c_1 \cdot (1+r)+c_2 =Z_1 \cdot (1+r)+Z_2\)</span></p></li>
+</ul>
+</div>
+<div id="solving-for-the-substitution-effect" class="section level3" number="9.5.2">
+<h3><span class="header-section-number">9.5.2</span> Solving for the Substitution Effect</h3>
+<p>There are different definitions of the substitution effect. One way of
+thinking about it is that given that the change in <span class="math inline">\(r\)</span>, what would the
+consumption bundle be at the new prices that would give the household
+the same level of utility as before. To find this point, we can solve
+for the household’s <a href="https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv/household_c1_c2_constrained_expmin.html">Hicksian Expenditure Minimization
+Problem</a>.
+But unlike before, we have to worry about two different prices, in our
+case two different interest rates. Our objective function uses the
+second interest rate, the new interest rate that we have shifted to. But
+the targeted utility level we are trying to achieve is based on the
+previous, existing interest rate.</p>
+<p>Specifically, the difference between the solution to the problem below
+and the optimal choices from the Marshallian problem given the initial
+prices <span class="math inline">\(r_1\)</span> represents the substitution effect. The difference betwen
+the solution to the problem below and the Marshallian problem given the
+new prices <span class="math inline">\(r_2\)</span> represent the income effects:</p>
+<ul>
+<li><strong>Expenditure</strong> we want to <strong>minimize</strong> given <strong>new</strong> price <span class="math inline">\(r_2\)</span>:</li>
+</ul>
+<p><span class="math display">\[\min_{c1,c2} \left(c_2 +(1+r_2 )c_1 \right)\]</span></p>
+<p>The constraint is however, a function or <span class="math inline">\(r_1\)</span>, where <span class="math inline">\(r_1\)</span> determines
+the <span class="math inline">\(V^*\)</span>, we are shifting to some point along the blue dashed line:</p>
+<ul>
+<li><strong>Constraint</strong> we need to satisfy given <strong>Indirect Utility</strong> with
+<strong>old</strong> price <span class="math inline">\(r_1\)</span>:</li>
+</ul>
+<p><span class="math display">\[\log (c_1 )+\beta \log (c_2 )=V^* (r_1 )\]</span></p>
+<p>The problem here is solves in terms of consumption in two periods, we
+can relabel consumptions in the first and second periods as consumption
+of Apples and Bananas in the same period. The solution method is the
+same. Our first order conditions are the same as when we did the
+<a href="https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv/household_c1_c2_constrained_expmin.html">Hicksian Expenditure Minimization
+Problem</a>
+problem. The only difference is what the <span class="math inline">\(V^{\ast }\)</span> is based on.
+Following our algebra before, the optimal choice from this problem above
+is:</p>
+<p><span class="math display">\[c_2^{\ast ,\textrm{substitution}} =\exp \left(\left(V^{\ast } (r_1 ,Z_1 ,Z_2 )+\log (\beta \cdot (1+r_2 ))\right)\cdot \frac{1}{1+\beta }\right)\]</span></p>
+<p>Then we can find the <span class="math inline">\(c_1^{\ast }\)</span> choice as well. Below we show the
+results graphically</p>
+</div>
+<div id="optimal-consumption-choices-with-different-interest-rates" class="section level3" number="9.5.3">
+<h3><span class="header-section-number">9.5.3</span> Optimal Consumption Choices with Different Interest Rates</h3>
+<p>In the following sections, we show the substitution and income effects
+graphically. First, we already solved the <a href="https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv/household_c1_c2_constrained.html">constrained utility
+maximization
+probem</a>
+already, and derived the analytical solutions. Below, we solve for the
+numerical values directly using matlab. We could have also used our
+analytical solutions, and plugged in values. Sometimes, if it is
+possible for matlab to analytically solve an equation for you, it is
+perhaps better to rely on matlab to take derivatives and solve. This
+way, we reduce potential errors in our algebraic derivations. We often
+do like to derive the solution analytically by hand as we did in
+<a href="https://fanwangecon.github.io/Math4Econ/opti_hh_constrained_brsv/household_c1_c2_constrained.html">constrained utility maximization
+probem</a>
+to gain more insights about how parameters impact optimal choices.</p>
+<p>Below is our numerical solutions based on matlab’s analytical solution
+combined with numerical values. We provide two interest rates below, and
+graphically show the optimal consumption choices with corresponding
+budgets and indifference curves at for each interest rate.</p>
+<pre><code>beta = 0.90;
+z1 = 0.5;
+z2 = 2.5;
+syms r c1 c2 mu
+% The Lagrangian
+lagrangian = (log(c1) + beta*log(c2)) - mu*( c2 + (1+r)*c1 - z1*(1+r) - z2);
+% Given we have many symbols, type K, L, mu at the end to let matlab know what we are solving for
+solu = solve(diff(lagrangian, c1)==0, diff(lagrangian, c2)==0, diff(lagrangian, mu)==0, c1, c2, mu, &#39;Real&#39;, true);
+solu_c1 = (solu.c1);
+solu_c2 = (solu.c2);</code></pre>
+<p>At two different interest rate levels, the optimal choices and utility
+at optimal choices are of course different, we can plot both out
+graphically following what we did
+<a href="https://fanwangecon.github.io/Math4Econ/optimization_application/household_c1_c2_constrained.html">before</a>.
+Note that changing <span class="math inline">\(r\)</span> directly changes both left hand side and right
+hand side of budget. If we were considering just apples and bananas,
+unless you sell apples or bananas, the price change would only impact
+the left-hand-side of the budget (which still lead to both income and
+substitution effects).</p>
+<pre><code>% Get Optimal Choices and Utility at Optimal Choices
+syms c1
+r1 = 0.05;
+r2 = 1;
+c1star_r1 = double(subs(solu_c1, {r}, {r1}));
+c1star_r2 = double(subs(solu_c1, {r}, {r2}));
+c2star_r1 = double(subs(solu_c2, {r}, {r1}));
+c2star_r2 = double(subs(solu_c2, {r}, {r2}));
+disp(table(c1star_r1, c1star_r2, c2star_r1, c2star_r2));
+
+    c1star_r1    c1star_r2    c2star_r1    c2star_r2
+    _________    _________    _________    _________
+
+     1.5163       0.92105      1.4329       1.6579  
+
+U_at_c_opti_r1 = log(c1star_r1) + beta*log(c2star_r1)
+
+U_at_c_opti_r1 = 0.7400
+
+U_at_c_opti_r2 = log(c1star_r2) + beta*log(c2star_r2)
+
+U_at_c_opti_r2 = 0.3728
+
+
+% The Budget Line at r1
+f_budget_r1 = z1*(1+r1) + z2 - (1+r1)*c1;
+% Indifference at V* at r1
+f_indiff_r1 = exp((U_at_c_opti_r1-log(c1))/(beta));
+
+% The Budget Line at r2
+f_budget_r2 = z1*(1+r2) + z2 - (1+r2)*c1;
+% Indifference at V* at r2
+f_indiff_r2 = exp((U_at_c_opti_r2-log(c1))/(beta));
+
+% Graph
+figure();
+hold on;
+% r1
+fplot(f_budget_r1, [0, (z1 + z2/(1+r2))*2], &#39;b&#39;);
+fplot(f_indiff_r1, [0, (z1 + z2/(1+r2))*2], &#39;b--&#39;);
+% r2
+fplot(f_budget_r2, [0, (z1 + z2/(1+r2))*2], &#39;r&#39;);
+fplot(f_indiff_r2, [0, (z1 + z2/(1+r2))*2], &#39;r--&#39;);
+% optmial points
+scatter(c1star_r1, c2star_r1, 100, &#39;b&#39;, &#39;filled&#39;);
+scatter(c1star_r2, c2star_r2, 100, &#39;r&#39;, &#39;filled&#39;);
+% Endowment Point
+scatter(z1, z2, 100, &#39;k&#39;, &#39;filled&#39;, &#39;d&#39;);
+plot(linspace(0,z1,10),ones(10,1) * z2, &#39;k-.&#39;, &#39;HandleVisibility&#39;,&#39;off&#39;);
+plot(ones(10,1) * z1, linspace(0,z2,10), &#39;k-.&#39;, &#39;HandleVisibility&#39;,&#39;off&#39;);
+% legends
+ylim([0, (z1 + z2/(1+r2))*2])
+xlabel(&#39;consumption today&#39;);
+ylabel(&#39;consumption tomorrow&#39;);
+legend({&#39;Budget R1&#39;, [&#39;Utility at Optimal Choices R1=&#39; num2str(r1)],...
+        &#39;Budget R2&#39;, [&#39;Utility at Optimal Choices R2=&#39; num2str(r2)],...
+        &#39;Optimal Choices ar R1&#39;, &#39;Optimal Choices at R2&#39;, &#39;Endowment&#39;})
+title({[&#39;r increases from &#39; num2str(r1) &#39; to &#39; num2str(r2)],...
+       [&#39;this tilts the budget line clock-wise (c today more expensive)&#39;],...
+       [&#39;this also shifts the budget line out (z today worth more)&#39;]}) 
+grid on;</code></pre>
+<p><img src="_img/household_c1_c2_constrained_r_change_images/figure_0.png" width="500" /></p>
+</div>
+<div id="graphical-illustration-of-the-income-and-substitution-effect" class="section level3" number="9.5.4">
+<h3><span class="header-section-number">9.5.4</span> Graphical Illustration of the Income and Substitution Effect</h3>
+<p>Based on our solution method above, we can solve for the substitution
+effects and income effects. The solid red dot below is the new point we
+added based on the minimization problem earlier.</p>
+<pre><code>syms c1 c2 lambda
+% The Lagrangian given U_at_c_opti found earlier
+lagrangian = (c2 + (1+r2)*c1 - lambda*( log(c1) + beta*log(c2) - U_at_c_opti_r1));
+% Solve
+solu_min_substitution = solve(diff(lagrangian, c1)==0, diff(lagrangian, c2)==0, diff(lagrangian, lambda)==0, c1, c2, lambda, &#39;Real&#39;, true);
+solu_min_substitution_c1 = double(solu_min_substitution.c1);
+solu_min_substitution_c2 = double(solu_min_substitution.c2);
+total_cost = solu_min_substitution_c2 + (1+r2)*solu_min_substitution_c1;
+disp(table(solu_min_substitution_c1, solu_min_substitution_c2, total_cost));
+
+    solu_min_substitution_c1    solu_min_substitution_c2    total_cost
+    ________________________    ________________________    __________
+
+             1.1174                      2.0114               4.2463  </code></pre>
+<p>We have found the bundle along the dashed blue line where the tangent
+line to the dashed blue line has the same slope as the solid red line.
+We can now graph this out:</p>
+<pre><code>% Same as before: The Budget Line at r1
+f_budget_r1 = z1*(1+r1) + z2 - (1+r1)*c1;
+% Same as before: Indifference at V* at r1
+f_indiff_r1 = exp((U_at_c_opti_r1-log(c1))/(beta));
+
+% Rather than plugging in z1*(1+r2) + z2, now we are pushing the red budget line out
+% z1_substi*(1+r2) + z2_substi = solu_min_substitution_c2 + (1+r2)*solu_min_substitution_c1
+f_budget_substitution = total_cost - (1+r2)*c1;
+
+% Graph
+figure();
+hold on;
+% Substitution Effect
+fplot(f_budget_substitution, [0, (z1 + z2/(1+r2))*2], &#39;r&#39;);
+scatter(solu_min_substitution_c1, solu_min_substitution_c2, 100, &#39;r&#39;, &#39;filled&#39;);
+% r1
+fplot(f_indiff_r1, [0, (z1 + z2/(1+r2))*2], &#39;b-.&#39;);
+fplot(f_budget_r1, [0, (z1 + z2/(1+r2))*2], &#39;b-.&#39;);
+fplot(f_budget_r2, [0, (z1 + z2/(1+r2))*2], &#39;r-.&#39;);
+fplot(f_indiff_r2, [0, (z1 + z2/(1+r2))*2], &#39;r-.&#39;);
+% legends
+ylim([0, (z1 + z2/(1+r2))*2])
+% optmial points
+scatter(c1star_r1, c2star_r1, 100, &#39;b&#39;);
+scatter(c1star_r2, c2star_r2, 100, &#39;r&#39;);
+% Endowment Point
+scatter(z1, z2, 100, &#39;k&#39;, &#39;filled&#39;, &#39;d&#39;);
+plot(linspace(0,z1,10),ones(10,1) * z2, &#39;k-.&#39;, &#39;HandleVisibility&#39;,&#39;off&#39;);
+plot(ones(10,1) * z1, linspace(0,z2,10), &#39;k-.&#39;, &#39;HandleVisibility&#39;,&#39;off&#39;);
+% legends
+ylim([0, (z1 + z2/(1+r2))*2])
+xlabel(&#39;consumption today&#39;);
+ylabel(&#39;consumption tomorrow&#39;);
+legend({&#39;Substitution Effect&#39;, [&#39;Bundle with R2=&#39; num2str(r2) &#39; and V*(R1=&#39; num2str(r1) &#39;)&#39;] ...
+        &#39;Budget R1&#39;, [&#39;Utility at Optimal Choices R1=&#39; num2str(r1)],...
+        &#39;Budget R2&#39;, [&#39;Utility at Optimal Choices R2=&#39; num2str(r2)],...
+        &#39;Optimal Choices ar R1&#39;, &#39;Optimal Choices at R2&#39;, &#39;Endowment&#39;})
+title({[&#39;Substitution Effect when r increases from &#39; num2str(r1) &#39; to &#39; num2str(r2)]...
+       [&#39;Blue Hollow Circle to Red Solid Circle = Substitution Effect&#39;]...
+       [&#39;Red Solid Circle to Red Hollow Circle = Income Effect&#39;]});
+grid on;</code></pre>
+<p><img src="_img/household_c1_c2_constrained_r_change_images/figure_1.png" width="500" /></p>
+<p>In the graph above, the shift between the empty blue circle and the red
+solid circle is the substitution effect. Remaining changes between empty
+blue circle and red blue circle are due to income effects. Note that in
+this problem, the substitution effect–given higher interest rate for a
+household that would like to borrow due to low endowment today–is to
+reduce consumption today and increasing consumption tomorrow. The income
+effect, however, is moving both consumption today and tomorrow down.</p>
+<p>It might be puzzling whey the income effect is shifting both <span class="math inline">\(c_1\)</span> and
+<span class="math inline">\(c_2\)</span> lower. This is because even though the higher interest rate
+increases the right hand side of the budget constraint, that increase in
+income is small relative to the effective loss in income due to the
+dramatically higher cost of borrowing. In another word, the dollar level
+of the household is higher due to higher interest rate, but the
+purchasing power of that wealth is significantly lower due to higher
+interest rate, so the higher dollar level is actually worth less in
+consumption units. There is a decrease in the household’s ability to
+purchase consumption in both periods given the increase in interest
+rate. Given that the household was borrowing before (notice where the
+endowment point is), the household is hurt by the increase in interest
+rate. The household now still borrows, but borrows less.</p>
+<p>This type of problem works in the Apples and Bananas case as well.
+Suppose you have endowments in Apples and Bananas, when the price of
+apple increases, your wealth directly increases from selling your apples
+endowments at higher prices, but you also have to pay higher cost when
+you buy apple which leads to an indirect income effect and substitution
+effect. In general, when our endowments are in terms of goods, changing
+price tilts the budget constraint but the constraint still has to pass
+through the black endowment point. If we have just some total endowment
+in cash, and not in goods, meaning our endowments are not related to
+prices, then our budget line, given price change would tilt at the y and
+x intercepts.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="uncertainty.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="inequality-constrained-optimization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["Introductory-Mathematics-for-Economists-with-Matlab.pdf", "PDF"]],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

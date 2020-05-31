@@ -1,0 +1,84 @@
+- file: matrix_linear_equations
+  title: "System of Linear Equations"
+  titleshort: "System of Linear Equations"
+  description: |
+    One or multiple linear equations.
+    Coefficient matrix and augmented form.
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: matrix_linear_system_2
+  title: "Solving for Two Equations and Two Unknowns"
+  titleshort: "Solving for Two Equations and Two Unknowns"
+  description: |
+    Two equations and two unknowns matrix form.
+    Graphical intersection of two lines.
+    Using linear solver linsolve.
+  core:
+    - package: m
+      code: |
+        linsolve
+        double(solve(y_1 - y_2 == 0))
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: matrix_row_echelon_form
+  title: "System of Linear Equations Row Echelon Form"
+  titleshort: "System of Linear Equations Row Echelon Form"
+  description: |
+    Two equations and two unknowns.
+    Elementary row operations and row echelon form.
+  date: 2020-05-30
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
+
+- file: matrix_inverse
+  title: "Matrix Inverse"
+  titleshort: "Matrix Inverse"
+  description: |
+    Find the inverse of a matrix.
+  date: 2020-05-31
+  date_start: 2018-12-01
+  output:
+    pdf_document:
+      pandoc_args: '../_output_kniti_pdf.yaml'
+      includes:
+        in_header: '../preamble.tex'
+    html_document:
+      pandoc_args: '../_output_kniti_html.yaml'
+      includes:
+        in_header: '../hdga.html'
+  always_allow_html: true
+  urlcolor: blue
