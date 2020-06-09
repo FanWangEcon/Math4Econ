@@ -1,3 +1,8 @@
+*.[jJ][pP][gG]
+# *.[cC][sS][vV]
+*.[tT][xX][tT]
+*.[pP][yY][cC]
+
 ###################
 # RMD
 ###################
@@ -6,6 +11,19 @@ _img/
 *.Rmd
 !index.Rmd
 !title.Rmd
+!main.Rmd
+
+###################
+# R markdown
+###################
+
+.Rproj.user
+.Rhistory
+.RData
+_publish.R
+_book
+_bookdown_files
+rsconnect
 
 ###################
 # Images CSV

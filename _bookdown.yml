@@ -42,6 +42,7 @@ rmd_files:
   - matrix_system_of_equations/matrix_linear_equations.Rmd
   - matrix_system_of_equations/matrix_linear_system_2.Rmd
   - matrix_system_of_equations/matrix_row_echelon_form.Rmd
+  - matrix_system_of_equations/matrix_inverse.Rmd
 
   - matrix_application/main.Rmd
   - matrix_application/KL_borrowhire_firm.Rmd

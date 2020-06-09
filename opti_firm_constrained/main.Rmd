@@ -1,0 +1,1 @@
+# Equality Constrained Optimization

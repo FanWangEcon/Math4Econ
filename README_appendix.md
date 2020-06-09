@@ -104,6 +104,8 @@
 3. [System of Linear Equations Row Echelon Form](https://fanwangecon.github.io/Math4Econ/matrix_system_of_equations/htmlpdfm/matrix_row_echelon_form.html): [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_system_of_equations/matrix_row_echelon_form.mlx) \| [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_system_of_equations/htmlpdfm/matrix_row_echelon_form.m) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_system_of_equations/htmlpdfm/matrix_row_echelon_form.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/matrix_system_of_equations/htmlpdfm/matrix_row_echelon_form.html)
 	+ Two equations and two unknowns.
 	+ Elementary row operations and row echelon form.
+4. [Matrix Inverse](https://fanwangecon.github.io/Math4Econ/matrix_system_of_equations/htmlpdfm/matrix_inverse.html): [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_system_of_equations/matrix_inverse.mlx) \| [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_system_of_equations/htmlpdfm/matrix_inverse.m) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/matrix_system_of_equations/htmlpdfm/matrix_inverse.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/matrix_system_of_equations/htmlpdfm/matrix_inverse.html)
+	+ Find the inverse of a matrix.
 
 ## Matrix Applications links
 
