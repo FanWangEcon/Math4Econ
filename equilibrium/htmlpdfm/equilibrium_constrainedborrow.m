@@ -1,6 +1,7 @@
 %% Equilibrium Interest Rate and Tax
-% <https://fanwangecon.github.io/Math4Econ/ *Back to Fan's Math for Economist 
-% Table of Content*>
+% *back to* <https://fanwangecon.github.io *Fan*>*'s* <https://fanwangecon.github.io/Math4Econ/ 
+% *Intro Math for Econ*>*,*  <https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
+% or* <https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*> *Repositories*
 % 
 % We have previous solved the household's asset supply problem with a <https://fanwangecon.github.io/Math4Econ/optimization_application/household_borrow_constrained.html 
 % borrowing constraint>. And also the firm's <https://fanwangecon.github.io/Math4Econ/derivative_application/K_borrow_firm.html 

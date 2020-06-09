@@ -1,6 +1,7 @@
 %% Equilibrium Interest Rate and Wage Rate
-% <https://fanwangecon.github.io/Math4Econ/ *Back to Fan's Math for Economist 
-% Table of Content*>
+% *back to* <https://fanwangecon.github.io *Fan*>*'s* <https://fanwangecon.github.io/Math4Econ/ 
+% *Intro Math for Econ*>*,*  <https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
+% or* <https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*> *Repositories*
 % 
 % We have solved for the problem with <https://fanwangecon.github.io/Math4Econ/optimization_application/household_asset_labor_constrained.html 
 % constrained labor and saving/borrowing choice>, and the problem with <https://fanwangecon.github.io/Math4Econ/equilibrium/equilibrium_constrainedborrow.html 
