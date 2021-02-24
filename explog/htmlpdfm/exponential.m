@@ -1,7 +1,7 @@
 %% Exponentiation and Compounding Interest Rate
 % *back to* <https://fanwangecon.github.io *Fan*>*'s* <https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Econ*>*,*  <https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
-% or* <https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*> *Repositories*
+% or* <https://fanwangecon.github.io/MEconTools/ *MEconTools*> *Repositories*
 % 
 % _See also_: <https://fanwangecon.github.io/Math4Econ/explog/exolog.html Exponential 
 % Function and Log Function>.
@@ -62,10 +62,10 @@ N = 5;
 % What if we do more and more compounding, if we say interest rate compounds 
 % $10$, $50$, $100$ times over the year, what happens? With APR at 100%, the total 
 % interest rate you pay at the end of the year does not go to infinity, rather, 
-% it converges to this special number $e$, the Exponential number, $2.7182818$, 
-% it is a magical number like $\pi$. This means if every second the interest rate 
-% is compounding, with an APR of 100%, you end up paying 272% of what you borrowed 
-% by the end of the year, which is 172% interest rate. 
+% it converges to this special number $e$, Euler's number, $2.7182818$. This means 
+% if every second the interest rate is compounding, with an APR of 100%, you end 
+% up paying 272% of what you borrowed by the end of the year, which is 172% interest 
+% rate. 
 %% 
 % * $\lim_{N \rightarrow \inf} (1 + \frac{1}{N})^{N} = e \approx 2.7182818$
 %% 
@@ -107,5 +107,5 @@ line([0,0],ylim);
 line(xlim, [0,0]);
 title('Exponential Function Graph with base e')
 xlabel('r = interest rate');
-ylabel({'Principle and Interests at End of Year Given 100% APR' 'for 1 dollar Borrowed, given infinite compounding'})
+ylabel({'Principle and Interests at End of Year' 'for 1 dollar Borrowed, given infinite compounding'})
 grid on;

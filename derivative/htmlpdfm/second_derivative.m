@@ -1,8 +1,8 @@
 %% Higher Order Derivatives--Cobb Douglas
 % *back to* <https://fanwangecon.github.io *Fan*>*'s* <https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Econ*>*,*  <https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
-% or* <https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*> *Repositories*
-% 
+% or* <https://fanwangecon.github.io/MEconTools/ *MEconTools*> *Repositories*
+%% 
 % We have the following general form for the Cobb-Douglas Production Function
 % 
 % $$Y(K,L) = K^{\alpha} \cdot L^{\beta}$$
@@ -30,11 +30,11 @@ secDeri = diff(diff(f, L),L)
 syms L K0 alpha beta
 f(L, K0, alpha) = K0^(alpha)*L^(beta);
 % 5 for 5th derivative
-tenthDeri = diff(f, L, 5)
+fifthDeri = diff(f, L, 5)
 %% Curvature and Second Derivative, Concave Function
 % Let's graph out the second derivative when $\beta=0.5$. The production function 
 % is concave (concave down). For a function that is twice continuously differentiable, 
-% the function is convex if and only if its second derivative is non-positive 
+% the function is concave if and only if its second derivative is non-positive 
 % (never accelerating). 
 
 alpha = 0.5;

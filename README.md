@@ -1,4 +1,4 @@
-[![HitCount](http://hits.dwyl.io/fanwangecon/Math4Econ.svg)](https://github.com/FanWangEcon/Math4Econ)  [![Star](https://img.shields.io/github/stars/fanwangecon/Math4Econ?style=social)](https://github.com/FanWangEcon/Math4Econ/stargazers) [![Fork](https://img.shields.io/github/forks/fanwangecon/Math4Econ?style=social)](https://github.com/FanWangEcon/Math4Econ/network/members) [![Star](https://img.shields.io/github/watchers/fanwangecon/Math4Econ?style=social)](https://github.com/FanWangEcon/Math4Econ/watchers)
+[![HitCount](http://hits.dwyl.com/fanwangecon/Math4Econ.svg)](https://github.com/FanWangEcon/Math4Econ)  [![Star](https://img.shields.io/github/stars/fanwangecon/Math4Econ?style=social)](https://github.com/FanWangEcon/Math4Econ/stargazers) [![Fork](https://img.shields.io/github/forks/fanwangecon/Math4Econ?style=social)](https://github.com/FanWangEcon/Math4Econ/network/members) [![Star](https://img.shields.io/github/watchers/fanwangecon/Math4Econ?style=social)](https://github.com/FanWangEcon/Math4Econ/watchers) [![DOI](https://zenodo.org/badge/145424348.svg)](https://zenodo.org/badge/latestdoi/145424348)
 
 This is a work-in-progress [course website](https://fanwangecon.github.io/Math4Econ/) for Mathematics for Economists. Course covers a limited subset of topics from *Mathematics for Economists* (Simon and Blume 1994), and uses various definitions from the book. Applications focus on two period borrowing and savings problems. Matlab's symbolic toolbox is used throughout.
 
@@ -6,11 +6,9 @@ This is a work-in-progress [course website](https://fanwangecon.github.io/Math4E
 
 Materials are written in matlab livescript files and shown as HTML files. To obtain matlab codes, see [here](docs/gitsetup.md) and [here](docs/gitsetupown.md) for github set up. For HTML files, click on the links below.
 
-From other repositories: For dynamic borrowing and savings problems, see [Dynamic Asset Repository](https://fanwangecon.github.io/CodeDynaAsset/); For code examples, see also [R Example Code](https://fanwangecon.github.io/R4Econ/), [Matlab Example Code](https://fanwangecon.github.io/M4Econ/), and [Stata Example Code](https://fanwangecon.github.io/Stata4Econ/); For intro stat with R, see [Intro Statistics for Undergraduates](https://fanwangecon.github.io/Stat4Econ/). See [here](https://github.com/FanWangEcon) for all of [Fan](https://fanwangecon.github.io/)'s public repositories.
+From other repositories: For dynamic borrowing and savings problems, see [MEconTools](https://fanwangecon.github.io/MEconTools/) and [Dynamic Asset Repository](https://fanwangecon.github.io/CodeDynaAsset/); For code examples, see also [Matlab Example Code](https://fanwangecon.github.io/M4Econ/), [Stata Example Code](https://fanwangecon.github.io/Stata4Econ/), [Python Example Code](https://fanwangecon.github.io/pyfan/), [R Example Code](https://fanwangecon.github.io/R4Econ/); For intro econ with Matlab, see [Intro Mathematics for Economists](https://fanwangecon.github.io/Math4Econ/), and for intro stat with R, see [Intro Statistics for Undergraduates](https://fanwangecon.github.io/Stat4Econ/). See [here](https://github.com/FanWangEcon) for all of [Fan](https://fanwangecon.github.io/)'s public repositories.
 
 Files are from the [Math4Econ](https://github.com/FanWangEcon/Math4Econ) repository. Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
-
-Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or problems.
 
 [![](https://img.shields.io/github/last-commit/fanwangecon/Math4Econ)](https://github.com/FanWangEcon/Math4Econ/commits/master) [![](https://img.shields.io/github/commit-activity/m/fanwangecon/Math4Econ)](https://github.com/FanWangEcon/Math4Econ/graphs/commit-activity) [![](https://img.shields.io/github/issues/fanwangecon/Math4Econ)](https://github.com/FanWangEcon/Math4Econ/issues) [![](https://img.shields.io/github/issues-pr/fanwangecon/Math4Econ)](https://github.com/FanWangEcon/Math4Econ/pulls)
 
@@ -27,8 +25,9 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
 	+ **m**: *sin() + plot()*
 4. [Function Notations](https://fanwangecon.github.io/Math4Econ/calconevar/htmlpdfm/funcnotations.html): [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/funcnotations.mlx) \| [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/htmlpdfm/funcnotations.m) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/htmlpdfm/funcnotations.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/calconevar/htmlpdfm/funcnotations.html)
 	+ Consistent function naming.
-5. [Monomial and Polynomial](https://fanwangecon.github.io/Math4Econ/calconevar/htmlpdfm/polynomial.html): [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/polynomial.mlx) \| [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/htmlpdfm/polynomial.m) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/htmlpdfm/polynomial.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/calconevar/htmlpdfm/polynomial.html)
+5. [Monomials and Polynomial of the 3rd Degree](https://fanwangecon.github.io/Math4Econ/calconevar/htmlpdfm/polynomial.html): [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/polynomial.mlx) \| [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/htmlpdfm/polynomial.m) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/htmlpdfm/polynomial.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/calconevar/htmlpdfm/polynomial.html)
 	+ Monomial, polynomial, degree of polynomial.
+	+ Graph polynomial of the 3rd degree and monomials of different degrees.
 	+ **m**: *syms x + f(x) = a + x + fplot(@(x) f(x,a), [x_low, x_high])*
 6. [Local and Global Maximum](https://fanwangecon.github.io/Math4Econ/calconevar/htmlpdfm/localglobal.html): [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/localglobal.mlx) \| [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/htmlpdfm/localglobal.m) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/htmlpdfm/localglobal.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/calconevar/htmlpdfm/localglobal.html)
 	+ local and global maximum.
@@ -40,6 +39,7 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
 	+ Exponential function and rules: a^b. Base e exponential, e = 2.71828.
 	+ Infinitely compounding interest rate (continuous time).
 	+ e^r: borrow 1 dollar, given r, meaning r percent interest, e^r is how much to pay back in principle + interests given infinite compounding.
+	+ Log linear equation with a constant term, substraction and division.
 	+ **m**: *exp() + fplot() + double(subs())*
 2. [Exponential and Log Functions](https://fanwangecon.github.io/Math4Econ/explog/htmlpdfm/exolog.html): [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/explog/exolog.mlx) \| [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/explog/htmlpdfm/exolog.m) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/explog/htmlpdfm/exolog.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/explog/htmlpdfm/exolog.html)
 	+ log and natural log (log in matlab base e, log in google base 10).
@@ -206,6 +206,8 @@ Please contact [FanWangEcon](https://fanwangecon.github.io/) for issues or probl
 
 ----
 Please contact [![](https://img.shields.io/github/followers/fanwangecon?label=FanWangEcon&style=social)](https://github.com/FanWangEcon) [![](https://img.shields.io/twitter/follow/fanwangecon?label=%20&style=social)](https://twitter.com/fanwangecon) for issues or problems.
+
+[![DOI](https://zenodo.org/badge/145424348.svg)](https://zenodo.org/badge/latestdoi/145424348)
 
 ![RepoSize](https://img.shields.io/github/repo-size/fanwangecon/Math4Econ)
 ![CodeSize](https://img.shields.io/github/languages/code-size/fanwangecon/Math4Econ)

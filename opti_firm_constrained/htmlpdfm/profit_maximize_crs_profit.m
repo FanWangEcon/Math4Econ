@@ -1,8 +1,8 @@
 %% Profit Maximization Constant Returns
 % *back to* <https://fanwangecon.github.io *Fan*>*'s* <https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Econ*>*,*  <https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
-% or* <https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*> *Repositories*
-% 
+% or* <https://fanwangecon.github.io/MEconTools/ *MEconTools*> *Repositories*
+%% 
 % We have already solved the firm's maximization problem before given decreasing 
 % return to scale: <https://fanwangecon.github.io/Math4Econ/matrix_application/KL_borrowhire_firm.html 
 % Firm Maximization Problem with Capital and Labor (Decreasing Return to Scale)>. 

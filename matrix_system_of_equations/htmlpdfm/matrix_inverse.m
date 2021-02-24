@@ -1,7 +1,7 @@
 %% Matrix Inverse
 % *back to* <https://fanwangecon.github.io *Fan*>*'s* <https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Econ*>*,*  <https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
-% or* <https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*> *Repositories*
+% or* <https://fanwangecon.github.io/MEconTools/ *MEconTools*> *Repositories*
 %% Inverse of a Matrix
 % The inverse of $5$ is $\frac{1}{5}$, multiplying the two numbers together 
 % gives us 1. What is the inverse of a matrix?

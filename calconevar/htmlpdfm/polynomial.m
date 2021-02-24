@@ -1,7 +1,7 @@
-%% Monomial and Polynomial
+%% Graphing Monomials and Polynomial of the 3rd Degree
 % *back to* <https://fanwangecon.github.io *Fan*>*'s* <https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Econ*>*,*  <https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
-% or* <https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*> *Repositories*
+% or* <https://fanwangecon.github.io/MEconTools/ *MEconTools*> *Repositories*
 %% Monomial
 % Functions of the form:
 % 
@@ -30,17 +30,30 @@
 
 clear all;
 a = 0.75;
-monomial_graph(a)
-%%
-a = 1;
-monomial_graph(a)
+ffi_monomial_graph(a)
 %%
 a = 1.25;
-monomial_graph(a)
+ffi_monomial_graph(a)
+%% Polynomial of Degree Three
+% Some outcome is a function of a polynomial of degree three, what does this 
+% look like?
+
+[fl_lower_bound, fl_uppper_bound] = deal(0.1, 0.9);
+% Graph 1
+[fl_constant, fl_lin, fl_quad, fl_cubic] = deal(0.131047762,0.002654614,-0.012944615,0.0086788);
+ffi_poly3rd_degree(fl_lower_bound, fl_uppper_bound, fl_constant, fl_lin, fl_quad, fl_cubic);
+%%
+% Graph 2
+[fl_constant, fl_lin, fl_quad, fl_cubic] = deal(1.406975108, -0.115556127, 0.343419845, -0.212016167);
+ffi_poly3rd_degree(fl_lower_bound, fl_uppper_bound, fl_constant, fl_lin, fl_quad, fl_cubic);
+%%
+% Graph 3
+[fl_constant, fl_lin, fl_quad, fl_cubic] = deal(1.102411416, -0.03056625, 0.146249875, -0.094270393);
+ffi_poly3rd_degree(fl_lower_bound, fl_uppper_bound, fl_constant, fl_lin, fl_quad, fl_cubic);
 %% Mononomials Function
 % When we program, we can write functions, which have parameters
 
-function monomial_graph(a)
+function ffi_monomial_graph(a)
 
 % Define a symbolic monomial
 syms x k
@@ -88,5 +101,36 @@ title(['Even Monomials a=', num2str(a)])
 legend('k=2','k=4', 'k=6');
 grid on
 end
-%% 
-%
+
+%% Polynomial of Degree Three Function
+% A function for graphing polynomial of the 3rd Degree.
+
+function ffi_poly3rd_degree(fl_lower_bound, fl_uppper_bound, fl_constant, fl_lin, fl_quad, fl_cubic)
+
+% Define a symbolic monomial
+syms x
+f(x) = fl_constant + fl_lin*x^2 + fl_quad*x^2 + fl_cubic*x^3;
+
+% Graph equation
+close all;
+figure();
+
+hold on;
+% Draw the function
+fplot(@(x) f(x), [fl_lower_bound, fl_uppper_bound]);
+% Label
+xlabel('x');
+ylabel('f(x) 3rd Degree Polynomial');
+xlim([fl_lower_bound, fl_uppper_bound])
+% Title
+ar_params = [fl_constant, fl_lin, fl_quad, fl_cubic];
+ar_st_parms_names = ["const", "lin", "quad", "cubic"];
+st_rounding = '.3f';
+st_title_main = "3rd Degree Polynomial";
+ar_st_params = strcat(ar_st_parms_names, compose(strcat("=%", st_rounding), ar_params));
+st_param_pasted = strjoin(ar_st_params, ', ');
+st_title_wth_params = strcat(st_title_main, ' (', st_param_pasted, ')');
+title(st_title_wth_params);
+grid on
+
+end

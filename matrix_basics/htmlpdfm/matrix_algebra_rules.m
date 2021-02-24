@@ -1,7 +1,7 @@
 %% Matrix Addition and Multiplication
 % *back to* <https://fanwangecon.github.io *Fan*>*'s* <https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Econ*>*,*  <https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
-% or* <https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*> *Repositories*
+% or* <https://fanwangecon.github.io/MEconTools/ *MEconTools*> *Repositories*
 %% Scalar Multiplication/Division, Addition/Subtraction
 % If we multiply a matrix by a number, we multiply every element of that matrix 
 % by that number. Addition, subtraction, and division of a matrix with a sclar 

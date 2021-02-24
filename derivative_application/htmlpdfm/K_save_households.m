@@ -1,7 +1,7 @@
 %% Utility Maximization and Intertemporal Consumption
 % *back to* <https://fanwangecon.github.io *Fan*>*'s* <https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Econ*>*,*  <https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
-% or* <https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*> *Repositories*
+% or* <https://fanwangecon.github.io/MEconTools/ *MEconTools*> *Repositories*
 %% Model Components and Maximization Problem
 % Suppose we have a household who will $z_2$ income tomorrow, and has $z_1$ 
 % dollar income income today. He needs to determine how much to save/borrow. There 

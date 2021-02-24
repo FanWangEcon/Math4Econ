@@ -1,8 +1,8 @@
 %% Cobb Douglas Profit Maximization
 % *back to* <https://fanwangecon.github.io *Fan*>*'s* <https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Econ*>*,*  <https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
-% or* <https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*> *Repositories*
-% 
+% or* <https://fanwangecon.github.io/MEconTools/ *MEconTools*> *Repositories*
+%% 
 % In the example here, we will solve a firm optimization problem using a system 
 % of linear equations (2 equations and 2 unknowns). The solution method is the 
 % same for N inputs with Cobb-Douglas Production Function.

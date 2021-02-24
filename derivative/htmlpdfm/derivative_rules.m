@@ -1,7 +1,10 @@
 %% Derivative Definition and Rules
 % *back to* <https://fanwangecon.github.io *Fan*>*'s* <https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Econ*>*,*  <https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
-% or* <https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*> *Repositories*
+% or* <https://fanwangecon.github.io/MEconTools/ *MEconTools*> *Repositories*
+%% Linear and Non-linear Functions
+% Linear functions have a constant slope, but what is the rate of change for 
+% a non-linear function as we shift along its domain?
 %% Definition
 % (SB) Let $(x_0, f(x_0))$ be a point on te graph of $y=f(x)$.
 % 

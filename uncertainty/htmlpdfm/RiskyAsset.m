@@ -1,7 +1,7 @@
 %% Risky and Safe Assets
 % *back to* <https://fanwangecon.github.io *Fan*>*'s* <https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Econ*>*,*  <https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
-% or* <https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*> *Repositories*
+% or* <https://fanwangecon.github.io/MEconTools/ *MEconTools*> *Repositories*
 %% *Uncertainty*
 % Previously, we have solved the <https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html 
 % household savings problem without uncertainty>. Now, suppose there are 2 states 

@@ -15,8 +15,9 @@
 	+ **m**: *sin() + plot()*
 4. [Function Notations](https://fanwangecon.github.io/Math4Econ/calconevar/htmlpdfm/funcnotations.html): [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/funcnotations.mlx) \| [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/htmlpdfm/funcnotations.m) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/htmlpdfm/funcnotations.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/calconevar/htmlpdfm/funcnotations.html)
 	+ Consistent function naming.
-5. [Monomial and Polynomial](https://fanwangecon.github.io/Math4Econ/calconevar/htmlpdfm/polynomial.html): [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/polynomial.mlx) \| [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/htmlpdfm/polynomial.m) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/htmlpdfm/polynomial.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/calconevar/htmlpdfm/polynomial.html)
+5. [Monomials and Polynomial of the 3rd Degree](https://fanwangecon.github.io/Math4Econ/calconevar/htmlpdfm/polynomial.html): [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/polynomial.mlx) \| [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/htmlpdfm/polynomial.m) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/htmlpdfm/polynomial.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/calconevar/htmlpdfm/polynomial.html)
 	+ Monomial, polynomial, degree of polynomial.
+	+ Graph polynomial of the 3rd degree and monomials of different degrees.
 	+ **m**: *syms x + f(x) = a + x + fplot(@(x) f(x,a), [x_low, x_high])*
 6. [Local and Global Maximum](https://fanwangecon.github.io/Math4Econ/calconevar/htmlpdfm/localglobal.html): [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/localglobal.mlx) \| [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/htmlpdfm/localglobal.m) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/calconevar/htmlpdfm/localglobal.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/calconevar/htmlpdfm/localglobal.html)
 	+ local and global maximum.
@@ -28,6 +29,7 @@
 	+ Exponential function and rules: a^b. Base e exponential, e = 2.71828.
 	+ Infinitely compounding interest rate (continuous time).
 	+ e^r: borrow 1 dollar, given r, meaning r percent interest, e^r is how much to pay back in principle + interests given infinite compounding.
+	+ Log linear equation with a constant term, substraction and division.
 	+ **m**: *exp() + fplot() + double(subs())*
 2. [Exponential and Log Functions](https://fanwangecon.github.io/Math4Econ/explog/htmlpdfm/exolog.html): [**mlx**](https://github.com/FanWangEcon/Math4Econ/blob/master/explog/exolog.mlx) \| [**m**](https://github.com/FanWangEcon/Math4Econ/blob/master/explog/htmlpdfm/exolog.m) \| [**pdf**](https://github.com/FanWangEcon/Math4Econ/blob/master/explog/htmlpdfm/exolog.pdf) \| [**html**](https://fanwangecon.github.io/Math4Econ/explog/htmlpdfm/exolog.html)
 	+ log and natural log (log in matlab base e, log in google base 10).

@@ -1,7 +1,7 @@
 %% Laws of Matrix Algebra
 % *back to* <https://fanwangecon.github.io *Fan*>*'s* <https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Econ*>*,*  <https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
-% or* <https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*> *Repositories*
+% or* <https://fanwangecon.github.io/MEconTools/ *MEconTools*> *Repositories*
 %% 6 Old Rules, 5 Still Apply
 % We had associative, commutative and distributive laws for scalar algebra, 
 % we can think of them as the six bullet points below. Only the multiplicative-commutative 

@@ -1,8 +1,8 @@
 %% Solving for Two Equations and Two Unknowns
 % *back to* <https://fanwangecon.github.io *Fan*>*'s* <https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Econ*>*,*  <https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
-% or* <https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*> *Repositories*
-% 
+% or* <https://fanwangecon.github.io/MEconTools/ *MEconTools*> *Repositories*
+%% 
 % _See also_: <https://fanwangecon.github.io/Math4Econ/matrix_system_of_equations/matrix_linear_equations.html 
 % System of Linear Equations>
 % 

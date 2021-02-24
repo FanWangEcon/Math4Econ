@@ -88,10 +88,11 @@
   urlcolor: blue
 
 - file: polynomial
-  title: "Monomial and Polynomial"
-  titleshort: "Monomial and Polynomial"
+  title: "Monomials and Polynomial of the 3rd Degree"
+  titleshort: "Monomials and Polynomial of the 3rd Degree"
   description: |
     Monomial, polynomial, degree of polynomial.
+    Graph polynomial of the 3rd degree and monomials of different degrees.
   core :
     - package: m
       code: |

@@ -74,7 +74,8 @@ if(!is.null(spt_file_current)) {
   sph_html='/htmlpdfm'
   sph_r='/htmlpdfm'
 
-  spt_root <- 'C:/Users/fan/Math4Econ/'
+  # spt_root <- 'C:/Users/fan/Math4Econ/'
+  spt_root <- 'G:/repos/Math4Econ/'
   spn_prj_rmd <- gsub(spt_root, "", spt_file_current)
   spt_rmd_path <- paste0('/',dirname(spn_prj_rmd))
 
@@ -107,9 +108,9 @@ if(!is.null(spt_file_current)) {
   # Common Shared Text and Strings
   total_area <- (800 * 7) / 2
   if (st_file_wno_suffix == 'Introductory-Mathematics-for-Economists-with-Matlab') {
-    text_shared_preamble_one <- paste0("> Go back to [fan](http://fanwangecon.github.io/)'s [CodeDynaAsset](https://fanwangecon.github.io/CodeDynaAsset/) Package, [Matlab Code Examples](https://fanwangecon.github.io/M4Econ/) Repository ([bookdown site](https://fanwangecon.github.io/M4Econ/bookdown)), or [Math for Econ with Matlab](https://fanwangecon.github.io/Math4Econ/) Repository ([bookdown site](https://fanwangecon.github.io/Math4Econ/bookdown)).")
+    text_shared_preamble_one <- paste0("> Go back to [fan](http://fanwangecon.github.io/)'s [MEconTools](https://fanwangecon.github.io/MEconTools/) Package, [Matlab Code Examples](https://fanwangecon.github.io/M4Econ/) Repository ([bookdown site](https://fanwangecon.github.io/M4Econ/bookdown)), or [Math for Econ with Matlab](https://fanwangecon.github.io/Math4Econ/) Repository ([bookdown site](https://fanwangecon.github.io/Math4Econ/bookdown)).")
   } else {
-    text_shared_preamble_one <- paste0(st_head_link, " Go back to [fan](http://fanwangecon.github.io/)'s [CodeDynaAsset](https://fanwangecon.github.io/CodeDynaAsset/) Package, [Matlab Code Examples](https://fanwangecon.github.io/M4Econ/) Repository ([bookdown site](https://fanwangecon.github.io/M4Econ/bookdown)), or [Math for Econ with Matlab](https://fanwangecon.github.io/Math4Econ/) Repository ([bookdown site](https://fanwangecon.github.io/Math4Econ/bookdown)).")
+    text_shared_preamble_one <- paste0(st_head_link, " Go back to [fan](http://fanwangecon.github.io/)'s [MEconTools](https://fanwangecon.github.io/MEconTools/) Package, [Matlab Code Examples](https://fanwangecon.github.io/M4Econ/) Repository ([bookdown site](https://fanwangecon.github.io/M4Econ/bookdown)), or [Math for Econ with Matlab](https://fanwangecon.github.io/Math4Econ/) Repository ([bookdown site](https://fanwangecon.github.io/Math4Econ/bookdown)).")
   }
 }
 
@@ -120,6 +121,6 @@ if (knitr::is_latex_output()) {
     text_top_count <- ""
     text_end_count <- ""
 } else {
-    text_top_count <- "[![HitCount](http://hits.dwyl.io/fanwangecon/Math4Econ.svg)](https://github.com/FanWangEcon/Math4Econ)  [![Star](https://img.shields.io/github/stars/fanwangecon/Math4Econ?style=social)](https://github.com/FanWangEcon/Math4Econ/stargazers) [![Fork](https://img.shields.io/github/forks/fanwangecon/Math4Econ?style=social)](https://github.com/FanWangEcon/Math4Econ/network/members) [![Star](https://img.shields.io/github/watchers/fanwangecon/Math4Econ?style=social)](https://github.com/FanWangEcon/Math4Econ/watchers)"
+    text_top_count <- "[![HitCount](http://hits.dwyl.com/fanwangecon/Math4Econ.svg)](https://github.com/FanWangEcon/Math4Econ)  [![Star](https://img.shields.io/github/stars/fanwangecon/Math4Econ?style=social)](https://github.com/FanWangEcon/Math4Econ/stargazers) [![Fork](https://img.shields.io/github/forks/fanwangecon/Math4Econ?style=social)](https://github.com/FanWangEcon/Math4Econ/network/members) [![Star](https://img.shields.io/github/watchers/fanwangecon/Math4Econ?style=social)](https://github.com/FanWangEcon/Math4Econ/watchers)"
     text_end_count <- "[![](https://img.shields.io/github/last-commit/fanwangecon/Math4Econ)](https://github.com/FanWangEcon/Math4Econ/commits/master) [![](https://img.shields.io/github/commit-activity/m/fanwangecon/Math4Econ)](https://github.com/FanWangEcon/Math4Econ/graphs/commit-activity) [![](https://img.shields.io/github/issues/fanwangecon/Math4Econ)](https://github.com/FanWangEcon/Math4Econ/issues) [![](https://img.shields.io/github/issues-pr/fanwangecon/Math4Econ)](https://github.com/FanWangEcon/Math4Econ/pulls)"
 }

@@ -1,7 +1,7 @@
 %% Elasticity and Derivative
 % *back to* <https://fanwangecon.github.io *Fan*>*'s* <https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Econ*>*,*  <https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
-% or* <https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*> *Repositories*
+% or* <https://fanwangecon.github.io/MEconTools/ *MEconTools*> *Repositories*
 %% Demand and Supply
 % At price $p_0$, the current price level, the demand and supply of good $x$ 
 % ( $x$ could be capital, labor, apples ect) could be written as:

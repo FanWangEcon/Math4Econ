@@ -1,8 +1,8 @@
 %% Natural Logarithm and Exponential
 % *back to* <https://fanwangecon.github.io *Fan*>*'s* <https://fanwangecon.github.io/Math4Econ/ 
 % *Intro Math for Econ*>*,*  <https://fanwangecon.github.io/M4Econ/ *Matlab Examples*>*, 
-% or* <https://fanwangecon.github.io/CodeDynaAsset/ *Dynamic Asset*> *Repositories*
-% 
+% or* <https://fanwangecon.github.io/MEconTools/ *MEconTools*> *Repositories*
+%% 
 % We use log for log utility in our <https://fanwangecon.github.io/Math4Econ/derivative_application/K_save_households.html 
 % household maximization problems>, and we use exponential functions with other 
 % bases for <https://fanwangecon.github.io/Math4Econ/derivative_application/K_borrow_firm.html 
@@ -22,7 +22,13 @@
 %% 
 % * $e^y = x$
 %% 
-% we can write:
+% where <https://en.wikipedia.org/wiki/E_(mathematical_constant) e is Euler's 
+% number>. Intuitively, $ln(x)$ is asking what exponent $y$ of base $e$ is needed 
+% for $e^y$ to be equal to $x$. When $x$ is consumption, the log utility of consumption 
+% is in some sense the number of $e$ terms needed to be multiplied together to 
+% equal to $c$. 
+% 
+% We can also write:
 %% 
 % * $e^x = \exp(x)$, writing $\exp(x)$ is a little easier to read, means just 
 % $e$ to the power of $x$
@@ -30,12 +36,11 @@
 % because of this:
 %% 
 % * since $e^0 = 1$, $\log(1) = 0$
-% * since $e^1 \approx 2.718$, $\log(2.718) \approx 1$
+% * since $e^1 \approx 2.71828$, $\log(2.71828) \approx 1$
 %% 
-% The natural log is just the inverse of the expoential function, 
-% 
-% We use log to linearize exponential functions, which allows us to do regressions 
-% afterwards for example.
+% The natural log is just the inverse of the exponential function. We use log 
+% to linearize exponential functions, which allows us to do regressions afterwards 
+% for example.
 %% Log Rules
 % Suppose we have: $\log \left(\frac{\exp(A + \epsilon)\cdot a^{\alpha}\cdot 
 % b^{\beta}}{c^{\theta}\cdot d^{\phi}} \right)$
@@ -87,30 +92,19 @@
 % * $\log(x\cdot y ) = z = (z_x + z_y) = \log(x) + \log(y)$
 %% Why does $\log(x^a) = a\cdot \log(x)$?
 % Why is the log of an exponential term equal to the power times the log of 
-% the base of the exponential? Intuitively, because we can re-write any positive 
-% number as base $e$ to the power of a coefficient:
+% the base of the exponential? 
 % 
 % We start with:
 %% 
 % * $\log(x^a) = z$
 %% 
-% Note that $x$ must be positive, otherwide log of zero of negative numbers 
-% are undefined. Hence, let $x=e^b$, by shifting $b$, $e^b$ can be equal to any 
-% positive number $x$. Then we have:
+% Proceed:
 %% 
-% * $\log\left(\left(e^b\right)^a\right) = z$
-%% 
-% Given that $\log(x^a) = z$ can be rewritten as $x^a = e^z$
-%% 
-% # $\log(x^a) = z$, $x=e^b$
-% # $\log\left(\left(e^b\right)^a\right) = z$
-% # $x^a = e^{b\cdot a} =  e^z$
-% # $b\cdot a = z$
-%% 
-% Having defined $x=e^b$, that means $\log(x)=b$. Hence $b\cdot a = z$ means 
-% that:
-%% 
-% * $a \cdot log(x) = z = log(x^a)$
+% # $\log(x^a) = z$
+% # $x^a = e^z$
+% # $x = e^{\frac{z}{a}}$
+% # $\log(x) = \frac{z}{a}$
+% # $a\cdot\log(x) = z$
 %% For Variables that Grow, Log difference is close to rate of change
 % Suppose that growth rate is $x$ percent per year, after 5 years, the gdp will 
 % be:
@@ -137,7 +131,3 @@ xVec
 % *Note:* This is a bad approximation if $x$ is large. For example, we know 
 % that $\ln(2.718) = \ln(1 + 1.718) \approx 1$ is almost exact. But the approximation 
 % here would have said $\ln(1 + 1.718) \approx 1.718$, which is very incorrect.
-% 
-% 
-% 
-%

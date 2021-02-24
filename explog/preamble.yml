@@ -5,6 +5,7 @@
     Exponential function and rules: a^b. Base e exponential, e = 2.71828.
     Infinitely compounding interest rate (continuous time).
     e^r: borrow 1 dollar, given r, meaning r percent interest, e^r is how much to pay back in principle + interests given infinite compounding.
+    Log linear equation with a constant term, substraction and division.
   core :
     - package: m
       code: |

@@ -9,7 +9,7 @@
 Households borrow with constraints and supply savings, firm demand capital.
 Solve for excess supply of assets and labor over wage and interest rates grid.
 Solve for market clearing wage and interest rates.</p>" />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 7 Matrix Applications | Introductory Mathematics for Economists with Matlab" />
   <meta property="og:type" content="book" />
@@ -33,7 +33,7 @@ Solve for market clearing wage and interest rates.</p>" />
 <meta name="author" content="Fan Wang" />
 
 
-<meta name="date" content="2020-06-09" />
+<meta name="date" content="2021-02-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -42,7 +42,7 @@ Solve for market clearing wage and interest rates.</p>" />
   
 <link rel="prev" href="system-of-equations.html"/>
 <link rel="next" href="uncertainty.html"/>
-<script src="libs/header-attrs-2.2/header-attrs.js"></script>
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -60,6 +60,8 @@ Solve for market clearing wage and interest rates.</p>" />
 
 
 
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92953468-2"></script>
 <script>
@@ -105,12 +107,14 @@ Solve for market clearing wage and interest rates.</p>" />
 </ul></li>
 <li class="chapter" data-level="1.3" data-path="notations-and-functions.html"><a href="notations-and-functions.html#what-is-a-function"><i class="fa fa-check"></i><b>1.3</b> What is a Function?</a></li>
 <li class="chapter" data-level="1.4" data-path="notations-and-functions.html"><a href="notations-and-functions.html#function-notations"><i class="fa fa-check"></i><b>1.4</b> Function Notations</a></li>
-<li class="chapter" data-level="1.5" data-path="notations-and-functions.html"><a href="notations-and-functions.html#monomial-and-polynomial"><i class="fa fa-check"></i><b>1.5</b> Monomial and Polynomial</a>
+<li class="chapter" data-level="1.5" data-path="notations-and-functions.html"><a href="notations-and-functions.html#graphing-monomials-and-polynomial-of-the-3rd-degree"><i class="fa fa-check"></i><b>1.5</b> Graphing Monomials and Polynomial of the 3rd Degree</a>
 <ul>
 <li class="chapter" data-level="1.5.1" data-path="notations-and-functions.html"><a href="notations-and-functions.html#monomial"><i class="fa fa-check"></i><b>1.5.1</b> Monomial</a></li>
 <li class="chapter" data-level="1.5.2" data-path="notations-and-functions.html"><a href="notations-and-functions.html#polynomial"><i class="fa fa-check"></i><b>1.5.2</b> Polynomial</a></li>
 <li class="chapter" data-level="1.5.3" data-path="notations-and-functions.html"><a href="notations-and-functions.html#graphical-monomial-examples"><i class="fa fa-check"></i><b>1.5.3</b> Graphical Monomial Examples</a></li>
-<li class="chapter" data-level="1.5.4" data-path="notations-and-functions.html"><a href="notations-and-functions.html#mononomials-function"><i class="fa fa-check"></i><b>1.5.4</b> Mononomials Function</a></li>
+<li class="chapter" data-level="1.5.4" data-path="notations-and-functions.html"><a href="notations-and-functions.html#polynomial-of-degree-three"><i class="fa fa-check"></i><b>1.5.4</b> Polynomial of Degree Three</a></li>
+<li class="chapter" data-level="1.5.5" data-path="notations-and-functions.html"><a href="notations-and-functions.html#mononomials-function"><i class="fa fa-check"></i><b>1.5.5</b> Mononomials Function</a></li>
+<li class="chapter" data-level="1.5.6" data-path="notations-and-functions.html"><a href="notations-and-functions.html#polynomial-of-degree-three-function"><i class="fa fa-check"></i><b>1.5.6</b> Polynomial of Degree Three Function</a></li>
 </ul></li>
 <li class="chapter" data-level="1.6" data-path="notations-and-functions.html"><a href="notations-and-functions.html#local-and-global-maximum"><i class="fa fa-check"></i><b>1.6</b> Local and Global Maximum</a></li>
 </ul></li>
@@ -136,15 +140,16 @@ Solve for market clearing wage and interest rates.</p>" />
 <ul>
 <li class="chapter" data-level="3.1" data-path="derivatives.html"><a href="derivatives.html#derivative-definition-and-rules"><i class="fa fa-check"></i><b>3.1</b> Derivative Definition and Rules</a>
 <ul>
-<li class="chapter" data-level="3.1.1" data-path="derivatives.html"><a href="derivatives.html#definition"><i class="fa fa-check"></i><b>3.1.1</b> Definition</a></li>
-<li class="chapter" data-level="3.1.2" data-path="derivatives.html"><a href="derivatives.html#derivative-rulesconstant-rule"><i class="fa fa-check"></i><b>3.1.2</b> Derivative Rules–Constant Rule</a></li>
-<li class="chapter" data-level="3.1.3" data-path="derivatives.html"><a href="derivatives.html#derivative-rulespower-rule-polynomial-rule"><i class="fa fa-check"></i><b>3.1.3</b> Derivative Rules–Power Rule (Polynomial Rule)</a></li>
-<li class="chapter" data-level="3.1.4" data-path="derivatives.html"><a href="derivatives.html#derivative-ruleschain-rule"><i class="fa fa-check"></i><b>3.1.4</b> Derivative Rules–Chain Rule</a></li>
-<li class="chapter" data-level="3.1.5" data-path="derivatives.html"><a href="derivatives.html#derivative-rulessum-and-difference-rule"><i class="fa fa-check"></i><b>3.1.5</b> Derivative Rules–Sum (and difference) Rule</a></li>
-<li class="chapter" data-level="3.1.6" data-path="derivatives.html"><a href="derivatives.html#derivative-rulesproduct-rule"><i class="fa fa-check"></i><b>3.1.6</b> Derivative Rules–Product Rule</a></li>
-<li class="chapter" data-level="3.1.7" data-path="derivatives.html"><a href="derivatives.html#derivative-rulesquotient-rule"><i class="fa fa-check"></i><b>3.1.7</b> Derivative Rules–Quotient Rule</a></li>
-<li class="chapter" data-level="3.1.8" data-path="derivatives.html"><a href="derivatives.html#derivative-rulesexponential"><i class="fa fa-check"></i><b>3.1.8</b> Derivative Rules–Exponential</a></li>
-<li class="chapter" data-level="3.1.9" data-path="derivatives.html"><a href="derivatives.html#derivative-ruleslog"><i class="fa fa-check"></i><b>3.1.9</b> Derivative Rules–Log</a></li>
+<li class="chapter" data-level="3.1.1" data-path="derivatives.html"><a href="derivatives.html#linear-and-non-linear-functions"><i class="fa fa-check"></i><b>3.1.1</b> Linear and Non-linear Functions</a></li>
+<li class="chapter" data-level="3.1.2" data-path="derivatives.html"><a href="derivatives.html#definition"><i class="fa fa-check"></i><b>3.1.2</b> Definition</a></li>
+<li class="chapter" data-level="3.1.3" data-path="derivatives.html"><a href="derivatives.html#derivative-rulesconstant-rule"><i class="fa fa-check"></i><b>3.1.3</b> Derivative Rules–Constant Rule</a></li>
+<li class="chapter" data-level="3.1.4" data-path="derivatives.html"><a href="derivatives.html#derivative-rulespower-rule-polynomial-rule"><i class="fa fa-check"></i><b>3.1.4</b> Derivative Rules–Power Rule (Polynomial Rule)</a></li>
+<li class="chapter" data-level="3.1.5" data-path="derivatives.html"><a href="derivatives.html#derivative-ruleschain-rule"><i class="fa fa-check"></i><b>3.1.5</b> Derivative Rules–Chain Rule</a></li>
+<li class="chapter" data-level="3.1.6" data-path="derivatives.html"><a href="derivatives.html#derivative-rulessum-and-difference-rule"><i class="fa fa-check"></i><b>3.1.6</b> Derivative Rules–Sum (and difference) Rule</a></li>
+<li class="chapter" data-level="3.1.7" data-path="derivatives.html"><a href="derivatives.html#derivative-rulesproduct-rule"><i class="fa fa-check"></i><b>3.1.7</b> Derivative Rules–Product Rule</a></li>
+<li class="chapter" data-level="3.1.8" data-path="derivatives.html"><a href="derivatives.html#derivative-rulesquotient-rule"><i class="fa fa-check"></i><b>3.1.8</b> Derivative Rules–Quotient Rule</a></li>
+<li class="chapter" data-level="3.1.9" data-path="derivatives.html"><a href="derivatives.html#derivative-rulesexponential"><i class="fa fa-check"></i><b>3.1.9</b> Derivative Rules–Exponential</a></li>
+<li class="chapter" data-level="3.1.10" data-path="derivatives.html"><a href="derivatives.html#derivative-ruleslog"><i class="fa fa-check"></i><b>3.1.10</b> Derivative Rules–Log</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="derivatives.html"><a href="derivatives.html#continuity-and-differentiability"><i class="fa fa-check"></i><b>3.2</b> Continuity and Differentiability</a>
 <ul>
@@ -459,7 +464,7 @@ Solve for market clearing wage and interest rates.</p>" />
 <div id="cobb-douglas-profit-maximization" class="section level2" number="7.1">
 <h2><span class="header-section-number">7.1</span> Cobb Douglas Profit Maximization</h2>
 <blockquote>
-<p>Go back to <a href="http://fanwangecon.github.io/">fan</a>’s <a href="https://fanwangecon.github.io/CodeDynaAsset/">CodeDynaAsset</a> Package, <a href="https://fanwangecon.github.io/M4Econ/">Matlab Code Examples</a> Repository (<a href="https://fanwangecon.github.io/M4Econ/bookdown">bookdown site</a>), or <a href="https://fanwangecon.github.io/Math4Econ/">Math for Econ with Matlab</a> Repository (<a href="https://fanwangecon.github.io/Math4Econ/bookdown">bookdown site</a>).</p>
+<p>Go back to <a href="http://fanwangecon.github.io/">fan</a>’s <a href="https://fanwangecon.github.io/MEconTools/">MEconTools</a> Package, <a href="https://fanwangecon.github.io/M4Econ/">Matlab Code Examples</a> Repository (<a href="https://fanwangecon.github.io/M4Econ/bookdown">bookdown site</a>), or <a href="https://fanwangecon.github.io/Math4Econ/">Math for Econ with Matlab</a> Repository (<a href="https://fanwangecon.github.io/Math4Econ/bookdown">bookdown site</a>).</p>
 </blockquote>
 <p>In the example here, we will solve a firm optimization problem using a
 system of linear equations (2 equations and 2 unknowns). The solution
@@ -558,15 +563,19 @@ A = [(alpha-1), beta;alpha, beta-1];
 % Solve linear equations, and then exponentiate, same as before
 % We can use the simplify command to simplify this solution, get rid of exp and log:
 linSolu = simplify(exp(linsolve(A, B)))</code></pre>
-<p>linSolu = <span class="math inline">\(\displaystyle \left(\begin{array}{c} {\mathrm{e}}^{\frac{\log \left(\frac{r}{A\,\alpha \,p}\right)-\beta \,\log \left(\frac{r}{A\,\alpha \,p}\right)+\beta \,\log \left(\frac{w}{A\,\beta \,p}\right)}{\alpha +\beta -1}} \\ {\mathrm{e}}^{\frac{\log \left(\frac{w}{A\,\beta \,p}\right)+\alpha \,\log \left(\frac{r}{A\,\alpha \,p}\right)-\alpha \,\log \left(\frac{w}{A\,\beta \,p}\right)}{\alpha +\beta -1}} \end{array}\right)\)</span></p>
+<p>linSolu =</p>
+<p>1em <span class="math inline">\(\displaystyle \left(\begin{array}{c} {\mathrm{e}}^{\frac{\log \left(\frac{r}{A\,\alpha \,p}\right)-\beta \,\log \left(\frac{r}{A\,\alpha \,p}\right)+\beta \,\log \left(\frac{w}{A\,\beta \,p}\right)}{\alpha +\beta -1}} \\ {\mathrm{e}}^{\frac{\log \left(\frac{w}{A\,\beta \,p}\right)+\alpha \,\log \left(\frac{r}{A\,\alpha \,p}\right)-\alpha \,\log \left(\frac{w}{A\,\beta \,p}\right)}{\alpha +\beta -1}} \end{array}\right)\)</span></p>
 <pre><code>KOpti = linSolu(1)</code></pre>
-<p>KOpti =
+<p>KOpti =</p>
+<p>1em
 <span class="math inline">\(\displaystyle {\mathrm{e}}^{\frac{\log \left(\frac{r}{A\,\alpha \,p}\right)-\beta \,\log \left(\frac{r}{A\,\alpha \,p}\right)+\beta \,\log \left(\frac{w}{A\,\beta \,p}\right)}{\alpha +\beta -1}}\)</span></p>
 <pre><code>LOpti = linSolu(2)</code></pre>
-<p>LOpti =
+<p>LOpti =</p>
+<p>1em
 <span class="math inline">\(\displaystyle {\mathrm{e}}^{\frac{\log \left(\frac{w}{A\,\beta \,p}\right)+\alpha \,\log \left(\frac{r}{A\,\alpha \,p}\right)-\alpha \,\log \left(\frac{w}{A\,\beta \,p}\right)}{\alpha +\beta -1}}\)</span></p>
 <pre><code>KOpti/LOpti</code></pre>
-<p>ans =
+<p>ans =</p>
+<p>1em
 <span class="math inline">\(\displaystyle {\mathrm{e}}^{\frac{\log \left(\frac{r}{A\,\alpha \,p}\right)-\beta \,\log \left(\frac{r}{A\,\alpha \,p}\right)+\beta \,\log \left(\frac{w}{A\,\beta \,p}\right)}{\alpha +\beta -1}} \,{\mathrm{e}}^{-\frac{\log \left(\frac{w}{A\,\beta \,p}\right)+\alpha \,\log \left(\frac{r}{A\,\alpha \,p}\right)-\alpha \,\log \left(\frac{w}{A\,\beta \,p}\right)}{\alpha +\beta -1}}\)</span></p>
 <p>The expressions from Matlab look a little convoluted, but you will
 notice a lot of similar terms inside the equation. If you try to
@@ -600,9 +609,11 @@ A = [(alpha-1), beta;alpha, beta-1];
 linSolu = simplify(exp(linsolve(A, B)));
 % The solution we get here is in terms of fractions, let&#39;s write them out:
 KOpti = linSolu(1)</code></pre>
-<p>KOpti = <span class="math inline">\(\displaystyle \frac{225\,\sqrt{15}}{32\,r^{5/2} \,w^{5/2} }\)</span></p>
+<p>KOpti =</p>
+<p>1em <span class="math inline">\(\displaystyle \frac{225\,\sqrt{15}}{32\,r^{5/2} \,w^{5/2} }\)</span></p>
 <pre><code>LOpti = linSolu(2)</code></pre>
-<p>LOpti = <span class="math inline">\(\displaystyle \frac{375\,\sqrt{15}}{32\,r^{3/2} \,w^{7/2} }\)</span></p>
+<p>LOpti =</p>
+<p>1em <span class="math inline">\(\displaystyle \frac{375\,\sqrt{15}}{32\,r^{3/2} \,w^{7/2} }\)</span></p>
 </div>
 <div id="own-and-cross-price-elasticity" class="section level3" number="7.1.7">
 <h3><span class="header-section-number">7.1.7</span> <strong>Own and Cross Price Elasticity</strong></h3>
@@ -635,16 +646,20 @@ increases, firms demand both less capital and less labor, but the effect
 is greater on labor, leading to higher share of optimal capital choice.</p>
 <pre><code>% Elasticity of KOpti with respect to prices?
 elasKoptiW = simplify((diff(KOpti, w)*w)/KOpti)</code></pre>
-<p>elasKoptiW = <span class="math inline">\(\displaystyle -\frac{5}{2}\)</span></p>
+<p>elasKoptiW =</p>
+<p>1em <span class="math inline">\(\displaystyle -\frac{5}{2}\)</span></p>
 <pre><code>% elasKoptiW = -5/2 for alpha = 0.3 and A = 1.0
 elasKoptiR = simplify((diff(KOpti, r)*r)/KOpti)</code></pre>
-<p>elasKoptiR = <span class="math inline">\(\displaystyle -\frac{5}{2}\)</span></p>
+<p>elasKoptiR =</p>
+<p>1em <span class="math inline">\(\displaystyle -\frac{5}{2}\)</span></p>
 <pre><code>% elasKoptiR = -5/2 for alpha = 0.3 and A = 1.0
 elasLoptiW = simplify((diff(LOpti, w)*w)/LOpti)</code></pre>
-<p>elasLoptiW = <span class="math inline">\(\displaystyle -\frac{7}{2}\)</span></p>
+<p>elasLoptiW =</p>
+<p>1em <span class="math inline">\(\displaystyle -\frac{7}{2}\)</span></p>
 <pre><code>% elasLoptiW = -7/2 for alpha = 0.3 and A = 1.0
 elasLoptiR = simplify((diff(LOpti, r)*r)/LOpti)</code></pre>
-<p>elasLoptiR = <span class="math inline">\(\displaystyle -\frac{3}{2}\)</span></p>
+<p>elasLoptiR =</p>
+<p>1em <span class="math inline">\(\displaystyle -\frac{3}{2}\)</span></p>
 <pre><code>% elasLoptiR = -3/2 for alpha = 0.3 and A = 1.0</code></pre>
 </div>
 <div id="graphical-results-for-optimal-choices" class="section level3" number="7.1.8">
@@ -699,7 +714,7 @@ title(&#39;Profit Function for Labor and Capital Choices&#39;)</code></pre>
 <div id="cobb-douglas-utility-maximization" class="section level2" number="7.2">
 <h2><span class="header-section-number">7.2</span> Cobb Douglas Utility Maximization</h2>
 <blockquote>
-<p>Go back to <a href="http://fanwangecon.github.io/">fan</a>’s <a href="https://fanwangecon.github.io/CodeDynaAsset/">CodeDynaAsset</a> Package, <a href="https://fanwangecon.github.io/M4Econ/">Matlab Code Examples</a> Repository (<a href="https://fanwangecon.github.io/M4Econ/bookdown">bookdown site</a>), or <a href="https://fanwangecon.github.io/Math4Econ/">Math for Econ with Matlab</a> Repository (<a href="https://fanwangecon.github.io/Math4Econ/bookdown">bookdown site</a>).</p>
+<p>Go back to <a href="http://fanwangecon.github.io/">fan</a>’s <a href="https://fanwangecon.github.io/MEconTools/">MEconTools</a> Package, <a href="https://fanwangecon.github.io/M4Econ/">Matlab Code Examples</a> Repository (<a href="https://fanwangecon.github.io/M4Econ/bookdown">bookdown site</a>), or <a href="https://fanwangecon.github.io/Math4Econ/">Math for Econ with Matlab</a> Repository (<a href="https://fanwangecon.github.io/Math4Econ/bookdown">bookdown site</a>).</p>
 </blockquote>
 <div id="a-model-with-two-goods" class="section level3" number="7.2.1">
 <h3><span class="header-section-number">7.2.1</span> A Model with Two Goods</h3>
@@ -805,7 +820,7 @@ plot(x1_M, x2_M, &#39;LineWidth&#39;, 3);</code></pre>
 <div id="equilibrium-interest-rate" class="section level2" number="7.3">
 <h2><span class="header-section-number">7.3</span> Equilibrium Interest Rate</h2>
 <blockquote>
-<p>Go back to <a href="http://fanwangecon.github.io/">fan</a>’s <a href="https://fanwangecon.github.io/CodeDynaAsset/">CodeDynaAsset</a> Package, <a href="https://fanwangecon.github.io/M4Econ/">Matlab Code Examples</a> Repository (<a href="https://fanwangecon.github.io/M4Econ/bookdown">bookdown site</a>), or <a href="https://fanwangecon.github.io/Math4Econ/">Math for Econ with Matlab</a> Repository (<a href="https://fanwangecon.github.io/Math4Econ/bookdown">bookdown site</a>).</p>
+<p>Go back to <a href="http://fanwangecon.github.io/">fan</a>’s <a href="https://fanwangecon.github.io/MEconTools/">MEconTools</a> Package, <a href="https://fanwangecon.github.io/M4Econ/">Matlab Code Examples</a> Repository (<a href="https://fanwangecon.github.io/M4Econ/bookdown">bookdown site</a>), or <a href="https://fanwangecon.github.io/Math4Econ/">Math for Econ with Matlab</a> Repository (<a href="https://fanwangecon.github.io/Math4Econ/bookdown">bookdown site</a>).</p>
 </blockquote>
 <p>We derived demand and supply for credit here: <a href="https://fanwangecon.github.io/Math4Econ/derivative_application/K_borrow_firm.html">Demand and Supply
 Derivation and
@@ -861,16 +876,19 @@ syms a b r
 S = a - b/(1+r);
 % For Approximation, need to get the derivative with respect to R
 SDiffR = diff(S, r)</code></pre>
-<p>SDiffR = <span class="math inline">\(\displaystyle \frac{b}{{{\left(r+1\right)}}^2 }\)</span></p>
+<p>SDiffR =</p>
+<p>1em <span class="math inline">\(\displaystyle \frac{b}{{{\left(r+1\right)}}^2 }\)</span></p>
 <pre><code>% Now evaluate S at r = 1 and evaluate S&#39;(r) also at r = 1
 SatRis1 = subs(S, r, 1)</code></pre>
-<p>SatRis1 = <span class="math inline">\(\displaystyle a-\frac{b}{2}\)</span></p>
+<p>SatRis1 =</p>
+<p>1em <span class="math inline">\(\displaystyle a-\frac{b}{2}\)</span></p>
 <pre><code>SDiffRris1 = subs(SDiffR, r, 1)</code></pre>
-<p>SDiffRris1 = <span class="math inline">\(\displaystyle \frac{b}{4}\)</span></p>
+<p>SDiffRris1 =</p>
+<p>1em <span class="math inline">\(\displaystyle \frac{b}{4}\)</span></p>
 <pre><code>% We now have an equation that approximates supply
 SupplyApproximate = SatRis1 + SDiffRris1*(r-1)</code></pre>
-<p>SupplyApproximate =
-<span class="math inline">\(\displaystyle a-\frac{b}{2}+\frac{b\,{\left(r-1\right)}}{4}\)</span></p>
+<p>SupplyApproximate =</p>
+<p>1em <span class="math inline">\(\displaystyle a-\frac{b}{2}+\frac{b\,{\left(r-1\right)}}{4}\)</span></p>
 </div>
 <div id="approximate-the-demand" class="section level3" number="7.3.3">
 <h3><span class="header-section-number">7.3.3</span> Approximate the Demand</h3>
@@ -883,15 +901,19 @@ syms h k r
 D = h/r^k;
 % For Approximation, need to get the derivative with respect to R
 DDiffR = diff(D, r)</code></pre>
-<p>DDiffR = <span class="math inline">\(\displaystyle -\frac{h\,k}{r^{k+1} }\)</span></p>
+<p>DDiffR =</p>
+<p>1em <span class="math inline">\(\displaystyle -\frac{h\,k}{r^{k+1} }\)</span></p>
 <pre><code>% Now evaluate D at r = 1 and evaluate D&#39;(r) also at r = 1
 DatRis1 = subs(D, r, 1)</code></pre>
-<p>DatRis1 = <span class="math inline">\(\displaystyle h\)</span></p>
+<p>DatRis1 =</p>
+<p>1em <span class="math inline">\(\displaystyle h\)</span></p>
 <pre><code>DDiffRris1 = subs(DDiffR, r, 1)</code></pre>
-<p>DDiffRris1 = <span class="math inline">\(\displaystyle -h\,k\)</span></p>
+<p>DDiffRris1 =</p>
+<p>1em <span class="math inline">\(\displaystyle -h\,k\)</span></p>
 <pre><code>% We now have an equation that approximates supply
 DemandApproximate = DatRis1 + DDiffRris1*(r-1)</code></pre>
-<p>DemandApproximate = <span class="math inline">\(\displaystyle h-h\,k\,{\left(r-1\right)}\)</span></p>
+<p>DemandApproximate =</p>
+<p>1em <span class="math inline">\(\displaystyle h-h\,k\,{\left(r-1\right)}\)</span></p>
 </div>
 <div id="solve-approximate-demand-and-supply-using-a-system-of-linear-equations" class="section level3" number="7.3.4">
 <h3><span class="header-section-number">7.3.4</span> Solve approximate Demand and Supply using a System of Linear Equations</h3>
@@ -915,11 +937,11 @@ COEFMAT = [1, -b/4;1, k*h];
 OUTVEC = [a-(3*b)/4; h + k*h];
 approximateSolution = linsolve(COEFMAT, OUTVEC);
 QEquiApproximate = approximateSolution(1)</code></pre>
-<p>QEquiApproximate =
-<span class="math inline">\(\displaystyle \frac{b\,h+4\,a\,h\,k-2\,b\,h\,k}{b+4\,h\,k}\)</span></p>
+<p>QEquiApproximate =</p>
+<p>1em <span class="math inline">\(\displaystyle \frac{b\,h+4\,a\,h\,k-2\,b\,h\,k}{b+4\,h\,k}\)</span></p>
 <pre><code>REquiApproximate = approximateSolution(2)</code></pre>
-<p>REquiApproximate =
-<span class="math inline">\(\displaystyle \frac{3\,b-4\,a+4\,h+4\,h\,k}{b+4\,h\,k}\)</span></p>
+<p>REquiApproximate =</p>
+<p>1em <span class="math inline">\(\displaystyle \frac{3\,b-4\,a+4\,h+4\,h\,k}{b+4\,h\,k}\)</span></p>
 <p>Now we have approximate analytical equations for demand and supply. If
 our <span class="math inline">\(a=r_0 =1\)</span> was close to true equilibrium rate, we would have a good
 approximation of how parameters of the model, the <span class="math inline">\(a,b,h,k\)</span> constants,
@@ -933,7 +955,7 @@ Capital</a></p>
 <div id="first-order-taylor-approximation-1" class="section level2" number="7.4">
 <h2><span class="header-section-number">7.4</span> First Order Taylor Approximation</h2>
 <blockquote>
-<p>Go back to <a href="http://fanwangecon.github.io/">fan</a>’s <a href="https://fanwangecon.github.io/CodeDynaAsset/">CodeDynaAsset</a> Package, <a href="https://fanwangecon.github.io/M4Econ/">Matlab Code Examples</a> Repository (<a href="https://fanwangecon.github.io/M4Econ/bookdown">bookdown site</a>), or <a href="https://fanwangecon.github.io/Math4Econ/">Math for Econ with Matlab</a> Repository (<a href="https://fanwangecon.github.io/Math4Econ/bookdown">bookdown site</a>).</p>
+<p>Go back to <a href="http://fanwangecon.github.io/">fan</a>’s <a href="https://fanwangecon.github.io/MEconTools/">MEconTools</a> Package, <a href="https://fanwangecon.github.io/M4Econ/">Matlab Code Examples</a> Repository (<a href="https://fanwangecon.github.io/M4Econ/bookdown">bookdown site</a>), or <a href="https://fanwangecon.github.io/Math4Econ/">Math for Econ with Matlab</a> Repository (<a href="https://fanwangecon.github.io/Math4Econ/bookdown">bookdown site</a>).</p>
 </blockquote>
 <div id="demand-and-supply-for-credit-and-abhk" class="section level3" number="7.4.1">
 <h3><span class="header-section-number">7.4.1</span> Demand and Supply for Credit and <span class="math inline">\(a,b,h,k\)</span></h3>
@@ -1118,10 +1140,12 @@ OUTVEC = [a-(3*b)/4; h + k*h];
 % Analytical solutions
 approximateSolution = linsolve(COEFMAT, OUTVEC);
 QEquiApproximate = approximateSolution(1)</code></pre>
-<p>QEquiApproximate =
+<p>QEquiApproximate =</p>
+<p>1em
 <span class="math inline">\(\displaystyle -\frac{Z\,{\left(\alpha -8\,\beta +1\right)}}{8\,\beta +Z\,{{\left(\frac{23\,\sqrt{2}\,A\,\alpha }{20}\right)}}^{\frac{1}{\alpha -1}} -Z\,\alpha \,{{\left(\frac{23\,\sqrt{2}\,A\,\alpha }{20}\right)}}^{\frac{1}{\alpha -1}} +8}\)</span></p>
 <pre><code>REquiApproximate = approximateSolution(2)</code></pre>
-<p>REquiApproximate = <span class="math inline">\(\displaystyle \begin{array}{l} -\frac{8\,\alpha -16\,\beta +8\,\alpha \,\beta -3\,Z\,\sigma_1 +3\,Z\,\alpha \,\sigma_1 +8\,Z\,\beta \,\sigma_1 -8\,Z\,\alpha \,\beta \,\sigma_1 -16}{8\,\beta +Z\,\sigma_1 -Z\,\alpha \,\sigma_1 +8}\\ \mathrm{}\\ \textrm{where}\\ \mathrm{}\\ \;\;\sigma_1 ={{\left(\frac{23\,\sqrt{2}\,A\,\alpha }{20}\right)}}^{\frac{1}{\alpha -1}} \end{array}\)</span></p>
+<p>REquiApproximate =</p>
+<p>1em <span class="math inline">\(\displaystyle \begin{array}{l} -\frac{8\,\alpha -16\,\beta +8\,\alpha \,\beta -3\,Z\,\sigma_1 +3\,Z\,\alpha \,\sigma_1 +8\,Z\,\beta \,\sigma_1 -8\,Z\,\alpha \,\beta \,\sigma_1 -16}{8\,\beta +Z\,\sigma_1 -Z\,\alpha \,\sigma_1 +8}\\ \mathrm{}\\ \textrm{where}\\ \mathrm{}\\ \;\;\sigma_1 ={{\left(\frac{23\,\sqrt{2}\,A\,\alpha }{20}\right)}}^{\frac{1}{\alpha -1}} \end{array}\)</span></p>
 <p>So we get these complicated looing equations from matlab in terms of A,
 alpha, beta and Z, we can analyze them graphically, each time fixing
 three of the four syms at numerical values.</p>
